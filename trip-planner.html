@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive AI Trip Planner - Nashik Explore</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Generate custom multi-day travel itineraries in Nashik using our smart AI Trip Planner. Automatically computes distance, estimates duration, and highlights compliance warnings.">
+  <meta name="keywords" content="Nashik, Travel Planner, Itinerary Generator, Trimbakeshwar, Sula Vineyards, Harihar Fort, Maharashtra, Tourism">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link class="rounded-xl" rel="icon" type="image/png" href="images/app-launcher-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#006398',
+              secondary: '#16658A',
+              sky: '#2C9EE8',
+              light: '#93D4FE',
+            },
+            slate: {
+              950: '#0B0E11',
+              900: '#12161A',
+              850: '#151C23',
+              800: '#1A2026',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Premium visual effects */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .dark .glass-effect {
+      background: rgba(21, 28, 35, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glow-blue {
+      box-shadow: 0 0 40px -10px rgba(0, 99, 152, 0.3);
+    }
+    .glow-sky {
+      box-shadow: 0 0 40px -10px rgba(44, 158, 232, 0.3);
+    }
+    
+    /* Smooth timeline line animation */
+    .timeline-line {
+      background: linear-gradient(to bottom, #006398, #2C9EE8, transparent);
+    }
+    
+    /* Device frame details */
+    .device-bezel {
+      border: 12px solid #1a202c;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .dark .device-bezel {
+      border: 12px solid #2d3748;
+    }
+    
+    /* Loading steps animation */
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .loading-dot {
+      animation: pulse-dot 1.4s infinite;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8FAFC] dark:bg-slate-950 text-[#1E293B] dark:text-[#E2E8F0] antialiased overflow-x-hidden font-sans">
+
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/20 py-4 px-6 md:px-12 flex items-center justify-between bg-white/10">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="Nashik Explore Logo" class="h-10 w-10 object-contain rounded-xl shadow-md border border-white/20">
+      <div>
+        <span class="font-heading font-extrabold text-lg tracking-tight bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-white dark:to-brand-light">Nashik Explore</span>
+        <span class="block text-[10px] uppercase font-bold tracking-widest text-[#64748B] dark:text-slate-400">Travel Guide</span>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-6">
+      <a href="index.html" class="font-bold text-sm text-[#1E293B]/80 hover:text-brand-blue dark:text-slate-350 dark:hover:text-brand-light transition-colors">Home</a>
+      <a href="index.html#features" class="font-bold text-sm text-[#1E293B]/80 hover:text-brand-blue dark:text-slate-350 dark:hover:text-brand-light transition-colors">App Features</a>
+      <button class="theme-toggle-btn p-2.5 rounded-full border border-slate-300/40 hover:bg-slate-200/40 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle dark mode">
+        <svg class="theme-toggle-light-icon h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 17.95a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-2.122-12.02a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zm-1.06 5.183a1 1 0 100-2H3a1 1 0 100 2h-1z"></path></svg>
+        <svg class="theme-toggle-dark-icon hidden h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Interactive Planner Dashboard -->
+  <main class="pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto">
+    <!-- Header Title -->
+    <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+      <h1 class="font-heading font-extrabold text-4xl md:text-5xl tracking-tight mb-4 bg-gradient-to-r from-brand-blue via-brand-sky to-brand-light bg-clip-text text-transparent">
+        AI Smart Itinerary Planner
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 font-medium text-md leading-relaxed">
+        Plan your next trip to Nashik using our on-device router tool. Setup preferences, pick transit points, and view coordinates calculation, safety warnings, and distance logs in real-time.
+      </p>
+    </div>
+
+    <!-- Dual Column Board -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <!-- Left Config panel -->
+      <section class="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 p-8 rounded-3xl shadow-lg glass-effect flex flex-col gap-6">
+        <h2 class="font-heading font-extrabold text-2xl border-b border-slate-200/50 dark:border-slate-800 pb-3 mb-2 flex items-center gap-2">
+          <span>Preferences Panel</span>
+          <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-brand-blue/10 text-brand-blue dark:bg-brand-light/10 dark:text-brand-light">Offline</span>
+        </h2>
+
+        <!-- Transit Hub -->
+        <div>
+          <label for="transit-hub" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Transit Hub / Starting Point</label>
+          <select id="transit-hub" class="w-full px-4 py-3 rounded-xl border border-slate-300/60 bg-white dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all">
+            <option value="nashik_road">Nashik Road Railway Station (Station Hub)</option>
+            <option value="ozar_airport">Ozar Airport (NE Airport Terminal)</option>
+            <option value="thakkar_bazaar">Thakkar Bazaar (Central Bus Stand)</option>
+          </select>
+        </div>
+
+        <!-- Duration -->
+        <div>
+          <label for="duration-slider" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex justify-between">
+            <span>Trip Duration</span>
+            <span id="duration-val" class="font-extrabold text-brand-blue dark:text-brand-light">2 Days</span>
+          </label>
+          <input type="range" id="duration-slider" min="1" max="3" value="2" class="w-full accent-brand-blue">
+        </div>
+
+        <!-- Budget -->
+        <div>
+          <label for="budget-tier" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Budget Tier</label>
+          <select id="budget-tier" class="w-full px-4 py-3 rounded-xl border border-slate-300/60 bg-white dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue transition-all">
+            <option value="budget">Budget-Friendly (Free / Low Cost)</option>
+            <option value="moderate" selected>Moderate (Average Entry Fees)</option>
+            <option value="premium">Premium Experience (Unlimited)</option>
+          </select>
+        </div>
+
+        <!-- Interests checkboxes -->
+        <div>
+          <span class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Attraction Categories</span>
+          <div class="grid grid-cols-2 gap-3 text-sm font-semibold">
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="cat-temple" checked class="h-4.5 w-4.5 rounded border-slate-300 accent-brand-blue">
+              <span>Temples & Spiritual</span>
+            </label>
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="cat-vineyard" checked class="h-4.5 w-4.5 rounded border-slate-300 accent-brand-blue">
+              <span>Vineyards & Tasting</span>
+            </label>
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="cat-fort" checked class="h-4.5 w-4.5 rounded border-slate-300 accent-brand-blue">
+              <span>Forts & Trekking</span>
+            </label>
+            <label class="flex items-center gap-2.5 cursor-pointer">
+              <input type="checkbox" id="cat-waterfall" checked class="h-4.5 w-4.5 rounded border-slate-300 accent-brand-blue">
+              <span>Waterfalls</span>
+            </label>
+            <label class="flex items-center gap-2.5 cursor-pointer col-span-2">
+              <input type="checkbox" id="cat-heritage" checked class="h-4.5 w-4.5 rounded border-slate-300 accent-brand-blue">
+              <span>Caves, Heritage & Food Outings</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Pace radio -->
+        <div>
+          <span class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Travel Pace</span>
+          <div class="flex gap-4 text-sm font-semibold">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="pace" value="relaxed" class="h-4.5 w-4.5 accent-brand-blue">
+              <span>Relaxed (2 stops)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="pace" value="moderate" checked class="h-4.5 w-4.5 accent-brand-blue">
+              <span>Standard (3 stops)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Extra triggers -->
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-2xl border border-slate-200/50 dark:border-slate-800/80 space-y-3">
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="block text-xs font-bold uppercase tracking-wide">Dynamic distance simulation</span>
+              <span class="block text-[10px] text-slate-400 font-medium">Re-calculates distance logs on demand</span>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="toggle-haversine" checked class="sr-only peer">
+              <div class="w-9 h-5 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand-blue"></div>
+            </label>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="w-full py-4 rounded-2xl text-white font-heading font-extrabold text-lg text-center bg-gradient-to-r from-brand-blue to-brand-sky hover:from-brand-secondary hover:to-brand-blue shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2">
+          <svg class="h-5 w-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Generate Plan</span>
+        </button>
+      </section>
+
+      <!-- Right Column Phone Mock Emulator -->
+      <section class="lg:col-span-7 flex justify-center">
+        <!-- Phone Device Bezel wrapper -->
+        <div class="relative w-full max-w-[420px] aspect-[9/18.5] bg-slate-900 rounded-[48px] device-bezel p-3 overflow-hidden flex flex-col glow-blue">
+          
+          <!-- Screen Shell Inner -->
+          <div class="w-full h-full bg-[#F5F5F5] dark:bg-slate-950 rounded-[38px] overflow-hidden flex flex-col relative text-[#1E293B] dark:text-[#E2E8F0] shadow-inner">
+            
+            <!-- Dynamic Island Notch -->
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-full z-40 flex items-center justify-end px-3">
+              <!-- Mock sensor dot -->
+              <span class="h-2.5 w-2.5 rounded-full bg-slate-900/80 border border-slate-800"></span>
+            </div>
+
+            <!-- Phone Top Status Bar -->
+            <div class="h-10 pt-2 px-6 flex items-center justify-between text-[11px] font-extrabold tracking-wide text-slate-800 dark:text-slate-200 z-30">
+              <span id="phone-time">9:41 AM</span>
+              <div class="flex items-center gap-1.5">
+                <!-- cellular indicator -->
+                <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M2 22h20V2z"/></svg>
+                <!-- battery indicator -->
+                <svg class="h-3 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17 5H3a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z M21 9h2v6h-2z"/></svg>
+              </div>
+            </div>
+
+            <!-- Phone screen main container -->
+            <div id="phone-screen-body" class="flex-1 overflow-y-auto px-4 pb-6 flex flex-col">
+              
+              <!-- MOCK SCREEN 1: Welcome/Idle view -->
+              <div id="screen-welcome" class="flex-1 flex flex-col items-center justify-center text-center p-6 gap-6 my-auto">
+                <div class="h-20 w-20 rounded-3xl bg-brand-blue/10 dark:bg-brand-light/10 text-brand-blue dark:text-brand-light flex items-center justify-center shadow-md animate-bounce">
+                  <img src="images/logo.png" alt="NE Logo" class="h-12 w-12 object-contain">
+                </div>
+                <div>
+                  <h3 class="font-heading font-extrabold text-2xl tracking-tight mb-2">Nashik Explore</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed max-w-[260px]">
+                    Create a customized smart itinerary by configuring preferences and clicking the generate button.
+                  </p>
+                </div>
+                <div class="px-4 py-2 border border-slate-300/40 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/50 dark:bg-slate-900/50">
+                  Ready to compute
+                </div>
+              </div>
+
+              <!-- MOCK SCREEN 2: Generating status view -->
+              <div id="screen-loading" class="flex-1 flex flex-col items-center justify-center p-6 hidden">
+                <div class="relative h-20 w-20 mb-8 flex items-center justify-center">
+                  <div class="absolute inset-0 rounded-full border-4 border-slate-200/50 dark:border-slate-800"></div>
+                  <div class="absolute inset-0 rounded-full border-4 border-t-brand-blue border-r-brand-sky animate-spin"></div>
+                  <svg class="h-8 w-8 text-brand-blue dark:text-brand-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h4 class="font-heading font-extrabold text-lg mb-3 tracking-tight">Generating Itinerary</h4>
+                <div id="loading-steps" class="space-y-2 text-[11px] font-semibold text-slate-500 text-left w-full max-w-[240px]">
+                  <div id="step-1" class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-slate-300 loading-dot"></span><span>Connecting to Firestore DB...</span></div>
+                  <div id="step-2" class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-slate-300"></span><span>Evaluating entry fee rules...</span></div>
+                  <div id="step-3" class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-slate-300"></span><span>Computing Haversine limits...</span></div>
+                  <div id="step-4" class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-slate-300"></span><span>Wiping old Hive cached boards...</span></div>
+                </div>
+              </div>
+
+              <!-- MOCK SCREEN 3: Result List View -->
+              <div id="screen-results" class="flex-1 flex flex-col hidden pt-2">
+                <!-- Day Select Tabs -->
+                <div class="flex border-b border-slate-300/40 dark:border-slate-800/80 mb-4 font-heading" id="tab-bar">
+                  <!-- Dynamic tabs go here -->
+                </div>
+
+                <!-- Timeline stack -->
+                <div class="relative flex-1">
+                  <!-- Timeline vertical bar -->
+                  <div class="absolute left-2.5 top-2 bottom-2 w-[3px] timeline-line rounded-full z-0"></div>
+
+                  <!-- Timeline cards stack container -->
+                  <div class="space-y-4 relative z-10 pl-6" id="itinerary-cards-container">
+                    <!-- Dynamic timeline stops -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Phone bottom indicators -->
+            <div class="h-5 flex items-center justify-center pb-2 z-30">
+              <span class="w-32 h-1 bg-slate-800 dark:bg-slate-200/80 rounded-full"></span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200/50 dark:border-slate-800 pt-16 pb-8 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <img src="images/logo.png" alt="Logo" class="h-8 w-8 object-contain">
+          <span class="font-heading font-extrabold text-lg tracking-tight">Nashik Explore</span>
+        </div>
+        <p class="text-sm text-[#64748B] dark:text-slate-400 leading-relaxed">
+          Premium Android travel companion directory. Get verified routes, custom multi-day itineraries, and localized guidelines for tourist hotspots.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-[#64748B] dark:text-slate-400 font-medium">
+          <li><a href="index.html#about" class="hover:text-brand-blue transition-colors">About App</a></li>
+          <li><a href="index.html#features" class="hover:text-brand-blue transition-colors">Interactive Features</a></li>
+          <li><a href="index.html#gallery" class="hover:text-brand-blue transition-colors">Screenshots</a></li>
+          <li><a href="index.html#categories" class="hover:text-brand-blue transition-colors">Attraction Categories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Legal Policy</h4>
+        <ul class="space-y-2 text-sm text-[#64748B] dark:text-slate-400 font-medium">
+          <li><a href="privacy-policy.html" class="hover:text-brand-blue transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html" class="hover:text-brand-blue transition-colors">Terms of Use</a></li>
+          <li><a href="cookies-policy.html" class="hover:text-brand-blue transition-colors">Cookies Policy</a></li>
+          <li><a href="disclaimer.html" class="hover:text-brand-blue transition-colors">Disclaimer Statement</a></li>
+          <li><a href="data-safety.html" class="hover:text-brand-blue transition-colors">Data Safety Sheet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Platform</h4>
+        <ul class="space-y-2 text-sm text-[#64748B] dark:text-slate-400 font-medium">
+          <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact Support</a></li>
+          <li><a href="sitemap.xml" class="hover:text-brand-blue transition-colors">XML Sitemap</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.nashikexplore.app" class="hover:text-brand-blue transition-colors">Google Play Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-200/50 dark:border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="text-xs text-[#64748B] dark:text-slate-400 font-medium">&copy; 2026 Nashik Explore. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <!-- Real Trip Planner Heuristic Script -->
+  <script>
+    // Seeding sample travel destinations
+    const destPool = [
+      {
+        id: "trimbakeshwar_temple",
+        name: "Trimbakeshwar Shiva Temple",
+        categoryId: "temple",
+        area: "Trimbak",
+        entryFee: "0",
+        latitude: 19.9380,
+        longitude: 73.5350,
+        comment: "Trimbakeshwar Jyotirlinga, spiritual hub.",
+        duration: 90,
+        access: "Washrooms available, parking limited, wheelchair accessible ramp."
+      },
+      {
+        id: "kalaram_temple",
+        name: "Kalaram Temple",
+        categoryId: "temple",
+        area: "Panchavati",
+        entryFee: "0",
+        latitude: 20.0080,
+        longitude: 73.7930,
+        comment: "Historic temple built with black stone carvings.",
+        duration: 45,
+        access: "Wheelchair accessible entrance, nearby public washrooms."
+      },
+      {
+        id: "sula_vineyards",
+        name: "Sula Vineyards",
+        categoryId: "vineyard",
+        area: "Govardhan",
+        entryFee: "250",
+        latitude: 20.0060,
+        longitude: 73.7170,
+        comment: "Wine tasting tours, gorgeous grape estates.",
+        duration: 120,
+        access: "Premium parking space, restrooms, wheelchair access, legal age 25+.",
+        wineWarning: true
+      },
+      {
+        id: "york_winery",
+        name: "York Winery",
+        categoryId: "vineyard",
+        area: "Govardhan",
+        entryFee: "150",
+        latitude: 20.0090,
+        longitude: 73.7140,
+        comment: "Boutique wine cellar overlooking the Gangapur Dam.",
+        duration: 90,
+        access: "Parking, washrooms, 25+ years verification required for wine tasting.",
+        wineWarning: true
+      },
+      {
+        id: "harihar_fort",
+        name: "Harihar Fort",
+        categoryId: "fort",
+        area: "Trimbak Region",
+        entryFee: "0",
+        latitude: 19.9050,
+        longitude: 73.4730,
+        comment: "Steep 80-degree stone-cut stairs climb.",
+        duration: 180,
+        access: "No toilet rooms, rural trail parking. Not recommended for children.",
+        climbingWarning: true
+      },
+      {
+        id: "anjaneri_hills",
+        name: "Anjaneri Hills",
+        categoryId: "fort",
+        area: "Anjaneri",
+        entryFee: "0",
+        latitude: 19.9230,
+        longitude: 73.5780,
+        comment: "Trek to the birthplace of Lord Hanuman.",
+        duration: 150,
+        access: "No public washrooms on high ridges, rural parking at bottom.",
+        climbingWarning: true
+      },
+      {
+        id: "dugarwadi_waterfall",
+        name: "Dugarwadi Waterfall",
+        categoryId: "waterfall",
+        area: "Trimbak Region",
+        entryFee: "0",
+        latitude: 19.9570,
+        longitude: 73.4910,
+        comment: "Stunning forest trail opening to a deep cascade.",
+        duration: 90,
+        access: "No washrooms, forest department parking. Extreme monsoonal flood risks.",
+        waterfallWarning: true
+      },
+      {
+        id: "someshwar_waterfall",
+        name: "Someshwar Waterfall (Dudh Sagar)",
+        categoryId: "waterfall",
+        area: "Gangapur",
+        entryFee: "0",
+        latitude: 19.9990,
+        longitude: 73.7380,
+        comment: "Scenic river waterfall near the Someshwar Temple.",
+        duration: 60,
+        access: "Restrooms available, concrete pathway, family parking.",
+        waterfallWarning: true
+      },
+      {
+        id: "pandavleni_caves",
+        name: "Pandavleni Caves",
+        categoryId: "heritage",
+        area: "Nashik City Boundary",
+        entryFee: "25",
+        latitude: 19.9630,
+        longitude: 73.7490,
+        comment: "24 Buddhist rock-cut caves dated back 2000 years.",
+        duration: 120,
+        access: "Archeological survey washrooms, paid parking, steep stair flight."
+      },
+      {
+        id: "sadhana_misal",
+        name: "Sadhana Restaurant (Chulivarchi)",
+        categoryId: "heritage",
+        area: "Gangapur Path",
+        entryFee: "0",
+        latitude: 20.0400,
+        longitude: 73.7410,
+        comment: "Legendary clay-fired spicy Nashik Misal.",
+        duration: 60,
+        access: "Spacious parking, kid-friendly play area, washrooms, farm zoo."
+      }
+    ];
+
+    // Transit hub coordinates
+    const hubCoords = {
+      nashik_road: { name: "Nashik Road Station", lat: 19.9610, lon: 73.8340 },
+      ozar_airport: { name: "Ozar Airport (NE)", lat: 20.1190, lon: 73.9160 },
+      thakkar_bazaar: { name: "Thakkar Bazaar Terminal", lat: 20.0030, lon: 73.7780 }
+    };
+
+    // Haversine formula calculation
+    const calcHaversine = (lat1, lon1, lat2, lon2) => {
+      const toRad = Math.PI / 180;
+      const dLat = (lat2 - lat1) * toRad;
+      const dLon = (lon2 - lon1) * toRad;
+      const a = 
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      return 12742 * Math.asin(Math.sqrt(a)); // R = 6371 km
+    };
+
+    // DOM selectors
+    const durationSlider = document.getElementById('duration-slider');
+    const durationVal = document.getElementById('duration-val');
+    const generateBtn = document.getElementById('generate-btn');
+    const welcomeScreen = document.getElementById('screen-welcome');
+    const loadingScreen = document.getElementById('screen-loading');
+    const resultsScreen = document.getElementById('screen-results');
+    const tabBar = document.getElementById('tab-bar');
+    const cardsContainer = document.getElementById('itinerary-cards-container');
+
+    // Current phone time handler
+    const updateTime = () => {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const timeEl = document.getElementById('phone-time');
+      if (timeEl) timeEl.textContent = timeStr;
+    };
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Slider listener
+    durationSlider.addEventListener('input', () => {
+      durationVal.textContent = durationSlider.value + (durationSlider.value == 1 ? ' Day' : ' Days');
+    });
+
+    // Main route planner generator trigger
+    generateBtn.addEventListener('click', () => {
+      // 1. Enter Loading screen
+      welcomeScreen.classList.add('hidden');
+      resultsScreen.classList.add('hidden');
+      loadingScreen.classList.remove('hidden');
+
+      // Animate steps
+      const steps = [
+        { id: 'step-1', label: 'Connecting to Firestore...' },
+        { id: 'step-2', label: 'Filtering by budget tier...' },
+        { id: 'step-3', label: 'Computing Haversine distance logs...' },
+        { id: 'step-4', label: 'Caching static itineraries...' }
+      ];
+
+      steps.forEach((s, idx) => {
+        const el = document.getElementById(s.id);
+        el.querySelector('span:first-child').className = 'h-2 w-2 rounded-full bg-slate-300';
+        if (idx === 0) el.querySelector('span:first-child').className = 'h-2 w-2 rounded-full bg-brand-blue loading-dot';
+      });
+
+      let currentStep = 0;
+      const stepInterval = setInterval(() => {
+        const curEl = document.getElementById(steps[currentStep].id);
+        curEl.querySelector('span:first-child').className = 'h-2 w-2 rounded-full bg-emerald-500';
+        
+        currentStep++;
+        if (currentStep < steps.length) {
+          const nextEl = document.getElementById(steps[currentStep].id);
+          nextEl.querySelector('span:first-child').className = 'h-2 w-2 rounded-full bg-brand-blue loading-dot';
+        } else {
+          clearInterval(stepInterval);
+          // Show Results Screen
+          loadingScreen.classList.add('hidden');
+          resultsScreen.classList.remove('hidden');
+          renderItinerary();
+        }
+      }, 700);
+    });
+
+    // Render Itinerary Cards inside Device Frame
+    const renderItinerary = () => {
+      const selectedHubVal = document.getElementById('transit-hub').value;
+      const durationVal = parseInt(durationSlider.value);
+      const budgetVal = document.getElementById('budget-tier').value;
+      const haversineActive = document.getElementById('toggle-haversine').checked;
+
+      // Filter destinations by category checks
+      const categoryMap = {
+        temple: document.getElementById('cat-temple').checked,
+        vineyard: document.getElementById('cat-vineyard').checked,
+        fort: document.getElementById('cat-fort').checked,
+        waterfall: document.getElementById('cat-waterfall').checked,
+        heritage: document.getElementById('cat-heritage').checked
+      };
+
+      let filteredPool = destPool.filter(d => categoryMap[d.categoryId]);
+      if (filteredPool.length === 0) filteredPool = destPool; // fallback
+
+      // Budget filtering
+      if (budgetVal === 'budget') {
+        filteredPool = filteredPool.filter(d => parseInt(d.entryFee) <= 50);
+      } else if (budgetVal === 'moderate') {
+        filteredPool = filteredPool.filter(d => parseInt(d.entryFee) <= 250);
+      }
+      if (filteredPool.length === 0) filteredPool = destPool; // fallback
+
+      // Shuffle slightly
+      const pool = [...filteredPool].sort(() => Math.random() - 0.5);
+
+      // Build Day timelines
+      const dayStops = [];
+      const slots = ['Morning', 'Afternoon', 'Evening'];
+      let poolIndex = 0;
+
+      for (let d = 1; d <= durationVal; d++) {
+        const stops = [];
+        for (let s = 0; s < slots.length; s++) {
+          if (poolIndex >= pool.length) poolIndex = 0; // wrap around
+          const p = pool[poolIndex];
+          
+          // Calculate distance
+          const hub = hubCoords[selectedHubVal];
+          const distance = calcHaversine(hub.lat, hub.lon, p.latitude, p.longitude);
+          
+          stops.push({
+            slot: slots[s],
+            place: p,
+            distance: haversineActive ? distance.toFixed(1) : "Calculated off"
+          });
+          poolIndex++;
+        }
+        dayStops.push({ day: d, stops: stops });
+      }
+
+      // Render tab bar
+      tabBar.innerHTML = '';
+      dayStops.forEach(ds => {
+        const tab = document.createElement('button');
+        tab.className = `flex-1 py-2 text-center text-xs font-bold transition-all border-b-2 ${ds.day === 1 ? 'border-brand-blue text-brand-blue dark:border-brand-light dark:text-brand-light' : 'border-transparent text-slate-500'}`;
+        tab.textContent = `Day ${ds.day}`;
+        tab.addEventListener('click', () => {
+          // deactivate other tabs
+          Array.from(tabBar.children).forEach(child => {
+            child.className = 'flex-1 py-2 text-center text-xs font-bold transition-all border-b-2 border-transparent text-slate-500';
+          });
+          tab.className = 'flex-1 py-2 text-center text-xs font-bold transition-all border-b-2 border-brand-blue text-brand-blue dark:border-brand-light dark:text-brand-light';
+          renderTimelineCards(ds.stops);
+        });
+        tabBar.appendChild(tab);
+      });
+
+      // Default load Day 1 cards
+      renderTimelineCards(dayStops[0].stops);
+    };
+
+    const renderTimelineCards = (stops) => {
+      cardsContainer.innerHTML = '';
+      stops.forEach(stop => {
+        const card = document.createElement('div');
+        card.className = 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 rounded-2xl relative shadow-sm hover:scale-[1.01] transition-transform duration-200';
+        
+        // Node marker
+        const node = document.createElement('div');
+        node.className = 'absolute -left-[23px] top-[18px] h-3.5 w-3.5 rounded-full border-2 border-brand-sky bg-white dark:bg-slate-950 z-20';
+
+        // Warning alerts
+        let warningBadge = '';
+        if (stop.place.climbingWarning) {
+          warningBadge = `<div class="mt-2.5 p-2 bg-amber-50 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-900/50 rounded-lg text-[9px] text-amber-700 dark:text-amber-400 font-semibold leading-normal">
+            ⚠️ Stairway Caution: Steep climb. Keep off steps during monsoonal storm forecasts.
+          </div>`;
+        } else if (stop.place.waterfallWarning) {
+          warningBadge = `<div class="mt-2.5 p-2 bg-red-50 dark:bg-red-950/20 border border-red-200/50 dark:border-red-900/50 rounded-lg text-[9px] text-red-700 dark:text-red-400 font-semibold leading-normal">
+            🌊 Water Hazard: High flash flooding risk in monsoons. Keep out of deep water layers.
+          </div>`;
+        } else if (stop.place.wineWarning) {
+          warningBadge = `<div class="mt-2.5 p-2 bg-blue-50 dark:bg-blue-950/20 border border-blue-200/50 dark:border-blue-900/50 rounded-lg text-[9px] text-blue-700 dark:text-blue-400 font-semibold leading-normal">
+            🍇 Age Restriction: 25+ years verification checks enforced for wine tasting in Maharashtra.
+          </div>`;
+        }
+
+        card.innerHTML = `
+          <div class="flex justify-between items-start mb-1">
+            <span class="text-[9px] uppercase font-black tracking-widest text-[#64748B] dark:text-slate-400">${stop.slot}</span>
+            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-brand-blue/10 dark:bg-brand-light/10 text-brand-blue dark:text-brand-light uppercase">${stop.place.categoryId}</span>
+          </div>
+          <h4 class="font-heading font-extrabold text-sm mb-1">${stop.place.name}</h4>
+          <p class="text-[10px] text-slate-500 dark:text-slate-400 mb-2 leading-relaxed">${stop.place.comment}</p>
+          
+          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100 dark:border-slate-800 text-[9px] font-bold text-slate-500">
+            <div class="flex items-center gap-1">
+              <svg class="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+              <span>${stop.distance} km</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <svg class="h-3.5 w-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>${stop.place.duration} Mins</span>
+            </div>
+          </div>
+          ${warningBadge}
+          <div class="mt-3 flex justify-between items-center text-[9px] font-bold">
+            <span class="text-slate-400">Entry: ₹${stop.place.entryFee}</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=${stop.place.latitude},${stop.place.longitude}" target="_blank" class="text-brand-blue dark:text-brand-light hover:underline flex items-center gap-0.5">
+              <span>Google Maps</span>
+              <svg class="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        `;
+        card.appendChild(node);
+        cardsContainer.appendChild(card);
+      });
+    };
+  </script>
+</body>
+</html>

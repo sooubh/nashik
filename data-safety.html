@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Safety & Deletion - Nashik Explore</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Official Data Safety declaration for the Nashik Explore Android application. Verified disclosures for Google Play Console compatibility.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/app-launcher-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#006398',
+              secondary: '#16658A',
+              sky: '#2C9EE8',
+              light: '#93D4FE',
+            },
+            slate: {
+              950: '#0B0E11',
+              900: '#12161A',
+              800: '#1A2026',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F9F9F9] dark:bg-slate-950 text-[#1A1C1C] dark:text-[#E2E3DF] antialiased overflow-x-hidden">
+
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/20 py-4 px-6 md:px-12 flex items-center justify-between bg-white/10">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="Nashik Explore Logo" class="h-10 w-10 object-contain rounded-xl shadow-md border border-white/20">
+      <div>
+        <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-white dark:to-brand-light">Nashik Explore</span>
+        <span class="block text-[10px] uppercase font-bold tracking-widest text-[#666666] dark:text-slate-400">Travel Guide</span>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="font-bold text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors mr-2">Home</a>
+      <button class="theme-toggle-btn p-2.5 rounded-full border border-slate-300/40 hover:bg-slate-100 dark:hover:bg-slate-855 transition-colors" aria-label="Toggle dark mode">
+        <svg class="theme-toggle-light-icon h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 17.95a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-2.122-12.02a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zm-1.06 5.183a1 1 0 100-2H3a1 1 0 100 2h-1z"></path></svg>
+        <svg class="theme-toggle-dark-icon hidden h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Layout -->
+  <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+    <!-- Sidebar Table of Contents -->
+    <aside class="w-full lg:w-1/4 lg:sticky lg:top-32 h-fit space-y-4">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-6 rounded-3xl shadow-sm glass-panel">
+        <h3 class="font-extrabold text-sm uppercase tracking-wider text-slate-500 mb-4">Table of Contents</h3>
+        <ul class="space-y-3 text-sm font-semibold">
+          <li><a href="#declarations" class="block hover:text-brand-blue transition-colors">1. Google Play Declarations</a></li>
+          <li><a href="#security-standards" class="block hover:text-brand-blue transition-colors">2. Security Standards</a></li>
+          <li><a href="#erasure-details" class="block hover:text-brand-blue transition-colors">3. Account Erasure Limits</a></li>
+          <li><a href="#deletion-form" class="block hover:text-brand-blue transition-colors">4. Request Deletion Form</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Detailed Legal Document -->
+    <article class="flex-1 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-8 md:p-12 rounded-3xl shadow-sm">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Data Safety Sheet</h1>
+      <p class="text-xs text-[#666666] dark:text-slate-400 font-semibold mb-8 uppercase tracking-widest">Last Updated: July 14, 2026</p>
+
+      <div class="prose prose-slate dark:prose-invert max-w-none space-y-8">
+        <!-- Section 1 -->
+        <section id="declarations">
+          <h2 class="text-xl font-bold border-b border-slate-200/50 dark:border-slate-800 pb-2 mb-4">1. Google Play Data Safety Disclosures</h2>
+          <p class="text-sm leading-relaxed text-[#666666] dark:text-slate-300 mb-4">
+            Under Google Play Developer console guidelines, we publish the following verified details detailing what parameters leave the client device:
+          </p>
+
+          <div class="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-xl mt-4">
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-800/40 border-b border-slate-200 dark:border-slate-800">
+                  <th class="p-4 font-bold">Data Type</th>
+                  <th class="p-4 font-bold">Shared / Transmitted</th>
+                  <th class="p-4 font-bold">Verification Detail</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-4 font-semibold">Location</td>
+                  <td class="p-4 text-amber-600 dark:text-amber-400 font-semibold">Not Shared</td>
+                  <td class="p-4">Although manifest declarations exist, no coordinates are retrieved via GPS. Distance metrics are calculated using static database fields.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold">Personal Info</td>
+                  <td class="p-4 text-emerald-600 dark:text-emerald-400 font-semibold">Transmitted</td>
+                  <td class="p-4">Name, email, and photo URL synced to Google Firebase Auth and Firestore. Optional phone number.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold">App Activity</td>
+                  <td class="p-4 text-emerald-600 dark:text-emerald-400 font-semibold">Transmitted</td>
+                  <td class="p-4">Reviews (ratings, comments <= 1000 characters) and custom wishlist board items saved in Firestore.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold">Financial Info</td>
+                  <td class="p-4 text-emerald-600 dark:text-emerald-400 font-semibold">Transmitted</td>
+                  <td class="p-4">Lifetime Premium (₹199 upgrade status) checked via RevenueCat APIs. No card parameters are processed.</td>
+                </tr>
+                <tr>
+                  <td class="p-4 font-semibold">Device IDs</td>
+                  <td class="p-4 text-rose-600 dark:text-rose-400 font-semibold">Shared with AdMob</td>
+                  <td class="p-4">Google AdID for advertisement delivery (free tier only). Deactivated upon Premium activation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="security-standards">
+          <h2 class="text-xl font-bold border-b border-slate-200/50 dark:border-slate-800 pb-2 mb-4">2. Security Standards</h2>
+          <p class="text-sm leading-relaxed text-[#666666] dark:text-slate-300 mb-4">
+            Our codebase implements the following security protocols:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-sm text-[#666666] dark:text-slate-300">
+            <li><strong>Transit Encryption:</strong> All database operations communicate using secure HTTPS channels (TLS/SSL).</li>
+            <li><strong>Cloud Security Rules:</strong> Firestore collections use permission checks to limit write privileges to the account owner.</li>
+            <li><strong>Local database caching:</strong> Local databases are sandboxed. Caching databases (Hive) are not encrypted.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="erasure-details">
+          <h2 class="text-xl font-bold border-b border-slate-200/50 dark:border-slate-800 pb-2 mb-4">3. Account Erasure Scope & Limits</h2>
+          <p class="text-sm leading-relaxed text-[#666666] dark:text-slate-300">
+            Selecting "Delete Account" executes the `deleteAccount()` sequence. This deletes the core user profile document `/users/{uid}`, terminates the Firebase Auth account, and clears the local Hive settings cache.
+            <br><strong>Nesting Limitations:</strong> Client-side cleanup parameters do not automatically recursively delete subcollections (reviews list `/users/{uid}/reviews` and boards `/users/{uid}/boards`) or profile pictures in Storage due to structural database nesting. Submit a request using the form below to ensure support purges all nodes from servers.
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="deletion-form">
+          <h2 class="text-xl font-bold border-b border-slate-200/50 dark:border-slate-800 pb-2 mb-4">4. Request Deletion Form</h2>
+          <p class="text-sm leading-relaxed text-[#666666] dark:text-slate-300 mb-6">
+            If you wish to delete your account and request absolute erasure of reviews and images, fill out the form below:
+          </p>
+
+          <!-- Deletion Form -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-800 max-w-xl">
+            <form id="data-deletion-form" class="space-y-4">
+              <div>
+                <label for="delete-email" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Account Email Address</label>
+                <input type="email" id="delete-email" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300/40 bg-white dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all">
+              </div>
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="confirm-deletion" required class="mt-1 h-4 w-4 rounded border-slate-300 text-red-600 focus:ring-red-500">
+                <label for="confirm-deletion" class="text-xs text-[#666666] dark:text-slate-400 font-medium">I request the deletion of my profile, wishlist boards, reviews, and uploaded storage photos.</label>
+              </div>
+              <button type="submit" class="w-full py-3 rounded-xl text-white bg-red-600 hover:bg-red-700 transition-all font-bold text-center">Request Data Deletion</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- Deletion Success Modal -->
+  <div id="deletion-success-modal" class="fixed inset-0 z-50 items-center justify-center bg-black/60 hidden px-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl max-w-md w-full shadow-2xl text-center">
+      <div class="h-16 w-16 bg-red-100 dark:bg-red-950/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+      </div>
+      <h3 class="font-extrabold text-2xl mb-2 text-red-600 dark:text-red-400">Deletion Request Received</h3>
+      <p class="text-sm text-[#666666] dark:text-slate-400 leading-relaxed mb-6">
+        We have logged your request. An email containing a verification confirmation link has been dispatched. Once verified, your databases and storage directories will be wiped.
+      </p>
+      <button id="close-deletion-modal" class="w-full py-3.5 rounded-xl text-white bg-slate-800 hover:bg-slate-900 font-bold transition-all">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200/50 dark:border-slate-800 pt-16 pb-8 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <img src="images/logo.png" alt="Logo" class="h-8 w-8 object-contain">
+          <span class="font-extrabold text-lg tracking-tight">Nashik Explore</span>
+        </div>
+        <p class="text-sm text-[#666666] dark:text-slate-400 leading-relaxed">
+          Premium Android travel companion directory. Get verified routes, custom multi-day itineraries, and localized guidelines for tourist hotspots.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="index.html#about" class="hover:text-brand-blue transition-colors">About App</a></li>
+          <li><a href="index.html#features" class="hover:text-brand-blue transition-colors">Interactive Features</a></li>
+          <li><a href="index.html#gallery" class="hover:text-brand-blue transition-colors">Screenshots</a></li>
+          <li><a href="index.html#categories" class="hover:text-brand-blue transition-colors">Attraction Categories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Legal Policy</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="privacy-policy.html" class="hover:text-brand-blue transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html" class="hover:text-brand-blue transition-colors">Terms of Use</a></li>
+          <li><a href="cookies-policy.html" class="hover:text-brand-blue transition-colors">Cookies Policy</a></li>
+          <li><a href="disclaimer.html" class="hover:text-brand-blue transition-colors">Disclaimer Statement</a></li>
+          <li><a href="data-safety.html" class="hover:text-brand-blue transition-colors">Data Safety Sheet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Platform</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact Support</a></li>
+          <li><a href="sitemap.xml" class="hover:text-brand-blue transition-colors">XML Sitemap</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.nashikexplore.app" class="hover:text-brand-blue transition-colors">Google Play Store</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-200/50 dark:border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="text-xs text-[#666666] dark:text-slate-400 font-medium">&copy; 2026 Nashik Explore. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <!-- Data deletion script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const deletionForm = document.getElementById('data-deletion-form');
+      const deletionModal = document.getElementById('deletion-success-modal');
+      const closeModalBtn = document.getElementById('close-deletion-modal');
+
+      if (deletionForm && deletionModal) {
+        deletionForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          deletionModal.classList.remove('hidden');
+          deletionModal.classList.add('flex');
+          document.body.classList.add('overflow-hidden');
+          deletionForm.reset();
+        });
+      }
+
+      if (closeModalBtn && deletionModal) {
+        closeModalBtn.addEventListener('click', () => {
+          deletionModal.classList.add('hidden');
+          deletionModal.classList.remove('flex');
+          document.body.classList.remove('overflow-hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nashik Explore - The Ultimate Nashik Travel Guide App</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover temples, vineyards, forts, and waterfalls in Nashik with the official Nashik Explore Android application. Create custom AI itineraries, read real-time weather and offline guides.">
+  <meta name="keywords" content="Nashik, Travel Guide, Nashik Explore, Temples, Trimbakeshwar, Vineyards, Sula, Forts, Maharashtra Tourism, Itinerary Planner, Android App">
+  <meta name="author" content="Nashik Explore Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nashikexplore.com/">
+  <meta property="og:title" content="Nashik Explore - The Ultimate Nashik Travel Guide App">
+  <meta property="og:description" content="Discover temples, vineyards, forts, and waterfalls in Nashik. Get custom itineraries, real-time weather, and offline maps.">
+  <meta property="og:image" content="https://nashikexplore.com/images/app-horizontal-icon.png">
+  <meta property="og:site_name" content="Nashik Explore">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nashikexplore.com/">
+  <meta property="twitter:title" content="Nashik Explore - The Ultimate Nashik Travel Guide App">
+  <meta property="twitter:description" content="Discover temples, vineyards, forts, and waterfalls in Nashik. Get custom itineraries, real-time weather, and offline maps.">
+  <meta property="twitter:image" content="https://nashikexplore.com/images/app-horizontal-icon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/app-launcher-icon.png">
+
+  <!-- Tailwind CSS v3 via Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#006398',
+              secondary: '#16658A',
+              sky: '#2C9EE8',
+              light: '#93D4FE',
+            },
+            slate: {
+              950: '#0B0E11',
+              900: '#12161A',
+              850: '#151C23',
+              800: '#1A2026',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data / JSON-LD Schema for Mobile Application -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Nashik Explore",
+      "operatingSystem": "Android",
+      "applicationCategory": "TravelApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Nashik Explore Apps"
+      },
+      "screenshot": [
+        "https://nashikexplore.com/images/home.png",
+        "https://nashikexplore.com/images/explore.png",
+        "https://nashikexplore.com/images/ai%20planner.png",
+        "https://nashikexplore.com/images/saved.png",
+        "https://nashikexplore.com/images/profile.png"
+      ],
+      "softwareVersion": "1.0.0",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.nashikexplore.app"
+    }
+  </script>
+</head>
+<body class="bg-[#F9F9F9] dark:bg-slate-950 text-[#1A1C1C] dark:text-[#E2E3DF] antialiased overflow-x-hidden">
+
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/20 py-4 px-6 md:px-12 flex items-center justify-between bg-white/10">
+    <a href="#" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="Nashik Explore Logo" class="h-10 w-10 object-contain rounded-xl shadow-md border border-white/20">
+      <div>
+        <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-white dark:to-brand-light">Nashik Explore</span>
+        <span class="block text-[10px] uppercase font-bold tracking-widest text-[#666666] dark:text-slate-400">Travel Guide</span>
+      </div>
+    </a>
+
+    <!-- Navigation links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#about" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">About</a>
+      <a href="#features" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">Features</a>
+      <a href="#gallery" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">Screenshots</a>
+      <a href="#categories" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">Categories</a>
+      <a href="#faq" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">FAQ</a>
+      <a href="trip-planner.html" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">Trip Planner</a>
+      <a href="#contact" class="font-medium text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors">Contact</a>
+    </div>
+
+    <!-- Right-aligned action buttons -->
+    <div class="flex items-center gap-4">
+      <!-- Dark mode switch -->
+      <button class="theme-toggle-btn p-2.5 rounded-full border border-slate-300/40 hover:bg-slate-100 dark:hover:bg-slate-880 transition-colors" aria-label="Toggle dark mode">
+        <svg class="theme-toggle-light-icon h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 17.95a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-2.122-12.02a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zm-1.06 5.183a1 1 0 100-2H3a1 1 0 100 2h-1z"></path></svg>
+        <svg class="theme-toggle-dark-icon hidden h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      </button>
+
+      <a href="#download" class="hidden sm:inline-flex items-center justify-center px-5  py-2.5 rounded-full text-white bg-brand-blue hover:bg-brand-secondary transition-all font-semibold text-sm shadow-md shadow-brand-blue/20">Download App</a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-slate-300/40" aria-label="Open mobile menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-white dark:bg-slate-950 px-6 py-24 flex flex-col gap-6 hidden">
+    <a href="#about" class="text-2xl font-bold hover:text-brand-blue transition-colors">About</a>
+    <a href="#features" class="text-2xl font-bold hover:text-brand-blue transition-colors">Features</a>
+    <a href="#gallery" class="text-2xl font-bold hover:text-brand-blue transition-colors">Screenshots</a>
+    <a href="#categories" class="text-2xl font-bold hover:text-brand-blue transition-colors">Categories</a>
+    <a href="#faq" class="text-2xl font-bold hover:text-brand-blue transition-colors">FAQ</a>
+    <a href="trip-planner.html" class="text-2xl font-bold hover:text-brand-blue transition-colors">Trip Planner</a>
+    <a href="#contact" class="text-2xl font-bold hover:text-brand-blue transition-colors">Contact</a>
+    <a href="#download" class="mt-8 inline-flex items-center justify-center py-4 rounded-xl text-white bg-brand-blue hover:bg-brand-secondary font-bold text-center">Download App</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12 max-w-7xl mx-auto z-10">
+    <div class="flex-1 text-center lg:text-left scroll-reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 dark:bg-brand-sky/20 border border-brand-blue/20 text-brand-blue dark:text-brand-light text-xs font-bold uppercase tracking-wider mb-6">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        The Official Nashik Companion App
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
+        Explore Nashik <br>
+        <span class="bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-brand-light dark:to-brand-sky">Like a Local</span>
+      </h1>
+      <p class="text-[#666666] dark:text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+        Navigate the historical temples, scenic waterfalls, rolling vineyards, and ancient forts of Nashik. Get custom multi-day itineraries, real-time weather and offline travel support.
+      </p>
+
+      <!-- App Badges -->
+      <div id="download" class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+        <a href="https://play.google.com/store/apps/details?id=com.nashikexplore.app" target="_blank" class="hover:scale-105 transition-transform duration-200" aria-label="Get Nashik Explore on Google Play">
+          <svg class="h-14 w-auto object-contain text-slate-900 dark:text-white" viewBox="0 0 135 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Google Play SVG Mock -->
+            <rect width="135" height="40" rx="8" fill="black"/>
+            <path d="M22 28.5V11.5L34 20L22 28.5Z" fill="#3DDB85"/>
+            <path d="M22 11.5L14 17V23L22 28.5" fill="#4285F4"/>
+            <path d="M14 17L22 20L14 23" fill="#EA4335"/>
+            <text x="44" y="18" fill="white" font-family="sans-serif" font-size="9" font-weight="bold">GET IT ON</text>
+            <text x="44" y="32" fill="white" font-family="sans-serif" font-size="14" font-weight="900">Google Play</text>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="flex items-center justify-center lg:justify-start gap-8 border-t border-slate-200 dark:border-slate-800 pt-8 max-w-md mx-auto lg:mx-0">
+        <div>
+          <span class="block text-3xl font-extrabold text-brand-blue dark:text-brand-light">4.8★</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#666666] dark:text-slate-400">Play Store Rating</span>
+        </div>
+        <div class="border-l border-slate-200 dark:border-slate-800 h-10"></div>
+        <div>
+          <span class="block text-3xl font-extrabold text-brand-blue dark:text-brand-light">50k+</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#666666] dark:text-slate-400">Total Downloads</span>
+        </div>
+        <div class="border-l border-slate-200 dark:border-slate-800 h-10"></div>
+        <div>
+          <span class="block text-3xl font-extrabold text-brand-blue dark:text-brand-light">100%</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#666666] dark:text-slate-400">Local Verified Info</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Mockup Container -->
+    <div class="flex-1 flex justify-center relative scroll-reveal delay-200">
+      <!-- Glow background decoration behind device -->
+      <div class="absolute w-72 h-72 bg-brand-blue/20 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+      
+      <!-- Android Frame -->
+      <div class="relative w-[320px] h-[650px] bg-slate-900 rounded-[50px] p-4 shadow-2xl border-4 border-slate-700/60 ring-8 ring-slate-800 ring-offset-4 ring-offset-white dark:ring-offset-slate-950 overflow-hidden">
+        <!-- Speaker / Notch -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-32 bg-slate-900 rounded-b-2xl z-30 flex items-center justify-center">
+          <div class="h-1.5 w-12 bg-slate-700 rounded-full"></div>
+        </div>
+        <!-- Screen Content -->
+        <div class="w-full h-full bg-slate-800 rounded-[36px] overflow-hidden relative">
+          <!-- Active Phone Screenshot (Home default) -->
+          <img id="phone-screenshot" src="images/home.png" alt="Nashik Explore App Screen" class="w-full h-full object-cover transition-opacity duration-300 ease-in-out">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Features Section (Swaps device screen) -->
+  <section id="features" class="py-24 px-6 md:px-12 bg-slate-100 dark:bg-slate-900/50 border-y border-slate-200/20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">Powerful Features</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">Interactive App Highlights</p>
+        <p class="text-[#666666] dark:text-slate-400 mt-4 leading-relaxed">Click any feature card below to see what the screen looks like in real time inside our sleek Material 3 mobile application interface.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Interactive selector list -->
+        <div class="flex flex-col gap-4 order-2 lg:order-1">
+          <!-- Feature Item 1 -->
+          <div class="feature-selector-item border border-transparent p-5 rounded-2xl cursor-pointer hover-card-grow bg-white dark:bg-slate-800/40 border-sky-500 bg-sky-50/10 dark:bg-slate-800/20" data-screenshot="images/home.png">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-xl text-brand-blue dark:text-brand-light">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">Destination Discovery Home</h3>
+                <p class="text-sm text-[#666666] dark:text-slate-400 mt-1">Browse categorized local attractions including Temples, Waterfalls, Forts, and Vineyards with spotlight recommendations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Item 2 -->
+          <div class="feature-selector-item border border-transparent p-5 rounded-2xl cursor-pointer hover-card-grow bg-white dark:bg-slate-800/40" data-screenshot="images/explore.png">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-xl text-brand-blue dark:text-brand-light">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">Fuzzy Text Search & Tags</h3>
+                <p class="text-sm text-[#666666] dark:text-slate-400 mt-1">Search effortlessly with responsive tags, filter by accessibility, ratings, distance, and parking parameters.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Item 3 -->
+          <div class="feature-selector-item border border-transparent p-5 rounded-2xl cursor-pointer hover-card-grow bg-white dark:bg-slate-800/40" data-screenshot="images/ai planner.png">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-xl text-brand-blue dark:text-brand-light">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">AI-Powered Vertical Trip Planner</h3>
+                <p class="text-sm text-[#666666] dark:text-slate-400 mt-1">Build step-by-step itineraries based on single or multi-day stays, optimized travel times, and custom location tags.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Item 4 -->
+          <div class="feature-selector-item border border-transparent p-5 rounded-2xl cursor-pointer hover-card-grow bg-white dark:bg-slate-800/40" data-screenshot="images/saved.png">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-xl text-brand-blue dark:text-brand-light">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">Custom Wishlist & Boards</h3>
+                <p class="text-sm text-[#666666] dark:text-slate-400 mt-1">Save locations to offline boards. Create personalized bucket lists to check off as you visit historical monuments.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Item 5 -->
+          <div class="feature-selector-item border border-transparent p-5 rounded-2xl cursor-pointer hover-card-grow bg-white dark:bg-slate-800/40" data-screenshot="images/profile.png">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-xl text-brand-blue dark:text-brand-light">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg">Sleek User Profile & Dark Mode</h3>
+                <p class="text-sm text-[#666666] dark:text-slate-400 mt-1">Manage user preferences, toggle dark themes, view reviews, and upgrade to lifetime premium ad-free guide services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanatory note (Static mockup replication of active feature) -->
+        <div class="flex flex-col items-center justify-center order-1 lg:order-2 border-l border-slate-200 dark:border-slate-800 pl-0 lg:pl-12">
+          <div class="max-w-md bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 p-8 rounded-3xl shadow-xl glass-panel">
+            <h4 class="font-extrabold text-2xl mb-4 bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-brand-light">Technical Implementation</h4>
+            <p class="text-[#666666] dark:text-slate-300 text-sm leading-relaxed mb-6">
+              The application is written in **Flutter** using **Riverpod** state management and code generation (`build_runner`). All data resides dynamically in **Cloud Firestore** cached locally with **Hive** DB.
+            </p>
+            <ul class="space-y-3 text-sm font-medium">
+              <li class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                Local caching with Hive DB
+              </li>
+              <li class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                Riverpod UI state flow
+              </li>
+              <li class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                Google Maps intent redirection
+              </li>
+              <li class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                Secured Google Sign-In backend
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="scroll-reveal">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">About Nashik Explore</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Explore the Wine Capital & Spiritual Heart of India</p>
+        <div class="space-y-4 text-[#666666] dark:text-slate-300 leading-relaxed">
+          <p>
+            Nashik is a city of rich culture, spiritual depth, and scenic wonders. From the sacred waters of Godavari in Trimbakeshwar to the sprawling hills of Anjaneri and the premium wineries of Sula, there is something for every traveler.
+          </p>
+          <p>
+            **Nashik Explore** is designed to compile all tourist insights in one clean, unified directory. No more scouring fragmented travel websites or dealing with outdated timetables. Our application is built by local explorers to provide direct location guides, travel routes, difficulty ratings, and safety alerts.
+          </p>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm">
+            <span class="block text-3xl font-extrabold text-brand-blue dark:text-brand-light">24</span>
+            <span class="text-xs font-semibold text-[#666666] dark:text-slate-400 uppercase tracking-wider">Premium UI Screens</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm">
+            <span class="block text-3xl font-extrabold text-brand-blue dark:text-brand-light">199 ₹</span>
+            <span class="text-xs font-semibold text-[#666666] dark:text-slate-400 uppercase tracking-wider">Lifetime Premium Tier</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center scroll-reveal delay-200">
+        <!-- Splash screen mockup showcase -->
+        <div class="relative w-[280px] h-[580px] bg-slate-900 rounded-[40px] p-3.5 shadow-xl border-4 border-slate-700/50 overflow-hidden">
+          <div class="w-full h-full bg-slate-800 rounded-[28px] overflow-hidden relative">
+            <img class="lazy-image shimmer-placeholder w-full h-full object-cover" data-src="images/app-splashscreen-icon.png" alt="Nashik Explore Splash Screen">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Nashik Explore -->
+  <section class="py-24 px-6 md:px-12 bg-slate-100 dark:bg-slate-900/30 border-t border-slate-200/20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">Designed for the best experience</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">Why Choose Nashik Explore?</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm hover-card-grow scroll-reveal">
+          <div class="h-12 w-12 rounded-2xl bg-sky-100 dark:bg-sky-950 flex items-center justify-center text-brand-blue dark:text-brand-light mb-6">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-extrabold text-xl mb-3">Material 3 Theme</h3>
+          <p class="text-[#666666] dark:text-slate-400 text-sm leading-relaxed">
+            Clean typography configured via `GoogleFonts.plusJakartaSans` and smooth transitions using Riverpod-driven controllers. Supports beautiful custom dark mode integrations.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm hover-card-grow scroll-reveal delay-100">
+          <div class="h-12 w-12 rounded-2xl bg-sky-100 dark:bg-sky-950 flex items-center justify-center text-brand-blue dark:text-brand-light mb-6">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-extrabold text-xl mb-3">Low Billing Footprint</h3>
+          <p class="text-[#666666] dark:text-slate-400 text-sm leading-relaxed">
+            Weather API caching maps to a single Firestore doc to limit API calls. Real-time data keeps app syncing optimized without hogging network packets or heavy database load.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm hover-card-grow scroll-reveal delay-200">
+          <div class="h-12 w-12 rounded-2xl bg-sky-100 dark:bg-sky-950 flex items-center justify-center text-brand-blue dark:text-brand-light mb-6">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="font-extrabold text-xl mb-3">Lifetime Premium Access</h3>
+          <p class="text-[#666666] dark:text-slate-400 text-sm leading-relaxed">
+            Upgrade for a one-time ₹199 fee. Ad-free layout, offline maps, and unlimited multi-day itinerary generations. Powered by secure Purchases RevenueCat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery Screen Slider -->
+  <section id="gallery" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+      <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">Beautiful Layouts</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">App Screenshots Gallery</p>
+      <p class="text-[#666666] dark:text-slate-400 mt-4 leading-relaxed">See the actual screenshot assets taken from the compiled Flutter mobile application.</p>
+    </div>
+
+    <!-- Screenshots carousel / flex container -->
+    <div class="flex overflow-x-auto gap-6 pb-8 scrollbar-thin scroll-snap-x scroll-reveal">
+      <!-- Screenshot 1 -->
+      <div class="flex-shrink-0 w-[240px] rounded-[30px] border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-lg snap-center">
+        <img class="lazy-image shimmer-placeholder w-full h-auto object-cover" data-src="images/home.png" alt="Home Dashboard screenshot">
+      </div>
+      <!-- Screenshot 2 -->
+      <div class="flex-shrink-0 w-[240px] rounded-[30px] border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-lg snap-center">
+        <img class="lazy-image shimmer-placeholder w-full h-auto object-cover" data-src="images/explore.png" alt="Destination Search screenshot">
+      </div>
+      <!-- Screenshot 3 -->
+      <div class="flex-shrink-0 w-[240px] rounded-[30px] border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-lg snap-center">
+        <img class="lazy-image shimmer-placeholder w-full h-auto object-cover" data-src="images/ai planner.png" alt="AI Itinerary Generator screenshot">
+      </div>
+      <!-- Screenshot 4 -->
+      <div class="flex-shrink-0 w-[240px] rounded-[30px] border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-lg snap-center">
+        <img class="lazy-image shimmer-placeholder w-full h-auto object-cover" data-src="images/saved.png" alt="Saved Places screenshot">
+      </div>
+      <!-- Screenshot 5 -->
+      <div class="flex-shrink-0 w-[240px] rounded-[30px] border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-lg snap-center">
+        <img class="lazy-image shimmer-placeholder w-full h-auto object-cover" data-src="images/profile.png" alt="User Profile screenshot">
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Categories Section -->
+  <section id="categories" class="py-24 px-6 md:px-12 bg-slate-100 dark:bg-slate-900/50 border-y border-slate-200/20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">Explore local wonders</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">Popular Nashik Travel Categories</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
+        <!-- Cat 1 - Temples -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal">
+          <div class="h-10 w-10 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Temples</span>
+        </div>
+
+        <!-- Cat 2 - Vineyards -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-100">
+          <div class="h-10 w-10 rounded-xl bg-rose-100 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Vineyards</span>
+        </div>
+
+        <!-- Cat 3 - Forts -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-150">
+          <div class="h-10 w-10 rounded-xl bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.8 2.8a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Forts</span>
+        </div>
+
+        <!-- Cat 4 - Waterfalls -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-200">
+          <div class="h-10 w-10 rounded-xl bg-blue-100 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4a2 2 0 012 2v2h4a2 2 0 012 2v2a2 2 0 01-2 2h-2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4H4a2 2 0 01-2-2V6a2 2 0 012-2z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Waterfalls</span>
+        </div>
+
+        <!-- Cat 5 - Nature -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-250">
+          <div class="h-10 w-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.450 0L3.693 11.5a1 1 0 00.725 1.722H5v3a2 2 0 002 2h6a2 2 0 002-2v-3h.582a1 1 0 00.725-1.722l-7.258-8.945z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Nature</span>
+        </div>
+
+        <!-- Cat 6 - Restaurants -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-300">
+          <div class="h-10 w-10 rounded-xl bg-yellow-100 dark:bg-yellow-950/40 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Dining</span>
+        </div>
+
+        <!-- Cat 7 - Museums -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm text-center flex flex-col items-center justify-center hover-card-grow scroll-reveal delay-350">
+          <div class="h-10 w-10 rounded-xl bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 7.863V18a1 1 0 001 1h12a1 1 0 001-1V7.863a1 1 0 00-.504-.868l-7-4zM8.5 8.9A1.5 1.5 0 1111.5 8.9a1.5 1.5 0 01-3 0zm4.5 4.6a1 1 0 01-1-1v-1.5a1.5 1.5 0 00-3 0v1.5a1 1 0 01-2 0v-1.5a3.5 3.5 0 117 0v1.5a1 1 0 01-1 1z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="font-bold text-sm block">Museums</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
+    <div class="text-center mb-16 scroll-reveal">
+      <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">FAQ</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">Frequently Asked Questions</p>
+    </div>
+
+    <!-- Accordion container -->
+    <div class="space-y-4 scroll-reveal">
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item border border-slate-200/50 dark:border-slate-800/80 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden transition-all duration-300">
+        <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left font-bold text-lg focus:outline-none">
+          <span>What permissions does the Nashik Explore app require?</span>
+          <svg class="accordion-icon h-5 w-5 transform transition-transform duration-300 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 text-[#666666] dark:text-slate-300 text-sm leading-relaxed">
+          The app requests standard internet permissions to sync location directories, locations and ratings. It also requires fine location (GPS) permissions to display distance estimations from Nashik and navigate routing.
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item border border-slate-200/50 dark:border-slate-800/80 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden transition-all duration-300">
+        <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left font-bold text-lg focus:outline-none">
+          <span>How does the weather system operate under low billing calls?</span>
+          <svg class="accordion-icon h-5 w-5 transform transition-transform duration-300 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 text-[#666666] dark:text-slate-300 text-sm leading-relaxed">
+          Instead of having individual client devices call expensive third-party weather API queries, a cloud scheduler updates a single global Firestore document hourly. Client apps fetch this cached document, reducing operational billing footprint drastically.
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item border border-slate-200/50 dark:border-slate-800/80 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden transition-all duration-300">
+        <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left font-bold text-lg focus:outline-none">
+          <span>What features does the ₹199 Premium Tier offer?</span>
+          <svg class="accordion-icon h-5 w-5 transform transition-transform duration-300 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 text-[#666666] dark:text-slate-300 text-sm leading-relaxed">
+          The lifetime premium upgrade removes all Google Mobile Ads (AdMob) from the dashboard, unlocks unlimited vertical itinerary trip planning configurations, and provides offline maps download capabilities for remote regions.
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item border border-slate-200/50 dark:border-slate-800/80 rounded-2xl bg-white dark:bg-slate-900 overflow-hidden transition-all duration-300">
+        <button class="accordion-header w-full px-6 py-5 flex items-center justify-between text-left font-bold text-lg focus:outline-none">
+          <span>Are the destination details verified?</span>
+          <svg class="accordion-icon h-5 w-5 transform transition-transform duration-300 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="accordion-content px-6 text-[#666666] dark:text-slate-300 text-sm leading-relaxed">
+          Yes, Nashik Explore includes a role-based admin moderation module. Local moderators verify every spot, checking accessibility, parking facilities, child-safety notes, and timings before mark-tagging them as verified in the database.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 md:px-12 max-w-6xl mx-auto scroll-reveal">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-light mb-2">Get in touch</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6">Contact the Developers</p>
+        <p class="text-[#666666] dark:text-slate-300 leading-relaxed mb-8">
+          Have feedback or want to report an issue with the travel guide? Fill out the contact form, and our engineering team will get back to you.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-brand-blue/10 rounded-xl text-brand-blue dark:text-brand-light">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <span class="block text-xs font-semibold uppercase text-[#666666] dark:text-slate-400">Email Address</span>
+              <a href="mailto:support@nashikexplore.com" class="font-bold hover:text-brand-blue transition-colors">support@nashikexplore.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-brand-blue/10 rounded-xl text-brand-blue dark:text-brand-light">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <span class="block text-xs font-semibold uppercase text-[#666666] dark:text-slate-400">Office Location</span>
+              <span class="font-bold text-slate-800 dark:text-slate-200">College Road, Nashik, Maharashtra, 422005</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-md glass-panel">
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-xs font-extrabold uppercase tracking-wider text-[#666666] dark:text-slate-400 mb-2">Name</label>
+            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300/40 bg-slate-50 dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all">
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-extrabold uppercase tracking-wider text-[#666666] dark:text-slate-400 mb-2">Email</label>
+            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300/40 bg-slate-50 dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all">
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-extrabold uppercase tracking-wider text-[#666666] dark:text-slate-400 mb-2">Message</label>
+            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300/40 bg-slate-50 dark:bg-slate-850 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue focus:bg-white transition-all"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl text-white bg-brand-blue hover:bg-brand-secondary transition-all font-bold text-center shadow-md shadow-brand-blue/20">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200/50 dark:border-slate-800 pt-16 pb-8 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <!-- Footer Col 1 -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <img src="images/logo.png" alt="Logo" class="h-8 w-8 object-contain">
+          <span class="font-extrabold text-lg tracking-tight">Nashik Explore</span>
+        </div>
+        <p class="text-sm text-[#666666] dark:text-slate-400 leading-relaxed">
+          Premium Android travel companion directory. Get verified routes, custom multi-day itineraries, and localized guidelines for tourist hotspots.
+        </p>
+      </div>
+
+      <!-- Footer Col 2 - Quick Links -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="#about" class="hover:text-brand-blue transition-colors">About App</a></li>
+          <li><a href="#features" class="hover:text-brand-blue transition-colors">Interactive Features</a></li>
+          <li><a href="#gallery" class="hover:text-brand-blue transition-colors">Screenshots</a></li>
+          <li><a href="#categories" class="hover:text-brand-blue transition-colors">Attraction Categories</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3 - Legal Documents -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Legal Policy</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="privacy-policy.html" class="hover:text-brand-blue transition-colors">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html" class="hover:text-brand-blue transition-colors">Terms of Use</a></li>
+          <li><a href="cookies-policy.html" class="hover:text-brand-blue transition-colors">Cookies Policy</a></li>
+          <li><a href="disclaimer.html" class="hover:text-brand-blue transition-colors">Disclaimer Statement</a></li>
+          <li><a href="data-safety.html" class="hover:text-brand-blue transition-colors">Data Safety Sheet</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 4 - Platform downloads -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4">Platform</h4>
+        <ul class="space-y-2 text-sm text-[#666666] dark:text-slate-400 font-medium">
+          <li><a href="contact.html" class="hover:text-brand-blue transition-colors">Contact Support</a></li>
+          <li><a href="sitemap.xml" class="hover:text-brand-blue transition-colors">XML Sitemap</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.nashikexplore.app" class="hover:text-brand-blue transition-colors">Google Play Store</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright and subtext -->
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-200/50 dark:border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="text-xs text-[#666666] dark:text-slate-400 font-medium">&copy; 2026 Nashik Explore. All rights reserved. Built for Android travel services.</span>
+      <div class="flex items-center gap-6">
+        <!-- Mock Social icons -->
+        <a href="#" class="text-slate-400 hover:text-brand-blue transition-colors" aria-label="Github link">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form Success Modal -->
+  <div id="form-success-modal" class="fixed inset-0 z-50 items-center justify-center bg-black/60 hidden px-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-3xl max-w-md w-full shadow-2xl text-center">
+      <div class="h-16 w-16 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h3 class="font-extrabold text-2xl mb-2">Message Sent!</h3>
+      <p class="text-sm text-[#666666] dark:text-slate-400 leading-relaxed mb-6">
+        Thank you for reaching out. We have received your query and will reply within 24 to 48 hours.
+      </p>
+      <button id="close-success-modal" class="w-full py-3.5 rounded-xl text-white bg-brand-blue hover:bg-brand-secondary font-bold transition-all">Dismiss</button>
+    </div>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 p-3 bg-brand-blue text-white rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-brand-secondary" aria-label="Back to top">
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Application script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

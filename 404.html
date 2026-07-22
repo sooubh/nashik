@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Nashik Explore</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Oops! The page you are looking for in our Nashik travel directory cannot be found. Find your way back home.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/app-launcher-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#006398',
+              secondary: '#16658A',
+              sky: '#2C9EE8',
+              light: '#93D4FE',
+            },
+            slate: {
+              950: '#0B0E11',
+              900: '#12161A',
+              800: '#1A2026',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F9F9F9] dark:bg-slate-950 text-[#1A1C1C] dark:text-[#E2E3DF] antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/20 py-4 px-6 md:px-12 flex items-center justify-between bg-white/10">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="Nashik Explore Logo" class="h-10 w-10 object-contain rounded-xl shadow-md border border-white/20">
+      <div>
+        <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-brand-blue to-brand-sky bg-clip-text text-transparent dark:from-white dark:to-brand-light">Nashik Explore</span>
+        <span class="block text-[10px] uppercase font-bold tracking-widest text-[#666666] dark:text-slate-400">Travel Guide</span>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="font-bold text-sm text-[#1A1C1C]/80 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-light transition-colors mr-2">Home</a>
+      <button class="theme-toggle-btn p-2.5 rounded-full border border-slate-300/40 hover:bg-slate-100 dark:hover:bg-slate-850 transition-colors" aria-label="Toggle dark mode">
+        <svg class="theme-toggle-light-icon h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 17.95a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-2.122-12.02a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zm-1.06 5.183a1 1 0 100-2H3a1 1 0 100 2h-1z"></path></svg>
+        <svg class="theme-toggle-dark-icon hidden h-5 w-5 text-slate-700 dark:text-slate-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 404 Hero -->
+  <main class="pt-32 pb-16 px-6 md:px-12 flex-1 flex flex-col items-center justify-center text-center max-w-xl mx-auto">
+    <div class="p-4 bg-brand-blue/10 dark:bg-brand-sky/20 rounded-3xl border border-brand-blue/20 text-brand-blue dark:text-brand-light font-extrabold text-5xl mb-6 shadow-sm">
+      404
+    </div>
+    <h1 class="text-3xl font-extrabold mb-4 tracking-tight">Wrong Turn on the Road</h1>
+    <p class="text-[#666666] dark:text-slate-300 text-base leading-relaxed mb-8">
+      It seems like you took a wrong turn on the road to Trimbakeshwar. The page you are looking for does not exist, or has been relocated to another coordinate.
+    </p>
+    <a href="index.html" class="px-8 py-3.5 rounded-xl text-white bg-brand-blue hover:bg-brand-secondary transition-all font-bold shadow-md shadow-brand-blue/20">Go Back Home</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200/50 dark:border-slate-800 py-8 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Logo" class="h-6 w-6 object-contain">
+        <span class="font-extrabold text-sm tracking-tight">Nashik Explore</span>
+      </div>
+      <span class="text-xs text-[#666666] dark:text-slate-400 font-medium">&copy; 2026 Nashik Explore. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
