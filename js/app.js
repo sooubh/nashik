@@ -1,4 +1,4 @@
-// Nashik Explore - Application JavaScript
+// Nashik Travel Guide - Application JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- Dark Mode Handler ---
