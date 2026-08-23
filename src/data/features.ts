@@ -1,0 +1,88 @@
+import { FeatureItem } from '@/lib/types';
+
+export const featuresData: FeatureItem[] = [
+  {
+    id: 'destination-discovery',
+    title: 'Destination Discovery Home',
+    description: 'Browse categorized local attractions including Temples, Waterfalls, Forts, and Vineyards with curated spotlight recommendations.',
+    icon: 'Compass',
+    screenshot: '/images/home.png',
+    badge: 'Popular',
+    technicalDetails: [
+      'Material 3 modern UI components',
+      'Dynamic weather widget with Firestore doc caching',
+      'Top spotlight destinations carousel',
+      'Categorized quick-filters',
+    ],
+  },
+  {
+    id: 'fuzzy-search',
+    title: 'Fuzzy Text Search & Filters',
+    description: 'Search effortlessly across 100+ spots with smart responsive tags, filter by accessibility, entry fee, ratings, distance, and parking.',
+    icon: 'Search',
+    screenshot: '/images/explore.png',
+    badge: 'Real-time',
+    technicalDetails: [
+      'Instant client-side fuzzy search',
+      'Accessibility & child-safety tags',
+      'One-tap Google Maps directions intent',
+      'Verified local parking & timing badges',
+    ],
+  },
+  {
+    id: 'ai-planner',
+    title: 'AI-Powered Smart Trip Planner',
+    description: 'Build customized step-by-step multi-day itineraries with optimized transit paths, safety alerts, weather recommendations, and timing.',
+    icon: 'Calendar',
+    screenshot: '/images/ai-planner.png',
+    badge: 'Smart Engine',
+    technicalDetails: [
+      'Haversine distance calculation',
+      'Morning, afternoon & evening time slots',
+      'Custom transit hub origins',
+      'Offline plan export & Hive persistence',
+    ],
+  },
+  {
+    id: 'wishlist-boards',
+    title: 'Custom Wishlist & Saved Boards',
+    description: 'Save favorite locations to offline collections. Create personalized bucket lists to check off as you visit historical monuments and wineries.',
+    icon: 'Heart',
+    screenshot: '/images/saved.png',
+    badge: 'Offline-first',
+    technicalDetails: [
+      'Hive local persistence',
+      'Organize places by trip or category',
+      'Share saved lists with travel companions',
+      'Zero-login guest wishlist support',
+    ],
+  },
+  {
+    id: 'user-profile',
+    title: 'Sleek Profile & Dark Theme',
+    description: 'Manage preferences, toggle dark/light theme, view reviews, manage offline downloads, and upgrade to lifetime premium ad-free guide.',
+    icon: 'User',
+    screenshot: '/images/profile.png',
+    badge: 'Personalized',
+    technicalDetails: [
+      'Firebase Auth with Google Sign-In',
+      'Adaptive dark mode system sync',
+      'RevenueCat in-app purchase integration',
+      'GDPR/Play Console data deletion control',
+    ],
+  },
+  {
+    id: 'rich-details',
+    title: 'Detailed Guides & Safety Alerts',
+    description: 'Access in-depth historical background, trekking difficulty levels, monsoonal water hazard warnings, and nearby local food recommendations.',
+    icon: 'ShieldCheck',
+    screenshot: '/images/details.png',
+    badge: 'Verified',
+    technicalDetails: [
+      'Monsoon flood danger notifications',
+      'Legal 25+ age wine tasting rules',
+      'Wheelchair & senior citizen ramp info',
+      'Verified local priest / guide contacts',
+    ],
+  },
+];
