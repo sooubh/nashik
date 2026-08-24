@@ -2,9 +2,24 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use - Nashik Travel Guide',
+  title: 'Terms of Use — Nashik Travel Guide',
   description:
-    'Official Terms of Use for the Nashik Travel Guide application. Covers service guidelines, user conduct, intellectual property, in-app purchases, and disclaimer of travel liabilities.',
+    'Official Terms of Use for the Nashik Travel Guide application and services. Covers usage guidelines, ₹199 lifetime in-app purchases, trekking hazard disclaimers, and community conduct.',
+  alternates: {
+    canonical: '/terms-of-use',
+  },
+  openGraph: {
+    title: 'Terms of Use — Nashik Travel Guide',
+    description:
+      'Official Terms of Use for Nashik Travel Guide application. Conditions of use, in-app purchases, and trek safety liabilities.',
+    url: 'https://nashikexplore.com/terms-of-use',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Use — Nashik Travel Guide',
+    description:
+      'Official Terms of Use for Nashik Travel Guide application.',
+  },
 };
 
 export default function TermsOfUsePage() {

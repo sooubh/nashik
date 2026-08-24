@@ -23,14 +23,14 @@ export function QrCodeModal({ isOpen, onClose }: QrCodeModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/70 backdrop-blur-md"
+            className="fixed inset-0 bg-slate-950/75 backdrop-blur-md"
           />
 
           {/* Modal Card */}
@@ -39,16 +39,16 @@ export function QrCodeModal({ isOpen, onClose }: QrCodeModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ type: 'spring', duration: 0.4, bounce: 0.15 }}
-            className="relative w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl z-10 overflow-hidden"
+            className="relative w-full max-w-sm sm:max-w-md bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl z-10 overflow-hidden"
           >
             {/* Ambient background glow */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-brand-sky/15 dark:bg-brand-sky/10 rounded-full blur-2xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
 
-            {/* Close Button */}
+            {/* Close Button with comfortable touch target */}
             <button
               onClick={onClose}
-              className="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 p-2.5 rounded-full text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -56,20 +56,20 @@ export function QrCodeModal({ isOpen, onClose }: QrCodeModalProps) {
 
             {/* Content */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 text-brand-blue dark:text-brand-light text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 text-brand-blue dark:text-brand-light text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
                 <Smartphone className="w-3.5 h-3.5" />
                 <span>Instant Mobile Install</span>
               </div>
 
-              <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-1.5 sm:mb-2">
                 Scan to Get the App
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xs mx-auto mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xs mx-auto mb-4 sm:mb-6">
                 Point your phone camera at the QR code to open the listing directly on Google Play.
               </p>
 
               {/* QR Code Container */}
-              <div className="relative mx-auto w-56 h-56 p-4 bg-white rounded-2xl border-2 border-slate-200 dark:border-slate-700 shadow-lg flex items-center justify-center group">
+              <div className="relative mx-auto w-48 h-48 sm:w-56 sm:h-56 p-3 sm:p-4 bg-white rounded-2xl border-2 border-slate-200 dark:border-slate-700 shadow-lg flex items-center justify-center group">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <img
                     src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.nashikexplore.app&color=006398"
@@ -79,7 +79,7 @@ export function QrCodeModal({ isOpen, onClose }: QrCodeModalProps) {
                     height={200}
                   />
                   {/* Center App Icon Overlay */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white p-1 rounded-xl shadow-md border border-slate-100 flex items-center justify-center">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-white p-1 rounded-xl shadow-md border border-slate-100 flex items-center justify-center">
                     <div className="relative w-full h-full">
                       <Image
                         src="/images/logo.png"
@@ -93,41 +93,41 @@ export function QrCodeModal({ isOpen, onClose }: QrCodeModalProps) {
               </div>
 
               {/* Badges / Information */}
-              <div className="flex items-center justify-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400 font-medium">
+              <div className="flex items-center justify-center gap-2 sm:gap-4 mt-4 sm:mt-6 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium">
                 <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" /> Free Download
+                  <span className="w-2 h-2 rounded-full bg-emerald-500" /> Free
                 </span>
                 <span>•</span>
                 <span>Android 8.0+</span>
                 <span>•</span>
-                <span>v1.0 Verified</span>
+                <span>Verified</span>
               </div>
 
               {/* Actions */}
-              <div className="flex flex-col sm:flex-row items-center gap-3 mt-6">
+              <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 mt-4 sm:mt-6">
                 <a
                   href={playStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-xl bg-brand-blue hover:bg-brand-secondary text-white font-bold text-sm shadow-md shadow-brand-blue/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full py-3 px-4 rounded-xl bg-brand-blue hover:bg-brand-700 text-white font-bold text-xs sm:text-sm shadow-glow-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.98] min-h-[44px]"
                 >
                   <span>Open in Play Store</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="w-full sm:w-auto py-3 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-sm flex items-center justify-center gap-2 transition-all shrink-0"
+                  className="w-full sm:w-auto py-3 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shrink-0 min-h-[44px] cursor-pointer"
                 >
                   {copied ? (
                     <>
-                      <Check className="w-4 h-4 text-emerald-500" />
+                      <Check className="w-3.5 h-3.5 text-emerald-500" />
                       <span className="text-emerald-600 dark:text-emerald-400">Copied!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4" />
+                      <Copy className="w-3.5 h-3.5" />
                       <span>Copy Link</span>
                     </>
                   )}

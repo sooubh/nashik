@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Disallow: /api/
 
 Sitemap: https://nashikexplore.com/sitemap.xml

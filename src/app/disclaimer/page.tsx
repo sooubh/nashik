@@ -2,9 +2,24 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer Statement - Nashik Travel Guide',
+  title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
   description:
-    'Official Disclaimer Statement for Nashik Travel Guide. Essential disclosures on hiking difficulty, weather warnings, temple timings, and alcohol laws in Maharashtra.',
+    'Official Disclaimer Statement for Nashik Travel Guide. Essential disclosures on Western Ghats trekking difficulty (Harihar Fort, Anjaneri), monsoon hazards, temple dress codes, and Maharashtra alcohol laws.',
+  alternates: {
+    canonical: '/disclaimer',
+  },
+  openGraph: {
+    title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
+    description:
+      'Crucial travel and safety disclosures for exploring Nashik temples, forts, waterfalls, and wineries.',
+    url: 'https://nashikexplore.com/disclaimer',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
+    description:
+      'Crucial travel and safety disclosures for exploring Nashik.',
+  },
 };
 
 export default function DisclaimerPage() {
@@ -34,7 +49,7 @@ export default function DisclaimerPage() {
 
       <section id="hiking-safety" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          2. Trekking & Mountain Safety Warnings
+          2. Trekking &amp; Mountain Safety Warnings
         </h2>
         <div className="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 rounded-2xl text-amber-900 dark:text-amber-200 text-xs leading-relaxed space-y-2">
           <p className="font-bold">⚠️ CRITICAL TREK SAFETY NOTICE:</p>
@@ -49,7 +64,7 @@ export default function DisclaimerPage() {
 
       <section id="temple-timing-rules" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          3. Temple Dress Codes & Timings
+          3. Temple Dress Codes &amp; Timings
         </h2>
         <p>
           Spiritual centers including the Trimbakeshwar Shiva Temple and Kalaram Temple enforce traditional dress codes for Garbhagriha / inner sanctum entry (dhoti/kurta for men, saree/salwar for women). VIP darshan passes and special pooja bookings are governed strictly by the Trimbakeshwar Sansthan Trust.
@@ -58,7 +73,7 @@ export default function DisclaimerPage() {
 
       <section id="alcohol-regulations" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          4. Wine Tasting & Maharashtra Drinking Laws
+          4. Wine Tasting &amp; Maharashtra Drinking Laws
         </h2>
         <p>
           Under Maharashtra state excise regulations, the legal age for purchasing and consuming wine and alcoholic beverages is <strong>25 years and older</strong>. Wineries including Sula Vineyards and York Winery enforce photo ID verification before admitting guests to tasting rooms.
@@ -67,7 +82,7 @@ export default function DisclaimerPage() {
 
       <section id="maps-gps-accuracy" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          5. GPS Coordinates & Route Precision
+          5. GPS Coordinates &amp; Route Precision
         </h2>
         <p>
           Estimated distances and driving times use the mathematical Haversine algorithm and standard Google Maps API routes. Real-time conditions including ghat road closures, festival processions (e.g. Kumbh Mela or Ram Navami), and monsoon landslides may alter transit times.

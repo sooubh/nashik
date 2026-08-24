@@ -11,26 +11,26 @@ export function DownloadCta() {
 
   return (
     <>
-      <section id="download" className="py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <section id="download" className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-[36px] bg-gradient-to-br from-brand-900 via-slate-900 to-slate-950 text-white p-8 sm:p-12 lg:p-16 border border-brand-800/40 shadow-2xl overflow-hidden text-center lg:text-left"
+          className="relative rounded-[32px] sm:rounded-[36px] bg-gradient-to-br from-brand-900 via-slate-900 to-slate-950 text-white p-6 sm:p-10 md:p-12 lg:p-16 border border-brand-800/40 shadow-2xl overflow-hidden text-center lg:text-left"
         >
           {/* Ambient Glows */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-blue/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-80 sm:w-96 h-80 sm:h-96 bg-brand-blue/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-80 sm:w-96 h-80 sm:h-96 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-            <div className="lg:col-span-8 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-brand-light text-xs font-bold uppercase tracking-wider">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+            <div className="lg:col-span-8 space-y-4 sm:space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-brand-light text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                 <Smartphone className="w-3.5 h-3.5" />
                 <span>Available for Android 8.0+</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                 Ready to Explore Nashik Like a Local?
               </h2>
 
@@ -38,46 +38,46 @@ export function DownloadCta() {
                 Download the official Nashik Travel Guide Android application today. Access verified temple timings, vineyard tasting guides, Sahyadri hiking coordinates, and custom offline itineraries.
               </p>
 
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1 sm:pt-2 max-w-md mx-auto lg:mx-0">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-7 py-3.5 rounded-2xl bg-brand-blue hover:bg-brand-500 text-white font-extrabold text-sm shadow-glow-md hover:scale-105 active:scale-95 transition-all"
+                  className="inline-flex items-center justify-center gap-3 px-6 sm:px-7 py-3.5 rounded-2xl bg-brand-blue hover:bg-brand-500 text-white font-extrabold text-sm shadow-glow-md hover:scale-105 active:scale-95 transition-all min-h-[48px]"
                 >
                   <Download className="w-4 h-4" />
-                  <span>Get it on Google Play</span>
+                  <span>Get on Google Play</span>
                 </a>
 
                 <button
                   type="button"
                   onClick={() => setIsQrModalOpen(true)}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm transition-all hover:scale-105 active:scale-95"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm transition-all hover:scale-105 active:scale-95 min-h-[48px]"
                 >
                   <QrCode className="w-4 h-4 text-brand-300" />
                   <span>Scan QR Code</span>
                 </button>
               </div>
 
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 text-xs text-slate-300">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-4 pt-3 sm:pt-4 text-xs text-slate-300">
                 <div className="flex items-center gap-1 text-amber-400">
                   <Star className="w-4 h-4 fill-amber-400" />
-                  <span className="font-bold text-white">4.8 Play Store</span>
+                  <span className="font-bold text-white">4.8 Rating</span>
                 </div>
                 <span>•</span>
                 <div className="flex items-center gap-1 text-emerald-400">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>100% Verified Offline</span>
+                  <span>100% Offline Ready</span>
                 </div>
                 <span>•</span>
-                <span>50k+ Active Travelers</span>
+                <span>50k+ Explorers</span>
               </div>
             </div>
 
             {/* Live QR Code Box */}
             <div className="lg:col-span-4 flex justify-center">
-              <div className="relative p-6 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl flex flex-col items-center justify-center text-center max-w-xs w-full">
-                <div className="relative w-40 h-40 bg-white p-2.5 rounded-2xl shadow-inner mb-3 flex items-center justify-center">
+              <div className="relative p-5 sm:p-6 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl flex flex-col items-center justify-center text-center max-w-[260px] sm:max-w-xs w-full">
+                <div className="relative w-36 h-36 sm:w-40 sm:h-40 bg-white p-2 sm:p-2.5 rounded-2xl shadow-inner mb-3 flex items-center justify-center">
                   <img
                     src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.nashikexplore.app&color=0066FF"
                     alt="Scan to download Nashik Travel Guide"

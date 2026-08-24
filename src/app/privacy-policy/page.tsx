@@ -2,9 +2,24 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Nashik Travel Guide',
+  title: 'Privacy Policy — Nashik Travel Guide',
   description:
-    'Official Privacy Policy for the Nashik Travel Guide Android application. Details regarding data collection, device permissions, Hive storage, Firebase authentication, and user data rights.',
+    'Official Privacy Policy for the Nashik Travel Guide Android application and website. Complete transparency regarding data collection, GPS location usage, Firebase Google Sign-In, on-device Hive storage, and account deletion procedures.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
+  openGraph: {
+    title: 'Privacy Policy — Nashik Travel Guide',
+    description:
+      'Official Privacy Policy for the Nashik Travel Guide Android app. Transparent disclosures on data processing, Hive offline database, and user data rights.',
+    url: 'https://nashikexplore.com/privacy-policy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy — Nashik Travel Guide',
+    description:
+      'Official Privacy Policy for the Nashik Travel Guide Android app. Transparent disclosures on data processing and privacy rights.',
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -63,8 +78,8 @@ export default function PrivacyPolicyPage() {
         <p>
           Under Google Play Console developer guidelines, here are the permissions requested in our manifest:
         </p>
-        <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-xl my-4">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-xl my-4">
+          <table className="w-full text-left text-xs min-w-[500px]">
             <thead className="bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
               <tr>
                 <th className="p-3 font-bold">Android Permission</th>
@@ -74,17 +89,17 @@ export default function PrivacyPolicyPage() {
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr>
-                <td className="p-3 font-mono">ACCESS_FINE_LOCATION</td>
+                <td className="p-3 font-mono text-[11px]">ACCESS_FINE_LOCATION</td>
                 <td className="p-3">Calculates accurate Haversine distances to temples, forts, and wineries.</td>
                 <td className="p-3 text-amber-600 font-semibold">Optional (Runtime)</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono">INTERNET</td>
+                <td className="p-3 font-mono text-[11px]">INTERNET</td>
                 <td className="p-3">Fetches cached weather records and latest verified spot directories.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Required</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono">ACCESS_NETWORK_STATE</td>
+                <td className="p-3 font-mono text-[11px]">ACCESS_NETWORK_STATE</td>
                 <td className="p-3">Detects connectivity to switch automatically to offline Hive storage mode.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Required</td>
               </tr>

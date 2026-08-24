@@ -2,9 +2,24 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Cookies & Local Storage Policy - Nashik Travel Guide',
+  title: 'Cookies & Storage Policy — Nashik Travel Guide',
   description:
-    'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details on localStorage, Hive caching, Google Analytics, and AdMob tracking.',
+    'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details regarding localStorage, Hive NoSQL caching, Google Analytics, and AdMob advertising tokens.',
+  alternates: {
+    canonical: '/cookies-policy',
+  },
+  openGraph: {
+    title: 'Cookies & Storage Policy — Nashik Travel Guide',
+    description:
+      'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details on localStorage and Hive storage.',
+    url: 'https://nashikexplore.com/cookies-policy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cookies & Storage Policy — Nashik Travel Guide',
+    description:
+      'Official Cookies & Local Storage Policy for Nashik Travel Guide.',
+  },
 };
 
 export default function CookiesPolicyPage() {
@@ -24,7 +39,7 @@ export default function CookiesPolicyPage() {
     >
       <section id="what-are-cookies" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          1. What Are Cookies & Local Storage?
+          1. What Are Cookies &amp; Local Storage?
         </h2>
         <p>
           Cookies and local storage tokens are small text files or key-value pairs stored on your device when you visit a website or use a mobile application. They help apps remember user preferences, maintain session state, and operate seamlessly offline.
@@ -47,7 +62,7 @@ export default function CookiesPolicyPage() {
 
       <section id="third-party-cookies" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          3. Third-Party Ad & Analytics Tokens
+          3. Third-Party Ad &amp; Analytics Tokens
         </h2>
         <p>
           On the free version of our Android app, Google AdMob may use device advertising identifiers (such as the Google Advertising ID / GAID) to deliver relevant travel ads. Upgrading to the Lifetime Premium tier immediately disables all AdMob integrations.

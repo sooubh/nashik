@@ -2,6 +2,7 @@ import React from 'react';
 import { Hero } from '@/components/Hero';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { FeatureShowcase } from '@/components/FeatureShowcase';
+import { TripPlannerShowcase } from '@/components/TripPlannerShowcase';
 import { CategoriesSection } from '@/components/CategoriesSection';
 import { ScreenshotGallery } from '@/components/ScreenshotGallery';
 import { StatsSection } from '@/components/StatsSection';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Hero />
       <WhyChooseUs />
       <FeatureShowcase />
+      <TripPlannerShowcase />
       <CategoriesSection />
       <ScreenshotGallery />
       <StatsSection />

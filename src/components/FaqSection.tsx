@@ -13,21 +13,40 @@ export function FaqSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqData.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
-      <div className="text-center mb-16">
+    <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      <div className="text-center mb-12 sm:mb-16">
         <span className="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-400 mb-2 block">
           Help & Support
         </span>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Frequently Asked Questions
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-4 text-base leading-relaxed">
-          Quick answers regarding offline capability, permissions, updates, and premium pricing.
+        <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
+          Quick answers regarding offline capability, permissions, account creation, updates, and premium pricing.
         </p>
       </div>
 
-      <div className="space-y-3.5">
+      <div className="space-y-3 sm:space-y-3.5">
         {faqData.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (
@@ -47,15 +66,15 @@ export function FaqSection() {
               <button
                 onClick={() => toggleAccordion(idx)}
                 type="button"
-                className="w-full px-6 py-4.5 flex items-center justify-between text-left focus:outline-none gap-4"
+                className="w-full px-4 sm:px-6 py-3.5 sm:py-4.5 flex items-center justify-between text-left focus:outline-none gap-3 sm:gap-4 cursor-pointer min-h-[48px]"
                 aria-expanded={isOpen}
               >
-                <span className="font-bold text-sm sm:text-base text-slate-900 dark:text-slate-100">
+                <span className="font-bold text-xs sm:text-base text-slate-900 dark:text-slate-100">
                   {item.question}
                 </span>
                 <div
                   className={cn(
-                    'p-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 transition-transform duration-300 shrink-0',
+                    'p-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 transition-transform duration-300 shrink-0',
                     isOpen && 'rotate-180 bg-brand-50 text-brand-blue dark:bg-brand-950 dark:text-brand-400'
                   )}
                 >
@@ -71,7 +90,7 @@ export function FaqSection() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.25, ease: 'easeInOut' }}
                   >
-                    <div className="px-6 pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3.5">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-3 sm:pt-3.5">
                       {item.answer}
                     </div>
                   </motion.div>

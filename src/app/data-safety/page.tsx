@@ -3,9 +3,24 @@ import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { ShieldCheck, Lock, CheckCircle, Database } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Data Safety Sheet - Nashik Travel Guide',
+  title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
   description:
     'Official Google Play Console Data Safety declaration for Nashik Travel Guide. Complete transparency on data collected, encryption in transit, on-device Hive storage, and deletion mechanisms.',
+  alternates: {
+    canonical: '/data-safety',
+  },
+  openGraph: {
+    title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
+    description:
+      'Official Google Play Console Data Safety declaration for the Nashik Travel Guide Android application.',
+    url: 'https://nashikexplore.com/data-safety',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
+    description:
+      'Official Google Play Console Data Safety declaration for the Nashik Travel Guide Android application.',
+  },
 };
 
 export default function DataSafetyPage() {
@@ -31,7 +46,7 @@ export default function DataSafetyPage() {
           We declare full compliance with Google Play&apos;s User Data policy. The table below represents our exact disclosures submitted in the Google Play Console:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 my-4">
           <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800/80">
             <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mb-2" />
             <span className="font-extrabold text-sm text-slate-900 dark:text-white block">Encrypted in Transit</span>
@@ -54,10 +69,10 @@ export default function DataSafetyPage() {
 
       <section id="data-table" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          2. Data Types & Verification Table
+          2. Data Types &amp; Verification Table
         </h2>
-        <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-xl my-4">
-          <table className="w-full text-left text-xs">
+        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-xl my-4">
+          <table className="w-full text-left text-xs min-w-[520px]">
             <thead className="bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
               <tr>
                 <th className="p-3 font-bold">Data Type</th>
@@ -68,13 +83,13 @@ export default function DataSafetyPage() {
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr>
-                <td className="p-3 font-bold">Approximate & Precise Location</td>
+                <td className="p-3 font-bold">Approximate &amp; Precise Location</td>
                 <td className="p-3">Collected on-device (Not shared)</td>
                 <td className="p-3">Calculates proximity distance to temples, forts, waterfalls.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Yes (Can be denied)</td>
               </tr>
               <tr>
-                <td className="p-3 font-bold">Name & Email Address</td>
+                <td className="p-3 font-bold">Name &amp; Email Address</td>
                 <td className="p-3">Collected (Firebase Auth)</td>
                 <td className="p-3">Account sign-in, saving wishlists across devices.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Yes (Guest mode supported)</td>
@@ -82,13 +97,13 @@ export default function DataSafetyPage() {
               <tr>
                 <td className="p-3 font-bold">Purchase History</td>
                 <td className="p-3">Processed via RevenueCat / Google Play</td>
-                <td className="p-3">Lifetime Premium upgrade verification & ad removal.</td>
+                <td className="p-3">Lifetime Premium upgrade verification &amp; ad removal.</td>
                 <td className="p-3 text-slate-500 font-semibold">Only upon purchase</td>
               </tr>
               <tr>
-                <td className="p-3 font-bold">Crash Logs & Diagnostics</td>
+                <td className="p-3 font-bold">Crash Logs &amp; Diagnostics</td>
                 <td className="p-3">Collected (Firebase Crashlytics)</td>
-                <td className="p-3">App performance monitoring & bug fixing.</td>
+                <td className="p-3">App performance monitoring &amp; bug fixing.</td>
                 <td className="p-3 text-slate-500 font-semibold">Automatic (Anonymized)</td>
               </tr>
             </tbody>
@@ -98,7 +113,7 @@ export default function DataSafetyPage() {
 
       <section id="encryption-security" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          3. Security & Encryption Standards
+          3. Security &amp; Encryption Standards
         </h2>
         <p>
           All communications between your device and Google Cloud Firestore servers occur over encrypted HTTPS / TLS 1.3 channels. User preferences and wishlist boards stored on-device are protected by Android Sandbox security.
@@ -107,7 +122,7 @@ export default function DataSafetyPage() {
 
       <section id="erasure-process" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          4. Account & Data Deletion Mechanisms
+          4. Account &amp; Data Deletion Mechanisms
         </h2>
         <p>
           In accordance with Google Play&apos;s Account Deletion Requirement, users can delete their entire account and associated data through two methods:
