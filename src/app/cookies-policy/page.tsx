@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Cookies & Storage Policy — Nashik Travel Guide',
     description:
       'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details on localStorage and Hive storage.',
-    url: 'https://nashikexplore.com/cookies-policy',
+    url: 'https://nashik.sooubh.me/cookies-policy',
   },
   twitter: {
     card: 'summary_large_image',

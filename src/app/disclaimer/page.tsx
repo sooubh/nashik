@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
     description:
       'Crucial travel and safety disclosures for exploring Nashik temples, forts, waterfalls, and wineries.',
-    url: 'https://nashikexplore.com/disclaimer',
+    url: 'https://nashik.sooubh.me/disclaimer',
   },
   twitter: {
     card: 'summary_large_image',

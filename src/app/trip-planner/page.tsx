@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'AI Smart Itinerary Planner — Nashik Travel Guide',
     description:
       'Generate optimized multi-day travel itineraries for Nashik with Haversine distance calculations, weather recommendations, and verified trekking warnings.',
-    url: 'https://nashikexplore.com/trip-planner',
+    url: 'https://nashik.sooubh.me/trip-planner',
     images: ['/images/ai-planner.png'],
   },
   twitter: {

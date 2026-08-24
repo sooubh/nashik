@@ -1,49 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nashikexplore.com/</loc>
+    <loc>https://nashik.sooubh.me/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/trip-planner</loc>
+    <loc>https://nashik.sooubh.me/trip-planner</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/contact</loc>
+    <loc>https://nashik.sooubh.me/contact</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nashik.sooubh.me/delete-account</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nashik.sooubh.me/data-safety</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/data-safety</loc>
+    <loc>https://nashik.sooubh.me/privacy-policy</loc>
     <lastmod>2026-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/privacy-policy</loc>
+    <loc>https://nashik.sooubh.me/terms-of-use</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/terms-of-use</loc>
+    <loc>https://nashik.sooubh.me/cookies-policy</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nashikexplore.com/cookies-policy</loc>
-    <lastmod>2026-08-24</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://nashikexplore.com/disclaimer</loc>
+    <loc>https://nashik.sooubh.me/disclaimer</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

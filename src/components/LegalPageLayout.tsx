@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Shield, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Shield, ChevronDown, Trash2 } from 'lucide-react';
 
 export interface TocItem {
   id: string;
@@ -24,6 +24,7 @@ export function LegalPageLayout({
 }: LegalPageLayoutProps) {
   const legalLinks = [
     { title: 'Privacy Policy', href: '/privacy-policy' },
+    { title: 'Delete Account', href: '/delete-account' },
     { title: 'Terms of Use', href: '/terms-of-use' },
     { title: 'Data Safety Sheet', href: '/data-safety' },
     { title: 'Cookies Policy', href: '/cookies-policy' },
@@ -101,7 +102,11 @@ export function LegalPageLayout({
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-brand-blue dark:hover:text-brand-light transition-colors py-1 block"
+                    className={`hover:text-brand-blue dark:hover:text-brand-light transition-colors py-1 block ${
+                      link.href === '/delete-account'
+                        ? 'text-rose-600 dark:text-rose-400 font-semibold'
+                        : ''
+                    }`}
                   >
                     {link.title}
                   </Link>

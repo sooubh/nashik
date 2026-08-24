@@ -1,47 +1,43 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { BackToTop } from '@/components/BackToTop';
+import './globals.css';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-plus-jakarta-sans',
   display: 'swap',
+  variable: '--font-plus-jakarta-sans',
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nashikexplore.com'),
+  metadataBase: new URL('https://nashik.sooubh.me'),
   title: {
     default: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
     template: '%s | Nashik Travel Guide',
   },
   description:
-    'Discover ancient Jyotirlinga temples in Trimbakeshwar, world-famous Sula vineyards, Sahyadri waterfall trails, and historic forts with the official Nashik Travel Guide Android app. Featuring on-device AI itineraries, real-time weather, and 100% offline Hive storage.',
-  keywords: [
-    'Nashik',
-    'Nashik Travel Guide',
-    'Nashik Tourism App',
-    'Trimbakeshwar Shiva Temple',
-    'Sula Vineyards Nashik',
-    'Harihar Fort Trek',
-    'Anjaneri Hills',
-    'Dugarwadi Waterfall',
-    'Someshwar Waterfall',
-    'Pandavleni Caves',
-    'Maharashtra Tourism',
-    'AI Trip Planner Nashik',
-    'Android Travel App Nashik',
-    'Offline Travel Guide',
-  ],
+    'The official travel companion for Nashik, Maharashtra. Explore Trimbakeshwar Jyotirlinga, Sula Vineyards, Sahyadri hiking trails, waterfalls, and offline transit maps. Download the verified Android app.',
+  applicationName: 'Nashik Travel Guide',
   authors: [{ name: 'Nashik Travel Guide Team' }],
+  generator: 'Next.js',
+  keywords: [
+    'Nashik travel guide',
+    'Nashik android app',
+    'Trimbakeshwar temple timings',
+    'Sula Vineyards tour',
+    'Harihar Fort trek',
+    'Anjaneri hill guide',
+    'Dugarwadi waterfall',
+    'Nashik offline travel maps',
+    'Maharashtra tourism',
+    'Kumbh Mela Nashik',
+    'AI Nashik itinerary planner',
+  ],
+  referrer: 'origin-when-cross-origin',
   creator: 'Nashik Travel Guide',
-  publisher: 'Nashik Travel Guide Apps',
-  alternates: {
-    canonical: '/',
-  },
+  publisher: 'Nashik Travel Guide',
   robots: {
     index: true,
     follow: true,
@@ -53,34 +49,48 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://nashikexplore.com/',
+    locale: 'en_IN',
+    url: 'https://nashik.sooubh.me/',
     siteName: 'Nashik Travel Guide',
     title: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
     description:
-      'The premier travel companion for Nashik, Maharashtra. Explore temples, vineyards, forts, AI itineraries, and verified offline guides.',
+      'Explore Trimbakeshwar, Sula Vineyards, Sahyadri waterfalls, and offline travel maps with the verified Android app.',
     images: [
       {
         url: '/images/app-horizontal-icon.png',
         width: 1200,
         height: 630,
-        alt: 'Nashik Travel Guide Android Application',
+        alt: 'Nashik Travel Guide Android App Preview',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashik Travel Guide — Official Android App',
+    title: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
     description:
-      'The premier travel companion for Nashik, Maharashtra. Temples, Vineyards, Forts, AI Trip Planner, and Offline travel support.',
+      'Explore Trimbakeshwar, Sula Vineyards, Sahyadri waterfalls, and offline travel maps with the verified Android app.',
     images: ['/images/app-horizontal-icon.png'],
   },
   icons: {
-    icon: '/images/app-launcher-icon.png',
-    apple: '/images/app-launcher-icon.png',
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FAFCFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#060A12' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -93,9 +103,9 @@ export default function RootLayout({
     '@graph': [
       {
         '@type': 'MobileApplication',
-        '@id': 'https://nashikexplore.com/#app',
+        '@id': 'https://nashik.sooubh.me/#app',
         name: 'Nashik Travel Guide',
-        operatingSystem: 'Android 8.0 and up',
+        operatingSystem: 'Android 8.0+',
         applicationCategory: 'TravelApplication',
         offers: {
           '@type': 'Offer',
@@ -109,43 +119,42 @@ export default function RootLayout({
           bestRating: '5',
           worstRating: '1',
         },
-        author: {
-          '@type': 'Organization',
-          name: 'Nashik Travel Guide Apps',
-          url: 'https://nashikexplore.com',
-        },
+        downloadUrl:
+          'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
+        installUrl:
+          'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
+        url: 'https://nashik.sooubh.me',
+        image: '/images/app-splashscreen-icon.png',
         screenshot: [
-          'https://nashikexplore.com/images/home.png',
-          'https://nashikexplore.com/images/explore.png',
-          'https://nashikexplore.com/images/ai-planner.png',
-          'https://nashikexplore.com/images/saved.png',
-          'https://nashikexplore.com/images/profile.png',
-          'https://nashikexplore.com/images/details.png',
+          'https://nashik.sooubh.me/images/home.png',
+          'https://nashik.sooubh.me/images/explore.png',
+          'https://nashik.sooubh.me/images/ai-planner.png',
+          'https://nashik.sooubh.me/images/saved.png',
+          'https://nashik.sooubh.me/images/profile.png',
+          'https://nashik.sooubh.me/images/details.png',
         ],
-        softwareVersion: '1.0.0',
-        downloadUrl: 'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
-        installUrl: 'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
         featureList: [
-          'Material 3 modern UI design',
-          '100% offline Hive database storage',
-          'On-device AI multi-day trip planner',
-          'GPS Haversine distance calculations',
-          'Verified trekking safety & monsoon cautions',
-          'Google Maps direct directions integration',
+          '100% Offline Database with Hive',
+          'AI Smart Itinerary Planner with Haversine Routing',
+          'Material 3 Dynamic Color Theming',
+          'Monsoon and Trekking Hazard Caution Warnings',
+          'Verified Google Maps Coordinates',
+          'Curated Vineyards, Forts, Temples, and Waterfalls',
         ],
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://nashikexplore.com/#website',
-        url: 'https://nashikexplore.com/',
+        '@id': 'https://nashik.sooubh.me/#website',
+        url: 'https://nashik.sooubh.me/',
         name: 'Nashik Travel Guide',
-        description: 'Official portal and travel companion for Nashik, Maharashtra.',
+        description:
+          'Official website and travel directory companion for Nashik, Maharashtra.',
         publisher: {
           '@type': 'Organization',
-          name: 'Nashik Travel Guide Apps',
+          name: 'Nashik Travel Guide',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://nashikexplore.com/images/logo.png',
+            url: 'https://nashik.sooubh.me/images/logo.png',
           },
         },
       },
@@ -153,29 +162,25 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`scroll-smooth ${plusJakartaSans.variable}`}>
+    <html lang="en" className={plusJakartaSans.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-[#FAFCFF] dark:bg-[#060A12] text-slate-900 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand-sky/25">
-        {/* Skip to Content for Accessibility */}
+      <body className="font-sans antialiased min-h-screen flex flex-col selection:bg-brand-blue selection:text-white">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-brand-blue text-white rounded-xl shadow-lg font-bold text-xs"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-xl focus:shadow-lg focus:outline-none text-xs font-bold"
         >
           Skip to main content
         </a>
-
-        <div className="glow-orb-blue top-0 right-1/4" />
-        <div className="glow-orb-blue top-96 left-10 opacity-60" />
-
         <Navbar />
-        <main id="main-content" className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
-        <BackToTop />
       </body>
     </html>
   );

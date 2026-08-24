@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy — Nashik Travel Guide',
     description:
       'Official Privacy Policy for the Nashik Travel Guide Android app. Transparent disclosures on data processing, Hive offline database, and user data rights.',
-    url: 'https://nashikexplore.com/privacy-policy',
+    url: 'https://nashik.sooubh.me/privacy-policy',
   },
   twitter: {
     card: 'summary_large_image',
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
 
       <section id="storage-security" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          4. Data Storage & Hive Caching
+          4. Data Storage &amp; Hive Caching
         </h2>
         <p>
           Our application operates with an offline-first architecture. All destination listings, curated trails, and user custom wishlists are serialized and cached in encrypted on-device Hive databases. Remote requests to Cloud Firestore are encrypted via Transport Layer Security (TLS 1.3).
@@ -133,10 +133,10 @@ export default function PrivacyPolicyPage() {
 
       <section id="deletion-process" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          6. Account Deletion & Data Rights
+          6. Account Deletion &amp; Data Rights
         </h2>
         <p>
-          You have full authority over your data. You may request complete erasure of your user profile, saved boards, and reviews at any time by navigating to <em>Settings &gt; Privacy &gt; Delete Account</em> inside the app or submitting a request via our Contact Helpdesk.
+          You have full authority over your data. You may request complete erasure of your user profile, saved wishlists, and reviews at any time through our <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Dedicated Account Deletion Portal</a>, navigating to <em>Settings &gt; Privacy &gt; Delete Account</em> inside the app, or contacting our support team.
         </p>
       </section>
 
@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
 
       <section id="contact-dpo" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          8. Contact & Policy Updates
+          8. Contact &amp; Policy Updates
         </h2>
         <p>
           We may update this policy periodically to reflect new features or regulatory requirements. For questions regarding our privacy practices, contact us at:

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nashikexplore.com';
+  const baseUrl = 'https://nashik.sooubh.me';
   const lastModified = new Date();
 
   return [
@@ -21,7 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/contact`,
       lastModified,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/delete-account`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/data-safety`,
@@ -33,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/privacy-policy`,
       lastModified,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/terms-of-use`,

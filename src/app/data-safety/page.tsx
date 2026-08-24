@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
     description:
       'Official Google Play Console Data Safety declaration for the Nashik Travel Guide Android application.',
-    url: 'https://nashikexplore.com/data-safety',
+    url: 'https://nashik.sooubh.me/data-safety',
   },
   twitter: {
     card: 'summary_large_image',
@@ -129,7 +129,7 @@ export default function DataSafetyPage() {
         </p>
         <ol className="list-decimal pl-5 space-y-1.5">
           <li><strong>Inside the App:</strong> Open <em>Profile &gt; Settings &gt; Security &gt; Delete Account</em> to permanently erase all Firestore user records and local Hive caches immediately.</li>
-          <li><strong>Via Web Helpdesk:</strong> Submit a data deletion request using our <a href="/contact" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Contact Form</a> or email <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> with your account email. Deletion is executed within 48 business hours.</li>
+          <li><strong>Via Web Portal:</strong> Submit a deletion request on our dedicated <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Account Deletion Page</a> or email <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> with your account email. Deletion is executed within 48 business hours.</li>
         </ol>
       </section>
     </LegalPageLayout>

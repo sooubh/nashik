@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://nashikexplore.com/sitemap.xml',
+    sitemap: 'https://nashik.sooubh.me/sitemap.xml',
   };
 }

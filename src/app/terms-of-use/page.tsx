@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Terms of Use — Nashik Travel Guide',
     description:
       'Official Terms of Use for Nashik Travel Guide application. Conditions of use, in-app purchases, and trek safety liabilities.',
-    url: 'https://nashikexplore.com/terms-of-use',
+    url: 'https://nashik.sooubh.me/terms-of-use',
   },
   twitter: {
     card: 'summary_large_image',
@@ -51,7 +51,7 @@ export default function TermsOfUsePage() {
 
       <section id="app-license" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          2. License & Permitted Use
+          2. License &amp; Permitted Use
         </h2>
         <p>
           Nashik Travel Guide grants you a limited, non-exclusive, non-transferable, and revocable license to access the guide for personal, non-commercial travel planning purposes. You agree not to scrape, reverse-engineer, or redistribute database records without prior written consent.
@@ -60,7 +60,7 @@ export default function TermsOfUsePage() {
 
       <section id="purchases-refunds" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          3. Lifetime Tier & In-App Purchases
+          3. Lifetime Tier &amp; In-App Purchases
         </h2>
         <p>
           The ₹199 Lifetime Premium upgrade is a one-time purchase managed through the Google Play Store and RevenueCat. It permanently removes banner ads, enables unlimited itinerary saves, and activates full offline map packages on your verified Google account.
@@ -69,7 +69,7 @@ export default function TermsOfUsePage() {
 
       <section id="hiking-liabilities" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          4. Trekking & Travel Risk Disclaimers
+          4. Trekking &amp; Travel Risk Disclaimers
         </h2>
         <p>
           Nashik and the surrounding Western Ghats feature intense topography, seasonal heavy monsoons, and steep rock staircases (including Harihar Fort and Anjaneri). All routes, times, and caution warnings are provided for general reference only.
@@ -81,7 +81,7 @@ export default function TermsOfUsePage() {
 
       <section id="user-reviews" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          5. User Conduct & Reviews
+          5. User Conduct &amp; Reviews
         </h2>
         <p>
           Users may submit ratings, tips, and comments. Submissions must not contain abusive, defamatory, discriminatory, or unlawful content. We reserve the right to moderate, edit, or delete any submission that violates community guidelines.
@@ -99,7 +99,7 @@ export default function TermsOfUsePage() {
 
       <section id="modifications" className="space-y-3">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
-          7. Governing Law & Amendments
+          7. Governing Law &amp; Amendments
         </h2>
         <p>
           These Terms are governed by the laws of Maharashtra, India. Any disputes arising out of the application or website shall be subject to the exclusive jurisdiction of the courts located in Nashik, Maharashtra.

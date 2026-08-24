@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Download, Mail, MapPin, ExternalLink, ShieldCheck, UserCheck } from 'lucide-react';
+import { Download, Mail, MapPin, ExternalLink, ShieldCheck, UserCheck, Trash2 } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -107,6 +107,12 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/delete-account" className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors font-semibold text-rose-600 dark:text-rose-400 py-1 flex items-center gap-1.5">
+                <Trash2 className="w-3 h-3" />
+                <span>Delete Account</span>
+              </Link>
+            </li>
+            <li>
               <Link href="/terms-of-use" className="hover:text-brand-blue dark:hover:text-brand-400 transition-colors py-1 block">
                 Terms of Use
               </Link>
@@ -174,6 +180,10 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500 dark:text-slate-400 font-medium">
           <Link href="/privacy-policy" className="hover:underline py-1">
             Privacy Policy
+          </Link>
+          <span>•</span>
+          <Link href="/delete-account" className="hover:underline py-1 text-rose-600 dark:text-rose-400">
+            Delete Account
           </Link>
           <span>•</span>
           <Link href="/terms-of-use" className="hover:underline py-1">
