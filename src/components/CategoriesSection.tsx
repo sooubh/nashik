@@ -40,12 +40,12 @@ export function CategoriesSection() {
   };
 
   return (
-    <section id="categories" className="py-16 sm:py-24 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
-      <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span className="text-xs uppercase font-extrabold tracking-widest text-brand-blue dark:text-brand-400 mb-2 block">
+    <section id="categories" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+        <span className="text-xs uppercase font-bold tracking-widest text-brand-blue dark:text-brand-400 mb-2 block">
           Curated Spot Collections
         </span>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Explore Nashik by Category
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
@@ -57,47 +57,43 @@ export function CategoriesSection() {
         {categoriesData.map((cat, idx) => (
           <motion.div
             key={cat.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: idx * 0.05 }}
-            className="p-5 sm:p-6 rounded-3xl glass-card shadow-soft-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+            transition={{ duration: 0.5, delay: idx * 0.06, ease: 'easeOut' }}
+            className="p-5 sm:p-7 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white dark:bg-slate-900/80 shadow-card dark:shadow-card-dark hover:shadow-card-hover dark:hover:shadow-card-dark-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div
                   className={cn(
-                    'p-2.5 sm:p-3 rounded-2xl transition-transform group-hover:scale-110 duration-200 shrink-0',
-                    cat.colorClass.bg,
-                    cat.colorClass.text,
-                    cat.colorClass.darkBg,
-                    cat.colorClass.darkText
+                    'p-3 rounded-xl transition-transform group-hover:scale-105 duration-200 shrink-0 bg-brand-50 dark:bg-brand-900/30 text-brand-blue dark:text-brand-400'
                   )}
                 >
                   {getCategoryIcon(cat.iconName)}
                 </div>
-                <span className="text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                   {cat.count} spots
                 </span>
               </div>
 
-              <h3 className="font-extrabold text-base text-slate-900 dark:text-slate-100 mb-1.5">
+              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">
                 {cat.name}
               </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                 {cat.description}
               </p>
             </div>
 
-            <div className="pt-3.5 border-t border-slate-100 dark:border-slate-800/80">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
+            <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-3">
                 Highlights
               </span>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-2">
                 {cat.sampleSpots.map((spot) => (
                   <span
                     key={spot}
-                    className="text-[10px] sm:text-[11px] font-medium px-2 py-0.5 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-slate-700/50"
+                    className="text-xs font-medium px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 border border-slate-100 dark:border-slate-700/50"
                   >
                     {spot}
                   </span>

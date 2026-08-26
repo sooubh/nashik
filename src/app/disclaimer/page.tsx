@@ -39,7 +39,7 @@ export default function DisclaimerPage() {
       toc={toc}
     >
       <section id="general-information" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           1. General Information Purpose
         </h2>
         <p>
@@ -48,10 +48,10 @@ export default function DisclaimerPage() {
       </section>
 
       <section id="hiking-safety" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           2. Trekking &amp; Mountain Safety Warnings
         </h2>
-        <div className="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 rounded-2xl text-amber-900 dark:text-amber-200 text-xs leading-relaxed space-y-2">
+        <div className="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 rounded-2xl text-amber-900 dark:text-amber-200 text-sm leading-relaxed space-y-2">
           <p className="font-bold">⚠️ CRITICAL TREK SAFETY NOTICE:</p>
           <p>
             Treks like Harihar Fort (80-degree vertical stone steps), Anjaneri, and Brahmagiri involve steep precipices and high physical exertion. During the monsoon season (June to September), heavy fog, mossy rock steps, and flash floods at Dugarwadi Waterfall pose severe risks.
@@ -63,7 +63,7 @@ export default function DisclaimerPage() {
       </section>
 
       <section id="temple-timing-rules" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           3. Temple Dress Codes &amp; Timings
         </h2>
         <p>
@@ -72,7 +72,7 @@ export default function DisclaimerPage() {
       </section>
 
       <section id="alcohol-regulations" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           4. Wine Tasting &amp; Maharashtra Drinking Laws
         </h2>
         <p>
@@ -81,7 +81,7 @@ export default function DisclaimerPage() {
       </section>
 
       <section id="maps-gps-accuracy" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           5. GPS Coordinates &amp; Route Precision
         </h2>
         <p>

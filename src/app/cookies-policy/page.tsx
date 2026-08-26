@@ -38,7 +38,7 @@ export default function CookiesPolicyPage() {
       toc={toc}
     >
       <section id="what-are-cookies" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           1. What Are Cookies &amp; Local Storage?
         </h2>
         <p>
@@ -47,7 +47,7 @@ export default function CookiesPolicyPage() {
       </section>
 
       <section id="how-we-use" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           2. How We Use Local Storage
         </h2>
         <p>
@@ -61,7 +61,7 @@ export default function CookiesPolicyPage() {
       </section>
 
       <section id="third-party-cookies" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           3. Third-Party Ad &amp; Analytics Tokens
         </h2>
         <p>
@@ -70,7 +70,7 @@ export default function CookiesPolicyPage() {
       </section>
 
       <section id="managing-preferences" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           4. Managing Storage Preferences
         </h2>
         <p>

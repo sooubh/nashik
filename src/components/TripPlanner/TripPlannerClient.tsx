@@ -114,7 +114,7 @@ export function TripPlannerClient() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
       {/* Left Column: Preferences Configuration Panel */}
-      <div className="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-8 rounded-3xl shadow-soft-sm flex flex-col gap-5 sm:gap-6">
+      <div className="lg:col-span-5 bg-white dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 p-5 sm:p-8 rounded-2xl shadow-card flex flex-col gap-5 sm:gap-6">
         <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
           <div>
             <h2 className="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">
@@ -298,16 +298,10 @@ export function TripPlannerClient() {
         </button>
       </div>
 
-      {/* Right Column: Phone Mockup Emulator */}
+      {/* Right Column: Interactive App Emulator */}
       <div className="lg:col-span-7 flex justify-center w-full">
-        <div className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] aspect-[9/19] bg-slate-950 rounded-[44px] sm:rounded-[50px] p-2.5 sm:p-3.5 shadow-2xl border-4 border-slate-800 ring-4 sm:ring-8 ring-slate-900/30 overflow-hidden flex flex-col">
-          {/* Phone Shell Inner */}
-          <div className="w-full h-full bg-[#F8FAFC] dark:bg-slate-950 rounded-[34px] sm:rounded-[38px] overflow-hidden flex flex-col relative text-slate-900 dark:text-slate-100 shadow-inner">
-            {/* Dynamic Island / Notch */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-4 sm:h-5 bg-black rounded-full z-40 flex items-center justify-end px-3">
-              <span className="h-1.5 sm:h-2 w-1.5 sm:w-2 rounded-full bg-slate-900" />
-            </div>
-
+        <div className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] aspect-[9/19] bg-white dark:bg-slate-900/80 rounded-2xl p-0 shadow-card border border-slate-200/60 dark:border-slate-800/60 overflow-hidden flex flex-col screenshot-card">
+          <div className="w-full h-full bg-surface-50 dark:bg-slate-950 overflow-hidden flex flex-col relative text-slate-900 dark:text-slate-100">
             {/* Status Bar */}
             <div className="h-9 sm:h-10 pt-1.5 sm:pt-2 px-4 sm:px-6 flex items-center justify-between text-[10px] sm:text-[11px] font-extrabold tracking-wide text-slate-800 dark:text-slate-200 z-30 shrink-0">
               <span>{currentTime}</span>
@@ -494,10 +488,6 @@ export function TripPlannerClient() {
               )}
             </div>
 
-            {/* Bottom Home Indicator bar */}
-            <div className="h-4 sm:h-5 flex items-center justify-center pb-1.5 sm:pb-2 z-30 shrink-0">
-              <span className="w-24 sm:w-28 h-1 bg-slate-800 dark:bg-slate-200 rounded-full" />
-            </div>
           </div>
         </div>
       </div>

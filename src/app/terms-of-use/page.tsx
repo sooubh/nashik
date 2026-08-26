@@ -41,7 +41,7 @@ export default function TermsOfUsePage() {
       toc={toc}
     >
       <section id="acceptance" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           1. Acceptance of Terms
         </h2>
         <p>
@@ -50,7 +50,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="app-license" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           2. License &amp; Permitted Use
         </h2>
         <p>
@@ -59,7 +59,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="purchases-refunds" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           3. Lifetime Tier &amp; In-App Purchases
         </h2>
         <p>
@@ -68,7 +68,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="hiking-liabilities" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           4. Trekking &amp; Travel Risk Disclaimers
         </h2>
         <p>
@@ -80,7 +80,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="user-reviews" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           5. User Conduct &amp; Reviews
         </h2>
         <p>
@@ -89,7 +89,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="intellectual-property" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           6. Intellectual Property
         </h2>
         <p>
@@ -98,7 +98,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="modifications" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           7. Governing Law &amp; Amendments
         </h2>
         <p>

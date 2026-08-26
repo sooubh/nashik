@@ -39,7 +39,7 @@ export default function DataSafetyPage() {
       toc={toc}
     >
       <section id="google-play-disclosures" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           1. Google Play Data Safety Declarations
         </h2>
         <p>
@@ -50,29 +50,29 @@ export default function DataSafetyPage() {
           <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-800/80">
             <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mb-2" />
             <span className="font-extrabold text-sm text-slate-900 dark:text-white block">Encrypted in Transit</span>
-            <span className="text-[11px] text-slate-600 dark:text-slate-400">All network traffic uses TLS 1.3 protocol.</span>
+            <span className="text-xs text-slate-600 dark:text-slate-400">All network traffic uses TLS 1.3 protocol.</span>
           </div>
 
           <div className="p-4 rounded-2xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200/80 dark:border-brand-800/80">
             <Lock className="w-5 h-5 text-brand-blue dark:text-brand-light mb-2" />
             <span className="font-extrabold text-sm text-slate-900 dark:text-white block">No Data Sold</span>
-            <span className="text-[11px] text-slate-600 dark:text-slate-400">We never sell personal data to data brokers.</span>
+            <span className="text-xs text-slate-600 dark:text-slate-400">We never sell personal data to data brokers.</span>
           </div>
 
           <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/80">
             <CheckCircle className="w-5 h-5 text-amber-600 dark:text-amber-400 mb-2" />
             <span className="font-extrabold text-sm text-slate-900 dark:text-white block">User Deletion Rights</span>
-            <span className="text-[11px] text-slate-600 dark:text-slate-400">Instant in-app and web account deletion.</span>
+            <span className="text-xs text-slate-600 dark:text-slate-400">Instant in-app and web account deletion.</span>
           </div>
         </div>
       </section>
 
       <section id="data-table" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           2. Data Types &amp; Verification Table
         </h2>
-        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-xl my-4">
-          <table className="w-full text-left text-xs min-w-[520px]">
+        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-2xl my-4">
+          <table className="w-full text-left text-sm min-w-[520px]">
             <thead className="bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
               <tr>
                 <th className="p-3 font-bold">Data Type</th>
@@ -112,7 +112,7 @@ export default function DataSafetyPage() {
       </section>
 
       <section id="encryption-security" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           3. Security &amp; Encryption Standards
         </h2>
         <p>
@@ -121,7 +121,7 @@ export default function DataSafetyPage() {
       </section>
 
       <section id="erasure-process" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           4. Account &amp; Data Deletion Mechanisms
         </h2>
         <p>
@@ -129,7 +129,7 @@ export default function DataSafetyPage() {
         </p>
         <ol className="list-decimal pl-5 space-y-1.5">
           <li><strong>Inside the App:</strong> Open <em>Profile &gt; Settings &gt; Security &gt; Delete Account</em> to permanently erase all Firestore user records and local Hive caches immediately.</li>
-          <li><strong>Via Web Portal:</strong> Submit a deletion request on our dedicated <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Account Deletion Page</a> or email <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> with your account email. Deletion is executed within 48 business hours.</li>
+          <li><strong>Via Web Portal:</strong> Submit a deletion request on our dedicated <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Account Deletion Page</a> or email <code className="text-sm bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> with your account email. Deletion is executed within 48 business hours.</li>
         </ol>
       </section>
     </LegalPageLayout>

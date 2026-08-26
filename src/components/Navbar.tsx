@@ -63,34 +63,34 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-3 sm:px-6 md:px-8',
+          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-4 sm:px-6 md:px-8',
           isScrolled
-            ? 'py-2.5 sm:py-3 bg-white/90 dark:bg-[#060A12]/90 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 shadow-soft-sm'
-            : 'py-3.5 sm:py-5 bg-transparent'
+            ? 'py-3 sm:py-4 glass-nav shadow-soft-sm'
+            : 'py-4 sm:py-6 bg-transparent'
         )}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Brand Logo & Name */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none shrink-0"
+            className="flex items-center gap-3 group focus:outline-none shrink-0"
             aria-label="Nashik Travel Guide Home"
           >
-            <div className="relative h-9 w-9 sm:h-10 sm:w-10 rounded-xl overflow-hidden shadow-soft-sm border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 group-hover:scale-105 transition-transform flex items-center justify-center p-1.5 shrink-0">
+            <div className="relative h-10 w-10 sm:h-12 sm:w-12 rounded-2xl overflow-hidden shadow-soft-sm border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 transition-transform group-hover:-translate-y-1 flex items-center justify-center p-2 shrink-0">
               <Image
                 src="/images/logo.png"
                 alt="Nashik Travel Guide Logo"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="object-contain"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold text-sm sm:text-base md:text-lg tracking-tight text-slate-900 dark:text-white leading-tight">
+              <span className="font-extrabold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 dark:text-white leading-tight">
                 Nashik<span className="text-brand-blue dark:text-brand-400">Guide</span>
               </span>
-              <span className="block text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-slate-500 dark:text-slate-400 leading-none mt-0.5">
+              <span className="block text-[10px] sm:text-xs uppercase font-bold tracking-widest text-slate-500 dark:text-slate-400 leading-none mt-1">
                 Official App
               </span>
             </div>
@@ -98,7 +98,7 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden lg:flex items-center gap-6 xl:gap-7 px-6 py-2 rounded-full glass-card shadow-soft-sm border border-slate-200/70 dark:border-slate-800/70"
+            className="hidden lg:flex items-center gap-6 xl:gap-8 px-8 py-3 rounded-2xl glass-card shadow-soft-sm"
             aria-label="Main Navigation"
           >
             {navLinks.map((link) => {
@@ -109,15 +109,15 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={cn(
-                    'text-xs font-bold transition-all py-1 flex items-center gap-1.5',
+                    'text-sm font-bold transition-all py-1.5 flex items-center gap-2',
                     isActive
                       ? 'text-brand-blue dark:text-brand-400 font-extrabold'
                       : isPlanner
-                      ? 'text-brand-blue dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-200'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-brand-blue dark:hover:text-brand-400'
+                      ? 'text-brand-blue dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-200 hover:-translate-y-0.5'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-brand-blue dark:hover:text-brand-400 hover:-translate-y-0.5'
                   )}
                 >
-                  {isPlanner && <Sparkles className="w-3 h-3 text-brand-sky animate-pulse" />}
+                  {isPlanner && <Sparkles className="w-4 h-4 text-brand-blue animate-pulse" />}
                   <span>{link.label}</span>
                 </Link>
               );
@@ -125,15 +125,15 @@ export function Navbar() {
           </nav>
 
           {/* Right Action buttons */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* QR Code trigger button */}
             <button
               type="button"
               onClick={() => setIsQrModalOpen(true)}
-              className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-full border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:text-brand-blue dark:hover:text-brand-400 hover:border-brand-300 text-xs font-bold transition-all shadow-soft-sm active:scale-95"
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:text-brand-blue dark:hover:text-brand-400 hover:border-brand-300 text-sm font-bold transition-all shadow-soft-sm active:scale-[0.97] min-h-[44px]"
               title="Scan QR Code to install app"
             >
-              <QrCode className="w-3.5 h-3.5 text-brand-blue" />
+              <QrCode className="w-4 h-4 text-brand-blue" />
               <span>QR Code</span>
             </button>
 
@@ -144,9 +144,9 @@ export function Navbar() {
               href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-full text-white bg-brand-blue hover:bg-brand-700 transition-all font-bold text-xs shadow-glow-sm hover:scale-105 active:scale-95 shrink-0"
+              className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-white bg-brand-blue hover:bg-brand-700 transition-all font-bold text-sm shadow-glow-sm active:scale-[0.97] shrink-0 min-h-[44px]"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-4 h-4" />
               <span>Get App</span>
             </a>
 
@@ -154,7 +154,7 @@ export function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               type="button"
-              className="lg:hidden p-2 sm:p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[40px] min-w-[40px] flex items-center justify-center"
+              className="lg:hidden p-2.5 rounded-xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-all min-h-[44px] min-w-[44px] flex items-center justify-center active:scale-[0.97]"
               aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isMobileMenuOpen}
             >
@@ -165,26 +165,26 @@ export function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[56px] sm:top-[65px] z-40 bg-white/98 dark:bg-[#060A12]/98 backdrop-blur-2xl px-5 py-6 flex flex-col justify-between overflow-y-auto animate-in fade-in duration-200 border-t border-slate-200 dark:border-slate-800 h-[calc(100dvh-56px)] sm:h-[calc(100dvh-65px)]">
-            <div className="flex flex-col gap-1">
+          <div className="lg:hidden fixed inset-0 top-[72px] sm:top-[88px] z-40 bg-surface-50/98 dark:bg-surface-900/98 backdrop-blur-2xl px-6 py-8 flex flex-col justify-between overflow-y-auto animate-in fade-in duration-200 border-t border-slate-200 dark:border-slate-800 h-[calc(100dvh-72px)] sm:h-[calc(100dvh-88px)]">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    'text-sm sm:text-base font-bold py-3 px-4 rounded-2xl transition-colors flex items-center justify-between min-h-[46px]',
+                    'text-base sm:text-lg font-bold py-4 px-5 rounded-2xl transition-colors flex items-center justify-between min-h-[44px]',
                     link.href === pathname
-                      ? 'bg-brand-50 text-brand-blue dark:bg-brand-950/60 dark:text-brand-400 font-extrabold'
-                      : 'text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 active:bg-slate-200 dark:active:bg-slate-800'
+                      ? 'bg-brand-50 text-brand-blue dark:bg-brand-900/40 dark:text-brand-400 font-extrabold'
+                      : 'text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 active:bg-slate-200 dark:active:bg-slate-700'
                   )}
                 >
-                  <span className="flex items-center gap-2.5">
-                    {link.label === 'AI Planner' && <Sparkles className="w-4 h-4 text-brand-blue" />}
+                  <span className="flex items-center gap-3">
+                    {link.label === 'AI Planner' && <Sparkles className="w-5 h-5 text-brand-blue" />}
                     {link.label}
                   </span>
                   {link.label === 'AI Planner' && (
-                    <span className="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded-md bg-brand-blue text-white">
+                    <span className="text-xs uppercase font-extrabold px-3 py-1 rounded-lg bg-brand-blue text-white shadow-glow-sm">
                       Interactive
                     </span>
                   )}
@@ -192,14 +192,14 @@ export function Navbar() {
               ))}
             </div>
 
-            <div className="pt-5 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col gap-3 shrink-0 pb-4">
+            <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col gap-4 shrink-0 pb-6 mt-6">
               <a
                 href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-2xl text-white bg-brand-blue hover:bg-brand-700 font-bold text-sm text-center flex items-center justify-center gap-2 shadow-glow-sm active:scale-[0.98]"
+                className="w-full py-4 rounded-xl text-white bg-brand-blue hover:bg-brand-700 font-bold text-base text-center flex items-center justify-center gap-2 shadow-glow-sm active:scale-[0.97] min-h-[44px]"
               >
-                <Download className="w-4 h-4" />
+                <Download className="w-5 h-5" />
                 <span>Download on Google Play</span>
               </a>
 
@@ -209,9 +209,9 @@ export function Navbar() {
                   setIsMobileMenuOpen(false);
                   setIsQrModalOpen(true);
                 }}
-                className="w-full py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-bold text-xs text-center flex items-center justify-center gap-2 shadow-soft-sm active:scale-[0.98]"
+                className="w-full py-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-bold text-base text-center flex items-center justify-center gap-2 shadow-soft-sm active:scale-[0.97] hover:border-brand-300 dark:hover:border-brand-700 min-h-[44px]"
               >
-                <QrCode className="w-3.5 h-3.5 text-brand-blue" />
+                <QrCode className="w-5 h-5 text-brand-blue" />
                 <span>Show QR Code</span>
               </button>
             </div>

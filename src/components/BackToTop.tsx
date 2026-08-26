@@ -15,7 +15,7 @@ export function BackToTop() {
         setIsVisible(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -31,10 +31,10 @@ export function BackToTop() {
       onClick={scrollToTop}
       type="button"
       className={cn(
-        'fixed bottom-6 right-6 z-40 p-3 rounded-full bg-brand-blue text-white shadow-xl shadow-brand-blue/30 transition-all duration-300 hover:bg-brand-secondary hover:scale-110 active:scale-95 focus:outline-none',
+        'fixed bottom-6 right-6 z-40 p-3 rounded-xl bg-brand-blue text-white shadow-soft-md ring-2 ring-brand-blue/20 transition-all duration-300 hover:bg-brand-700 hover:-translate-y-1 active:scale-[0.97] focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center',
         isVisible
-          ? 'opacity-100 translate-y-0 pointer-events-auto'
-          : 'opacity-0 translate-y-6 pointer-events-none'
+          ? 'opacity-100 pointer-events-auto'
+          : 'opacity-0 pointer-events-none'
       )}
       aria-label="Scroll back to top"
       title="Back to top"

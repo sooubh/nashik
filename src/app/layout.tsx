@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { BackToTop } from '@/components/BackToTop';
 import './globals.css';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-plus-jakarta-sans',
+  variable: '--font-dm-sans',
   weight: ['300', '400', '500', '600', '700', '800'],
 });
 
@@ -85,8 +86,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAFCFF' },
-    { media: '(prefers-color-scheme: dark)', color: '#060A12' },
+    { media: '(prefers-color-scheme: light)', color: '#FAFBFE' },
+    { media: '(prefers-color-scheme: dark)', color: '#080B12' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -162,14 +163,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={plusJakartaSans.variable} suppressHydrationWarning>
+    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col selection:bg-brand-blue selection:text-white">
+      <body className="font-sans antialiased min-h-screen flex flex-col selection:bg-brand-blue/20 selection:text-brand-blue dark:selection:bg-brand-400/20 dark:selection:text-brand-300">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-xl focus:shadow-lg focus:outline-none text-xs font-bold"
@@ -181,6 +182,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

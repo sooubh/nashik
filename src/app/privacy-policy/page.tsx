@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
       toc={toc}
     >
       <section id="data-collection" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           1. Data We Collect
         </h2>
         <p>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="uncollected-data" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           2. Data We Do Not Collect
         </h2>
         <p>
@@ -72,14 +72,14 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="permissions" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           3. Device Permissions Disclosures
         </h2>
         <p>
           Under Google Play Console developer guidelines, here are the permissions requested in our manifest:
         </p>
-        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-xl my-4">
-          <table className="w-full text-left text-xs min-w-[500px]">
+        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-2xl my-4">
+          <table className="w-full text-left text-sm min-w-[500px]">
             <thead className="bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
               <tr>
                 <th className="p-3 font-bold">Android Permission</th>
@@ -89,17 +89,17 @@ export default function PrivacyPolicyPage() {
             </thead>
             <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               <tr>
-                <td className="p-3 font-mono text-[11px]">ACCESS_FINE_LOCATION</td>
+                <td className="p-3 font-mono text-xs">ACCESS_FINE_LOCATION</td>
                 <td className="p-3">Calculates accurate Haversine distances to temples, forts, and wineries.</td>
                 <td className="p-3 text-amber-600 font-semibold">Optional (Runtime)</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-[11px]">INTERNET</td>
+                <td className="p-3 font-mono text-xs">INTERNET</td>
                 <td className="p-3">Fetches cached weather records and latest verified spot directories.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Required</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-[11px]">ACCESS_NETWORK_STATE</td>
+                <td className="p-3 font-mono text-xs">ACCESS_NETWORK_STATE</td>
                 <td className="p-3">Detects connectivity to switch automatically to offline Hive storage mode.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Required</td>
               </tr>
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="storage-security" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           4. Data Storage &amp; Hive Caching
         </h2>
         <p>
@@ -118,7 +118,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="third-parties" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           5. Third-Party Networks
         </h2>
         <p>
@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="deletion-process" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           6. Account Deletion &amp; Data Rights
         </h2>
         <p>
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="children-privacy" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           7. Children&apos;s Privacy
         </h2>
         <p>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="contact-dpo" className="space-y-3">
-        <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
           8. Contact &amp; Policy Updates
         </h2>
         <p>
