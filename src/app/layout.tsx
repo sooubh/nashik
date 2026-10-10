@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { DM_Sans } from 'next/font/google';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { BackToTop } from '@/components/BackToTop';
 import './globals.css';
 
 const dmSans = DM_Sans({
@@ -15,30 +14,26 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://nashik.sooubh.me'),
   title: {
-    default: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
-    template: '%s | Nashik Travel Guide',
+    default: 'NashikExplore — Discover Places Around Nashik',
+    template: '%s | NashikExplore',
   },
   description:
-    'The official travel companion for Nashik, Maharashtra. Explore Trimbakeshwar Jyotirlinga, Sula Vineyards, Sahyadri hiking trails, waterfalls, and offline transit maps. Download the verified Android app.',
-  applicationName: 'Nashik Travel Guide',
-  authors: [{ name: 'Nashik Travel Guide Team' }],
+    'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore. Get the app on Google Play.',
+  applicationName: 'NashikExplore',
+  authors: [{ name: 'NashikExplore' }],
   generator: 'Next.js',
   keywords: [
     'Nashik travel guide',
     'Nashik android app',
-    'Trimbakeshwar temple timings',
-    'Sula Vineyards tour',
-    'Harihar Fort trek',
-    'Anjaneri hill guide',
-    'Dugarwadi waterfall',
-    'Nashik offline travel maps',
-    'Maharashtra tourism',
-    'Kumbh Mela Nashik',
-    'AI Nashik itinerary planner',
+    'Trimbakeshwar',
+    'Sula Vineyards',
+    'Harihar Fort',
+    'Nashik places to visit',
+    'Nashik trip planner',
   ],
   referrer: 'origin-when-cross-origin',
-  creator: 'Nashik Travel Guide',
-  publisher: 'Nashik Travel Guide',
+  creator: 'NashikExplore',
+  publisher: 'NashikExplore',
   robots: {
     index: true,
     follow: true,
@@ -57,30 +52,30 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://nashik.sooubh.me/',
-    siteName: 'Nashik Travel Guide',
-    title: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
+    siteName: 'NashikExplore',
+    title: 'NashikExplore — Discover Places Around Nashik',
     description:
-      'Explore Trimbakeshwar, Sula Vineyards, Sahyadri waterfalls, and offline travel maps with the verified Android app.',
+      'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore.',
     images: [
       {
         url: '/images/app-horizontal-icon.png',
         width: 1200,
         height: 630,
-        alt: 'Nashik Travel Guide Android App Preview',
+        alt: 'NashikExplore Android App Preview',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashik Travel Guide — Official Android App for Exploring Nashik',
+    title: 'NashikExplore — Discover Places Around Nashik',
     description:
-      'Explore Trimbakeshwar, Sula Vineyards, Sahyadri waterfalls, and offline travel maps with the verified Android app.',
+      'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore.',
     images: ['/images/app-horizontal-icon.png'],
   },
   icons: {
-    icon: '/images/logo.png',
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 };
 
@@ -105,21 +100,9 @@ export default function RootLayout({
       {
         '@type': 'MobileApplication',
         '@id': 'https://nashik.sooubh.me/#app',
-        name: 'Nashik Travel Guide',
+        name: 'NashikExplore',
         operatingSystem: 'Android 8.0+',
         applicationCategory: 'TravelApplication',
-        offers: {
-          '@type': 'Offer',
-          price: '0',
-          priceCurrency: 'INR',
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          ratingCount: '1250',
-          bestRating: '5',
-          worstRating: '1',
-        },
         downloadUrl:
           'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
         installUrl:
@@ -135,24 +118,23 @@ export default function RootLayout({
           'https://nashik.sooubh.me/images/details.png',
         ],
         featureList: [
-          '100% Offline Database with Hive',
-          'AI Smart Itinerary Planner with Haversine Routing',
-          'Material 3 Dynamic Color Theming',
-          'Monsoon and Trekking Hazard Caution Warnings',
-          'Verified Google Maps Coordinates',
-          'Curated Vineyards, Forts, Temples, and Waterfalls',
+          'Category-based destination discovery',
+          'Multi-day itinerary planning with transit hubs',
+          'Custom saved places and wishlist boards',
+          'Distance estimates and Google Maps navigation handoff',
+          'Material 3 design with light and dark theme',
         ],
       },
       {
         '@type': 'WebSite',
         '@id': 'https://nashik.sooubh.me/#website',
         url: 'https://nashik.sooubh.me/',
-        name: 'Nashik Travel Guide',
+        name: 'NashikExplore',
         description:
-          'Official website and travel directory companion for Nashik, Maharashtra.',
+          'Official website and travel directory companion for NashikExplore.',
         publisher: {
           '@type': 'Organization',
-          name: 'Nashik Travel Guide',
+          name: 'NashikExplore',
           logo: {
             '@type': 'ImageObject',
             url: 'https://nashik.sooubh.me/images/logo.png',
@@ -182,7 +164,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <BackToTop />
       </body>
     </html>
   );

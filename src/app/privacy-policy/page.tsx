@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Nashik Travel Guide',
+  title: 'Privacy Policy — NashikExplore',
   description:
-    'Official Privacy Policy for the Nashik Travel Guide Android application and website. Complete transparency regarding data collection, GPS location usage, Firebase Google Sign-In, on-device Hive storage, and account deletion procedures.',
+    'Privacy Policy for the NashikExplore Android application and website. Information regarding data collection, device permissions, and user data rights.',
   alternates: {
     canonical: '/privacy-policy',
   },
   openGraph: {
-    title: 'Privacy Policy — Nashik Travel Guide',
+    title: 'Privacy Policy — NashikExplore',
     description:
-      'Official Privacy Policy for the Nashik Travel Guide Android app. Transparent disclosures on data processing, Hive offline database, and user data rights.',
+      'Privacy Policy for the NashikExplore Android app and website.',
     url: 'https://nashik.sooubh.me/privacy-policy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy — Nashik Travel Guide',
+    title: 'Privacy Policy — NashikExplore',
     description:
-      'Official Privacy Policy for the Nashik Travel Guide Android app. Transparent disclosures on data processing and privacy rights.',
+      'Privacy Policy for the NashikExplore Android app and website.',
   },
 };
 
@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
     { id: 'data-collection', title: 'Data We Collect' },
     { id: 'uncollected-data', title: 'Data We Do Not Collect' },
     { id: 'permissions', title: 'Device Permissions Disclosures' },
-    { id: 'storage-security', title: 'Data Storage & Hive Caching' },
+    { id: 'storage-security', title: 'Data Storage & Local Caching' },
     { id: 'third-parties', title: 'Third-Party Networks (AdMob, RevenueCat)' },
     { id: 'deletion-process', title: 'Account Deletion & Data Rights' },
     { id: 'children-privacy', title: "Children's Privacy" },
@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
               </tr>
               <tr>
                 <td className="p-3 font-mono text-xs">ACCESS_NETWORK_STATE</td>
-                <td className="p-3">Detects connectivity to switch automatically to offline Hive storage mode.</td>
+                <td className="p-3">Detects connectivity to handle online syncing and cached responses.</td>
                 <td className="p-3 text-emerald-600 font-semibold">Required</td>
               </tr>
             </tbody>
@@ -110,10 +110,10 @@ export default function PrivacyPolicyPage() {
 
       <section id="storage-security" className="space-y-3">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
-          4. Data Storage &amp; Hive Caching
+          4. Data Storage &amp; Local Caching
         </h2>
         <p>
-          Our application operates with an offline-first architecture. All destination listings, curated trails, and user custom wishlists are serialized and cached in encrypted on-device Hive databases. Remote requests to Cloud Firestore are encrypted via Transport Layer Security (TLS 1.3).
+          The application uses local device caching. Saved wishlist boards and user preferences are stored on-device using Hive, while destination information leverages standard Firestore client caching. Network transmissions to Firebase/Cloud Firestore are encrypted in transit via Transport Layer Security (TLS).
         </p>
       </section>
 
@@ -125,8 +125,8 @@ export default function PrivacyPolicyPage() {
           We partner with established infrastructure providers:
         </p>
         <ul className="list-disc pl-5 space-y-1.5">
-          <li><strong>Google AdMob:</strong> Serves non-intrusive banner ads to free tier users (completely disabled upon upgrading to the ₹199 lifetime premium tier).</li>
-          <li><strong>RevenueCat:</strong> Manages subscription status, receipt verification, and entitlement tokens for lifetime premium purchases.</li>
+          <li><strong>Google AdMob:</strong> Serves non-intrusive banner ads to free tier users (disabled upon upgrading to the ad-free premium tier).</li>
+          <li><strong>RevenueCat:</strong> Manages subscription status, receipt verification, and entitlement tokens for in-app purchases.</li>
           <li><strong>Google Maps Platform:</strong> Powers map redirection and location visualizers.</li>
         </ul>
       </section>

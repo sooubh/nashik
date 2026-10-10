@@ -28,7 +28,7 @@ export default function NotFound() {
           className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-300 dark:hover:border-brand-700 font-bold text-sm transition-all shadow-soft-sm min-h-[44px]"
         >
           <Compass className="w-4 h-4 text-brand-blue dark:text-brand-400" />
-          <span>Try AI Planner</span>
+          <span>Trip Planner</span>
         </Link>
       </div>
     </div>

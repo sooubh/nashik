@@ -3,23 +3,23 @@ import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { ShieldCheck, Lock, CheckCircle, Database } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
+  title: 'Data Safety — NashikExplore',
   description:
-    'Official Google Play Console Data Safety declaration for Nashik Travel Guide. Complete transparency on data collected, encryption in transit, on-device Hive storage, and deletion mechanisms.',
+    'Data Safety details for NashikExplore. Information on data collected, security practices, and deletion mechanisms.',
   alternates: {
     canonical: '/data-safety',
   },
   openGraph: {
-    title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
+    title: 'Data Safety — NashikExplore',
     description:
-      'Official Google Play Console Data Safety declaration for the Nashik Travel Guide Android application.',
+      'Data Safety details for the NashikExplore Android application.',
     url: 'https://nashik.sooubh.me/data-safety',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Google Play Data Safety Sheet — Nashik Travel Guide',
+    title: 'Data Safety — NashikExplore',
     description:
-      'Official Google Play Console Data Safety declaration for the Nashik Travel Guide Android application.',
+      'Data Safety details for the NashikExplore Android application.',
   },
 };
 
@@ -62,7 +62,7 @@ export default function DataSafetyPage() {
           <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/80">
             <CheckCircle className="w-5 h-5 text-amber-600 dark:text-amber-400 mb-2" />
             <span className="font-extrabold text-sm text-slate-900 dark:text-white block">User Deletion Rights</span>
-            <span className="text-xs text-slate-600 dark:text-slate-400">Instant in-app and web account deletion.</span>
+            <span className="text-xs text-slate-600 dark:text-slate-400">In-app account deletion and email request support.</span>
           </div>
         </div>
       </section>
@@ -128,8 +128,8 @@ export default function DataSafetyPage() {
           In accordance with Google Play&apos;s Account Deletion Requirement, users can delete their entire account and associated data through two methods:
         </p>
         <ol className="list-decimal pl-5 space-y-1.5">
-          <li><strong>Inside the App:</strong> Open <em>Profile &gt; Settings &gt; Security &gt; Delete Account</em> to permanently erase all Firestore user records and local Hive caches immediately.</li>
-          <li><strong>Via Web Portal:</strong> Submit a deletion request on our dedicated <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Account Deletion Page</a> or email <code className="text-sm bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> with your account email. Deletion is executed within 48 business hours.</li>
+          <li><strong>Inside the App:</strong> Open <em>Profile &gt; Settings &gt; Privacy &amp; Security &gt; Delete Account</em> to delete your Firebase authentication user and Firestore profile records.</li>
+          <li><strong>Via Email Request:</strong> Submit an email request via our dedicated <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Account Deletion Page</a> or email <code className="text-sm bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> from your registered email address. Requests are verified and processed upon confirmation.</li>
         </ol>
       </section>
     </LegalPageLayout>

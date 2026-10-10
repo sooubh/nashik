@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { DeleteAccountClient } from '@/components/DeleteAccount/DeleteAccountClient';
 
 export const metadata: Metadata = {
-  title: 'Request Account & Data Deletion — Nashik Travel Guide',
+  title: 'Request Account & Data Deletion — NashikExplore',
   description:
-    'Official Account and Personal Data Deletion Request page for Nashik Travel Guide (com.nashikexplore.app). In compliance with Google Play Console User Data policies.',
+    'Account and Personal Data Deletion Request page for NashikExplore. Instructions for in-app deletion and email-based deletion requests.',
   alternates: {
     canonical: '/delete-account',
   },
   openGraph: {
-    title: 'Request Account & Data Deletion — Nashik Travel Guide',
+    title: 'Request Account & Data Deletion — NashikExplore',
     description:
-      'Official Google Play compliant Account and Data Deletion page for Nashik Travel Guide.',
+      'Account and Data Deletion instructions for NashikExplore.',
     url: 'https://nashik.sooubh.me/delete-account',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Request Account & Data Deletion — Nashik Travel Guide',
+    title: 'Request Account & Data Deletion — NashikExplore',
     description:
-      'Official Google Play compliant Account and Data Deletion page for Nashik Travel Guide.',
+      'Account and Data Deletion instructions for NashikExplore.',
   },
 };
 

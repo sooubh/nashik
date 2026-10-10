@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://nashik.sooubh.me';
-  const lastModified = new Date();
+  const lastModified = '2026-10-10';
 
   return [
     {

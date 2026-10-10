@@ -29,7 +29,7 @@ export function LegalPageLayout({
     { title: 'Data Safety Sheet', href: '/data-safety' },
     { title: 'Cookies Policy', href: '/cookies-policy' },
     { title: 'Disclaimer', href: '/disclaimer' },
-    { title: 'Contact Helpdesk', href: '/contact' },
+    { title: 'Contact Support', href: '/contact' },
   ];
 
   return (
@@ -46,7 +46,7 @@ export function LegalPageLayout({
 
         <div className="inline-flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-medium bg-surface-50 dark:bg-slate-900/50 px-3 py-1.5 rounded-full border border-slate-200/60 dark:border-slate-800/60">
           <Shield className="w-3.5 h-3.5 text-brand-blue dark:text-brand-400 shrink-0" />
-          <span>Official Legal Center</span>
+          <span>Policy Center</span>
         </div>
       </div>
 

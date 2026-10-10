@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, Clock, Send, CheckCircle2, ShieldCheck, ArrowLeft, HelpCircle } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, MapPin, Send, ArrowLeft, HelpCircle } from 'lucide-react';
 
 export function ContactClient() {
   const [formData, setFormData] = useState({
@@ -12,24 +11,13 @@ export function ContactClient() {
     subject: 'General Inquiry',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleOpenEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: 'General Inquiry',
-        message: '',
-      });
-    }, 700);
+    const subjectLine = `[NashikExplore] ${formData.subject}${formData.name ? ` from ${formData.name}` : ''}`;
+    const bodyContent = `${formData.message}\n\n---\nSender: ${formData.name || 'Not specified'}\nEmail: ${formData.email || 'Not specified'}`;
+    const mailtoUrl = `mailto:support@nashikexplore.com?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -44,9 +32,9 @@ export function ContactClient() {
           <span>Back to Homepage</span>
         </Link>
 
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/60 dark:border-emerald-800/60 text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
-          <ShieldCheck className="w-4 h-4" />
-          <span>Verified Helpdesk</span>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 font-semibold">
+          <Mail className="w-3.5 h-3.5" />
+          <span>Support Contact</span>
         </div>
       </div>
 
@@ -56,19 +44,19 @@ export function ContactClient() {
           Get In Touch
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-3 sm:mb-4">
-          Contact Support &amp; Moderation
+          Contact Support
         </h1>
         <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-          Have questions about spots, feedback on itineraries, need assistance with your lifetime premium status, or requesting account/data deletion? We are here to help.
+          Have questions about spots, feedback on the app, or suggestions? Reach out to us directly.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-        {/* Left Column: Direct Info & SLA Cards */}
+        {/* Left Column: Direct Info Cards */}
         <div className="lg:col-span-5 space-y-4 sm:space-y-6">
           <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 shadow-card space-y-5 sm:space-y-6">
             <h2 className="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white tracking-tight">
-              Direct Communication Channels
+              Support Channel
             </h2>
 
             <div className="space-y-4 sm:space-y-5">
@@ -78,7 +66,7 @@ export function ContactClient() {
                 </div>
                 <div className="min-w-0">
                   <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Email Helpdesk
+                    Official Email
                   </span>
                   <a
                     href="mailto:support@nashikexplore.com"
@@ -87,41 +75,24 @@ export function ContactClient() {
                     support@nashikexplore.com
                   </a>
                   <span className="block text-[10px] sm:text-[11px] text-slate-500 mt-0.5">
-                    For support, moderation, and data erasure
+                    For feedback, reports, and inquiries
                   </span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 shrink-0">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Response SLA
-                  </span>
-                  <span className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-slate-100 block">
-                    24 - 48 Business Hours
-                  </span>
-                  <span className="block text-[10px] sm:text-[11px] text-slate-500 mt-0.5">
-                    Mon - Sat (9:00 AM - 6:00 PM IST)
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5 sm:gap-4">
-                <div className="p-2.5 sm:p-3 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 shrink-0">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="block text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Developer Address
+                    Location
                   </span>
                   <span className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-slate-100 block">
-                    College Road, Nashik
+                    Nashik, Maharashtra
                   </span>
                   <span className="block text-[10px] sm:text-[11px] text-slate-500 mt-0.5">
-                    Maharashtra, 422005, India
+                    India
                   </span>
                 </div>
               </div>
@@ -135,7 +106,7 @@ export function ContactClient() {
                 <span>Frequently Asked Questions</span>
               </h3>
               <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                Check our knowledge base for fast answers.
+                Check our common questions and answers.
               </p>
             </div>
             <Link
@@ -147,25 +118,24 @@ export function ContactClient() {
           </div>
         </div>
 
-        {/* Right Column: Interactive Form */}
+        {/* Right Column: Compose Email */}
         <div className="lg:col-span-7 bg-white dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 p-6 sm:p-10 rounded-2xl shadow-card">
           <h2 className="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight mb-1 sm:mb-2">
-            Send Us a Message
+            Send an Email
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400 mb-6 sm:mb-8">
-            Fill in the details below and our team will get back to you promptly.
+            Compose your message below. Clicking the button will open your device&apos;s email client to send directly to <strong>support@nashikexplore.com</strong>.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <form onSubmit={handleOpenEmail} className="space-y-4 sm:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label htmlFor="contact-name" className="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-1.5 sm:mb-2">
-                  Your Full Name *
+                  Your Name
                 </label>
                 <input
                   id="contact-name"
                   type="text"
-                  required
                   placeholder="e.g. Rahul Sharma"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -175,12 +145,11 @@ export function ContactClient() {
 
               <div>
                 <label htmlFor="contact-email" className="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-1.5 sm:mb-2">
-                  Email Address *
+                  Your Email Address
                 </label>
                 <input
                   id="contact-email"
                   type="email"
-                  required
                   placeholder="name@domain.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -200,10 +169,10 @@ export function ContactClient() {
                 className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-surface-50 dark:bg-slate-850 text-slate-800 dark:text-slate-200 text-base sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-blue min-h-[46px]"
               >
                 <option value="General Inquiry">General App Inquiry</option>
-                <option value="Spot Submission">Suggest a New Tourist Spot</option>
-                <option value="Correction">Report Outdated Timing / Fee</option>
-                <option value="Premium Support">Lifetime Premium Billing Support</option>
-                <option value="Data Deletion">Data Deletion Request (GDPR / Play Console)</option>
+                <option value="Spot Submission">Suggest a New Attraction</option>
+                <option value="Correction">Report Inaccurate Timing / Details</option>
+                <option value="Billing Support">Subscription / Billing Support</option>
+                <option value="Data Deletion">Data Deletion Request</option>
               </select>
             </div>
 
@@ -215,7 +184,7 @@ export function ContactClient() {
                 id="contact-message"
                 rows={5}
                 required
-                placeholder="Please describe your question or feedback in detail..."
+                placeholder="Please describe your question or feedback..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-surface-50 dark:bg-slate-850 text-slate-800 dark:text-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue"
@@ -224,56 +193,18 @@ export function ContactClient() {
 
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full py-3.5 sm:py-4 rounded-xl text-white font-extrabold text-sm sm:text-base bg-brand-blue hover:bg-brand-700 transition-all shadow-glow-sm flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] min-h-[48px] cursor-pointer"
+              className="w-full py-3.5 sm:py-4 rounded-xl text-white font-extrabold text-sm sm:text-base bg-brand-blue hover:bg-brand-700 transition-all shadow-glow-sm flex items-center justify-center gap-2 active:scale-[0.99] min-h-[48px] cursor-pointer"
             >
-              {isSubmitting ? (
-                <span>Sending Message...</span>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  <span>Send Message</span>
-                </>
-              )}
+              <Send className="w-4 h-4" />
+              <span>Open in Email Client</span>
             </button>
+
+            <p className="text-[11px] text-center text-slate-500 dark:text-slate-400">
+              Opens your email client to send an email to <a href="mailto:support@nashikexplore.com" className="text-brand-blue underline">support@nashikexplore.com</a>.
+            </p>
           </form>
         </div>
       </div>
-
-      {/* Success Modal */}
-      <AnimatePresence>
-        {isSuccess && (
-          <div
-            onClick={() => setIsSuccess(false)}
-            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 p-6 sm:p-8 rounded-2xl max-w-md w-full shadow-soft-xl text-center"
-            >
-              <div className="h-14 w-14 sm:h-16 sm:w-16 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shrink-0">
-                <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
-              </div>
-              <h3 className="font-extrabold text-xl sm:text-2xl mb-2 text-slate-900 dark:text-white">
-                Message Received!
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Thank you for reaching out to the Nashik Travel Guide team. We will review your message and reply to your email address within 24 to 48 business hours.
-              </p>
-              <button
-                onClick={() => setIsSuccess(false)}
-                type="button"
-                className="w-full py-3.5 rounded-xl text-white bg-brand-blue hover:bg-brand-700 font-bold text-sm transition-all min-h-[44px] cursor-pointer shadow-glow-sm"
-              >
-                Dismiss
-              </button>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

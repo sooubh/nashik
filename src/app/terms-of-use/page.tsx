@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — Nashik Travel Guide',
+  title: 'Terms of Use — NashikExplore',
   description:
-    'Official Terms of Use for the Nashik Travel Guide application and services. Covers usage guidelines, ₹199 lifetime in-app purchases, trekking hazard disclaimers, and community conduct.',
+    'Terms of Use for the NashikExplore application and services. Covers usage guidelines, in-app purchases, travel advisories, and user conduct.',
   alternates: {
     canonical: '/terms-of-use',
   },
   openGraph: {
-    title: 'Terms of Use — Nashik Travel Guide',
+    title: 'Terms of Use — NashikExplore',
     description:
-      'Official Terms of Use for Nashik Travel Guide application. Conditions of use, in-app purchases, and trek safety liabilities.',
+      'Terms of Use for the NashikExplore application and website.',
     url: 'https://nashik.sooubh.me/terms-of-use',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use — Nashik Travel Guide',
+    title: 'Terms of Use — NashikExplore',
     description:
-      'Official Terms of Use for Nashik Travel Guide application.',
+      'Terms of Use for the NashikExplore application and website.',
   },
 };
 
@@ -26,7 +26,7 @@ export default function TermsOfUsePage() {
   const toc = [
     { id: 'acceptance', title: 'Acceptance of Terms' },
     { id: 'app-license', title: 'License & Permitted Use' },
-    { id: 'purchases-refunds', title: 'Lifetime Tier & Purchases' },
+    { id: 'purchases-refunds', title: 'In-App Purchases & Upgrades' },
     { id: 'hiking-liabilities', title: 'Trekking & Travel Risk Disclaimers' },
     { id: 'user-reviews', title: 'User Conduct & Reviews' },
     { id: 'intellectual-property', title: 'Intellectual Property' },
@@ -37,7 +37,7 @@ export default function TermsOfUsePage() {
     <LegalPageLayout
       title="Terms of Use"
       lastUpdated="July 14, 2026"
-      summary="These Terms of Use establish the legally binding agreement between you and Nashik Travel Guide. By downloading, accessing, or using our mobile application or website, you agree to these conditions."
+      summary="These Terms of Use establish the agreement between you and NashikExplore. By downloading, accessing, or using our mobile application or website, you agree to these conditions."
       toc={toc}
     >
       <section id="acceptance" className="space-y-3">
@@ -45,7 +45,7 @@ export default function TermsOfUsePage() {
           1. Acceptance of Terms
         </h2>
         <p>
-          By creating an account, downloading the Android application, or browsing the Nashik Travel Guide website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
+          By creating an account, downloading the Android application, or browsing the NashikExplore website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
         </p>
       </section>
 
@@ -54,16 +54,16 @@ export default function TermsOfUsePage() {
           2. License &amp; Permitted Use
         </h2>
         <p>
-          Nashik Travel Guide grants you a limited, non-exclusive, non-transferable, and revocable license to access the guide for personal, non-commercial travel planning purposes. You agree not to scrape, reverse-engineer, or redistribute database records without prior written consent.
+          NashikExplore grants you a limited, non-exclusive, non-transferable, and revocable license to access the guide for personal, non-commercial travel planning purposes. You agree not to scrape, reverse-engineer, or redistribute database records without prior written consent.
         </p>
       </section>
 
       <section id="purchases-refunds" className="space-y-3">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
-          3. Lifetime Tier &amp; In-App Purchases
+          3. In-App Purchases &amp; Upgrades
         </h2>
         <p>
-          The ₹199 Lifetime Premium upgrade is a one-time purchase managed through the Google Play Store and RevenueCat. It permanently removes banner ads, enables unlimited itinerary saves, and activates full offline map packages on your verified Google account.
+          Optional premium upgrades are managed through Google Play and RevenueCat. The upgrade removes advertisements and unlocks additional features within the app. Billing, cancellations, and refunds are handled according to Google Play Store terms and policies.
         </p>
       </section>
 

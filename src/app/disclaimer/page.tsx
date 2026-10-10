@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
+  title: 'Disclaimer & Safety Statement — NashikExplore',
   description:
-    'Official Disclaimer Statement for Nashik Travel Guide. Essential disclosures on Western Ghats trekking difficulty (Harihar Fort, Anjaneri), monsoon hazards, temple dress codes, and Maharashtra alcohol laws.',
+    'Disclaimer Statement for NashikExplore. Travel disclosures on trekking cautions, temple guidelines, and local travel advisories.',
   alternates: {
     canonical: '/disclaimer',
   },
   openGraph: {
-    title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
+    title: 'Disclaimer & Safety Statement — NashikExplore',
     description:
-      'Crucial travel and safety disclosures for exploring Nashik temples, forts, waterfalls, and wineries.',
+      'Travel and safety disclosures for exploring Nashik with NashikExplore.',
     url: 'https://nashik.sooubh.me/disclaimer',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Disclaimer & Safety Statement — Nashik Travel Guide',
+    title: 'Disclaimer & Safety Statement — NashikExplore',
     description:
-      'Crucial travel and safety disclosures for exploring Nashik.',
+      'Travel and safety disclosures for exploring Nashik with NashikExplore.',
   },
 };
 
@@ -35,7 +35,7 @@ export default function DisclaimerPage() {
     <LegalPageLayout
       title="Disclaimer Statement"
       lastUpdated="July 14, 2026"
-      summary="Please read these crucial travel safety disclosures. Information provided in the app and website is compiled for educational and navigational assistance, but conditions on the ground in Nashik may change."
+      summary="Please read these travel safety disclosures. Information provided in the app and website is compiled for educational and navigational assistance, but conditions on the ground in Nashik may change."
       toc={toc}
     >
       <section id="general-information" className="space-y-3">
@@ -43,7 +43,7 @@ export default function DisclaimerPage() {
           1. General Information Purpose
         </h2>
         <p>
-          All listings, ratings, distance calculations, and routes published by Nashik Travel Guide are provided in good faith for informational and planning purposes only. While our local editorial team verifies details regularly, entry fees, operational hours, and road accessibility are subject to change by local municipal and temple authorities without prior notice.
+          All listings, ratings, distance estimates, and guides published by NashikExplore are provided in good faith for informational and planning purposes only. While details are curated, entry fees, operational hours, and road accessibility are subject to change by local municipal and temple authorities without prior notice.
         </p>
       </section>
 

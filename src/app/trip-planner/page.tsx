@@ -2,35 +2,34 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sparkles, Route, Compass, Download, ArrowLeft, ShieldAlert, Clock, ArrowRight } from 'lucide-react';
-import { TripPlannerClient } from '@/components/TripPlanner/TripPlannerClient';
+import { Route, Compass, Download, ArrowLeft, Clock, Calendar, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Smart Itinerary Planner — Nashik Travel Guide',
+  title: 'Trip Planning in the App — NashikExplore',
   description:
-    'Experience the interactive AI Itinerary Planner built into the Nashik Travel Guide Android App. Customize transit hubs, trip duration, pace, and interests with on-device GPS Haversine calculations and monsoon safety alerts.',
+    'Discover how the NashikExplore Android app helps you plan multi-day trips around Nashik with customized itineraries, distance estimates, and Google Maps navigation.',
   alternates: {
     canonical: '/trip-planner',
   },
   openGraph: {
-    title: 'AI Smart Itinerary Planner — Nashik Travel Guide',
+    title: 'Trip Planning in the App — NashikExplore',
     description:
-      'Generate optimized multi-day travel itineraries for Nashik with Haversine distance calculations, weather recommendations, and verified trekking warnings.',
+      'Plan multi-day travel itineraries in Nashik with the NashikExplore Android app.',
     url: 'https://nashik.sooubh.me/trip-planner',
     images: ['/images/ai-planner.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Smart Itinerary Planner — Nashik Travel Guide',
+    title: 'Trip Planning in the App — NashikExplore',
     description:
-      'Generate optimized multi-day travel itineraries for Nashik with Haversine distance calculations and safety alerts.',
+      'Plan multi-day travel itineraries in Nashik with the NashikExplore Android app.',
     images: ['/images/ai-planner.png'],
   },
 };
 
 export default function TripPlannerPage() {
   return (
-    <div className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-14 sm:space-y-18">
+    <div className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 sm:space-y-16">
       {/* Top Breadcrumb / Return */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <Link
@@ -42,98 +41,106 @@ export default function TripPlannerPage() {
         </Link>
 
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-50 dark:bg-slate-900/50 text-brand-blue dark:text-brand-400 text-xs font-bold border border-slate-200/60 dark:border-slate-800/60 min-h-[44px]">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Live On-Device Simulator</span>
+          <Calendar className="w-3.5 h-3.5" />
+          <span>Mobile App Feature</span>
         </div>
       </div>
 
       {/* Page Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
         <span className="text-xs uppercase font-bold tracking-widest text-brand-blue dark:text-brand-400 mb-3 block">
-          Intelligent Route Engine
+          Itinerary Planning
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
-          AI Smart Itinerary Planner
+          Trip Planning in the App
         </h1>
         <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
-          Configure your starting transit hub, travel duration, pace, and destination tags below. Our on-device routing engine calculates optimal paths, travel durations, and critical safety cautions.
+          The NashikExplore Android app includes a dedicated trip planner to help you build customized multi-day itineraries based on your interests, pace, and starting location.
         </p>
       </div>
 
-      {/* Interactive Planner Client Emulator */}
-      <TripPlannerClient />
-
-      {/* App Promotion & Features Banner */}
-      <div className="rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 shadow-card p-6 sm:p-10 md:p-12 lg:p-16 relative overflow-hidden mt-14 sm:mt-18">
-        <div className="absolute top-0 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-brand-400/10 dark:bg-brand-400/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 sm:w-80 h-64 sm:h-80 bg-brand-300/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-          <div className="lg:col-span-8 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-slate-800 border border-brand-100 dark:border-slate-700 text-brand-blue dark:text-brand-400 text-xs font-bold uppercase tracking-widest min-h-[44px]">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Full Offline Support on Mobile</span>
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-              Take Your Custom Itinerary Offline
+      {/* Feature Showcase Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Left: How it works in the app */}
+        <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/60 dark:border-slate-800/60 shadow-card space-y-5">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              How Trip Planning Works
             </h2>
-
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Install the official Nashik Travel Guide Android application to sync generated routes, save unlimited custom boards, access 100% offline Hive databases, and receive real-time weather and landslide notifications on remote treks.
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Instead of manually coordinating schedules across different attractions, the app assists you through a simple multi-step flow:
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-left">
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60">
-                <Route className="w-4 h-4 text-brand-blue dark:text-brand-400 shrink-0" />
-                <span className="text-sm font-bold text-slate-900 dark:text-white">Haversine Distance Optimization</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60">
-                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
-                <span className="text-sm font-bold text-slate-900 dark:text-white">Monsoon & Stair Cautions</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60">
-                <Clock className="w-4 h-4 text-brand-blue dark:text-brand-400 shrink-0" />
-                <span className="text-sm font-bold text-slate-900 dark:text-white">Time Slot Scheduling</span>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60">
-                <Compass className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span className="text-sm font-bold text-slate-900 dark:text-white">Direct Maps Navigation</span>
-              </div>
+            <ul className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
+                <div>
+                  <strong>Set Your Starting Point:</strong> Choose a transit hub such as Nashik Road Railway Station, Ozar Airport, or central bus stands.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
+                <div>
+                  <strong>Select Duration &amp; Pace:</strong> Plan from 1 to multiple days with relaxed, moderate, or active pacing.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
+                <div>
+                  <strong>Smart Generation with Offline Fallback:</strong> The app requests a Cloudflare Worker backend for AI-assisted itinerary assembly, with a deterministic heuristic fallback if network is unavailable.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
+                <div>
+                  <strong>Directions via Google Maps:</strong> Distances between spots are estimated, and individual stops or full days open directly in Google Maps for turn-by-turn road navigation.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div className="p-4 rounded-xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 text-center">
+              <Route className="w-5 h-5 text-brand-blue mx-auto mb-2" />
+              <span className="text-xs font-bold text-slate-900 dark:text-white block">Distance Estimates</span>
+              <span className="text-[11px] text-slate-500 dark:text-slate-400">Approximate point-to-point</span>
             </div>
-
-            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 max-w-md mx-auto lg:mx-0">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 rounded-xl bg-brand-blue hover:bg-brand-700 text-white font-bold text-sm shadow-glow-sm transition-all active:scale-[0.97] min-h-[44px]"
-              >
-                <Download className="w-4 h-4" />
-                <span>Get App on Google Play</span>
-              </a>
-
-              <Link
-                href="/#features"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 hover:border-brand-300 dark:hover:border-brand-700 font-bold text-sm transition-all shadow-soft-sm min-h-[44px]"
-              >
-                <span>Explore All Features</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            <div className="p-4 rounded-xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 text-center">
+              <Clock className="w-5 h-5 text-brand-blue mx-auto mb-2" />
+              <span className="text-xs font-bold text-slate-900 dark:text-white block">Daily Time Slots</span>
+              <span className="text-[11px] text-slate-500 dark:text-slate-400">Morning, afternoon, evening</span>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 text-center">
+              <Compass className="w-5 h-5 text-brand-blue mx-auto mb-2" />
+              <span className="text-xs font-bold text-slate-900 dark:text-white block">Maps Navigation</span>
+              <span className="text-[11px] text-slate-500 dark:text-slate-400">Opens in Google Maps</span>
             </div>
           </div>
 
-          <div className="lg:col-span-4 flex justify-center">
-            {/* Flat screenshot-card styling without phone mockup */}
-            <div className="relative w-full max-w-[280px] aspect-[9/19] rounded-2xl overflow-hidden shadow-card dark:shadow-card-dark border border-slate-200/60 dark:border-slate-800/60 bg-slate-900 screenshot-card">
-              <Image
-                src="/images/ai-planner.png"
-                alt="Nashik AI Trip Planner in Android App"
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 280px, 280px"
-              />
-            </div>
+          <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-brand-blue hover:bg-brand-700 text-white font-bold text-sm shadow-glow-sm transition-all active:scale-[0.97] min-h-[48px]"
+            >
+              <Download className="w-5 h-5" />
+              <span>Get the App on Google Play</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Actual App Screenshot */}
+        <div className="lg:col-span-5 flex justify-center">
+          <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[9/19] rounded-2xl overflow-hidden shadow-card dark:shadow-card-dark border border-slate-200/60 dark:border-slate-800/60 bg-slate-900 screenshot-card">
+            <Image
+              src="/images/ai-planner.png"
+              alt="NashikExplore Trip Planner Screen"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 280px, 320px"
+              priority
+            />
           </div>
         </div>
       </div>

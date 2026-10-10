@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Cookies & Storage Policy — Nashik Travel Guide',
+  title: 'Cookies & Storage Policy — NashikExplore',
   description:
-    'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details regarding localStorage, Hive NoSQL caching, Google Analytics, and AdMob advertising tokens.',
+    'Cookies & Local Storage Policy for NashikExplore. Details regarding localStorage and on-device storage.',
   alternates: {
     canonical: '/cookies-policy',
   },
   openGraph: {
-    title: 'Cookies & Storage Policy — Nashik Travel Guide',
+    title: 'Cookies & Storage Policy — NashikExplore',
     description:
-      'Official Cookies & Local Storage Policy for Nashik Travel Guide. Details on localStorage and Hive storage.',
+      'Cookies & Local Storage Policy for NashikExplore.',
     url: 'https://nashik.sooubh.me/cookies-policy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cookies & Storage Policy — Nashik Travel Guide',
+    title: 'Cookies & Storage Policy — NashikExplore',
     description:
-      'Official Cookies & Local Storage Policy for Nashik Travel Guide.',
+      'Cookies & Local Storage Policy for NashikExplore.',
   },
 };
 
@@ -34,7 +34,7 @@ export default function CookiesPolicyPage() {
     <LegalPageLayout
       title="Cookies & Local Storage Policy"
       lastUpdated="July 14, 2026"
-      summary="This policy explains how Nashik Travel Guide uses browser cookies, device tokens, and on-device storage (Hive & localStorage) to remember your theme and cached travel boards."
+      summary="This policy explains how NashikExplore uses browser local storage and on-device app storage to remember theme preferences and saved travel boards."
       toc={toc}
     >
       <section id="what-are-cookies" className="space-y-3">
@@ -55,7 +55,7 @@ export default function CookiesPolicyPage() {
         </p>
         <ul className="list-disc pl-5 space-y-1.5">
           <li><strong>Theme Preferences (color-theme):</strong> Stored in <code>localStorage</code> to remember whether you selected Light or Dark Mode.</li>
-          <li><strong>Hive Database Boxes:</strong> Stored on your Android phone to cache offline tourist spots, ratings, and custom itineraries.</li>
+          <li><strong>Local App Storage (Hive):</strong> Stored on your Android phone to save user preferences, search history, and wishlist boards locally.</li>
           <li><strong>Session Tokens:</strong> Maintained via Firebase Auth to keep you signed in securely across app launches.</li>
         </ul>
       </section>
