@@ -35,7 +35,7 @@ export default function DataSafetyPage() {
     <LegalPageLayout
       title="Data Safety Sheet"
       lastUpdated="July 14, 2026"
-      summary="In full compliance with Google Play Console policies and global privacy regulations, this page provides a comprehensive breakdown of all data handled by the Nashik Travel Guide mobile application."
+      summary="This page provides a breakdown of data types handled by the NashikExplore mobile application and website, aligned with Google Play Data Safety guidelines."
       toc={toc}
     >
       <section id="google-play-disclosures" className="space-y-3">
@@ -43,7 +43,7 @@ export default function DataSafetyPage() {
           1. Google Play Data Safety Declarations
         </h2>
         <p>
-          We declare full compliance with Google Play&apos;s User Data policy. The table below represents our exact disclosures submitted in the Google Play Console:
+          This section outlines our data handling practices aligned with Google Play&apos;s User Data guidelines:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 my-4">

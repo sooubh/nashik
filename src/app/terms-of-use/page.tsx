@@ -93,7 +93,7 @@ export default function TermsOfUsePage() {
           6. Intellectual Property
         </h2>
         <p>
-          All logos, branding assets, custom artwork, curated itineraries, and software code are the intellectual property of Nashik Travel Guide. Third-party brand names (such as Sula Vineyards or Trimbakeshwar) are referenced solely for identification and descriptive travel purposes.
+          All logos, branding assets, custom artwork, curated itineraries, and software code are the intellectual property of NashikExplore. Third-party brand names (such as Sula Vineyards or Trimbakeshwar) are referenced solely for identification and descriptive travel purposes.
         </p>
       </section>
 

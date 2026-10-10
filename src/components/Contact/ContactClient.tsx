@@ -103,17 +103,17 @@ export function ContactClient() {
             <div>
               <h3 className="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
                 <HelpCircle className="w-4 h-4 text-brand-blue" />
-                <span>Frequently Asked Questions</span>
+                <span>Privacy &amp; Data Rights</span>
               </h3>
               <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                Check our common questions and answers.
+                Learn how your data and preferences are handled.
               </p>
             </div>
             <Link
-              href="/#faq"
+              href="/privacy-policy"
               className="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 text-brand-blue dark:text-brand-light font-bold text-xs shadow-soft-xs hover:shadow-soft-sm border border-slate-200/60 dark:border-slate-800/60 hover:scale-105 transition-all shrink-0 min-h-[40px] flex items-center justify-center"
             >
-              View FAQ
+              Read Policy
             </Link>
           </div>
         </div>
