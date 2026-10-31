@@ -1,112 +1,140 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Compass, Calendar, Bookmark, CheckCircle2 } from 'lucide-react';
-
-const benefits = [
-  {
-    id: 'discover',
-    title: 'Discover Places',
-    badge: 'Curated Guide',
-    icon: Compass,
-    iconBg: 'text-brand-blue dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60',
-    description:
-      'Browse curated attractions across wine country, historic temples, hill forts, and scenic waterfalls with visiting tips and one-tap Google Maps directions.',
-    points: [
-      'Categorized guides for heritage, nature & vineyards',
-      'Visitor timings and practical tips',
-      'Direct navigation via Google Maps',
-    ],
-  },
-  {
-    id: 'plan',
-    title: 'Plan Your Visit',
-    badge: 'Trip Planner',
-    icon: Calendar,
-    iconBg: 'text-brand-sky bg-sky-50 dark:bg-sky-950/60',
-    description:
-      'Build structured 1 to 3-day itineraries tailored to your starting transit hub, travel pace, and interests with balanced daily stops.',
-    points: [
-      '1 to 3-day customizable itineraries',
-      'Transit hub starting points (Station, Airport, Bus)',
-      'Practical morning, afternoon & evening stops',
-    ],
-  },
-  {
-    id: 'save',
-    title: 'Save Places',
-    badge: 'Wishlist Boards',
-    icon: Bookmark,
-    iconBg: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60',
-    description:
-      'Organize your favorite destinations into custom wishlist boards on your phone so your travel ideas stay readily accessible on the go.',
-    points: [
-      'Custom boards for weekend or themed trips',
-      'Kept directly on your device',
-      'Organize places to revisit anytime',
-    ],
-  },
-];
+import Link from 'next/link';
+import { Compass, Calendar, Bookmark, MapPin, Check, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export function Benefits() {
   return (
     <section id="features" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-blue dark:text-brand-400 text-xs font-bold uppercase tracking-wider mb-4">
-          <span>Three Practical Benefits</span>
-        </div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-          Everything You Need to Explore Nashik
+      {/* Section Header - Editorial, clear, no screaming labels */}
+      <div className="max-w-3xl mb-14 sm:mb-20 text-left">
+        <span className="text-xs font-bold text-blue-600 dark:text-blue-400 block mb-2">
+          Purpose-built features
+        </span>
+        <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white headline-editorial">
+          Everything you need for a smooth trip across Nashik.
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 text-sm sm:text-base leading-relaxed">
-          From ancient temples and wine country to hill forts and scenic waterfalls, NashikExplore makes your journey simple, organized, and reliable.
+        <p className="text-slate-600 dark:text-slate-300 mt-3 text-base sm:text-lg leading-relaxed">
+          Designed to take the friction out of exploring Maharashtra&apos;s heritage center, wine estates, and mountain valleys without bloated feeds or algorithmic distractions.
         </p>
       </div>
 
-      {/* 3 Benefit Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        {benefits.map((benefit, idx) => {
-          const Icon = benefit.icon;
-          return (
-            <motion.div
-              key={benefit.id}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08, ease: 'easeOut' }}
-              className="p-6 sm:p-8 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white dark:bg-slate-900/80 shadow-card dark:shadow-card-dark hover:shadow-card-hover dark:hover:shadow-card-dark-hover transition-all duration-300 flex flex-col justify-between"
+      {/* Asymmetric 3-Feature Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        {/* Benefit 1: Curated Spot Dossiers (Large Feature Card - 7 cols) */}
+        <div className="lg:col-span-7 editorial-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div className="inline-flex p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 mb-6">
+              <Compass className="w-6 h-6" />
+            </div>
+            
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3">
+              Curated spot dossiers with practical visitor intelligence
+            </h3>
+            
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Every landmark includes essential field guidance: optimal visiting hours to beat crowds, seasonal timing (such as winter vineyard harvesting or monsoon waterfall surges), dress codes for sacred sanctums, and one-tap handoff to Google Maps for turn-by-turn road navigation.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+              <div className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <Check className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Categories for Vineyards, Forts, Temples &amp; Nature</span>
+              </div>
+              <div className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <Check className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Verified entry fees, dress norms &amp; parking tips</span>
+              </div>
+              <div className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <Check className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Direct coordinates link into Google Maps</span>
+              </div>
+              <div className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <Check className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Local Marathi landmarks and heritage context</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-4">
+            <a
+              href="#places-preview"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 transition-colors"
             >
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className={`p-3 rounded-2xl ${benefit.iconBg}`}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <span className="text-[10px] uppercase font-bold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">
-                    {benefit.badge}
-                  </span>
-                </div>
+              <span>Preview real destinations below</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
 
-                <h3 className="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                  {benefit.description}
-                </p>
-              </div>
+        {/* Benefit 2: Multi-Day Trip Planner (5 cols) */}
+        <div className="lg:col-span-5 editorial-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div className="inline-flex p-3 rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 mb-6">
+              <Calendar className="w-6 h-6" />
+            </div>
 
-              <div className="pt-5 border-t border-slate-100 dark:border-slate-800/80 space-y-2.5">
-                {benefit.points.map((pt) => (
-                  <div key={pt} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                    <span>{pt}</span>
-                  </div>
-                ))}
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3">
+              Multi-day itineraries customized to your transit hub
+            </h3>
+
+            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+              Whether you arrive at Nashik Road Railway Station, Ozar Airport, or the Central Bus Stand, generate balanced 1 to 3-day schedules matched to your pace (relaxed vs active). Powered by Cloudflare Worker AI with a reliable deterministic offline heuristic fallback.
+            </p>
+
+            <ul className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <span>Select Nashik Road Station, Airport, or CBS as departure point</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <span>Morning, midday, and sunset grouped by proximity</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <span>Deterministic offline generator when cell reception drops</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-8 pt-4">
+            <Link
+              href="/trip-planner"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 transition-colors"
+            >
+              <span>Read how the planner works</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Benefit 3: On-Device Saved Wishlist Boards (Full Width Span - 12 cols) */}
+        <div className="lg:col-span-12 editorial-card p-6 sm:p-10 rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-8">
+              <div className="inline-flex p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 mb-4">
+                <Bookmark className="w-6 h-6" />
               </div>
-            </motion.div>
-          );
-        })}
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                Wishlist boards stored directly on your phone
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                Cell reception in the rugged Sahyadri ranges or rural Gangapur backwaters can be unpredictable. NashikExplore saves your favorite spots and custom boards directly into your phone&apos;s local storage, ensuring your itinerary remains immediately accessible even when climbing Harihar Fort.
+              </p>
+            </div>
+
+            <div className="md:col-span-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <span className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                Built For Field Conditions
+              </span>
+              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                No account is required to start browsing or saving spots. Your saved boards persist across app restarts without cloud latency.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

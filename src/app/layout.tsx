@@ -14,22 +14,23 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://nashik.sooubh.me'),
   title: {
-    default: 'NashikExplore — Discover Places Around Nashik',
+    default: 'NashikExplore — Curated Travel Companion for Nashik',
     template: '%s | NashikExplore',
   },
   description:
-    'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore. Get the app on Google Play.',
+    'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
   applicationName: 'NashikExplore',
   authors: [{ name: 'NashikExplore' }],
   generator: 'Next.js',
   keywords: [
     'Nashik travel guide',
     'Nashik android app',
-    'Trimbakeshwar',
+    'Trimbakeshwar Shiva Temple',
     'Sula Vineyards',
-    'Harihar Fort',
-    'Nashik places to visit',
+    'Harihar Fort trek',
+    'Pandavleni Caves',
     'Nashik trip planner',
+    'Maharashtra tourism',
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'NashikExplore',
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://nashik.sooubh.me/',
     siteName: 'NashikExplore',
-    title: 'NashikExplore — Discover Places Around Nashik',
+    title: 'NashikExplore — Curated Travel Companion for Nashik',
     description:
-      'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore.',
+      'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
     images: [
       {
         url: '/images/app-horizontal-icon.png',
@@ -67,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NashikExplore — Discover Places Around Nashik',
+    title: 'NashikExplore — Curated Travel Companion for Nashik',
     description:
-      'Discover Nashik attractions, browse place details, and plan your visit with NashikExplore.',
+      'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
     images: ['/images/app-horizontal-icon.png'],
   },
   icons: {
@@ -81,8 +82,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FAFBFE' },
-    { media: '(prefers-color-scheme: dark)', color: '#080B12' },
+    { media: '(prefers-color-scheme: light)', color: '#F8FAFC' },
+    { media: '(prefers-color-scheme: dark)', color: '#090E17' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -152,10 +153,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col selection:bg-brand-blue/20 selection:text-brand-blue dark:selection:bg-brand-400/20 dark:selection:text-brand-300">
+      <body className="font-sans antialiased min-h-screen flex flex-col selection:bg-blue-600/20 selection:text-blue-700 dark:selection:bg-blue-400/20 dark:selection:text-blue-300">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-xl focus:shadow-lg focus:outline-none text-xs font-bold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-xl focus:shadow-lg focus:outline-none text-xs font-bold"
         >
           Skip to main content
         </a>
