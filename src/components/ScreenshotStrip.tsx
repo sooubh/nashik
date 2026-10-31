@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { Smartphone, Check, MapPin, Calendar, Compass, Search } from 'lucide-react';
 
 const screens = [
   {
@@ -35,89 +34,85 @@ const screens = [
 
 export function ScreenshotStrip() {
   return (
-    <section id="screenshots" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/30">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-20 text-left">
-          <span className="text-xs font-bold text-blue-600 dark:text-blue-400 block mb-2">
-            Material 3 interface
+    <section id="screenshots" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* Section Header */}
+      <div className="max-w-3xl mb-16 text-left">
+        <span className="text-sm font-bold text-blue-600 dark:text-blue-400 block mb-3">
+          Material 3 Architecture
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
+          Authentic Android application screens.
+        </h2>
+        <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg leading-relaxed">
+          Clean, native Android architecture built for rapid navigation under bright outdoor sunlight on the trekking trail or relaxed evening dining in wine country.
+        </p>
+      </div>
+
+      {/* 4-Screenshot Grid */}
+      <div data-ui="true" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {screens.map((screen) => (
+          <div
+            key={screen.id}
+            className="rounded-3xl bg-slate-900 text-white p-4 flex flex-col justify-between"
+          >
+            {/* Phone Screen Container */}
+            <div className="relative w-full aspect-[9/19.5] rounded-2xl overflow-hidden bg-black">
+              <Image
+                src={screen.src}
+                alt={`NashikExplore interface preview: ${screen.title}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+            </div>
+
+            {/* Caption & Metadata */}
+            <div className="mt-5 p-2 text-left space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-blue-400">
+                  {screen.tag}
+                </span>
+                <span className="text-xs text-slate-400 font-semibold">
+                  Android 8.0+
+                </span>
+              </div>
+              <h3 className="text-base font-bold text-white leading-snug">
+                {screen.title}
+              </h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                {screen.caption}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Technical Performance Notes */}
+      <div className="mt-12 p-8 rounded-3xl bg-slate-100 dark:bg-slate-900/80 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div className="space-y-2">
+          <span className="text-sm font-bold text-slate-900 dark:text-white block">
+            Lightweight Download
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white headline-editorial">
-            Authentic screens from the Android application.
-          </h2>
-          <p className="text-slate-600 dark:text-slate-300 mt-3 text-base sm:text-lg leading-relaxed">
-            Clean, native Android architecture built for seamless navigation under bright outdoor sunlight on the trekking trail or relaxed evening dining in wine country.
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Fast installation footprint with fluid Flutter rendering and zero background telemetry drain while navigating.
           </p>
         </div>
-
-        {/* 4-Screenshot Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {screens.map((screen) => (
-            <div
-              key={screen.id}
-              className="editorial-card rounded-3xl p-4 flex flex-col justify-between group"
-            >
-              {/* Phone Aspect Container */}
-              <div className="relative w-full aspect-[9/19] rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-inner">
-                <Image
-                  src={screen.src}
-                  alt={`NashikExplore interface preview: ${screen.title}`}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                />
-              </div>
-
-              {/* Caption & Metadata */}
-              <div className="mt-4 pt-2 text-left space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                    {screen.tag}
-                  </span>
-                  <span className="text-[10px] text-slate-400 font-mono">
-                    Android 8.0+
-                  </span>
-                </div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
-                  {screen.title}
-                </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  {screen.caption}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="space-y-2">
+          <span className="text-sm font-bold text-slate-900 dark:text-white block">
+            Solar Contrast Modes
+          </span>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            High-contrast outdoor visibility for glaring midday fortress treks, and OLED-optimized dark theme for evening temple walks.
+          </p>
         </div>
-
-        {/* Technical Architecture Notes */}
-        <div className="mt-12 p-6 rounded-2xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          <div className="space-y-1">
-            <span className="text-xs font-bold text-slate-900 dark:text-slate-200 block">
-              Lightweight Installation
-            </span>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Fast download size with responsive, native 60fps Flutter rendering and minimal battery drain during outdoor GPS usage.
-            </p>
-          </div>
-          <div className="space-y-1">
-            <span className="text-xs font-bold text-slate-900 dark:text-slate-200 block">
-              Adaptive Day &amp; Night Modes
-            </span>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              High-contrast solar readability for glaring mid-day fortress treks, and OLED-friendly dark palette for evening temple visits.
-            </p>
-          </div>
-          <div className="space-y-1">
-            <span className="text-xs font-bold text-slate-900 dark:text-slate-200 block">
-              Direct Road Navigation
-            </span>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Every spot coordinates pass directly into Google Maps for real-time traffic, voice-guided turns, and accurate ETA estimates.
-            </p>
-          </div>
+        <div className="space-y-2">
+          <span className="text-sm font-bold text-slate-900 dark:text-white block">
+            Direct Road Navigation
+          </span>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Destination coordinates hand off into Google Maps for real-time traffic updates and voice-guided turns.
+          </p>
         </div>
-
       </div>
     </section>
   );

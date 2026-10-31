@@ -2,23 +2,23 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — NashikExplore',
+  title: 'Terms of Use: NashikExplore',
   description:
-    'Terms of Use for the NashikExplore application and services. Covers usage guidelines, in-app purchases, travel advisories, and user conduct.',
+    'Terms of Use and Conditions for NashikExplore. Guidelines on permitted use, trekking risk acknowledgments, and intellectual property.',
   alternates: {
     canonical: '/terms-of-use',
   },
   openGraph: {
-    title: 'Terms of Use — NashikExplore',
+    title: 'Terms of Use: NashikExplore',
     description:
-      'Terms of Use for the NashikExplore application and website.',
+      'Terms of Use for the NashikExplore Android application and website.',
     url: 'https://nashik.sooubh.me/terms-of-use',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use — NashikExplore',
+    title: 'Terms of Use: NashikExplore',
     description:
-      'Terms of Use for the NashikExplore application and website.',
+      'Terms of Use for the NashikExplore Android application and website.',
   },
 };
 
@@ -41,7 +41,7 @@ export default function TermsOfUsePage() {
       toc={toc}
     >
       <section id="acceptance" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           1. Acceptance of Terms
         </h2>
         <p>
@@ -50,7 +50,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="app-license" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           2. License &amp; Permitted Use
         </h2>
         <p>
@@ -59,7 +59,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="purchases-refunds" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           3. In-App Purchases &amp; Upgrades
         </h2>
         <p>
@@ -68,7 +68,7 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="hiking-liabilities" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           4. Trekking &amp; Travel Risk Disclaimers
         </h2>
         <p>
@@ -80,29 +80,29 @@ export default function TermsOfUsePage() {
       </section>
 
       <section id="user-reviews" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           5. User Conduct &amp; Reviews
         </h2>
         <p>
-          Users may submit ratings, tips, and comments. Submissions must not contain abusive, defamatory, discriminatory, or unlawful content. We reserve the right to moderate, edit, or delete any submission that violates community guidelines.
+          Users contributing reviews or attraction feedback agree not to post defamatory, offensive, false, or commercial promotional content. We reserve the right to moderate or remove user submissions that violate community safety.
         </p>
       </section>
 
       <section id="intellectual-property" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           6. Intellectual Property
         </h2>
         <p>
-          All logos, branding assets, custom artwork, curated itineraries, and software code are the intellectual property of NashikExplore. Third-party brand names (such as Sula Vineyards or Trimbakeshwar) are referenced solely for identification and descriptive travel purposes.
+          The NashikExplore name, logo, graphic assets, database organization, and software source code are the intellectual property of NashikExplore. All rights not expressly granted are reserved.
         </p>
       </section>
 
       <section id="modifications" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           7. Governing Law &amp; Amendments
         </h2>
         <p>
-          These Terms are governed by the laws of Maharashtra, India. Any disputes arising out of the application or website shall be subject to the exclusive jurisdiction of the courts located in Nashik, Maharashtra.
+          These terms are governed by the laws of Maharashtra, India. Any disputes arising out of the use of this service shall be subject to the exclusive jurisdiction of courts located in Nashik, Maharashtra.
         </p>
       </section>
     </LegalPageLayout>

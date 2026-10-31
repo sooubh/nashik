@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
     question: 'When is the best season to explore Nashik?',
     answer:
-      'October through March is the peak travel window. The weather is cool and crisp (12°C–28°C), ideal for exploring Sahyadri forts like Harihar and Anjaneri, and late January through March is the active grape harvest and wine-crush season at Sula and York. For lush landscapes and cascading waterfalls like Someshwar and Vaitarna, the monsoon months of July to September are spectacular.',
+      'October through March is the peak travel window. The weather is cool and crisp (12°C to 28°C), ideal for exploring Sahyadri forts like Harihar and Anjaneri, and late January through March is the active grape harvest and wine-crush season at Sula and York. For lush landscapes and cascading waterfalls like Someshwar, the monsoon months of July to September are spectacular.',
   },
   {
     question: 'Does the mobile app work if cell reception drops?',
@@ -44,47 +44,47 @@ export function TravelFaq() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-200/80 dark:border-slate-800/80">
+    <section id="faq" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Section Header */}
-      <div className="max-w-3xl mb-12 sm:mb-16 text-left">
-        <span className="text-xs font-bold text-blue-600 dark:text-blue-400 block mb-2">
-          Practical traveler advice
+      <div className="max-w-3xl mb-16 text-left">
+        <span className="text-sm font-bold text-blue-600 dark:text-blue-400 block mb-3">
+          Practical Travel Advice
         </span>
-        <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white headline-editorial">
-          Frequently asked questions about visiting Nashik &amp; the app.
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
+          Questions about visiting Nashik &amp; the app.
         </h2>
-        <p className="text-slate-600 dark:text-slate-300 mt-3 text-base sm:text-lg leading-relaxed">
-          Honest, clear answers to help you plan your itinerary with confidence.
+        <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg leading-relaxed">
+          Clear answers to help you plan your travel schedule with confidence.
         </p>
       </div>
 
-      {/* Accordion List */}
+      {/* Accordion List with Clean Filled Surfaces */}
       <div className="space-y-4">
         {faqs.map((faq, idx) => {
           const isOpen = openIndex === idx;
           return (
             <div
               key={idx}
-              className="editorial-card rounded-2xl overflow-hidden transition-all"
+              className="rounded-2xl bg-slate-100 dark:bg-slate-900/90 overflow-hidden transition-colors"
             >
               <button
                 type="button"
                 onClick={() => toggleFaq(idx)}
                 aria-expanded={isOpen}
-                className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                className="w-full p-6 sm:p-7 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
               >
                 <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
+                  className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${
                     isOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : ''
                   }`}
                 />
               </button>
 
               {isOpen && (
-                <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/60">
+                <div className="px-6 sm:px-7 pb-6 pt-0 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                   {faq.answer}
                 </div>
               )}

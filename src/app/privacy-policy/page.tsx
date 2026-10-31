@@ -2,21 +2,21 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — NashikExplore',
+  title: 'Privacy Policy: NashikExplore',
   description:
     'Privacy Policy for the NashikExplore Android application and website. Information regarding data collection, device permissions, and user data rights.',
   alternates: {
     canonical: '/privacy-policy',
   },
   openGraph: {
-    title: 'Privacy Policy — NashikExplore',
+    title: 'Privacy Policy: NashikExplore',
     description:
       'Privacy Policy for the NashikExplore Android app and website.',
     url: 'https://nashik.sooubh.me/privacy-policy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy — NashikExplore',
+    title: 'Privacy Policy: NashikExplore',
     description:
       'Privacy Policy for the NashikExplore Android app and website.',
   },
@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
       toc={toc}
     >
       <section id="data-collection" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           1. Data We Collect
         </h2>
         <p>
@@ -51,13 +51,13 @@ export default function PrivacyPolicyPage() {
         <ul className="list-disc pl-5 space-y-1.5">
           <li><strong>Approximate and Precise Location (GPS):</strong> Used exclusively on-device when navigating to calculate travel distances, driving duration estimates, and sort tourist spots by proximity.</li>
           <li><strong>User Authentication Data:</strong> If you choose to sign in via Google Sign-In, Firebase Auth stores your display name, email address, and unique user ID to persist your saved boards and reviews.</li>
-          <li><strong>Wishlist & Custom Itineraries:</strong> Stored locally using Hive NoSQL storage on your mobile device for offline accessibility.</li>
-          <li><strong>Diagnostic & Crash Data:</strong> Anonymous crash reports and error logs via Firebase Crashlytics to diagnose performance bottlenecks and crashes.</li>
+          <li><strong>Wishlist &amp; Custom Itineraries:</strong> Stored locally using Hive NoSQL storage on your mobile device for offline accessibility.</li>
+          <li><strong>Diagnostic &amp; Crash Data:</strong> Anonymous crash reports and error logs via Firebase Crashlytics to diagnose performance bottlenecks and crashes.</li>
         </ul>
       </section>
 
       <section id="uncollected-data" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           2. Data We Do Not Collect
         </h2>
         <p>
@@ -72,36 +72,36 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="permissions" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           3. Device Permissions Disclosures
         </h2>
         <p>
           Under Google Play Console developer guidelines, here are the permissions requested in our manifest:
         </p>
-        <div className="overflow-x-auto momentum-scroll border border-slate-200 dark:border-slate-800 rounded-2xl my-4">
+        <div data-ui="true" className="overflow-x-auto momentum-scroll bg-white dark:bg-slate-800 rounded-2xl my-4">
           <table className="w-full text-left text-sm min-w-[500px]">
-            <thead className="bg-slate-50 dark:bg-slate-850 border-b border-slate-200 dark:border-slate-800">
+            <thead className="bg-slate-50 dark:bg-slate-900">
               <tr>
-                <th className="p-3 font-bold">Android Permission</th>
-                <th className="p-3 font-bold">Functional Purpose</th>
-                <th className="p-3 font-bold">Mandatory?</th>
+                <th className="p-4 font-bold">Android Permission</th>
+                <th className="p-4 font-bold">Functional Purpose</th>
+                <th className="p-4 font-bold">Mandatory?</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
+            <tbody>
               <tr>
-                <td className="p-3 font-mono text-xs">ACCESS_FINE_LOCATION</td>
-                <td className="p-3">Calculates accurate Haversine distances to temples, forts, and wineries.</td>
-                <td className="p-3 text-amber-600 font-semibold">Optional (Runtime)</td>
+                <td className="p-4 text-xs font-semibold"><code>ACCESS_FINE_LOCATION</code></td>
+                <td className="p-4">Calculates accurate Haversine distances to temples, forts, and wineries.</td>
+                <td className="p-4 text-amber-600 font-semibold">Optional (Runtime)</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-xs">INTERNET</td>
-                <td className="p-3">Fetches cached weather records and latest verified spot directories.</td>
-                <td className="p-3 text-emerald-600 font-semibold">Required</td>
+                <td className="p-4 text-xs font-semibold"><code>INTERNET</code></td>
+                <td className="p-4">Fetches cached weather records and latest verified spot directories.</td>
+                <td className="p-4 text-emerald-600 font-semibold">Required</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-xs">ACCESS_NETWORK_STATE</td>
-                <td className="p-3">Detects connectivity to handle online syncing and cached responses.</td>
-                <td className="p-3 text-emerald-600 font-semibold">Required</td>
+                <td className="p-4 text-xs font-semibold"><code>ACCESS_NETWORK_STATE</code></td>
+                <td className="p-4">Detects connectivity to handle online syncing and cached responses.</td>
+                <td className="p-4 text-emerald-600 font-semibold">Required</td>
               </tr>
             </tbody>
           </table>
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="storage-security" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           4. Data Storage &amp; Local Caching
         </h2>
         <p>
@@ -118,7 +118,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="third-parties" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           5. Third-Party Networks
         </h2>
         <p>
@@ -132,16 +132,16 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="deletion-process" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           6. Account Deletion &amp; Data Rights
         </h2>
         <p>
-          You have full authority over your data. You may request complete erasure of your user profile, saved wishlists, and reviews at any time through our <a href="/delete-account" className="text-brand-blue dark:text-brand-light font-bold hover:underline">Dedicated Account Deletion Portal</a>, navigating to <em>Settings &gt; Privacy &gt; Delete Account</em> inside the app, or contacting our support team.
+          You have full authority over your data. You may request complete erasure of your user profile, saved wishlists, and reviews at any time through our <a href="/delete-account" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Dedicated Account Deletion Portal</a>, navigating to <em>Settings &gt; Privacy &gt; Delete Account</em> inside the app, or contacting our support team.
         </p>
       </section>
 
       <section id="children-privacy" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           7. Children&apos;s Privacy
         </h2>
         <p>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section id="contact-dpo" className="space-y-3">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-slate-200/60 dark:border-slate-800/60 pb-4 mb-4">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
           8. Contact &amp; Policy Updates
         </h2>
         <p>

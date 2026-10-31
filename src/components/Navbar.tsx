@@ -50,19 +50,20 @@ export function Navbar() {
   }, [pathname]);
 
   const navLinks = [
+    { label: 'Planner Demo', href: '/#trip-planner-demo' },
     { label: 'Features', href: '/#features' },
     { label: 'Destinations', href: '/#places-preview' },
     { label: 'Screenshots', href: '/#screenshots' },
-    { label: 'Trip Planner', href: '/trip-planner' },
+    { label: 'FAQ', href: '/#faq' },
     { label: 'Contact', href: '/contact' },
   ];
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-4 sm:px-6 md:px-8',
+        'fixed top-0 left-0 right-0 z-40 transition-colors duration-200 px-4 sm:px-6 md:px-8',
         isScrolled
-          ? 'py-3 sm:py-3.5 glass-nav shadow-sm'
+          ? 'py-3 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md'
           : 'py-4 sm:py-5 bg-transparent'
       )}
     >
@@ -73,7 +74,7 @@ export function Navbar() {
           className="flex items-center gap-3 group focus:outline-none shrink-0"
           aria-label="NashikExplore Home"
         >
-          <div className="relative h-10 w-10 sm:h-11 sm:w-11 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-transform group-hover:-translate-y-0.5 flex items-center justify-center p-2 shrink-0">
+          <div className="relative h-10 w-10 sm:h-11 sm:w-11 rounded-2xl overflow-hidden bg-white dark:bg-slate-900 flex items-center justify-center p-2 shrink-0">
             <Image
               src="/images/logo.png"
               alt="NashikExplore Logo"
@@ -87,7 +88,7 @@ export function Navbar() {
             <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white leading-tight">
               Nashik<span className="text-blue-600 dark:text-blue-400">Explore</span>
             </span>
-            <span className="block text-[10px] uppercase font-bold tracking-wider text-slate-500 dark:text-slate-400 leading-none mt-0.5">
+            <span className="block text-[11px] font-bold text-slate-500 dark:text-slate-400 leading-none mt-0.5">
               Android Travel Guide
             </span>
           </div>
@@ -95,7 +96,7 @@ export function Navbar() {
 
         {/* Desktop Navigation Links */}
         <nav
-          className="hidden lg:flex items-center gap-6 xl:gap-7 px-6 py-2 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800/80 shadow-sm"
+          className="hidden lg:flex items-center gap-6 xl:gap-7 px-6 py-2.5 rounded-2xl bg-slate-100/90 dark:bg-slate-900/90"
           aria-label="Main Navigation"
         >
           {navLinks.map((link) => {
@@ -127,7 +128,7 @@ export function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Get NashikExplore on Google Play (opens in a new tab)"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors font-bold text-xs shadow-sm active:scale-[0.98] shrink-0 min-h-[42px]"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors font-bold text-xs active:scale-[0.98] shrink-0 min-h-[42px]"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Get App</span>
@@ -137,7 +138,7 @@ export function Navbar() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             type="button"
-            className="lg:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus:outline-none hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[42px] min-w-[42px] flex items-center justify-center cursor-pointer"
+            className="lg:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus:outline-none hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors min-h-[42px] min-w-[42px] flex items-center justify-center cursor-pointer"
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-nav-drawer"
@@ -154,7 +155,7 @@ export function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Menu"
-          className="lg:hidden fixed inset-x-0 top-full z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl px-6 py-6 flex flex-col justify-between overflow-y-auto border-t border-slate-200 dark:border-slate-800 h-[calc(100dvh-100%)] shadow-2xl"
+          className="lg:hidden fixed inset-x-0 top-full z-40 bg-white dark:bg-slate-950 px-6 py-6 flex flex-col justify-between overflow-y-auto h-[calc(100dvh-100%)]"
         >
           <div className="flex flex-col gap-1.5 text-left">
             {navLinks.map((link) => (
@@ -174,13 +175,13 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3 shrink-0 pb-6 mt-6">
+          <div className="pt-6 flex flex-col gap-3 shrink-0 pb-6 mt-6">
             <a
               href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get NashikExplore on Google Play (opens in a new tab)"
-              className="w-full py-3.5 rounded-xl text-white bg-blue-600 hover:bg-blue-700 font-bold text-sm text-center flex items-center justify-center gap-2 shadow-sm min-h-[46px]"
+              className="w-full py-3.5 rounded-xl text-white bg-blue-600 hover:bg-blue-700 font-bold text-sm text-center flex items-center justify-center gap-2 min-h-[46px]"
             >
               <Download className="w-4 h-4" />
               <span>Get App on Google Play</span>
