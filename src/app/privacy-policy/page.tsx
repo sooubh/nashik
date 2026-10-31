@@ -37,6 +37,7 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageLayout
       title="Privacy Policy"
+      path="/privacy-policy"
       lastUpdated="July 14, 2026"
       summary="This Privacy Policy explains how NashikExplore processes, stores, and protects your information across the mobile application and website. We prioritize on-device storage with minimal network transmission."
       toc={toc}

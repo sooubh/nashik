@@ -33,6 +33,7 @@ export default function CookiesPolicyPage() {
   return (
     <LegalPageLayout
       title="Cookies & Local Storage Policy"
+      path="/cookies-policy"
       lastUpdated="July 14, 2026"
       summary="This policy explains how NashikExplore uses browser local storage and on-device app storage to remember theme preferences and saved travel boards."
       toc={toc}

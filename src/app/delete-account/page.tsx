@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { DeleteAccountClient } from '@/components/DeleteAccount/DeleteAccountClient';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: 'Request Account & Data Deletion: NashikExplore',
@@ -23,5 +24,15 @@ export const metadata: Metadata = {
 };
 
 export default function DeleteAccountPage() {
-  return <DeleteAccountClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://nashik.sooubh.me' },
+          { name: 'Delete Account & Data', url: 'https://nashik.sooubh.me/delete-account' },
+        ]}
+      />
+      <DeleteAccountClient />
+    </>
+  );
 }

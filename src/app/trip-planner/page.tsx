@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Download, ArrowLeft, Calendar, CheckCircle2, Sparkles } from 'lucide-react';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: 'Trip Planning in the App: NashikExplore',
@@ -30,6 +31,12 @@ export const metadata: Metadata = {
 export default function TripPlannerPage() {
   return (
     <div className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 sm:space-y-16">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://nashik.sooubh.me' },
+          { name: 'Trip Planning Guide', url: 'https://nashik.sooubh.me/trip-planner' },
+        ]}
+      />
       {/* Top Breadcrumb / Return */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <Link

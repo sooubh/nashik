@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
     },
     sitemap: 'https://nashik.sooubh.me/sitemap.xml',
+    host: 'https://nashik.sooubh.me',
   };
 }

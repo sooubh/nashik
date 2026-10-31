@@ -36,6 +36,7 @@ export default function TermsOfUsePage() {
   return (
     <LegalPageLayout
       title="Terms of Use"
+      path="/terms-of-use"
       lastUpdated="July 14, 2026"
       summary="These Terms of Use establish the agreement between you and NashikExplore. By downloading, accessing, or using our mobile application or website, you agree to these conditions."
       toc={toc}

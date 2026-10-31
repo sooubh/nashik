@@ -24,6 +24,7 @@ export function PlacesExplorer() {
 
   return (
     <section id="places-preview" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20">
+      <div id="places" className="sr-only" aria-hidden="true" />
       {/* Section Header */}
       <div className="max-w-3xl mb-12 text-left">
         <span className="text-sm font-bold text-blue-600 dark:text-blue-400 block mb-3">

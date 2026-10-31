@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { ContactClient } from '@/components/Contact/ContactClient';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: 'Contact Support: NashikExplore',
@@ -23,5 +24,15 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: 'https://nashik.sooubh.me' },
+          { name: 'Contact Support', url: 'https://nashik.sooubh.me/contact' },
+        ]}
+      />
+      <ContactClient />
+    </>
+  );
 }

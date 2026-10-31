@@ -34,6 +34,7 @@ export default function DisclaimerPage() {
   return (
     <LegalPageLayout
       title="Disclaimer Statement"
+      path="/disclaimer"
       lastUpdated="July 14, 2026"
       summary="Please read these travel safety disclosures. Information provided in the app and website is compiled for educational and navigational assistance, but conditions on the ground in Nashik may change."
       toc={toc}

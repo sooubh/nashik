@@ -34,6 +34,7 @@ export default function DataSafetyPage() {
   return (
     <LegalPageLayout
       title="Data Safety Sheet"
+      path="/data-safety"
       lastUpdated="July 14, 2026"
       summary="This page provides a breakdown of data types handled by the NashikExplore mobile application and website, aligned with Google Play Data Safety guidelines."
       toc={toc}

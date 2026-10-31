@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
   applicationName: 'NashikExplore',
-  authors: [{ name: 'NashikExplore' }],
+  authors: [{ name: 'NashikExplore', url: 'https://nashik.sooubh.me' }],
   generator: 'Next.js',
   keywords: [
     'Nashik travel guide',
@@ -29,12 +29,20 @@ export const metadata: Metadata = {
     'Sula Vineyards',
     'Harihar Fort trek',
     'Pandavleni Caves',
+    'Someshwar Waterfall',
+    'Kalaram Temple',
+    'Anjaneri Hill',
     'Nashik trip planner',
     'Maharashtra tourism',
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'NashikExplore',
   publisher: 'NashikExplore',
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
+  },
   robots: {
     index: true,
     follow: true,
@@ -62,7 +70,7 @@ export const metadata: Metadata = {
         url: '/images/app-horizontal-icon.png',
         width: 1200,
         height: 630,
-        alt: 'NashikExplore Android App Preview',
+        alt: 'NashikExplore Android App Preview and Travel Guide',
       },
     ],
   },
@@ -104,12 +112,24 @@ export default function RootLayout({
         name: 'NashikExplore',
         operatingSystem: 'Android 8.0+',
         applicationCategory: 'TravelApplication',
+        applicationSubCategory: 'Travel & Local',
+        softwareVersion: '1.0.0',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'INR',
+        },
         downloadUrl:
           'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
         installUrl:
           'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
         url: 'https://nashik.sooubh.me',
-        image: '/images/app-splashscreen-icon.png',
+        image: 'https://nashik.sooubh.me/images/app-splashscreen-icon.png',
+        author: {
+          '@type': 'Organization',
+          name: 'NashikExplore',
+          url: 'https://nashik.sooubh.me',
+        },
         screenshot: [
           'https://nashik.sooubh.me/images/home.png',
           'https://nashik.sooubh.me/images/explore.png',
@@ -133,9 +153,15 @@ export default function RootLayout({
         name: 'NashikExplore',
         description:
           'Official website and travel directory companion for NashikExplore.',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://nashik.sooubh.me/#places?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
         publisher: {
           '@type': 'Organization',
           name: 'NashikExplore',
+          url: 'https://nashik.sooubh.me',
           logo: {
             '@type': 'ImageObject',
             url: 'https://nashik.sooubh.me/images/logo.png',
