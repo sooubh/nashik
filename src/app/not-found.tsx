@@ -24,11 +24,11 @@ export default function NotFound() {
           <span>Return Home</span>
         </Link>
         <Link
-          href="/#trip-planner-demo"
+          href="/trip-planner"
           className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold text-sm transition-colors min-h-[46px]"
         >
           <Compass className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-          <span>Trip Planner Demo</span>
+          <span>Trip Planning Guide</span>
         </Link>
       </div>
     </div>

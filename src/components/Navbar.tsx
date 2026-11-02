@@ -50,11 +50,11 @@ export function Navbar() {
   }, [pathname]);
 
   const navLinks = [
-    { label: 'Planner Demo', href: '/#trip-planner-demo' },
     { label: 'Features', href: '/#features' },
     { label: 'Destinations', href: '/#places-preview' },
     { label: 'Screenshots', href: '/#screenshots' },
     { label: 'FAQ', href: '/#faq' },
+    { label: 'Trip Guide', href: '/trip-planner' },
     { label: 'Contact', href: '/contact' },
   ];
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Hero } from '@/components/Hero';
-import { InteractivePlanner } from '@/components/InteractivePlanner';
 import { Benefits } from '@/components/Benefits';
 import { PlacesExplorer } from '@/components/PlacesExplorer';
 import { ScreenshotStrip } from '@/components/ScreenshotStrip';
@@ -79,7 +78,7 @@ export default function HomePage() {
         name: place.name,
         alternateName: place.marathiName,
         description: place.highlight,
-        url: 'https://nashik.sooubh.me/#places',
+        url: 'https://nashik.sooubh.me/#places-preview',
         address: {
           '@type': 'PostalAddress',
           addressLocality: place.locationArea,
@@ -102,7 +101,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(placesListSchema) }}
       />
       <Hero />
-      <InteractivePlanner />
       <Benefits />
       <PlacesExplorer />
       <ScreenshotStrip />

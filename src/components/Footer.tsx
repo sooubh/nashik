@@ -54,8 +54,8 @@ export function Footer() {
           </h4>
           <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
             <li>
-              <Link href="/#trip-planner-demo" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-0.5 block">
-                Planner Simulator
+              <Link href="/trip-planner" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-0.5 block">
+                Trip Planning Guide
               </Link>
             </li>
             <li>
