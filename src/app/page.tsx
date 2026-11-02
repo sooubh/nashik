@@ -2,6 +2,12 @@ import React from 'react';
 import { TrivioHero } from '@/components/trivio/TrivioHero';
 import { TrivioJourney } from '@/components/trivio/TrivioJourney';
 import { TrivioSpots } from '@/components/trivio/TrivioSpots';
+import { TrivioCategories } from '@/components/trivio/TrivioCategories';
+import { TrivioComparison } from '@/components/trivio/TrivioComparison';
+import { TrivioFeatures } from '@/components/trivio/TrivioFeatures';
+import { TrivioPlannerTeaser } from '@/components/trivio/TrivioPlannerTeaser';
+import { TrivioTestimonials } from '@/components/trivio/TrivioTestimonials';
+import { TrivioFaq } from '@/components/trivio/TrivioFaq';
 import { TrivioFounderNote } from '@/components/trivio/TrivioFounderNote';
 import { TrivioCta } from '@/components/trivio/TrivioCta';
 import { TrivioFooter } from '@/components/trivio/TrivioFooter';
@@ -13,34 +19,50 @@ export default function HomePage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is Trivio and how does it work in Nashik?',
+        name: 'Is Trivio free to download and use on Android?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Trivio is a curated travel and community discovery app built for Nashik, Maharashtra. It connects travelers and locals with hand-curated quiet trails, riverbank ghats, viewpoints, community circles, and one-tap GPS navigation.',
+          text: 'Yes. Trivio is 100% free to download on Android via Google Play. You get full access to all destination guides, category filters, offline caching, and itinerary planning with zero surprise paywalls.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How does turn-by-turn navigation work in Trivio?',
+        name: 'How does Trivio differ from generic chatbots or standard map apps?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Trivio provides verified geographic coordinates and one-tap handoff to your favorite map application (such as Google Maps) so you can pocket your phone and explore the outdoors distraction-free.',
+          text: 'Generic AI tools and standard map apps frequently hallucinate places that are closed or pair spots on opposite ends of the city. Trivio uses a deterministic local clustering engine that verifies opening hours, checks aarti closures, factors in real road transit times, and sequences stops with zero backtracking.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What spots can I explore in Nashik today?',
+        name: 'Does Trivio work if cellular reception drops in Sahyadri valleys?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can discover over 50 verified landmarks in Nashik including Panchavati river ghats, Trimbakeshwar Jyotirlinga, Sula Vineyards rolling trails, and Pandavleni rock-cut caves.',
+          text: 'Yes. Trivio is built local-first for the realities of the Western Ghats. Your saved wishlist boards and destination guides are cached on-device. When cellular signal drops at fort summits or in rural valleys, all core data and coordinates remain accessible without network errors.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Is Trivio free on Android?',
+        name: 'Which transit arrival hubs can I select for multi-day itineraries?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, Trivio is 100% free to download on Google Play without subscription fees or paywalled spot guides.',
+          text: 'You can choose your exact point of arrival: Nashik Road Railway Station (main rail terminus), Ozar Airport (regional flight hub), or Central Bus Stand (CBS / Thakkar Bazaar). The itinerary sequences your stops geographically from that starting hub.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does turn-by-turn road navigation work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Trivio displays point-to-point geographic distances for planning, and provides a direct one-tap button to push exact GPS coordinates into your favorite map app (such as Google Maps) for live directions, road traffic, and navigation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are temple dress codes and visiting guidelines included?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Heritage and pilgrimage sites like Trimbakeshwar Jyotirlinga and Kalaram Mandir provide specific guidance on expected attire and optimal morning hours to avoid long queues.',
         },
       },
     ],
@@ -112,6 +134,36 @@ export default function HomePage() {
           },
         },
       },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Harihar Fort',
+          description: 'Legendary 80-degree rock-cut steps chiseled into sheer rock walls.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Harshewadi, Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 6,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Someshwar Waterfall',
+          description: 'Scenic monsoon cascade along the holy Godavari river basin.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Someshwar, Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
+        },
+      },
     ],
   };
 
@@ -129,6 +181,12 @@ export default function HomePage() {
         <TrivioHero />
         <TrivioJourney />
         <TrivioSpots />
+        <TrivioCategories />
+        <TrivioComparison />
+        <TrivioFeatures />
+        <TrivioPlannerTeaser />
+        <TrivioTestimonials />
+        <TrivioFaq />
         <TrivioFounderNote />
         <TrivioCta />
       </main>
