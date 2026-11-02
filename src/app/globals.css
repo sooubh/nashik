@@ -1,78 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ──── Design Tokens & Architectural Canvas ──── */
 :root {
-  --font-dm-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --bg-surface: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --border-default: #E2E8F0;
-  --accent-blue: #1D4ED8;
-  --accent-emerald: #047857;
-  --accent-amber: #B45309;
+  --bg-page: #ECE7F2;
+  --bg-paper: #FBFAFD;
+  --color-deep-violet: #4B2E83;
+  --color-signal-lime: #C6F432;
+  --text-on-surface: #1A1C1E;
+  --text-variant: #494551;
 }
 
-.dark {
-  --bg-surface: #070B14;
-  --bg-card: #0D1524;
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --border-default: #1E293B;
-  --accent-blue: #3B82F6;
-  --accent-emerald: #10B981;
-  --accent-amber: #F59E0B;
-}
-
-/* ──── Base Reset ──── */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
-  transition-property: background-color, color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
+  background-color: var(--bg-page);
+  color: var(--text-on-surface);
   overflow-x: hidden;
-  -webkit-tap-highlight-color: transparent;
   min-height: 100dvh;
 }
 
-/* ──── Scrollbar ──── */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
-.dark ::-webkit-scrollbar-thumb { background: #1E293B; }
-::-webkit-scrollbar-thumb:hover { background: #1D4ED8; }
-
-/* ──── Focus & Accessibility ──── */
 *:focus-visible {
-  outline: 2px solid #1D4ED8;
+  outline: 2px solid #4B2E83;
   outline-offset: 2px;
-}
-.dark *:focus-visible {
-  outline-color: #60A5FA;
-}
-
-/* ──── Reduced Motion Accessibility ──── */
-@media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }

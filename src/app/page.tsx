@@ -1,11 +1,10 @@
 import React from 'react';
-import { Hero } from '@/components/Hero';
-import { Benefits } from '@/components/Benefits';
-import { PlacesExplorer } from '@/components/PlacesExplorer';
-import { ScreenshotStrip } from '@/components/ScreenshotStrip';
-import { TravelFaq } from '@/components/TravelFaq';
-import { DownloadCta } from '@/components/DownloadCta';
-import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
+import { TrivioHero } from '@/components/trivio/TrivioHero';
+import { TrivioJourney } from '@/components/trivio/TrivioJourney';
+import { TrivioSpots } from '@/components/trivio/TrivioSpots';
+import { TrivioFounderNote } from '@/components/trivio/TrivioFounderNote';
+import { TrivioCta } from '@/components/trivio/TrivioCta';
+import { TrivioFooter } from '@/components/trivio/TrivioFooter';
 
 export default function HomePage() {
   const faqSchema = {
@@ -14,87 +13,106 @@ export default function HomePage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'When is the best season to explore Nashik?',
+        name: 'What is Trivio and how does it work in Nashik?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'October through March is the peak travel window. The weather is cool and crisp (12°C to 28°C), ideal for exploring Sahyadri forts like Harihar and Anjaneri, and late January through March is the active grape harvest and wine-crush season at Sula and York. For lush landscapes and cascading waterfalls like Someshwar, the monsoon months of July to September are spectacular.',
+          text: 'Trivio is a curated travel and community discovery app built for Nashik, Maharashtra. It connects travelers and locals with hand-curated quiet trails, riverbank ghats, viewpoints, community circles, and one-tap GPS navigation.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Does the mobile app work if cell reception drops?',
+        name: 'How does turn-by-turn navigation work in Trivio?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. NashikExplore is built with mobile field realities in mind. Your saved wishlist boards and previously viewed spot dossiers are stored directly in your phone’s local cache. If network drops while you are trekking or driving through rural ghat passes, the app uses a deterministic offline trip generator rather than failing with network errors.',
+          text: 'Trivio provides verified geographic coordinates and one-tap handoff to your favorite map application (such as Google Maps) so you can pocket your phone and explore the outdoors distraction-free.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Which transit hubs can I use as itinerary starting points?',
+        name: 'What spots can I explore in Nashik today?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The multi-day itinerary builder lets you select your actual point of arrival: Nashik Road Railway Station (main rail terminus), Ozar Airport (direct flights from regional centers), or Central Bus Stand (CBS / Thakkar Bazaar). Itineraries sequence your morning and afternoon stops to minimize backtracking.',
+          text: 'You can discover over 50 verified landmarks in Nashik including Panchavati river ghats, Trimbakeshwar Jyotirlinga, Sula Vineyards rolling trails, and Pandavleni rock-cut caves.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How does navigation between destinations work?',
+        name: 'Is Trivio free on Android?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The app displays approximate geographic distances to help you plan your day, and provides a direct one-tap button to open the exact coordinates in Google Maps for live road directions, live traffic conditions, and turn-by-turn navigation.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Are temple dress codes and visiting guidelines included?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. Significant heritage and pilgrimage sites such as Trimbakeshwar Jyotirlinga and Kalaram Temple Mandir include practical notes regarding expected attire (such as traditional clothing requirements for inner sanctum puja access) and recommended morning hours to minimize queue times.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is NashikExplore free to download and use?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'NashikExplore is free to download on Google Play. It provides full access to the destination directory, category filters, and itinerary planner. There are no surprise paywalls for essential travel information.',
+          text: 'Yes, Trivio is 100% free to download on Google Play without subscription fees or paywalled spot guides.',
         },
       },
     ],
   };
 
-  const placesListSchema = {
+  const spotsSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Curated Landmarks & Destinations in Nashik',
-    description:
-      'Authentic field guide to vineyards, historic forts, ancient temples, and waterfalls across Nashik, Maharashtra.',
-    numberOfItems: NASHIK_REAL_PLACES.length,
-    itemListElement: NASHIK_REAL_PLACES.map((place, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'TouristAttraction',
-        name: place.name,
-        alternateName: place.marathiName,
-        description: place.highlight,
-        url: 'https://nashik.sooubh.me/#places-preview',
-        image: `https://nashik.sooubh.me${place.image}`,
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: place.locationArea,
-          addressRegion: 'Maharashtra',
-          addressCountry: 'IN',
+    name: 'Featured Nashik Exploration Spots in Trivio',
+    description: 'Hand-curated trails, sacred ghats, hill overlooks, and vineyards in Nashik.',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Panchavati',
+          description: 'Historic river ghats and Godavari temples.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
         },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: place.coordinates.latitude,
-          longitude: place.coordinates.longitude,
-        },
-        hasMap: place.googleMapsUrl,
-        touristType: place.categoryLabel,
       },
-    })),
+      {
+        '@type': 'ListItem',
+        position: 2,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Trimbakeshwar',
+          description: 'Sacred shrine tucked beneath Brahmagiri peaks.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Trimbak, Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Sula Vineyards',
+          description: 'Rolling green trails and tasting rooms.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Govardhan, Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        item: {
+          '@type': 'TouristAttraction',
+          name: 'Pandavleni',
+          description: '2nd-century BCE rock-cut hill overlook.',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Pathardi Phata, Nashik',
+            addressRegion: 'Maharashtra',
+            addressCountry: 'IN',
+          },
+        },
+      },
+    ],
   };
 
   return (
@@ -105,14 +123,16 @@ export default function HomePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(placesListSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(spotsSchema) }}
       />
-      <Hero />
-      <Benefits />
-      <PlacesExplorer />
-      <ScreenshotStrip />
-      <TravelFaq />
-      <DownloadCta />
+      <main>
+        <TrivioHero />
+        <TrivioJourney />
+        <TrivioSpots />
+        <TrivioFounderNote />
+        <TrivioCta />
+      </main>
+      <TrivioFooter />
     </>
   );
 }

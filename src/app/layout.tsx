@@ -1,48 +1,46 @@
 import type { Metadata, Viewport } from 'next';
-import { DM_Sans } from 'next/font/google';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
+import { Bricolage_Grotesque, Newsreader } from 'next/font/google';
 import './globals.css';
 
-const dmSans = DM_Sans({
+const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-dm-sans',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-bricolage',
+});
+
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-newsreader',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nashik.sooubh.me'),
   title: {
-    default: 'NashikExplore: Curated Travel Companion for Nashik',
-    template: '%s | NashikExplore',
+    default: 'Trivio — Places, events and people in one app',
+    template: '%s | Trivio',
   },
   description:
-    'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
-  applicationName: 'NashikExplore',
-  authors: [{ name: 'NashikExplore', url: 'https://nashik.sooubh.me' }],
+    'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps. Free on Android.',
+  applicationName: 'Trivio',
+  authors: [{ name: 'Trivio', url: 'https://nashik.sooubh.me' }],
   generator: 'Next.js',
   keywords: [
+    'Trivio',
     'Nashik travel guide',
     'Nashik android app',
     'Trimbakeshwar Shiva Temple',
     'Sula Vineyards',
-    'Harihar Fort trek',
+    'Harihar Fort',
+    'Panchavati',
     'Pandavleni Caves',
-    'Someshwar Waterfall',
-    'Kalaram Temple',
-    'Anjaneri Hill',
-    'Nashik trip planner',
+    'Godavari River',
     'Maharashtra tourism',
   ],
   referrer: 'origin-when-cross-origin',
-  creator: 'NashikExplore',
-  publisher: 'NashikExplore',
-  formatDetection: {
-    telephone: false,
-    address: false,
-    email: false,
-  },
+  creator: 'Trivio',
+  publisher: 'Trivio',
   robots: {
     index: true,
     follow: true,
@@ -61,38 +59,35 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://nashik.sooubh.me/',
-    siteName: 'NashikExplore',
-    title: 'NashikExplore: Curated Travel Companion for Nashik',
+    siteName: 'Trivio',
+    title: 'Trivio — Places, events and people in one app',
     description:
-      'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
+      'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps.',
     images: [
       {
-        url: '/images/app-horizontal-icon.png',
+        url: '/images/trivio/hero-meadow.jpg',
         width: 1200,
         height: 630,
-        alt: 'NashikExplore Android App Preview and Travel Guide',
+        alt: 'Trivio — Places, events and people in one app',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NashikExplore: Curated Travel Companion for Nashik',
+    title: 'Trivio — Places, events and people in one app',
     description:
-      'Field guide to Nashik’s vineyards, sacred ghats, and mountain forts. Curated landmark dossiers, station-based itineraries, and offline wishlists.',
-    images: ['/images/app-horizontal-icon.png'],
+      'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps.',
+    images: ['/images/trivio/hero-meadow.jpg'],
   },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    apple: '/Icon-192.png',
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F8FAFC' },
-    { media: '(prefers-color-scheme: dark)', color: '#070B14' },
-  ],
+  themeColor: '#4B2E83',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -109,7 +104,8 @@ export default function RootLayout({
       {
         '@type': 'MobileApplication',
         '@id': 'https://nashik.sooubh.me/#app',
-        name: 'NashikExplore',
+        name: 'Trivio',
+        alternateName: 'NashikExplore',
         operatingSystem: 'Android 8.0+',
         applicationCategory: 'TravelApplication',
         applicationSubCategory: 'Travel & Local',
@@ -124,73 +120,55 @@ export default function RootLayout({
         installUrl:
           'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
         url: 'https://nashik.sooubh.me',
-        image: 'https://nashik.sooubh.me/images/app-splashscreen-icon.png',
+        image: 'https://nashik.sooubh.me/images/branding/trivio_launcher_icon.png',
         author: {
           '@type': 'Organization',
-          name: 'NashikExplore',
+          name: 'Trivio',
           url: 'https://nashik.sooubh.me',
         },
-        screenshot: [
-          'https://nashik.sooubh.me/images/home.png',
-          'https://nashik.sooubh.me/images/explore.png',
-          'https://nashik.sooubh.me/images/ai-planner.png',
-          'https://nashik.sooubh.me/images/saved.png',
-          'https://nashik.sooubh.me/images/profile.png',
-          'https://nashik.sooubh.me/images/details.png',
-        ],
         featureList: [
-          'Category-based destination discovery',
-          'Multi-day itinerary planning with transit hubs',
-          'Custom saved places and wishlist boards',
-          'Distance estimates and Google Maps navigation handoff',
-          'Material 3 design with light and dark theme',
+          'Hand-curated quiet trails and riverbank ghats',
+          'One-tap GPS coordinate transfer to map apps',
+          'Verified visiting timings and guidelines',
+          'Offline cached wishlist boards',
+          'Community circles and sunrise treks',
         ],
       },
       {
         '@type': 'WebSite',
         '@id': 'https://nashik.sooubh.me/#website',
         url: 'https://nashik.sooubh.me/',
-        name: 'NashikExplore',
+        name: 'Trivio',
+        alternateName: 'NashikExplore',
         description:
-          'Official website and travel directory companion for NashikExplore.',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://nashik.sooubh.me/#places?q={search_term_string}',
-          'query-input': 'required name=search_term_string',
-        },
+          'Official website and travel directory companion for Trivio.',
         publisher: {
           '@type': 'Organization',
-          name: 'NashikExplore',
+          name: 'Trivio',
           url: 'https://nashik.sooubh.me',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://nashik.sooubh.me/images/logo.png',
-          },
         },
       },
     ],
   };
 
   return (
-    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
+    <html lang="en" className={`${bricolage.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="font-sans antialiased min-h-[100dvh] flex flex-col selection:bg-blue-600/20 selection:text-blue-700 dark:selection:bg-blue-400/20 dark:selection:text-blue-300">
+      <body className="bg-[#ECE7F2] font-sans text-on-surface antialiased p-2 sm:p-5 lg:p-8">
         <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-xl focus:outline-none text-xs font-bold"
+          href="#journey"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-deep-violet focus:text-white focus:rounded-full text-xs font-bold"
         >
-          Skip to main content
+          Skip to content
         </a>
-        <Navbar />
-        <main id="main-content" className="flex-1">
+        <div data-ui="true" className="max-w-[1360px] mx-auto bg-paper rounded-frame overflow-hidden border border-[#ded9e8]">
           {children}
-        </main>
-        <Footer />
+        </div>
       </body>
     </html>
   );
