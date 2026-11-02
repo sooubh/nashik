@@ -8,7 +8,20 @@ import { ArrowRight, Compass, ShieldCheck } from 'lucide-react';
 export function Hero() {
   return (
     <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      {/* Cinematic Mountain Sunrise Backdrop */}
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <Image
+          src="/images/destinations/sahyadri-sunrise.jpg"
+          alt="Panoramic sunrise over Sahyadri mountains near Nashik"
+          fill
+          priority
+          className="object-cover object-center opacity-20 dark:opacity-25"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-white/80 dark:bg-[#070B14]/85" />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         
         {/* Left Column: Command & Value Proposition */}
         <div className="lg:col-span-7 text-left space-y-6 lg:space-y-8">
@@ -44,10 +57,10 @@ export function Hero() {
             </a>
 
             <Link
-              href="#features"
+              href="#places-preview"
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold text-sm transition-colors min-h-[52px]"
             >
-              <span>See app features</span>
+              <span>Explore landmarks</span>
               <ArrowRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </Link>
           </div>

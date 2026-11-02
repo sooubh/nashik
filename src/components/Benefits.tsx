@@ -1,10 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import { Compass, Calendar, Bookmark, ArrowRight, Navigation } from 'lucide-react';
+import Image from 'next/image';
+import { Compass, Calendar, Bookmark, ArrowRight } from 'lucide-react';
 
 const benefits = [
   {
     icon: Compass,
+    image: '/images/destinations/trimbakeshwar-temple.jpg',
+    imageAlt: 'Ancient Trimbakeshwar Shiva Temple in Nashik',
     title: 'Curated destination dossiers',
     summary:
       'Essential visiting intelligence for every spot: optimal morning hours to beat temple queues, grape crush seasons, sanctum dress codes, and one-tap handoff to Google Maps for turn-by-turn road navigation.',
@@ -13,6 +15,8 @@ const benefits = [
   },
   {
     icon: Calendar,
+    image: '/images/destinations/sahyadri-sunrise.jpg',
+    imageAlt: 'Sahyadri mountain range sunrise and trekking trails near Nashik',
     title: 'Station-based itinerary builder',
     summary:
       'Select your arrival hub—Nashik Road Railway Station, Ozar Airport, or Central Bus Stand (CBS). Itineraries group morning, midday, and sunset destinations by geographic proximity so you never backtrack across town.',
@@ -21,6 +25,8 @@ const benefits = [
   },
   {
     icon: Bookmark,
+    image: '/images/destinations/sula-vineyards.jpg',
+    imageAlt: 'Lush Sula Vineyards wine estate in Nashik',
     title: 'On-device offline wishlists',
     summary:
       'Cellular reception frequently drops when trekking through rural Sahyadri passes or traversing remote vineyard roads. Your saved boards and cached spot details remain accessible on your device.',
@@ -45,34 +51,44 @@ export function Benefits() {
         </p>
       </div>
 
-      {/* 3-Benefit Editorial Grid */}
+      {/* 3-Benefit Image-Rich Editorial Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {benefits.map((benefit, idx) => {
           const Icon = benefit.icon;
           return (
             <div
               key={idx}
-              className="p-8 sm:p-10 rounded-3xl bg-slate-100 dark:bg-slate-900/90 flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-3xl bg-slate-100 dark:bg-slate-900/90 flex flex-col justify-between overflow-hidden"
             >
               <div>
-                <div className="inline-flex p-3 rounded-2xl bg-blue-600 text-white mb-6">
-                  <Icon className="w-5 h-5" />
+                {/* Photo Header */}
+                <div className="relative w-full h-44 rounded-2xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800">
+                  <Image
+                    src={benefit.image}
+                    alt={benefit.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute top-3 left-3 p-2.5 rounded-xl bg-slate-950/80 text-white">
+                    <Icon className="w-4 h-4 text-blue-400" />
+                  </div>
                 </div>
 
-                <span className="text-xs font-bold text-slate-500 dark:text-slate-400 block mb-2">
+                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 block mb-2">
                   {benefit.tag}
                 </span>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4 leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 leading-snug">
                   {benefit.title}
                 </h3>
 
-                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                   {benefit.summary}
                 </p>
               </div>
 
-              <div className="pt-4 p-4 rounded-2xl bg-white dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <div className="p-4 rounded-2xl bg-white dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
                 {benefit.highlight}
               </div>
             </div>

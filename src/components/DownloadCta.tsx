@@ -7,12 +7,24 @@ export function DownloadCta() {
     <section id="download" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="relative rounded-3xl bg-slate-950 text-white p-8 sm:p-14 lg:p-20 overflow-hidden">
         
+        {/* Cinematic Sunset Lake Backdrop */}
+        <div className="absolute inset-0 pointer-events-none">
+          <Image
+            src="/images/destinations/gangapur-lake-sunset.jpg"
+            alt="Sunset over Gangapur Dam lake and Sahyadri mountains"
+            fill
+            className="object-cover object-center opacity-30"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+          />
+          <div className="absolute inset-0 bg-slate-950/75" />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
           
           {/* Left Text & Direct Action */}
           <div className="lg:col-span-8 text-left space-y-6">
             
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-slate-300 text-xs font-bold">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 text-slate-300 text-xs font-bold">
               <Smartphone className="w-4 h-4 text-blue-400" />
               <span>Available for Android devices</span>
             </div>
@@ -58,23 +70,20 @@ export function DownloadCta() {
                 <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
                 No intrusive third-party background tracking
               </span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
-                Handoff directly to Google Maps
-              </span>
             </div>
 
           </div>
 
-          {/* Right App Icon Emblem */}
-          <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-3xl overflow-hidden bg-slate-900 flex items-center justify-center p-6">
-              <div className="relative w-32 h-32 sm:w-36 sm:h-36">
+          {/* Right Column: Phone Visual */}
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <div className="relative w-48 sm:w-56 aspect-[9/19.5] rounded-3xl overflow-hidden bg-black p-2">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/logo.png"
-                  alt="NashikExplore App Icon"
+                  src="/images/details.png"
+                  alt="NashikExplore spot dossier detail preview"
                   fill
-                  className="object-contain"
+                  className="object-cover"
+                  sizes="224px"
                 />
               </div>
             </div>

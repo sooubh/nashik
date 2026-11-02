@@ -30,7 +30,18 @@ export const metadata: Metadata = {
 
 export default function TripPlannerPage() {
   return (
-    <div className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 sm:space-y-16">
+    <div className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 sm:space-y-16 overflow-hidden">
+      {/* Cinematic Backdrop Atmosphere */}
+      <div className="absolute top-0 left-0 right-0 h-96 -z-10 overflow-hidden pointer-events-none">
+        <Image
+          src="/images/destinations/sula-vineyards.jpg"
+          alt="Sula Vineyards landscape backdrop"
+          fill
+          className="object-cover object-center opacity-15 dark:opacity-20"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-white/85 dark:bg-[#070B14]/85" />
+      </div>
       <BreadcrumbJsonLd
         items={[
           { name: 'Home', url: 'https://nashik.sooubh.me' },
