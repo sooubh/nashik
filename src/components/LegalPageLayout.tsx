@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Shield, ChevronDown } from 'lucide-react';
 import { BreadcrumbJsonLd } from './BreadcrumbJsonLd';
-import { TrivioNav } from '@/components/trivio/TrivioNav';
-import { TrivioFooter } from '@/components/trivio/TrivioFooter';
+import { SiteNav } from '@/components/SiteNav';
+import { SiteFooter } from '@/components/SiteFooter';
 
 export interface TocItem {
   id: string;
@@ -39,9 +39,9 @@ export function LegalPageLayout({
 
   return (
     <div className="min-h-[100dvh] bg-paper flex flex-col justify-between">
-      <TrivioNav />
+      <SiteNav />
 
-      <main className="flex-1 py-12 sm:py-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full">
+      <main className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full">
         {path && (
           <BreadcrumbJsonLd
             items={[
@@ -151,7 +151,7 @@ export function LegalPageLayout({
         </div>
       </main>
 
-      <TrivioFooter />
+      <SiteFooter />
     </div>
   );
 }

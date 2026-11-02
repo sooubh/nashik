@@ -1,4 +1,4 @@
-# NashikExplore — Official Website & Travel Companion
+﻿# NashikExplore — Official Website & Travel Companion
 
 Official marketing website and policy center for the **NashikExplore** Android application.
 
@@ -6,7 +6,7 @@ Official marketing website and policy center for the **NashikExplore** Android a
 
 - **Canonical Domain:** `https://nashik.sooubh.me`
 - **Architecture:** Next.js 14 (App Router) with TypeScript & Tailwind CSS
-- **Target App:** NashikExplore for Android ([Google Play Store](https://play.google.com/store/apps/details?id=com.nashikexplore.app))
+- **Target App:** Trivio for Android ([Google Play Store](https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore))
 - **Support Contact:** `support@nashikexplore.com`
 
 ---

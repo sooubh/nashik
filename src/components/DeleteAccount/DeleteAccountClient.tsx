@@ -11,8 +11,9 @@ import {
   Copy,
   Check,
 } from 'lucide-react';
-import { TrivioNav } from '@/components/trivio/TrivioNav';
-import { TrivioFooter } from '@/components/trivio/TrivioFooter';
+import { SiteNav } from '@/components/SiteNav';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SITE_CONFIG } from '@/config/site';
 
 export function DeleteAccountClient() {
   const [copied, setCopied] = useState(false);
@@ -30,17 +31,17 @@ export function DeleteAccountClient() {
     e.preventDefault();
     if (!email || !confirmCheckbox) return;
 
-    const subjectLine = `[Trivio] Account Deletion Request: ${email}`;
-    const bodyContent = `Hello Support Team,\n\nI would like to request the deletion of my Trivio user account.\n\nRegistered Email: ${email}\nReason (optional): ${reason || 'Not specified'}\n\nI confirm that I understand this request will delete my account profile and authentication records.\n\nThank you.`;
-    const mailtoUrl = `mailto:support@nashikexplore.com?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
+    const subjectLine = `[${SITE_CONFIG.name}] Account Deletion Request: ${email}`;
+    const bodyContent = `Hello Support Team,\n\nI would like to request the deletion of my ${SITE_CONFIG.name} user account.\n\nRegistered Email: ${email}\nReason (optional): ${reason || 'Not specified'}\n\nI confirm that I understand this request will delete my account profile and authentication records.\n\nThank you.`;
+    const mailtoUrl = `mailto:${SITE_CONFIG.supportEmail}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
     window.location.href = mailtoUrl;
   };
 
   return (
     <div className="min-h-[100dvh] bg-paper flex flex-col justify-between">
-      <TrivioNav />
+      <SiteNav />
 
-      <main className="flex-1 py-12 sm:py-16 px-4 sm:px-8 lg:px-12 max-w-5xl mx-auto w-full space-y-12">
+      <main className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-5xl mx-auto w-full space-y-12">
         {/* Top Back Nav & Badge */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
@@ -203,7 +204,7 @@ export function DeleteAccountClient() {
                 className="mt-1 w-4 h-4 rounded text-deep-violet focus:ring-deep-violet accent-deep-violet"
               />
               <label htmlFor="confirm-deletion" className="text-xs text-on-surface-variant leading-relaxed">
-                I understand that submitting this request will permanently delete my Trivio profile and authentication records.
+                I understand that submitting this request will permanently delete my user account and authentication records.
               </label>
             </div>
 
@@ -219,7 +220,7 @@ export function DeleteAccountClient() {
         </div>
       </main>
 
-      <TrivioFooter />
+      <SiteFooter />
     </div>
   );
 }

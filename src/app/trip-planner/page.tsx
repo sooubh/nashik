@@ -2,44 +2,45 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Sparkles, Download } from 'lucide-react';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
-import { TrivioNav } from '@/components/trivio/TrivioNav';
-import { TrivioFooter } from '@/components/trivio/TrivioFooter';
+import { SiteNav } from '@/components/SiteNav';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Trip Planning Guide: Trivio',
+  title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
   description:
-    'Discover how the Trivio Android app helps you plan multi-day trips around Nashik with customized itineraries, distance estimates, and Google Maps navigation.',
+    `Discover how the ${SITE_CONFIG.name} Android app plans multi-day itineraries around Nashik with geographic clustering, zero backtracking, and offline caching.`,
   alternates: {
     canonical: '/trip-planner',
   },
   openGraph: {
-    title: 'Trip Planning Guide: Trivio',
+    title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
     description:
-      'Plan multi-day travel itineraries in Nashik with the Trivio Android app.',
-    url: 'https://nashik.sooubh.me/trip-planner',
-    images: ['/images/trivio/step-discover.jpg'],
+      `Plan multi-day travel itineraries in Nashik with ${SITE_CONFIG.name}.`,
+    url: `${SITE_CONFIG.canonicalUrl}/trip-planner`,
+    images: ['/images/screenshots/ai-planner.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trip Planning Guide: Trivio',
+    title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
     description:
-      'Plan multi-day travel itineraries in Nashik with the Trivio Android app.',
-    images: ['/images/trivio/step-discover.jpg'],
+      `Plan multi-day travel itineraries in Nashik with ${SITE_CONFIG.name}.`,
+    images: ['/images/screenshots/ai-planner.png'],
   },
 };
 
 export default function TripPlannerPage() {
   return (
     <div className="min-h-[100dvh] bg-paper flex flex-col justify-between">
-      <TrivioNav />
+      <SiteNav />
 
-      <main className="flex-1 py-12 sm:py-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
+      <main className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
         <BreadcrumbJsonLd
           items={[
-            { name: 'Home', url: 'https://nashik.sooubh.me' },
-            { name: 'Trip Planning Guide', url: 'https://nashik.sooubh.me/trip-planner' },
+            { name: 'Home', url: SITE_CONFIG.canonicalUrl },
+            { name: 'Trip Planning Guide', url: `${SITE_CONFIG.canonicalUrl}/trip-planner` },
           ]}
         />
 
@@ -50,7 +51,7 @@ export default function TripPlannerPage() {
             className="inline-flex items-center gap-2 text-xs font-semibold text-deep-violet hover:underline py-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to Trivio Home</span>
+            <span>Return to Home</span>
           </Link>
 
           <div className="inline-flex items-center gap-2 text-xs text-deep-violet font-semibold bg-deep-violet/10 px-3.5 py-1.5 rounded-full">
@@ -62,13 +63,13 @@ export default function TripPlannerPage() {
         {/* Page Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="font-editorial italic text-base text-deep-violet block">
-            Itinerary Planning Guide
+            Itinerary Architecture Guide
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface leading-tight">
             Trip planning built for real travel in Nashik.
           </h1>
           <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed">
-            The Trivio app includes a dedicated itinerary builder designed to eliminate backtracking between wine estates, sacred ghats, and Sahyadri mountains.
+            The {SITE_CONFIG.name} app includes a dedicated itinerary builder designed to eliminate backtracking between wine estates, sacred ghats, and Sahyadri mountains.
           </p>
         </div>
 
@@ -81,7 +82,7 @@ export default function TripPlannerPage() {
                 How the Itinerary Builder Works
               </h2>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Instead of manually coordinating scattered attractions on different maps, Trivio guides you through four clear preferences:
+                Instead of manually coordinating scattered attractions on different maps, {SITE_CONFIG.name} guides you through clear geographic preferences:
               </p>
 
               <ul className="space-y-4 text-sm text-on-surface">
@@ -100,7 +101,7 @@ export default function TripPlannerPage() {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-deep-violet shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-deep-violet">Offline Fallback:</strong> The app connects to a Cloudflare Worker backend for assisted scheduling, with a deterministic offline heuristic generator if cell reception drops in Sahyadri valleys.
+                    <strong className="text-deep-violet">Offline Fallback:</strong> The app connects to an assisted scheduling service, with a deterministic offline heuristic generator if cell reception drops in Sahyadri valleys.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -150,42 +151,36 @@ export default function TripPlannerPage() {
 
             <div className="pt-2">
               <a
-                href="https://play.google.com/store/apps/details?id=com.nashikexplore.app"
+                href={SITE_CONFIG.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 bg-signal-lime hover:bg-[#d5ff4f] text-[#221045] text-sm sm:text-base font-bold px-7 py-3.5 rounded-full transition-transform hover:scale-[1.02] active:scale-95"
               >
-                <svg aria-hidden="true" className="w-5 h-5 fill-[#221045] shrink-0" viewBox="0 0 24 24">
-                  <path d="M3.609 1.814L13.792 12 3.61 22.185c-.382-.363-.61-.884-.61-1.47V3.284c0-.585.228-1.106.609-1.47zm11.242 11.243l2.364 2.364-12.08 6.942 9.716-9.306zm0-2.115L5.135 1.637l12.08 6.942-2.364 2.363zm1.488 1.058l3.774 2.167c.928.532.928 1.401 0 1.934l-3.774 2.167-2.302-2.301 2.302-2.267z" />
-                </svg>
-                <span>Get Trivio on Google Play</span>
+                <Download className="w-5 h-5 shrink-0" />
+                <span>Get App on Google Play</span>
               </a>
             </div>
           </div>
 
-          {/* Right: Phone preview chassis */}
-          <div className="lg:col-span-5 flex justify-center sticky top-24">
-            <div data-ui="true" className="max-w-[270px] w-full rounded-[28px] p-2 bg-slate-900 border border-slate-700/60 overflow-hidden">
-              <div className="relative rounded-[22px] overflow-hidden aspect-[9/16] bg-slate-950">
+          {/* Right: Real Phone Preview */}
+          <div className="lg:col-span-5 flex justify-center sticky top-28">
+            <div className="max-w-[280px] w-full rounded-[36px] p-2.5 bg-slate-950 border-4 border-slate-800 overflow-hidden">
+              <div className="relative rounded-[28px] overflow-hidden aspect-[9/19.5] bg-slate-900">
                 <Image
-                  src="/images/trivio/step-discover.jpg"
-                  alt="Trivio Trip Planner Screen Preview"
+                  src="/images/screenshots/ai-planner.png"
+                  alt={`${SITE_CONFIG.name} AI Trip Planner Screen`}
                   fill
-                  className="object-cover"
-                  sizes="270px"
+                  className="object-cover object-top"
+                  sizes="280px"
                   priority
                 />
-                <div className="absolute inset-x-3 bottom-3 p-2.5 rounded-xl bg-slate-950/90 border border-white/10 text-white">
-                  <div className="text-[11px] font-bold text-signal-lime">Deterministic Itineraries</div>
-                  <div className="text-[10px] text-white/70">Sequenced by proximity · 0 backtracking</div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
 
-      <TrivioFooter />
+      <SiteFooter />
     </div>
   );
 }

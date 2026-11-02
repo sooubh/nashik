@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, Newsreader } from 'next/font/google';
 import './globals.css';
+import { SITE_CONFIG } from '@/config/site';
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -16,31 +17,30 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nashik.sooubh.me'),
+  metadataBase: new URL(SITE_CONFIG.canonicalUrl),
   title: {
-    default: 'Trivio — Places, events and people in one app',
-    template: '%s | Trivio',
+    default: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
+    template: `%s | ${SITE_CONFIG.name}`,
   },
-  description:
-    'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps. Free on Android.',
-  applicationName: 'Trivio',
-  authors: [{ name: 'Trivio', url: 'https://nashik.sooubh.me' }],
+  description: SITE_CONFIG.description,
+  applicationName: SITE_CONFIG.name,
+  authors: [{ name: 'sooubh', url: SITE_CONFIG.canonicalUrl }],
   generator: 'Next.js',
   keywords: [
-    'Trivio',
     'Nashik travel guide',
     'Nashik android app',
     'Trimbakeshwar Shiva Temple',
     'Sula Vineyards',
-    'Harihar Fort',
-    'Panchavati',
+    'Harihar Fort rock steps',
+    'Panchavati Ramkund',
     'Pandavleni Caves',
     'Godavari River',
     'Maharashtra tourism',
+    'Nashik itinerary planner',
   ],
   referrer: 'origin-when-cross-origin',
-  creator: 'Trivio',
-  publisher: 'Trivio',
+  creator: 'sooubh',
+  publisher: 'NashikExplore',
   robots: {
     index: true,
     follow: true,
@@ -58,26 +58,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://nashik.sooubh.me/',
-    siteName: 'Trivio',
-    title: 'Trivio — Places, events and people in one app',
-    description:
-      'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps.',
+    url: `${SITE_CONFIG.canonicalUrl}/`,
+    siteName: SITE_CONFIG.name,
+    title: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
+    description: SITE_CONFIG.description,
     images: [
       {
-        url: '/images/trivio/hero-meadow.jpg',
+        url: '/images/destinations/sula-vineyards.jpg',
         width: 1200,
         height: 630,
-        alt: 'Trivio — Places, events and people in one app',
+        alt: `${SITE_CONFIG.name} · Authentic Travel Guide for Nashik`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trivio — Places, events and people in one app',
-    description:
-      'Hand-curated quiet trails, riverbank ghats, and hidden viewpoints in Nashik. One tap transfers exact GPS coordinates to your favorite maps.',
-    images: ['/images/trivio/hero-meadow.jpg'],
+    title: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
+    description: SITE_CONFIG.description,
+    images: ['/images/destinations/sula-vineyards.jpg'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -103,8 +101,8 @@ export default function RootLayout({
     '@graph': [
       {
         '@type': 'MobileApplication',
-        '@id': 'https://nashik.sooubh.me/#app',
-        name: 'Trivio',
+        '@id': `${SITE_CONFIG.canonicalUrl}/#app`,
+        name: SITE_CONFIG.name,
         alternateName: 'NashikExplore',
         operatingSystem: 'Android 8.0+',
         applicationCategory: 'TravelApplication',
@@ -115,37 +113,34 @@ export default function RootLayout({
           price: '0',
           priceCurrency: 'INR',
         },
-        downloadUrl:
-          'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
-        installUrl:
-          'https://play.google.com/store/apps/details?id=com.nashikexplore.app',
-        url: 'https://nashik.sooubh.me',
-        image: 'https://nashik.sooubh.me/images/branding/trivio_launcher_icon.png',
+        downloadUrl: SITE_CONFIG.playStoreUrl,
+        installUrl: SITE_CONFIG.playStoreUrl,
+        url: SITE_CONFIG.canonicalUrl,
+        image: `${SITE_CONFIG.canonicalUrl}/images/branding/logo.png`,
         author: {
-          '@type': 'Organization',
-          name: 'Trivio',
-          url: 'https://nashik.sooubh.me',
+          '@type': 'Person',
+          name: 'Sourabh Singh',
+          url: 'https://sooubh.me',
         },
         featureList: [
-          'Hand-curated quiet trails and riverbank ghats',
+          'Hand-curated quiet trails, riverbank ghats, and hill overlooks',
           'One-tap GPS coordinate transfer to map apps',
-          'Verified visiting timings and guidelines',
-          'Offline cached wishlist boards',
-          'Community circles and sunrise treks',
+          'Verified temple darshan timings and dress code guidelines',
+          'Offline cached wishlist boards in local Hive storage',
+          'Deterministic trip planner with zero backtracking',
         ],
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://nashik.sooubh.me/#website',
-        url: 'https://nashik.sooubh.me/',
-        name: 'Trivio',
+        '@id': `${SITE_CONFIG.canonicalUrl}/#website`,
+        url: `${SITE_CONFIG.canonicalUrl}/`,
+        name: SITE_CONFIG.name,
         alternateName: 'NashikExplore',
-        description:
-          'Official website and travel directory companion for Trivio.',
+        description: SITE_CONFIG.description,
         publisher: {
           '@type': 'Organization',
-          name: 'Trivio',
-          url: 'https://nashik.sooubh.me',
+          name: 'NashikExplore',
+          url: SITE_CONFIG.canonicalUrl,
         },
       },
     ],
@@ -161,7 +156,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#ECE7F2] font-sans text-on-surface antialiased p-2 sm:p-5 lg:p-8">
         <a
-          href="#journey"
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-deep-violet focus:text-white focus:rounded-full text-xs font-bold"
         >
           Skip to content

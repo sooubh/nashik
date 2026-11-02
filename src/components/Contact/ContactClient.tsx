@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Mail, MapPin, Send, ArrowLeft, HelpCircle, Copy, Check } from 'lucide-react';
-import { TrivioNav } from '@/components/trivio/TrivioNav';
-import { TrivioFooter } from '@/components/trivio/TrivioFooter';
+import { SiteNav } from '@/components/SiteNav';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SITE_CONFIG } from '@/config/site';
 
 export function ContactClient() {
   const [copied, setCopied] = useState(false);
@@ -23,17 +24,17 @@ export function ContactClient() {
 
   const handleOpenEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    const subjectLine = `[Trivio] ${formData.subject}${formData.name ? ` from ${formData.name}` : ''}`;
+    const subjectLine = `[${SITE_CONFIG.name}] ${formData.subject}${formData.name ? ` from ${formData.name}` : ''}`;
     const bodyContent = `${formData.message}\n\n---\nSender: ${formData.name || 'Not specified'}\nEmail: ${formData.email || 'Not specified'}`;
-    const mailtoUrl = `mailto:support@nashikexplore.com?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
+    const mailtoUrl = `mailto:${SITE_CONFIG.supportEmail}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
     window.location.href = mailtoUrl;
   };
 
   return (
     <div className="min-h-[100dvh] bg-paper flex flex-col justify-between">
-      <TrivioNav />
+      <SiteNav />
 
-      <main className="flex-1 py-12 sm:py-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
+      <main className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
         {/* Top Back Link & Badge */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
@@ -229,7 +230,7 @@ export function ContactClient() {
         </div>
       </main>
 
-      <TrivioFooter />
+      <SiteFooter />
     </div>
   );
 }
