@@ -2,15 +2,29 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Download } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
+  const heroRef = React.useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
+  });
+  const wordmarkY = useSpring(
+    useTransform(scrollYProgress, [0, 0.62, 1], [0, -18, -72]),
+    { stiffness: 105, damping: 28, mass: 0.35 },
+  );
+  const wordmarkOpacity = useTransform(scrollYProgress, [0, 0.58, 0.9, 1], [1, 1, 0.35, 0]);
+  const foregroundY = useSpring(
+    useTransform(scrollYProgress, [0, 1], [0, -34]),
+    { stiffness: 90, damping: 28, mass: 0.4 },
+  );
 
   return (
-    <section className="relative h-screen min-h-[640px] w-full overflow-hidden bg-slate-950 text-white select-none max-sm:h-[100svh] max-sm:min-h-[680px]">
+    <section ref={heroRef} className="relative h-screen min-h-[640px] w-full overflow-hidden bg-slate-950 text-white select-none max-sm:h-[100svh] max-sm:min-h-[680px]">
       {/* One original sky image is used across desktop and mobile. */}
       <div className="absolute inset-0 z-0 h-full w-full select-none">
         <div className="absolute inset-0 h-full w-full">
@@ -35,14 +49,15 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeOut' }}
         className="pointer-events-none absolute inset-x-0 top-[34%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
+        style={shouldReduceMotion ? undefined : { y: wordmarkY, opacity: wordmarkOpacity }}
       >
-        <h1 className="w-full select-none text-center font-sans text-[19vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
+        <h1 className="w-full select-none text-center font-sans text-[21vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
           NASHIK
         </h1>
       </motion.div>
 
       {/* Reuse the exact desktop foreground cutout; responsive object-fit frames it for phones. */}
-      <div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none">
+      <motion.div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none" style={shouldReduceMotion ? undefined : { y: foregroundY }}>
         <div className="absolute inset-0 h-full w-full">
           <Image
             src="/images/trivio/hero-temple-cutout.png"
@@ -56,7 +71,10 @@ export function HeroSection() {
             className="scale-[1.002] object-cover object-center max-sm:scale-100 max-sm:object-[center_50%]"
           />
         </div>
-      </div>
+      </motion.div>
+
+      {/* Softly blends the hero artwork into the following destination section. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[15] h-24 bg-gradient-to-b from-transparent to-[#F4F1F8] sm:h-28" />
 
       {/* The primary hero action now takes visitors directly to Google Play. */}
       <div className="pointer-events-auto absolute left-1/2 top-[51%] z-20 -translate-x-1/2 sm:top-[52%] md:top-[53%] max-sm:top-[73%]">
