@@ -36,7 +36,7 @@ export function HeroSection() {
         transition={{ duration: 0.9, ease: 'easeOut' }}
         className="pointer-events-none absolute inset-x-0 top-[34%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
       >
-        <h1 className="w-full select-none text-center font-sans text-[17vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
+        <h1 className="w-full select-none text-center font-sans text-[19vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
           NASHIK
         </h1>
       </motion.div>
