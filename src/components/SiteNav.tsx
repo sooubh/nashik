@@ -2,107 +2,92 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, MapPin, User } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '#main-content' },
+  { label: 'Destinations', href: '#destinations' },
+  { label: 'Experiences', href: '#experiences' },
+  { label: 'App Preview', href: '#app-preview' },
+  { label: 'Why Trivio', href: '#why-trivio' },
+];
 
 export function SiteNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#features' },
-    { label: 'Pricing', href: '#packages' },
-    { label: 'Tours', href: '#tours' },
-  ];
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
+      className={'fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ' + (
         isScrolled
-          ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl'
+          ? 'border-b border-white/10 bg-slate-950/90 py-3.5 shadow-xl backdrop-blur-md'
           : 'bg-transparent py-6 sm:py-8'
-      }`}
+      )}
     >
-      <div className="w-full px-6 sm:px-12 lg:px-16 flex items-center justify-between">
-        {/* Brand Logo: TRIVIO + MapPin */}
+      <div className="flex w-full items-center justify-between px-6 sm:px-12 lg:px-16">
         <Link
           href="/"
-          className="group flex items-center gap-1.5 text-white tracking-widest font-black text-xl sm:text-2xl select-none"
+          className="group flex select-none items-center gap-1.5 text-xl font-black tracking-widest text-white sm:text-2xl"
           aria-label="Trivio Home"
         >
           <span>TRIVIO</span>
-          <MapPin className="w-5 h-5 fill-white text-white transition-transform group-hover:scale-110" />
+          <span aria-hidden="true" className="text-sm text-signal-lime">●</span>
         </Link>
 
-        {/* Desktop Navigation Links & User Avatar */}
-        <div className="hidden md:flex items-center gap-8 lg:gap-12">
-          <nav aria-label="Main Navigation" className="flex items-center gap-8 lg:gap-10">
-            {navItems.map((item) => (
+        <div className="hidden items-center gap-8 md:flex lg:gap-10">
+          <nav aria-label="Main Navigation" className="flex items-center gap-6 lg:gap-8">
+            {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-white/90 hover:text-white transition-colors tracking-wide"
+                className="whitespace-nowrap text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-white"
               >
                 {item.label}
               </a>
             ))}
           </nav>
-
-          {/* User Profile Avatar Icon */}
-          <button
-            type="button"
-            aria-label="User Account"
-            className="w-9 h-9 rounded-full border border-white/70 hover:border-white flex items-center justify-center text-white/90 hover:text-white transition-colors hover:bg-white/10"
+          <a
+            href={SITE_CONFIG.playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-signal-lime px-5 py-2.5 text-xs font-bold text-[#221045] transition-colors hover:bg-[#d5ff4f]"
           >
-            <User className="w-4 h-4 stroke-[2]" />
-          </button>
+            Get the app
+          </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex md:hidden items-center gap-3">
-          <button
-            type="button"
-            aria-label="User Account"
-            className="w-8 h-8 rounded-full border border-white/70 flex items-center justify-center text-white"
-          >
-            <User className="w-3.5 h-3.5" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors"
-            aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => setMobileOpen((open) => !open)}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-black/10 text-white transition-colors hover:bg-white/10 md:hidden"
+          aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
+        >
+          {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+        </button>
       </div>
 
-      {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className="md:hidden w-full px-6 mt-3">
+        <div className="mt-3 w-full px-6 md:hidden" id="mobile-navigation">
           <nav
             aria-label="Mobile Navigation Menu"
-            className="rounded-2xl bg-slate-950/95 backdrop-blur-xl border border-white/15 p-5 flex flex-col gap-3 text-white shadow-2xl"
+            className="flex flex-col gap-2 rounded-2xl border border-white/15 bg-slate-950/95 p-5 text-white shadow-2xl backdrop-blur-xl"
           >
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
               >
                 {item.label}
               </a>
@@ -111,9 +96,9 @@ export function SiteNav() {
               href={SITE_CONFIG.playStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 text-center py-3 rounded-full bg-signal-lime text-[#221045] font-bold text-sm shadow-md"
+              className="mt-2 rounded-full bg-signal-lime py-3 text-center text-sm font-bold text-[#221045]"
             >
-              Get App on Google Play
+              Get the app on Google Play
             </a>
           </nav>
         </div>
