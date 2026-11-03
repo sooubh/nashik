@@ -11,7 +11,7 @@ export function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden bg-slate-950 text-white select-none max-sm:h-[100svh] max-sm:min-h-[680px]">
-      {/* Desktop sky; phones use a portrait crop of the same original artwork. */}
+      {/* One original sky image is used across desktop and mobile. */}
       <div className="absolute inset-0 z-0 h-full w-full select-none">
         <div className="absolute inset-0 h-full w-full">
           <Image
@@ -41,7 +41,7 @@ export function HeroSection() {
         </h1>
       </motion.div>
 
-      {/* Mobile art direction: a portrait crop of the exact same transparent cutout. */}
+      {/* Reuse the exact desktop foreground cutout; responsive object-fit frames it for phones. */}
       <div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none">
         <div className="absolute inset-0 h-full w-full">
           <Image
@@ -53,7 +53,7 @@ export function HeroSection() {
             fetchPriority="high"
             quality={95}
             sizes="100vw"
-            className="scale-[1.002] object-cover object-center max-sm:left-1/2 max-sm:right-auto max-sm:top-auto max-sm:bottom-0 max-sm:h-[78svh] max-sm:w-auto max-sm:max-w-none max-sm:-translate-x-1/2 max-sm:object-contain max-sm:object-bottom"
+            className="scale-[1.002] object-cover object-center max-sm:scale-100 max-sm:object-[center_50%]"
           />
         </div>
       </div>
