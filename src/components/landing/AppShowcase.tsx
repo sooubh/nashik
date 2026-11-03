@@ -4,28 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 
-const PREVIEW_SCREENS = [
-  {
-    id: 'explore',
-    title: 'Explore',
-    image: '/images/screenshots/explore.png',
-    position: 'relative z-0 -mr-3 translate-y-7 -rotate-[8deg] sm:mr-0 sm:translate-y-10',
-    size: 'h-[214px] w-[104px] sm:h-[370px] sm:w-[180px] lg:h-[430px] lg:w-[210px]',
-  },
-  {
-    id: 'home',
-    title: 'Home',
-    image: '/images/screenshots/home.png',
-    position: 'relative z-10',
-    size: 'h-[296px] w-[145px] sm:h-[440px] sm:w-[215px] lg:h-[490px] lg:w-[240px]',
-  },
-  {
-    id: 'planner',
-    title: 'Trip planner',
-    image: '/images/screenshots/ai-planner.png',
-    position: 'relative z-0 -ml-3 translate-y-7 rotate-[8deg] sm:ml-0 sm:translate-y-10',
-    size: 'h-[214px] w-[104px] sm:h-[370px] sm:w-[180px] lg:h-[430px] lg:w-[210px]',
-  },
+const AUDIENCES = [
+  'Weekend explorers',
+  'Heritage lovers',
+  'Nature seekers',
+  'Food explorers',
+  'Local travellers',
 ];
 
 export function AppShowcase() {
@@ -35,66 +19,77 @@ export function AppShowcase() {
     <section
       id="app-preview"
       aria-labelledby="app-preview-title"
-      className="relative w-full scroll-mt-24 overflow-hidden bg-[#F4F1F8] px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+      className="relative w-full scroll-mt-24 overflow-hidden bg-white px-4 pb-10 pt-16 sm:px-8 sm:pb-14 sm:pt-20 lg:px-12 lg:pb-16 lg:pt-24"
     >
-      <div className="pointer-events-none absolute left-1/2 top-[38%] h-[340px] w-[min(760px,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-[24%] mx-auto h-[360px] max-w-5xl rounded-full bg-[radial-gradient(ellipse_at_center,rgba(204,226,250,0.52)_0%,rgba(235,244,253,0.25)_45%,transparent_72%)] blur-2xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl">
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-deep-violet sm:text-[11px]">
+            Your Nashik travel companion
+          </p>
+          <h2
+            id="app-preview-title"
+            className="mx-auto max-w-4xl text-[2rem] font-bold leading-[1.08] tracking-[-0.045em] text-on-surface sm:text-4xl md:text-5xl lg:text-[3.65rem]"
+          >
+            Make every Nashik trip
+            <span className="block font-editorial font-normal italic tracking-[-0.025em] text-[#7A7484]">
+              easier to discover.
+            </span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-on-surface-variant sm:mt-5 sm:text-base">
+            Find remarkable places, local experiences and useful travel details — all in one simple guide.
+          </p>
+        </motion.div>
+
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mb-10 max-w-2xl text-center sm:mb-14"
+          transition={{ duration: 0.65, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-9 text-center sm:mt-11"
         >
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
-            App preview
+          <p className="mb-4 text-[10px] font-medium tracking-[0.16em] text-on-surface-variant/65 sm:text-[11px]">
+            A GUIDE FOR EVERY KIND OF EXPLORER
           </p>
-          <h2
-            id="app-preview-title"
-            className="text-3xl font-bold leading-tight tracking-tight text-on-surface sm:text-4xl lg:text-5xl"
-          >
-            Your Nashik journey,
-            <span className="block font-editorial font-normal italic text-deep-violet">
-              right in your pocket.
-            </span>
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-on-surface-variant sm:text-base">
-            A closer look at the tools that help you discover, save and plan your next trip.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+            {AUDIENCES.map((audience) => (
+              <span
+                key={audience}
+                className="rounded-full border border-[#e8e5ed] bg-white/90 px-3.5 py-2 text-[10px] font-semibold tracking-wide text-[#5B5664] shadow-[0_3px_12px_rgba(31,22,47,0.035)] sm:px-4 sm:text-[11px]"
+              >
+                # {audience}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.16 }}
-          transition={{ duration: 0.65, ease: 'easeOut' }}
-          className="relative flex items-center justify-center overflow-hidden px-0 pb-5 pt-2 sm:gap-4 sm:overflow-visible"
+          initial={reduceMotion ? false : { opacity: 0, y: 42, scale: 0.985 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.12 }}
+          transition={{ duration: 0.9, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mx-auto mt-7 w-full max-w-[1360px] sm:mt-9 lg:mt-10"
         >
-          {PREVIEW_SCREENS.map((screen) => (
-            <div
-              key={screen.id}
-              className={'shrink-0 rounded-[2.25rem] border-[6px] border-[#17151D] bg-[#17151D] p-[3px] shadow-[0_28px_70px_rgba(35,20,66,0.18)] sm:rounded-[2.6rem] sm:border-[7px] sm:p-1 ' + screen.position + ' ' + screen.size}
-            >
-              <div className="relative h-full w-full overflow-hidden rounded-[1.8rem] bg-slate-100 sm:rounded-[2.1rem]">
-                <Image
-                  src={screen.image}
-                  alt={screen.title + ' screen in the Trivio app'}
-                  fill
-                  sizes="(max-width: 640px) 145px, (max-width: 1024px) 215px, 240px"
-                  className="object-cover object-top"
-                />
-              </div>
-            </div>
-          ))}
+          <Image
+            src="/images/app-preview/trivio-app-preview.webp"
+            alt="Trivio travel guide app preview showing Nashik destinations, temple and waterfall discoveries, and a trip route planner across three phone screens"
+            width={1536}
+            height={1024}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 96vw, 1360px"
+            className="block h-auto w-full select-none object-contain"
+            draggable={false}
+          />
         </motion.div>
-
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-medium tracking-wide text-on-surface-variant sm:mt-8 sm:gap-x-8 sm:text-xs">
-          <span>Explore places</span>
-          <span className="h-1 w-1 rounded-full bg-deep-violet/50" />
-          <span>Save favourites</span>
-          <span className="h-1 w-1 rounded-full bg-deep-violet/50" />
-          <span>Plan your route</span>
-        </div>
       </div>
     </section>
   );
