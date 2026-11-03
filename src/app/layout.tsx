@@ -100,43 +100,30 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'WebSite',
+        '@id': `${SITE_CONFIG.canonicalUrl}/#website`,
+        url: SITE_CONFIG.canonicalUrl,
+        name: SITE_CONFIG.name,
+        description: SITE_CONFIG.description,
+        inLanguage: 'en-IN',
+      },
+      {
         '@type': 'MobileApplication',
         '@id': `${SITE_CONFIG.canonicalUrl}/#app`,
         name: SITE_CONFIG.name,
-        alternateName: 'NashikExplore',
-        operatingSystem: 'Android 8.0+',
+        operatingSystem: 'ANDROID',
         applicationCategory: 'TravelApplication',
-        applicationSubCategory: 'Travel & Local',
-        softwareVersion: '1.0.0',
+        installUrl: SITE_CONFIG.playStoreUrl,
         offers: {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'INR',
         },
-        downloadUrl: SITE_CONFIG.playStoreUrl,
-        installUrl: SITE_CONFIG.playStoreUrl,
-        url: SITE_CONFIG.canonicalUrl,
-        image: `${SITE_CONFIG.canonicalUrl}/images/branding/logo.png`,
         author: {
-          '@type': 'Person',
-          name: 'Sourabh Singh',
-          url: 'https://sooubh.me',
+          '@type': 'Organization',
+          name: 'NashikExplore',
+          url: SITE_CONFIG.canonicalUrl,
         },
-        featureList: [
-          'Hand-curated quiet trails, riverbank ghats, and hill overlooks',
-          'One-tap GPS coordinate transfer to map apps',
-          'Verified temple darshan timings and dress code guidelines',
-          'Offline cached wishlist boards in local Hive storage',
-          'Deterministic trip planner with zero backtracking',
-        ],
-      },
-      {
-        '@type': 'WebSite',
-        '@id': `${SITE_CONFIG.canonicalUrl}/#website`,
-        url: `${SITE_CONFIG.canonicalUrl}/`,
-        name: SITE_CONFIG.name,
-        alternateName: 'NashikExplore',
-        description: SITE_CONFIG.description,
         publisher: {
           '@type': 'Organization',
           name: 'NashikExplore',
@@ -154,14 +141,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-[#ECE7F2] font-sans text-on-surface antialiased p-2 sm:p-5 lg:p-8">
+      <body className="bg-white font-sans text-on-surface antialiased min-h-screen w-full overflow-x-hidden p-0 m-0">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-deep-violet focus:text-white focus:rounded-full text-xs font-bold"
         >
           Skip to content
         </a>
-        <div data-ui="true" className="max-w-[1360px] mx-auto bg-paper rounded-frame overflow-hidden border border-[#ded9e8]">
+        <div className="w-full min-h-screen">
           {children}
         </div>
       </body>

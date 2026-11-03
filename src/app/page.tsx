@@ -2,6 +2,8 @@ import React from 'react';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { HeroSection } from '@/components/landing/HeroSection';
+import { PopularToursSection } from '@/components/landing/PopularToursSection';
+import { TourPackagesSection } from '@/components/landing/TourPackagesSection';
 import { DestinationGallery } from '@/components/landing/DestinationGallery';
 import { PlaceIntelligence } from '@/components/landing/PlaceIntelligence';
 import { AppShowcase } from '@/components/landing/AppShowcase';
@@ -177,12 +179,31 @@ export default function HomePage() {
       />
       <SiteNav />
       <main id="main-content">
+        {/* Pixel-Perfect Reference Hero Section matching media_1793715148625_8d55c47a.jpg */}
         <HeroSection />
-        <DestinationGallery />
+
+        {/* Pixel-Perfect Section 1: Discover Our Most Popular Tours matching media_1793715148150_afc46a87.jpg */}
+        <PopularToursSection />
+
+        {/* Section 2: Curated Tour Packages matching reference specification */}
+        <TourPackagesSection />
+
+        {/* Authentic Nashik Field Intelligence & Gazetteer */}
         <PlaceIntelligence />
+
+        {/* Authentic Android App Showcase with Real Device Frames */}
         <AppShowcase />
+
+        {/* Destination Gallery Reel */}
+        <DestinationGallery />
+
+        {/* Local Advantage Comparison */}
         <LocalAdvantage />
+
+        {/* App FAQ */}
         <AppFaq />
+
+        {/* Conversion Download CTA */}
         <DownloadCta />
       </main>
       <SiteFooter />
