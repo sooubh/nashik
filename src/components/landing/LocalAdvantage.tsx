@@ -1,91 +1,86 @@
 'use client';
 
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Compass, Route, CloudOff } from 'lucide-react';
 
-const COMPARISONS = [
+const REASONS = [
   {
-    topic: 'Temple Sanctum Timings',
-    standard:
-      'Displays outer gate opening hours; ignores afternoon Garbhagriha closures and VIP puja pass slots.',
-    trivio:
-      'Flags inner sanctum entry windows, morning Rudrabhishek aartis, and traditional dhoti/kurta dress codes.',
+    icon: Compass,
+    title: 'Made for Nashik',
+    description:
+      'Explore temples, vineyards, forts and nature spots with local context, practical tips and useful visiting details.',
   },
   {
-    topic: 'Vineyard Cellar Tours',
-    standard:
-      'Presents a roadside pin with generic commercial hours, missing cellar tasting reservations.',
-    trivio:
-      'Direct guidance on daily tasting room sessions, seasonal harvest stomping (Jan–Mar), and lakeside deck tables.',
+    icon: Route,
+    title: 'Plan better days',
+    description:
+      'Bring nearby places together and shape a trip around your arrival point, available time and interests.',
   },
   {
-    topic: 'Sahyadri Trail Hazards',
-    standard:
-      'Shows a basic trail line without elevation gradient, water warnings, or seasonal cliff hazards.',
-    trivio:
-      'Explicit alerts for Harihar’s 80° rock-cut steps, monsoon slickness, and mandatory early morning start hours.',
-  },
-  {
-    topic: 'Route Sequencing',
-    standard:
-      'Point-to-point routing that causes repetitive backtracking through congested city intersections.',
-    trivio:
-      'Geographic clustering that sequences morning, afternoon, and sunset stops smoothly from your arrival hub.',
-  },
-  {
-    topic: 'Western Ghats Dead Zones',
-    standard:
-      'Stalls with blank loading spinners when cellular reception drops in deep Sahyadri valleys.',
-    trivio:
-      'On-device local caching keeps full destination dossiers and GPS coordinates accessible with zero signal.',
+    icon: CloudOff,
+    title: 'Useful beyond the signal',
+    description:
+      'Keep saved destination information close, even when your journey takes you into areas with weak connectivity.',
   },
 ];
 
 export function LocalAdvantage() {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section className="w-full px-6 sm:px-10 lg:px-16 py-20 lg:py-28 bg-white" id="comparison">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface">
-            What standard maps miss in Nashik.
-          </h2>
-          <p className="text-base sm:text-lg text-on-surface-variant mt-3 leading-relaxed">
-            Mainstream navigation engines calculate highway logistics. Trivio factors in the cultural, topographic, and seasonal realities of the Western Ghats.
+    <section
+      id="why-trivio"
+      aria-labelledby="why-trivio-title"
+      className="w-full scroll-mt-24 bg-white px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+    >
+      <div className="mx-auto max-w-6xl">
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.5 }}
+          className="mb-10 max-w-2xl sm:mb-12"
+        >
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
+            Why Trivio
           </p>
-        </div>
+          <h2
+            id="why-trivio-title"
+            className="text-3xl font-bold leading-tight tracking-tight text-on-surface sm:text-4xl lg:text-5xl"
+          >
+            A more local way to explore.
+          </h2>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-on-surface-variant sm:text-base">
+            Less guesswork. More time for the places that make a journey memorable.
+          </p>
+        </motion.div>
 
-        {/* Editorial Comparison Ledger */}
-        <div className="space-y-4">
-          {COMPARISONS.map((item) => (
-            <div
-              key={item.topic}
-              className="p-6 sm:p-7 rounded-2xl bg-[#FBFAFD] border border-brand-100 grid grid-cols-1 lg:grid-cols-12 gap-5 items-baseline"
-            >
-              <div className="lg:col-span-3">
-                <span className="font-bold text-base sm:text-lg text-deep-violet block">
-                  {item.topic}
-                </span>
-              </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 sm:gap-5">
+          {REASONS.map((reason, index) => {
+            const Icon = reason.icon;
 
-              <div className="lg:col-span-4 p-4 rounded-xl bg-white border border-brand-100/60">
-                <span className="text-xs font-semibold text-rose-700 block mb-1">
-                  Standard Map Engines
+            return (
+              <motion.article
+                key={reason.title}
+                initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.18 }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                className="rounded-[22px] border border-brand-100 bg-[#FBFAFD] p-6 sm:p-7"
+              >
+                <span className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-brand-50 text-deep-violet">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
-                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                  {item.standard}
+                <h3 className="text-lg font-bold tracking-tight text-on-surface sm:text-xl">
+                  {reason.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+                  {reason.description}
                 </p>
-              </div>
-
-              <div className="lg:col-span-5 p-4 rounded-xl bg-deep-violet text-white">
-                <span className="text-xs font-semibold text-signal-lime block mb-1">
-                  Trivio Local Intelligence
-                </span>
-                <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
-                  {item.trivio}
-                </p>
-              </div>
-            </div>
-          ))}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
