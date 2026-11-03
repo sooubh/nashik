@@ -13,11 +13,7 @@ export function HeroSection() {
     <section className="relative h-screen min-h-[640px] w-full overflow-hidden bg-slate-950 text-white select-none max-sm:h-[100svh] max-sm:min-h-[680px]">
       {/* Desktop sky; phones use a portrait crop of the same original artwork. */}
       <div className="absolute inset-0 z-0 h-full w-full select-none">
-        <picture className="absolute inset-0 block h-full w-full">
-          <source
-            media="(max-width: 639px)"
-            srcSet="/images/trivio/hero-sky-mobile.svg"
-          />
+        <div className="absolute inset-0 h-full w-full">
           <Image
             src="/images/trivio/hero-sky.jpg"
             alt=""
@@ -27,9 +23,9 @@ export function HeroSection() {
             fetchPriority="high"
             quality={95}
             sizes="100vw"
-            className="scale-[1.002] object-cover object-center"
+            className="scale-[1.002] object-cover object-center max-sm:scale-100"
           />
-        </picture>
+        </div>
         <div className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-slate-950/60 via-slate-950/20 to-transparent" />
       </div>
 
@@ -38,20 +34,16 @@ export function HeroSection() {
         initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeOut' }}
-        className="pointer-events-none absolute inset-x-0 top-[31%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
+        className="pointer-events-none absolute inset-x-0 top-[34%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
       >
-        <h1 className="w-full select-none text-center font-sans text-[18vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
+        <h1 className="w-full select-none text-center font-sans text-[17vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
           NASHIK
         </h1>
       </motion.div>
 
       {/* Mobile art direction: a portrait crop of the exact same transparent cutout. */}
       <div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none">
-        <picture className="absolute inset-0 block h-full w-full">
-          <source
-            media="(max-width: 639px)"
-            srcSet="/images/trivio/hero-temple-mobile.svg"
-          />
+        <div className="absolute inset-0 h-full w-full">
           <Image
             src="/images/trivio/hero-temple-cutout.png"
             alt="Trimbakeshwar Temple and Brahmagiri Mountain"
@@ -61,9 +53,9 @@ export function HeroSection() {
             fetchPriority="high"
             quality={95}
             sizes="100vw"
-            className="scale-[1.002] object-cover object-center"
+            className="scale-[1.002] object-cover object-center max-sm:left-1/2 max-sm:right-auto max-sm:top-auto max-sm:bottom-0 max-sm:h-[78svh] max-sm:w-auto max-sm:max-w-none max-sm:-translate-x-1/2 max-sm:object-contain max-sm:object-bottom"
           />
-        </picture>
+        </div>
       </div>
 
       {/* The primary hero action now takes visitors directly to Google Play. */}
