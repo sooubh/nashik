@@ -15,7 +15,7 @@ export function DestinationGallery() {
     if (!rail) return;
 
     rail.scrollBy({
-      left: direction * Math.min(rail.clientWidth * 0.82, 560),
+      left: direction * Math.min(rail.clientWidth * 0.82, 680),
       behavior: reduceMotion ? 'auto' : 'smooth',
     });
   };
@@ -26,8 +26,8 @@ export function DestinationGallery() {
       aria-labelledby="destinations-title"
       className="w-full scroll-mt-24 bg-[#F4F1F8] px-4 py-14 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
     >
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 overflow-hidden rounded-[28px] border border-[#e5dfed] bg-[#FBFAFD] p-5 shadow-sm sm:p-8 lg:grid-cols-[0.78fr_2fr] lg:items-center lg:gap-10 lg:rounded-[34px] lg:p-10">
-        <div className="flex flex-col justify-between lg:min-h-[350px]">
+      <div className="mx-auto grid max-w-[1480px] grid-cols-1 gap-8 overflow-hidden rounded-[28px] border border-[#e5dfed] bg-[#FBFAFD] p-5 shadow-sm sm:p-8 lg:grid-cols-[0.78fr_2fr] lg:items-center lg:gap-10 lg:rounded-[34px] lg:p-10">
+        <motion.div initial={reduceMotion ? false : { opacity: 0, x: -28 }} whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }} className="flex flex-col justify-between lg:min-h-[420px]">
           <div>
             <div className="mb-5 h-[3px] w-14 rounded-full bg-deep-violet/70" />
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
@@ -69,7 +69,7 @@ export function DestinationGallery() {
               Scroll to explore
             </span>
           </div>
-        </div>
+        </motion.div>
 
         <div
           ref={railRef}
@@ -83,28 +83,32 @@ export function DestinationGallery() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={'Explore ' + place.name + ' on Google Maps'}
-              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              initial={reduceMotion ? false : { opacity: 0, y: 40, rotateX: 8, scale: 0.94 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.12 }}
-              transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
-              className="group relative aspect-[3/4] w-[235px] shrink-0 snap-start overflow-hidden rounded-[20px] bg-slate-900 shadow-sm sm:w-[270px] lg:w-[250px] xl:w-[275px]"
+              transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
+              whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
+              whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+              style={{ perspective: 1100, transformStyle: 'preserve-3d' }}
+              className="group relative aspect-[4/5] w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
             >
               <Image
                 src={place.image}
                 alt={place.name}
                 fill
-                sizes="(max-width: 640px) 235px, (max-width: 1024px) 270px, 275px"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 280px, (max-width: 1024px) 310px, 340px"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/5" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/12 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
                 {place.categoryLabel}
               </span>
               <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 <ArrowUpRight className="h-4 w-4" />
               </span>
-              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3 className="text-lg font-bold leading-tight tracking-tight text-white sm:text-xl">
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                <h3 className="text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl">
                   {place.name}
                 </h3>
                 <p className="mt-1 line-clamp-1 text-xs text-white/75">
