@@ -66,10 +66,7 @@ export function SiteFooter() {
           <div>
             © {new Date().getFullYear()} {SITE_CONFIG.name} · Developed by sooubh · Nashik, Maharashtra
           </div>
-          <div className="flex items-center gap-4">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/30" />
-            <span>Google Play ID: <code className="text-white/80">{SITE_CONFIG.packageId}</code></span>
-          </div>
+
         </div>
       </div>
     </footer>
