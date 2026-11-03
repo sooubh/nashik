@@ -60,10 +60,10 @@ export function DiscoverExperiences() {
       aria-labelledby="experiences-title"
       className="w-full scroll-mt-24 bg-white px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5 }}
           className="mb-10 text-center sm:mb-12"
@@ -82,7 +82,7 @@ export function DiscoverExperiences() {
           </p>
         </motion.div>
 
-        <div className="grid auto-rows-[155px] grid-cols-2 gap-3 sm:auto-rows-[190px] sm:gap-4 lg:auto-rows-[220px] lg:grid-cols-4 lg:gap-5">
+        <div className="grid auto-rows-[190px] grid-cols-2 gap-3 sm:auto-rows-[250px] sm:gap-4 lg:auto-rows-[270px] lg:grid-cols-4 lg:gap-5">
           {EXPERIENCE_CARDS.map((card, index) => {
             const place = NASHIK_REAL_PLACES.find((item) => item.id === card.placeId);
             if (!place) return null;
@@ -94,33 +94,35 @@ export function DiscoverExperiences() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={'Discover ' + place.name + ' on Google Maps'}
-                initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+                initial={reduceMotion ? false : { opacity: 0, y: 44, rotateX: 8, scale: 0.96 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.2) }}
-                whileHover={reduceMotion ? undefined : { y: -4 }}
-                className={'group relative min-h-0 overflow-hidden rounded-[20px] bg-slate-900 shadow-sm ' + card.layout}
+                transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
+                whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
+                style={{ perspective: 1100, transformStyle: 'preserve-3d' }}
+                className={'group relative min-h-0 overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_42px_rgba(21,17,35,0.14)] ring-1 ring-inset ring-black/5 ' + card.layout}
               >
                 <Image
                   src={place.image}
                   alt={place.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/5 transition-colors duration-300 group-hover:from-black/90" />
-                <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-black/30 px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
                   {card.label}
                 </span>
                 <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
                 <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                  <h3 className="text-base font-bold leading-tight tracking-tight text-white sm:text-lg lg:text-xl">
+                  <h3 className="text-lg font-bold leading-tight tracking-tight text-white sm:text-xl lg:text-2xl">
                     {place.name}
                   </h3>
                   {card.featured && (
-                    <p className="mt-2 line-clamp-2 max-w-sm text-xs leading-relaxed text-white/80 sm:text-sm">
+                    <p className="mt-2 line-clamp-2 max-w-sm text-xs leading-relaxed text-white/85 sm:text-sm">
                       {place.highlight}
                     </p>
                   )}
