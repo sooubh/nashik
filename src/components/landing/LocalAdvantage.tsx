@@ -37,7 +37,7 @@ export function LocalAdvantage() {
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5 }}
           className="mb-10 max-w-2xl sm:mb-12"
@@ -63,13 +63,15 @@ export function LocalAdvantage() {
             return (
               <motion.article
                 key={reason.title}
-                initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+                initial={reduceMotion ? false : { opacity: 0, y: 34, rotateX: 6 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.18 }}
-                transition={{ duration: 0.45, delay: index * 0.06 }}
-                className="rounded-[22px] border border-brand-100 bg-[#FBFAFD] p-6 sm:p-7"
+                transition={{ duration: 0.68, delay: index * 0.09, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={reduceMotion ? undefined : { y: -8, rotateX: 2, scale: 1.012 }}
+                style={{ perspective: 1000, transformStyle: 'preserve-3d' }}
+                className="rounded-[24px] border border-brand-100 bg-[#FBFAFD] p-7 shadow-[0_12px_34px_rgba(48,31,78,0.05)] transition-shadow duration-300 hover:shadow-[0_22px_50px_rgba(48,31,78,0.12)] sm:p-8"
               >
-                <span className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-brand-50 text-deep-violet">
+                <span className="mb-8 flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-deep-violet">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h3 className="text-lg font-bold tracking-tight text-on-surface sm:text-xl">
