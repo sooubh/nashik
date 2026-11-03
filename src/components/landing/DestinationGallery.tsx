@@ -89,7 +89,7 @@ export function DestinationGallery() {
               transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
               whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
               whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-              style={{ perspective: 1100, transformStyle: 'preserve-3d' }}
+              style={{ transformPerspective: 1100, transformStyle: 'preserve-3d' }}
               className="group relative aspect-[4/5] w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
             >
               <Image
