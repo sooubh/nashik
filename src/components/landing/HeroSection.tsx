@@ -45,15 +45,17 @@ export function HeroSection() {
 
       {/* The oversized wordmark sits behind the transparent mountain foreground. */}
       <motion.div
-        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
         className="pointer-events-none absolute inset-x-0 top-[34%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
         style={shouldReduceMotion ? undefined : { y: wordmarkY, opacity: wordmarkOpacity }}
       >
-        <h1 className="w-full select-none text-center font-sans text-[21vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]">
+        <motion.h1
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
+          className="w-full select-none text-center font-sans text-[21vw] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] sm:text-[19.2vw]"
+        >
           NASHIK
-        </h1>
+        </motion.h1>
       </motion.div>
 
       {/* Reuse the exact desktop foreground cutout; responsive object-fit frames it for phones. */}
