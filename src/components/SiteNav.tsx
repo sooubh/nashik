@@ -2,122 +2,141 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, MapPin, User } from 'lucide-react';
+import { Menu, MapPin, X, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '#main-content' },
+  { label: 'Destinations', href: '#destinations' },
+  { label: 'Experiences', href: '#experiences' },
+  { label: 'App Preview', href: '#app-preview' },
+  { label: 'Why Trivio', href: '#why-trivio' },
+];
 
 export function SiteNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileOpen(false);
     };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
-  const navItems = [
-    { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#features' },
-    { label: 'Pricing', href: '#packages' },
-    { label: 'Tours', href: '#tours' },
-  ];
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
-        isScrolled
-          ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl'
-          : 'bg-transparent py-6 sm:py-8'
-      }`}
-    >
-      <div className="w-full px-6 sm:px-12 lg:px-16 flex items-center justify-between">
-        {/* Brand Logo: TRIVIO + MapPin */}
-        <Link
-          href="/"
-          className="group flex items-center gap-1.5 text-white tracking-widest font-black text-xl sm:text-2xl select-none"
-          aria-label="Trivio Home"
-        >
-          <span>TRIVIO</span>
-          <MapPin className="w-5 h-5 fill-white text-white transition-transform group-hover:scale-110" />
-        </Link>
-
-        {/* Desktop Navigation Links & User Avatar */}
-        <div className="hidden md:flex items-center gap-8 lg:gap-12">
-          <nav aria-label="Main Navigation" className="flex items-center gap-8 lg:gap-10">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-white/90 hover:text-white transition-colors tracking-wide"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* User Profile Avatar Icon */}
-          <button
-            type="button"
-            aria-label="User Account"
-            className="w-9 h-9 rounded-full border border-white/70 hover:border-white flex items-center justify-center text-white/90 hover:text-white transition-colors hover:bg-white/10"
+    <>
+      <header
+        className={'fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ' + (
+          isScrolled
+            ? 'border-b border-white/10 bg-slate-950/90 py-3.5 shadow-xl backdrop-blur-md'
+            : 'bg-transparent py-6 sm:py-8'
+        )}
+      >
+        <div className="flex w-full items-center justify-between px-5 sm:px-12 lg:px-16">
+          <Link
+            href="/"
+            className="group flex select-none items-center gap-1.5 text-xl font-black tracking-widest text-white sm:text-2xl"
+            aria-label="Trivio Home"
           >
-            <User className="w-4 h-4 stroke-[2]" />
-          </button>
-        </div>
+            <span>TRIVIO</span>
+            <MapPin className="h-5 w-5 fill-white text-white transition-transform group-hover:scale-110" aria-hidden="true" />
+          </Link>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex md:hidden items-center gap-3">
-          <button
-            type="button"
-            aria-label="User Account"
-            className="w-8 h-8 rounded-full border border-white/70 flex items-center justify-center text-white"
-          >
-            <User className="w-3.5 h-3.5" />
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors"
-            aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Drawer */}
-      {mobileOpen && (
-        <div className="md:hidden w-full px-6 mt-3">
-          <nav
-            aria-label="Mobile Navigation Menu"
-            className="rounded-2xl bg-slate-950/95 backdrop-blur-xl border border-white/15 p-5 flex flex-col gap-3 text-white shadow-2xl"
-          >
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-2 text-base font-medium text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+          <div className="hidden items-center gap-8 md:flex lg:gap-10">
+            <nav aria-label="Main Navigation" className="flex items-center gap-6 lg:gap-8">
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="whitespace-nowrap text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
             <a
               href={SITE_CONFIG.playStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 text-center py-3 rounded-full bg-signal-lime text-[#221045] font-bold text-sm shadow-md"
+              className="inline-flex items-center justify-center rounded-full bg-signal-lime px-5 py-2.5 text-xs font-bold text-[#221045] transition-colors hover:bg-[#d5ff4f]"
             >
-              Get App on Google Play
+              Get the app
+            </a>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="relative z-[60] flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-slate-950/35 text-white shadow-lg backdrop-blur-md transition-all hover:bg-white/10 active:scale-95 md:hidden"
+            aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </header>
+
+      {mobileOpen && (
+        <div className="fixed inset-0 z-40 md:hidden" id="mobile-navigation">
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            className="absolute inset-0 h-full w-full bg-slate-950/55 backdrop-blur-[3px]"
+            onClick={() => setMobileOpen(false)}
+          />
+          <nav
+            aria-label="Mobile Navigation Menu"
+            className="absolute left-4 right-4 top-[76px] mx-auto max-w-md overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#17112b]/95 p-3 text-white shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
+          >
+            <div className="flex items-center justify-between px-3 pb-3 pt-2">
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/45">Explore Trivio</p>
+                <p className="mt-1 text-lg font-semibold tracking-tight">Find your next place.</p>
+              </div>
+              <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-semibold tracking-[0.16em] text-white/55">MENU</span>
+            </div>
+            <div className="space-y-1">
+              {NAV_ITEMS.map((item, index) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="group flex min-h-12 items-center justify-between rounded-xl px-3.5 text-[15px] font-medium text-white/85 transition-colors hover:bg-white/[0.08] hover:text-white"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="font-mono text-[10px] text-white/35">0{index + 1}</span>
+                    {item.label}
+                  </span>
+                  <ArrowUpRight className="h-4 w-4 text-white/35 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-signal-lime" />
+                </a>
+              ))}
+            </div>
+            <a
+              href={SITE_CONFIG.playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-full bg-signal-lime px-5 text-sm font-bold text-[#221045] transition-colors hover:bg-[#d5ff4f]"
+            >
+              Download Trivio <ArrowUpRight className="h-4 w-4" />
             </a>
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }

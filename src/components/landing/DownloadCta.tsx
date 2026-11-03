@@ -17,10 +17,8 @@ export function DownloadCta() {
           <p className="text-base sm:text-lg text-white/80 leading-relaxed">
             Download Trivio on your Android device. Complete offline guides, sanctum hours, and zero tracking.
           </p>
-          <div className="mt-4 flex items-center gap-3 text-xs text-white/60">
+          <div className="mt-4 text-xs text-white/60">
             <span>Free on Google Play</span>
-            <span>·</span>
-            <span>Package: <code className="text-white/80">{SITE_CONFIG.packageId}</code></span>
           </div>
         </div>
 

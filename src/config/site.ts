@@ -4,7 +4,6 @@ export interface SiteConfig {
   description: string;
   canonicalUrl: string;
   playStoreUrl: string;
-  packageId: string;
   supportEmail: string;
   navLinks: Array<{ label: string; href: string; external?: boolean }>;
   footerColumns: Array<{
@@ -20,7 +19,6 @@ export const SITE_CONFIG: SiteConfig = {
     'Discover ancient Jyotirlinga shrines, world-renowned vineyards, sheer Sahyadri fort steps, and seasonal waterfalls with local-first offline intelligence.',
   canonicalUrl: 'https://nashik.sooubh.me',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore',
-  packageId: 'com.sooubh.nashikexplore',
   supportEmail: 'support@nashikexplore.com',
   navLinks: [
     { label: 'Destinations', href: '#places' },
