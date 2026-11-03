@@ -95,11 +95,11 @@ export function DiscoverExperiences() {
                 rel="noopener noreferrer"
                 aria-label={'Discover ' + place.name + ' on Google Maps'}
                 initial={reduceMotion ? false : { opacity: 0, y: 44, rotateX: 8, scale: 0.96 }}
-                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
                 whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
-                style={{ perspective: 1100, transformStyle: 'preserve-3d' }}
+                style={{ transformPerspective: 1100, transformStyle: 'preserve-3d' }}
                 className={'group relative min-h-0 overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_42px_rgba(21,17,35,0.14)] ring-1 ring-inset ring-black/5 ' + card.layout}
               >
                 <Image
