@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, MapPin, X } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 
 const NAV_ITEMS = [
@@ -39,7 +39,7 @@ export function SiteNav() {
           aria-label="Trivio Home"
         >
           <span>TRIVIO</span>
-          <span aria-hidden="true" className="text-sm text-signal-lime">●</span>
+          <MapPin className="h-5 w-5 fill-white text-white transition-transform group-hover:scale-110" aria-hidden="true" />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex lg:gap-10">
