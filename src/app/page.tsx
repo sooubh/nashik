@@ -12,6 +12,7 @@ import { DownloadCta } from '@/components/landing/DownloadCta';
 import { SITE_CONFIG } from '@/config/site';
 import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
 import { FAQ_ITEMS } from '@/data/faqData';
+import { safeJsonLd } from '@/lib/utils';
 
 export default function HomePage() {
   const pageSchema = {
@@ -56,7 +57,7 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(pageSchema).replace(/</g, '\\u003c'),
+          __html: safeJsonLd(pageSchema),
         }}
       />
       <SiteNav />

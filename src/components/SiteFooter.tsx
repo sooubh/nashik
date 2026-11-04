@@ -22,7 +22,7 @@ export function SiteFooter() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-x-0 top-[18%] z-0 overflow-hidden text-center"
           >
-            <span className="whitespace-nowrap font-sans text-[clamp(4.5rem,21vw,19rem)] font-black leading-[0.8] tracking-[-0.105em] text-[#4B2E83]/[0.13]">
+            <span className="whitespace-nowrap font-sans text-[clamp(3.5rem,20vw,19rem)] font-black leading-[0.8] tracking-[-0.105em] text-[#4B2E83]/[0.13]">
               TRIVIO
             </span>
           </div>
@@ -40,9 +40,9 @@ export function SiteFooter() {
       </div>
 
       {/* Brand details and the original footer navigation sit below the artwork. */}
-      <div className="relative z-20 mx-auto mt-2 max-w-7xl px-6 pb-8 pt-10 sm:mt-5 sm:px-10 sm:pt-14 lg:px-16 lg:pt-16">
-        <div className="grid grid-cols-1 gap-10 border-t border-[#E9E4EF] pt-10 sm:gap-12 md:grid-cols-12 lg:gap-14">
-          <div className="flex flex-col justify-between md:col-span-5">
+      <div className="relative z-20 mx-auto mt-2 max-w-7xl px-4 pb-8 pt-8 sm:mt-5 sm:px-8 sm:pt-12 lg:px-16 lg:pt-16">
+        <div className="grid grid-cols-1 gap-10 border-t border-[#E9E4EF] pt-8 sm:gap-12 lg:grid-cols-12 lg:gap-14">
+          <div className="flex flex-col justify-between lg:col-span-4">
             <div>
               <Link
                 href="/"
@@ -57,19 +57,19 @@ export function SiteFooter() {
                   aria-hidden="true"
                 />
               </Link>
-              <p className="max-w-sm text-sm leading-relaxed text-[#686273]">
+              <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-[#686273]">
                 {SITE_CONFIG.description}
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:col-span-7 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-8 lg:gap-10">
             {SITE_CONFIG.footerColumns.map((col) => (
               <div key={col.title}>
-                <h3 className="mb-4 text-xs font-bold tracking-wide text-deep-violet">
+                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-deep-violet">
                   {col.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-1">
                   {col.links.map((link) => (
                     <li key={link.label}>
                       {link.external ? (
@@ -77,14 +77,14 @@ export function SiteFooter() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs leading-relaxed text-[#696474] transition-colors hover:text-deep-violet sm:text-sm"
+                          className="inline-flex min-h-[36px] sm:min-h-[40px] items-center text-xs leading-snug text-[#696474] transition-colors hover:text-deep-violet sm:text-sm py-1"
                         >
                           {link.label}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-xs leading-relaxed text-[#696474] transition-colors hover:text-deep-violet sm:text-sm"
+                          className="inline-flex min-h-[36px] sm:min-h-[40px] items-center text-xs leading-snug text-[#696474] transition-colors hover:text-deep-violet sm:text-sm py-1"
                         >
                           {link.label}
                         </Link>
@@ -98,7 +98,7 @@ export function SiteFooter() {
         </div>
 
         <div
-          className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-[#E9E4EF] pt-6 text-xs text-[#898393] sm:mt-14 sm:flex-row sm:items-center"
+          className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-[#E9E4EF] pt-6 text-xs text-[#898393] sm:mt-12 sm:flex-row sm:items-center"
           data-ui
         >
           <div>

@@ -11,7 +11,7 @@ const EXPERIENCE_CARDS = [
     placeId: 'trimbakeshwar',
     label: 'Sacred heritage',
     title: 'Find a moment of calm.',
-    layout: 'col-span-2 row-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 lg:row-span-2',
+    layout: 'col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1 lg:row-span-2',
     featured: true,
   },
   {
@@ -32,7 +32,7 @@ const EXPERIENCE_CARDS = [
     placeId: 'someshwar-waterfall',
     label: 'Nature & waterfalls',
     title: 'Follow the sound of water.',
-    layout: 'col-span-2 row-span-2 lg:col-span-1 lg:col-start-3 lg:row-start-1 lg:row-span-2',
+    layout: 'col-span-1 row-span-1 sm:col-span-2 sm:row-span-2 lg:col-span-1 lg:col-start-3 lg:row-start-1 lg:row-span-2',
     featured: true,
   },
   {
@@ -82,7 +82,7 @@ export function DiscoverExperiences() {
           </p>
         </motion.div>
 
-        <div className="grid auto-rows-[190px] grid-cols-2 gap-3 sm:auto-rows-[250px] sm:gap-4 lg:auto-rows-[270px] lg:grid-cols-4 lg:gap-5">
+        <div className="grid grid-cols-1 auto-rows-[220px] gap-4 sm:grid-cols-2 sm:auto-rows-[250px] lg:grid-cols-4 lg:auto-rows-[270px] lg:gap-5">
           {EXPERIENCE_CARDS.map((card, index) => {
             const place = NASHIK_REAL_PLACES.find((item) => item.id === card.placeId);
             if (!place) return null;
@@ -106,12 +106,12 @@ export function DiscoverExperiences() {
                   src={place.image}
                   alt={place.name}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-black/30 px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+                <span className="absolute left-4 top-4 max-w-[calc(100%-4.5rem)] truncate rounded-full border border-white/25 bg-black/30 px-3.5 py-1.5 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
                   {card.label}
                 </span>
                 <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

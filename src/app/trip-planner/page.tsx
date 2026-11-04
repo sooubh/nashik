@@ -124,7 +124,7 @@ export default function TripPlannerPage() {
               
               <div className="space-y-3 pt-2">
                 <div className="p-4 rounded-xl bg-white border border-[#ded9e8]">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                     <span className="text-xs font-bold text-deep-violet">Day 1: Sacred Heritage &amp; Jyotirlinga</span>
                     <span className="text-[11px] text-on-surface-variant font-medium">Depart: Nashik Road Station</span>
                   </div>
@@ -136,7 +136,7 @@ export default function TripPlannerPage() {
                 </div>
 
                 <div className="p-4 rounded-xl bg-white border border-[#ded9e8]">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                     <span className="text-xs font-bold text-deep-violet">Day 2: Wine Estates &amp; Cascades</span>
                     <span className="text-[11px] text-on-surface-variant font-medium">Gangapur Catchment</span>
                   </div>
@@ -154,7 +154,7 @@ export default function TripPlannerPage() {
                 href={SITE_CONFIG.playStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-signal-lime hover:bg-[#d5ff4f] text-[#221045] text-sm sm:text-base font-bold px-7 py-3.5 rounded-full transition-transform hover:scale-[1.02] active:scale-95"
+                className="inline-flex min-h-[48px] items-center gap-2.5 bg-signal-lime hover:bg-[#d5ff4f] text-[#221045] text-sm sm:text-base font-bold px-7 py-3.5 rounded-full transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer"
               >
                 <Download className="w-5 h-5 shrink-0" />
                 <span>Get App on Google Play</span>
@@ -162,9 +162,9 @@ export default function TripPlannerPage() {
             </div>
           </div>
 
-          {/* Right: Real Phone Preview */}
-          <div className="lg:col-span-5 flex justify-center sticky top-28">
-            <div className="max-w-[280px] w-full rounded-[36px] p-2.5 bg-slate-950 border-4 border-slate-800 overflow-hidden">
+          {/* Right: Real Phone Preview with sticky boundary */}
+          <div className="lg:col-span-5 flex justify-center lg:sticky lg:top-28 self-start max-w-[260px] xl:max-w-[280px] mx-auto w-full">
+            <div className="w-full rounded-[36px] p-2.5 bg-slate-950 border-4 border-slate-800 overflow-hidden shadow-2xl">
               <div className="relative rounded-[28px] overflow-hidden aspect-[9/19.5] bg-slate-900">
                 <Image
                   src="/images/screenshots/ai-planner.png"

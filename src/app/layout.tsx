@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, Newsreader } from 'next/font/google';
 import './globals.css';
 import { SITE_CONFIG } from '@/config/site';
+import { safeJsonLd } from '@/lib/utils';
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -184,7 +185,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+            __html: safeJsonLd(structuredData),
           }}
         />
       </head>

@@ -72,7 +72,7 @@ export function LegalPageLayout({
           {/* Mobile Collapsible TOC */}
           <div className="w-full lg:hidden bg-[#F4F1F8] p-5 rounded-card">
             <details className="group">
-              <summary className="flex items-center justify-between font-bold text-xs text-deep-violet cursor-pointer list-none min-h-[36px]">
+              <summary className="flex items-center justify-between font-bold text-xs text-deep-violet cursor-pointer list-none min-h-[44px] [&::-webkit-details-marker]:hidden">
                 <span>Jump to Section ({toc.length})</span>
                 <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180 text-deep-violet" />
               </summary>
@@ -91,7 +91,7 @@ export function LegalPageLayout({
           </div>
 
           {/* Desktop Sticky Left Sidebar */}
-          <aside className="hidden lg:block w-64 shrink-0 sticky top-24 space-y-6">
+          <aside className="hidden lg:block w-64 shrink-0 sticky top-24 space-y-6 max-h-[calc(100dvh-7rem)] overflow-y-auto no-scrollbar">
             <div className="p-5 rounded-card bg-[#F4F1F8] border border-[#ded9e8]">
               <p className="text-xs font-bold text-deep-violet mb-3">
                 Sections on this Page

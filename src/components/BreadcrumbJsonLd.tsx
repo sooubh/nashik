@@ -1,4 +1,5 @@
 import React from 'react';
+import { safeJsonLd } from '@/lib/utils';
 
 export interface BreadcrumbItem {
   name: string;
@@ -24,7 +25,7 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }

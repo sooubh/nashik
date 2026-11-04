@@ -35,7 +35,7 @@ export function DestinationGallery() {
             </p>
             <h2
               id="destinations-title"
-              className="max-w-sm text-4xl font-bold leading-[1.04] tracking-tight text-on-surface sm:text-5xl"
+              className="max-w-sm text-3xl font-bold leading-[1.04] tracking-tight text-on-surface sm:text-4xl lg:text-5xl"
             >
               Top places
               <span className="block font-editorial font-normal italic text-deep-violet">
@@ -53,7 +53,7 @@ export function DestinationGallery() {
               type="button"
               onClick={() => moveRail(-1)}
               aria-label="Previous destinations"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d9d2e3] bg-white text-deep-violet transition-colors hover:border-deep-violet hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-violet focus-visible:ring-offset-2"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d9d2e3] bg-white text-deep-violet transition-colors hover:border-deep-violet hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-violet focus-visible:ring-offset-2 cursor-pointer"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
@@ -61,7 +61,7 @@ export function DestinationGallery() {
               type="button"
               onClick={() => moveRail(1)}
               aria-label="Next destinations"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-deep-violet text-white transition-colors hover:bg-[#392066] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-violet focus-visible:ring-offset-2"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-deep-violet text-white transition-colors hover:bg-[#392066] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-violet focus-visible:ring-offset-2 cursor-pointer"
             >
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -90,18 +90,18 @@ export function DestinationGallery() {
               whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
               whileTap={reduceMotion ? undefined : { scale: 0.985 }}
               style={{ transformPerspective: 1100, transformStyle: 'preserve-3d' }}
-              className="group relative aspect-[4/5] w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
+              className="group relative aspect-[4/5] w-[calc(100vw-4.5rem)] max-w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
             >
               <Image
                 src={place.image}
                 alt={place.name}
                 fill
-                sizes="(max-width: 640px) 280px, (max-width: 1024px) 310px, 340px"
+                sizes="(max-width: 640px) 85vw, (max-width: 1024px) 310px, 340px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/12 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
               <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+              <span className="absolute left-4 top-4 max-w-[calc(100%-4.5rem)] truncate rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
                 {place.categoryLabel}
               </span>
               <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

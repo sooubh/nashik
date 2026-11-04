@@ -12,10 +12,13 @@ export function PlaceIntelligence() {
     NASHIK_REAL_PLACES.find((p) => p.id === selectedPlaceId) || NASHIK_REAL_PLACES[0];
 
   return (
-    <section className="w-full bg-[#FBFAFD] py-20 lg:py-28 px-6 sm:px-10 lg:px-16" id="gazetteer">
+    <section className="w-full bg-[#FBFAFD] py-16 sm:py-20 lg:py-28 px-4 sm:px-8 lg:px-16" id="gazetteer">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header without AI Pill Badges */}
-        <div className="max-w-2xl mb-12 sm:mb-16">
+        {/* Section Header */}
+        <div className="max-w-2xl mb-10 sm:mb-14">
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
+            Field Intelligence
+          </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface">
             Nashik Field Intelligence
           </h2>
@@ -25,13 +28,23 @@ export function PlaceIntelligence() {
         </div>
 
         {/* Two-Column Split Dossier */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Destination Selector Column */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+          {/* Destination Selector: Horizontal scrollable rail on mobile/tablet, vertical stack on desktop */}
           <div className="lg:col-span-5 flex flex-col gap-2">
-            <span className="text-xs font-semibold text-deep-violet mb-2">
-              Select a destination
-            </span>
-            <div className="flex flex-col gap-1.5" role="tablist" aria-label="Destinations">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-xs font-semibold text-deep-violet">
+                Select a destination
+              </span>
+              <span className="text-[11px] text-on-surface-variant lg:hidden font-medium">
+                Swipe to explore &rarr;
+              </span>
+            </div>
+
+            <div
+              className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x pb-2 lg:pb-0"
+              role="tablist"
+              aria-label="Destinations"
+            >
               {NASHIK_REAL_PLACES.map((place: NashikPlace) => {
                 const isActive = place.id === activePlace.id;
                 return (
@@ -41,18 +54,18 @@ export function PlaceIntelligence() {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setSelectedPlaceId(place.id)}
-                    className={`text-left p-4 rounded-xl transition-colors duration-150 flex items-center justify-between ${
+                    className={`w-[260px] sm:w-[280px] lg:w-full shrink-0 lg:shrink snap-start text-left p-3.5 sm:p-4 rounded-xl transition-all duration-150 flex items-center justify-between cursor-pointer ${
                       isActive
-                        ? 'bg-deep-violet text-white font-medium'
+                        ? 'bg-deep-violet text-white font-medium shadow-md'
                         : 'bg-white hover:bg-brand-50 text-on-surface border border-brand-100'
                     }`}
                   >
-                    <div>
-                      <span className="block font-semibold text-sm sm:text-base leading-snug">
+                    <div className="min-w-0 pr-2">
+                      <span className="block font-semibold text-sm sm:text-base leading-snug truncate">
                         {place.name}
                       </span>
                       <span
-                        className={`text-xs block mt-0.5 ${
+                        className={`text-xs block mt-0.5 truncate ${
                           isActive ? 'text-white/80' : 'text-on-surface-variant'
                         }`}
                       >
@@ -60,7 +73,7 @@ export function PlaceIntelligence() {
                       </span>
                     </div>
                     <span
-                      className={`text-xs shrink-0 ml-3 font-medium ${
+                      className={`text-xs shrink-0 font-medium ${
                         isActive ? 'text-signal-lime' : 'text-on-surface-variant/70'
                       }`}
                     >
@@ -73,7 +86,7 @@ export function PlaceIntelligence() {
           </div>
 
           {/* Active Place Detail Dossier */}
-          <div className="lg:col-span-7 bg-white rounded-2xl border border-brand-100 p-6 sm:p-8 flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-white rounded-2xl border border-brand-100 p-5 sm:p-8 flex flex-col justify-between shadow-sm">
             <div>
               {/* Photo Plate */}
               <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-slate-100 mb-6">
@@ -81,10 +94,10 @@ export function PlaceIntelligence() {
                   src={activePlace.image}
                   alt={activePlace.name}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 600px"
+                  sizes="(max-width: 1024px) 100vw, 640px"
                   className="object-cover object-center"
                 />
-                <div className="absolute bottom-3 left-3 bg-slate-950/80 px-3 py-1 rounded-md text-xs font-semibold text-white">
+                <div className="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-sm px-3 py-1 rounded-md text-xs font-semibold text-white">
                   {activePlace.locationArea}
                 </div>
               </div>
@@ -103,7 +116,7 @@ export function PlaceIntelligence() {
               </div>
 
               {/* Ground Guidance Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
                 <div className="p-4 rounded-xl bg-brand-50">
                   <span className="block text-xs font-semibold text-deep-violet mb-1">
                     Optimal visiting hours
@@ -136,7 +149,7 @@ export function PlaceIntelligence() {
 
             {/* Action Bar */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-              <span className="text-xs text-on-surface-variant">
+              <span className="text-xs text-on-surface-variant text-center sm:text-left">
                 Full offline directions and cached maps available in Trivio on Android.
               </span>
               <a

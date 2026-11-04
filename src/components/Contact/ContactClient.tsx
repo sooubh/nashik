@@ -9,6 +9,7 @@ import { SITE_CONFIG } from '@/config/site';
 
 export function ContactClient() {
   const [copied, setCopied] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,9 +25,37 @@ export function ContactClient() {
 
   const handleOpenEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    const subjectLine = `[${SITE_CONFIG.name}] ${formData.subject}${formData.name ? ` from ${formData.name}` : ''}`;
-    const bodyContent = `${formData.message}\n\n---\nSender: ${formData.name || 'Not specified'}\nEmail: ${formData.email || 'Not specified'}`;
+    setErrorMessage('');
+
+    // Sanitize against CRLF injection in mailto headers
+    const safeName = formData.name.replace(/[\r\n\t]/g, ' ').trim().slice(0, 100);
+    const safeEmail = formData.email.replace(/[\r\n\t]/g, '').trim().slice(0, 100);
+    const safeSubject = formData.subject.replace(/[\r\n\t]/g, ' ').trim().slice(0, 100);
+    const safeMessage = formData.message.slice(0, 1800);
+
+    // Validate email format if provided
+    if (safeEmail) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(safeEmail)) {
+        setErrorMessage('Please enter a valid email address.');
+        return;
+      }
+    }
+
+    if (!safeMessage) {
+      setErrorMessage('Please enter a message description.');
+      return;
+    }
+
+    const subjectLine = `[${SITE_CONFIG.name}] ${safeSubject}${safeName ? ` from ${safeName}` : ''}`;
+    const bodyContent = `${safeMessage}\n\n---\nSender: ${safeName || 'Not specified'}\nEmail: ${safeEmail || 'Not specified'}`;
     const mailtoUrl = `mailto:${SITE_CONFIG.supportEmail}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(bodyContent)}`;
+
+    if (mailtoUrl.length > 2000) {
+      setErrorMessage('Message is too long for an email link. Please shorten your note.');
+      return;
+    }
+
     window.location.href = mailtoUrl;
   };
 
@@ -90,7 +119,7 @@ export function ContactClient() {
                     <button
                       onClick={handleCopyEmail}
                       type="button"
-                      className="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#ded9e8] text-xs font-semibold text-deep-violet hover:bg-[#ded9e8] transition-colors cursor-pointer"
+                      className="mt-2 inline-flex min-h-[36px] items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#ded9e8] text-xs font-semibold text-deep-violet hover:bg-[#ded9e8] transition-colors cursor-pointer"
                     >
                       {copied ? (
                         <>
@@ -138,7 +167,7 @@ export function ContactClient() {
               </div>
               <Link
                 href="/privacy-policy"
-                className="px-4 py-2 rounded-full bg-white border border-[#ded9e8] text-deep-violet font-semibold text-xs hover:border-deep-violet transition-colors shrink-0"
+                className="px-4 py-2 min-h-[36px] inline-flex items-center rounded-full bg-white border border-[#ded9e8] text-deep-violet font-semibold text-xs hover:border-deep-violet transition-colors shrink-0"
               >
                 Read Policy
               </Link>
@@ -154,6 +183,12 @@ export function ContactClient() {
               Fill in your note below. Clicking <strong>Open Email Client</strong> will launch your device&apos;s email program with the subject and body pre-addressed to <strong>{SITE_CONFIG.supportEmail}</strong>.
             </p>
 
+            {errorMessage && (
+              <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-xs font-medium text-red-700">
+                {errorMessage}
+              </div>
+            )}
+
             <form onSubmit={handleOpenEmail} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -163,10 +198,11 @@ export function ContactClient() {
                   <input
                     id="contact-name"
                     type="text"
+                    maxLength={100}
                     placeholder="e.g. Rahul Sharma"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-sm focus:outline-none focus:border-deep-violet"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-base sm:text-sm focus:outline-none focus:border-deep-violet"
                   />
                 </div>
 
@@ -177,10 +213,11 @@ export function ContactClient() {
                   <input
                     id="contact-email"
                     type="email"
+                    maxLength={100}
                     placeholder="name@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-sm focus:outline-none focus:border-deep-violet"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-base sm:text-sm focus:outline-none focus:border-deep-violet"
                   />
                 </div>
               </div>
@@ -193,7 +230,7 @@ export function ContactClient() {
                   id="contact-subject"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-sm focus:outline-none focus:border-deep-violet"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-base sm:text-sm focus:outline-none focus:border-deep-violet"
                 >
                   <option value="General Inquiry">General Question</option>
                   <option value="Spot Inaccuracy Report">Destination Correction / Update</option>
@@ -211,16 +248,17 @@ export function ContactClient() {
                   id="contact-message"
                   rows={4}
                   required
+                  maxLength={1800}
                   placeholder="Describe your inquiry, suggestion, or correction..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-sm focus:outline-none focus:border-deep-violet"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#ded9e8] text-on-surface text-base sm:text-sm focus:outline-none focus:border-deep-violet"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full text-signal-lime font-bold text-sm bg-deep-violet hover:bg-primary transition-colors flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                className="w-full min-h-[48px] py-3.5 rounded-full text-signal-lime font-bold text-sm bg-deep-violet hover:bg-primary transition-colors flex items-center justify-center gap-2 cursor-pointer active:scale-95"
               >
                 <Send className="w-4 h-4" />
                 <span>Open Email Client to Send</span>
