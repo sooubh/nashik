@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nashik.sooubh.me';
-  const lastModified = '2026-10-31';
+  const baseUrl = SITE_CONFIG.canonicalUrl;
+  const lastModified = '2026-11-04';
 
   return [
     {

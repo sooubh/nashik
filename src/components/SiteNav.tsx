@@ -6,11 +6,12 @@ import { Menu, MapPin, X, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 
 const NAV_ITEMS = [
-  { label: 'Home', href: '#main-content' },
   { label: 'Destinations', href: '#destinations' },
+  { label: 'Field Guide', href: '#gazetteer' },
   { label: 'Experiences', href: '#experiences' },
-  { label: 'App Preview', href: '#app-preview' },
+  { label: 'Trip Guide', href: '/trip-planner' },
   { label: 'Why Trivio', href: '#why-trivio' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 export function SiteNav() {
@@ -58,13 +59,23 @@ export function SiteNav() {
           <div className="hidden items-center gap-8 md:flex lg:gap-10">
             <nav aria-label="Main Navigation" className="flex items-center gap-6 lg:gap-8">
               {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="whitespace-nowrap text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-white"
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="whitespace-nowrap text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="whitespace-nowrap text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
             </nav>
             <a
@@ -111,18 +122,33 @@ export function SiteNav() {
             </div>
             <div className="space-y-1">
               {NAV_ITEMS.map((item, index) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="group flex min-h-12 items-center justify-between rounded-xl px-3.5 text-[15px] font-medium text-white/85 transition-colors hover:bg-white/[0.08] hover:text-white"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="font-mono text-[10px] text-white/35">0{index + 1}</span>
-                    {item.label}
-                  </span>
-                  <ArrowUpRight className="h-4 w-4 text-white/35 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-signal-lime" />
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="group flex min-h-12 items-center justify-between rounded-xl px-3.5 text-[15px] font-medium text-white/85 transition-colors hover:bg-white/[0.08] hover:text-white"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="font-mono text-[10px] text-white/35">0{index + 1}</span>
+                      {item.label}
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-white/35 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-signal-lime" />
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="group flex min-h-12 items-center justify-between rounded-xl px-3.5 text-[15px] font-medium text-white/85 transition-colors hover:bg-white/[0.08] hover:text-white"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span className="font-mono text-[10px] text-white/35">0{index + 1}</span>
+                      {item.label}
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 text-white/35 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-signal-lime" />
+                  </a>
+                )
               ))}
             </div>
             <a

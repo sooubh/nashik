@@ -1,24 +1,25 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer & Safety Statement: NashikExplore',
+  title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
   description:
-    'Disclaimer Statement for NashikExplore. Travel disclosures on trekking cautions, temple guidelines, and local travel advisories.',
+    `Disclaimer Statement for ${SITE_CONFIG.name}. Travel disclosures on trekking cautions, temple guidelines, and local travel advisories.`,
   alternates: {
     canonical: '/disclaimer',
   },
   openGraph: {
-    title: 'Disclaimer & Safety Statement: NashikExplore',
+    title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
     description:
-      'Travel and safety disclosures for exploring Nashik with NashikExplore.',
-    url: 'https://nashik.sooubh.me/disclaimer',
+      `Travel and safety disclosures for exploring Nashik with ${SITE_CONFIG.name}.`,
+    url: `${SITE_CONFIG.canonicalUrl}/disclaimer`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Disclaimer & Safety Statement: NashikExplore',
+    title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
     description:
-      'Travel and safety disclosures for exploring Nashik with NashikExplore.',
+      `Travel and safety disclosures for exploring Nashik with ${SITE_CONFIG.name}.`,
   },
 };
 
@@ -44,7 +45,7 @@ export default function DisclaimerPage() {
           1. General Information Purpose
         </h2>
         <p>
-          All listings, ratings, distance estimates, and guides published by NashikExplore are provided in good faith for informational and planning purposes only. While details are curated, entry fees, operational hours, and road accessibility are subject to change by local municipal and temple authorities without prior notice.
+          All listings, ratings, distance estimates, and guides published by {SITE_CONFIG.name} are provided in good faith for informational and planning purposes only. While details are curated, entry fees, operational hours, and road accessibility are subject to change by local municipal and temple authorities without prior notice.
         </p>
       </section>
 

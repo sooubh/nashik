@@ -22,7 +22,7 @@ export function DeleteAccountClient() {
   const [confirmCheckbox, setConfirmCheckbox] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('support@nashikexplore.com');
+    navigator.clipboard.writeText(SITE_CONFIG.supportEmail);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -126,7 +126,7 @@ export function DeleteAccountClient() {
               </div>
 
               <p className="text-sm text-on-surface-variant leading-relaxed mb-4">
-                If you have uninstalled the app or cannot log in, use the form below to prepare an email deletion request to <strong>support@nashikexplore.com</strong>.
+                If you have uninstalled the app or cannot log in, use the form below to prepare an email deletion request to <strong>{SITE_CONFIG.supportEmail}</strong>.
               </p>
 
               <button
@@ -217,6 +217,16 @@ export function DeleteAccountClient() {
               <span>Open Email to Request Deletion</span>
             </button>
           </form>
+
+          {/* Google Play Policy Transparency Box */}
+          <div className="pt-4 border-t border-[#ded9e8] text-xs text-on-surface-variant space-y-2">
+            <p className="font-bold text-deep-violet">Google Play Data Deletion Transparency:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Data Purged:</strong> Display name, email address, Firebase Auth UID, saved wishlist boards, and custom itinerary history.</li>
+              <li><strong>Retention Period:</strong> In-app deletions take effect immediately. Email deletion requests are verified and permanently purged within 30 days.</li>
+              <li><strong>Third-Party Notice:</strong> No personal data is retained by third parties post-deletion. Transaction receipts for optional Google Play purchases are maintained separately by Google LLC per statutory financial requirements.</li>
+            </ul>
+          </div>
         </div>
       </main>
 

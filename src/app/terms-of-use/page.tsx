@@ -1,24 +1,25 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use: NashikExplore',
+  title: `Terms of Use · ${SITE_CONFIG.name}`,
   description:
-    'Terms of Use and Conditions for NashikExplore. Guidelines on permitted use, trekking risk acknowledgments, and intellectual property.',
+    `Terms of Use and Conditions for ${SITE_CONFIG.name}. Guidelines on permitted use, trekking risk acknowledgments, and intellectual property.`,
   alternates: {
     canonical: '/terms-of-use',
   },
   openGraph: {
-    title: 'Terms of Use: NashikExplore',
+    title: `Terms of Use · ${SITE_CONFIG.name}`,
     description:
-      'Terms of Use for the NashikExplore Android application and website.',
-    url: 'https://nashik.sooubh.me/terms-of-use',
+      `Terms of Use for the ${SITE_CONFIG.name} Android application and website.`,
+    url: `${SITE_CONFIG.canonicalUrl}/terms-of-use`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use: NashikExplore',
+    title: `Terms of Use · ${SITE_CONFIG.name}`,
     description:
-      'Terms of Use for the NashikExplore Android application and website.',
+      `Terms of Use for the ${SITE_CONFIG.name} Android application and website.`,
   },
 };
 
@@ -38,7 +39,7 @@ export default function TermsOfUsePage() {
       title="Terms of Use"
       path="/terms-of-use"
       lastUpdated="July 14, 2026"
-      summary="These Terms of Use establish the agreement between you and NashikExplore. By downloading, accessing, or using our mobile application or website, you agree to these conditions."
+      summary={`These Terms of Use establish the agreement between you and ${SITE_CONFIG.name}. By downloading, accessing, or using our mobile application or website, you agree to these conditions.`}
       toc={toc}
     >
       <section id="acceptance" className="space-y-3">
@@ -46,7 +47,7 @@ export default function TermsOfUsePage() {
           1. Acceptance of Terms
         </h2>
         <p>
-          By creating an account, downloading the Android application, or browsing the NashikExplore website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
+          By creating an account, downloading the Android application, or browsing the {SITE_CONFIG.name} website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and our Privacy Policy.
         </p>
       </section>
 
@@ -55,7 +56,7 @@ export default function TermsOfUsePage() {
           2. License &amp; Permitted Use
         </h2>
         <p>
-          NashikExplore grants you a limited, non-exclusive, non-transferable, and revocable license to access the guide for personal, non-commercial travel planning purposes. You agree not to scrape, reverse-engineer, or redistribute database records without prior written consent.
+          {SITE_CONFIG.name} grants you a limited, non-exclusive, non-transferable, and revocable license to access the guide for personal, non-commercial travel planning purposes. You agree not to scrape, reverse-engineer, or redistribute database records without prior written consent.
         </p>
       </section>
 
@@ -94,7 +95,7 @@ export default function TermsOfUsePage() {
           6. Intellectual Property
         </h2>
         <p>
-          The NashikExplore name, logo, graphic assets, database organization, and software source code are the intellectual property of NashikExplore. All rights not expressly granted are reserved.
+          The {SITE_CONFIG.name} name, logo, graphic assets, database organization, and software source code are the intellectual property of {SITE_CONFIG.name} (developed by sooubh). All rights not expressly granted are reserved.
         </p>
       </section>
 

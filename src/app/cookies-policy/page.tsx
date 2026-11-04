@@ -1,24 +1,25 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Cookies & Storage Policy: NashikExplore',
+  title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
   description:
-    'Cookies & Local Storage Policy for NashikExplore. Details regarding localStorage and on-device storage.',
+    `Cookies & Local Storage Policy for ${SITE_CONFIG.name}. Details regarding localStorage and on-device storage.`,
   alternates: {
     canonical: '/cookies-policy',
   },
   openGraph: {
-    title: 'Cookies & Storage Policy: NashikExplore',
+    title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
     description:
-      'Cookies & Local Storage Policy for NashikExplore.',
-    url: 'https://nashik.sooubh.me/cookies-policy',
+      `Cookies & Local Storage Policy for ${SITE_CONFIG.name}.`,
+    url: `${SITE_CONFIG.canonicalUrl}/cookies-policy`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cookies & Storage Policy: NashikExplore',
+    title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
     description:
-      'Cookies & Local Storage Policy for NashikExplore.',
+      `Cookies & Local Storage Policy for ${SITE_CONFIG.name}.`,
   },
 };
 
@@ -35,7 +36,7 @@ export default function CookiesPolicyPage() {
       title="Cookies & Local Storage Policy"
       path="/cookies-policy"
       lastUpdated="July 14, 2026"
-      summary="This policy explains how NashikExplore uses browser local storage and on-device app storage to remember theme preferences and saved travel boards."
+      summary={`This policy explains how ${SITE_CONFIG.name} uses browser local storage and on-device app storage to remember preferences and saved travel wishlists.`}
       toc={toc}
     >
       <section id="what-are-cookies" className="space-y-3">

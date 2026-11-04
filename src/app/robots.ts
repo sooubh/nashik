@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://nashik.sooubh.me/sitemap.xml',
-    host: 'https://nashik.sooubh.me',
+    sitemap: `${SITE_CONFIG.canonicalUrl}/sitemap.xml`,
+    host: SITE_CONFIG.canonicalUrl,
   };
 }

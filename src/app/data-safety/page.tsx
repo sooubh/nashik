@@ -1,25 +1,26 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { ShieldCheck, Lock, CheckCircle } from 'lucide-react';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Data Safety Sheet: NashikExplore',
+  title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
   description:
-    'Google Play Data Safety Disclosures for NashikExplore. Complete inventory of collected data, transit encryption, and deletion mechanisms.',
+    `Google Play Data Safety Disclosures for ${SITE_CONFIG.name}. Complete inventory of collected data, transit encryption, and account deletion mechanisms.`,
   alternates: {
     canonical: '/data-safety',
   },
   openGraph: {
-    title: 'Data Safety Sheet: NashikExplore',
+    title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
     description:
-      'Data safety disclosures for NashikExplore matching Google Play console specifications.',
-    url: 'https://nashik.sooubh.me/data-safety',
+      `Data safety disclosures for ${SITE_CONFIG.name} matching Google Play console specifications.`,
+    url: `${SITE_CONFIG.canonicalUrl}/data-safety`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Data Safety Sheet: NashikExplore',
+    title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
     description:
-      'Data safety disclosures for NashikExplore matching Google Play console specifications.',
+      `Data safety disclosures for ${SITE_CONFIG.name} matching Google Play console specifications.`,
   },
 };
 
@@ -36,7 +37,7 @@ export default function DataSafetyPage() {
       title="Data Safety Sheet"
       path="/data-safety"
       lastUpdated="July 14, 2026"
-      summary="This page provides a breakdown of data types handled by the NashikExplore mobile application and website, aligned with Google Play Data Safety guidelines."
+      summary={`This page provides a breakdown of data types handled by the ${SITE_CONFIG.name} mobile application and website, aligned with Google Play Data Safety guidelines.`}
       toc={toc}
     >
       <section id="google-play-disclosures" className="space-y-3">
@@ -130,7 +131,7 @@ export default function DataSafetyPage() {
         </p>
         <ol className="list-decimal pl-5 space-y-1.5">
           <li><strong>Inside the App:</strong> Open <em>Profile &gt; Settings &gt; Privacy &amp; Security &gt; Delete Account</em> to delete your Firebase authentication user and Firestore profile records.</li>
-          <li><strong>Via Email Request:</strong> Submit an email request via our dedicated <a href="/delete-account" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Account Deletion Page</a> or email <code className="text-sm bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">support@nashikexplore.com</code> from your registered email address. Requests are verified and processed upon confirmation.</li>
+          <li><strong>Via Email Request:</strong> Submit an email request via our dedicated <a href="/delete-account" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Account Deletion Page</a> or email <code className="text-sm bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">trivio-support@sooubh.in</code> from your registered email address. Requests are verified and processed within 30 days upon confirmation.</li>
         </ol>
       </section>
     </LegalPageLayout>

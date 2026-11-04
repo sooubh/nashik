@@ -17,7 +17,7 @@ export function ContactClient() {
   });
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('support@nashikexplore.com');
+    navigator.clipboard.writeText(SITE_CONFIG.supportEmail);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -82,10 +82,10 @@ export function ContactClient() {
                       Official Support Email
                     </span>
                     <a
-                      href="mailto:support@nashikexplore.com"
+                      href={`mailto:${SITE_CONFIG.supportEmail}`}
                       className="font-bold text-base text-on-surface hover:text-deep-violet transition-colors block truncate"
                     >
-                      support@nashikexplore.com
+                      {SITE_CONFIG.supportEmail}
                     </a>
                     <button
                       onClick={handleCopyEmail}
@@ -151,7 +151,7 @@ export function ContactClient() {
               Compose Message
             </h2>
             <p className="text-xs text-on-surface-variant mb-6 leading-relaxed">
-              Fill in your note below. Clicking <strong>Open Email Client</strong> will launch your device&apos;s email program with the subject and body pre-addressed to <strong>support@nashikexplore.com</strong>.
+              Fill in your note below. Clicking <strong>Open Email Client</strong> will launch your device&apos;s email program with the subject and body pre-addressed to <strong>{SITE_CONFIG.supportEmail}</strong>.
             </p>
 
             <form onSubmit={handleOpenEmail} className="space-y-5">

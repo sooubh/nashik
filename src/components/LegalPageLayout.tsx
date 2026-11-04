@@ -4,6 +4,7 @@ import { ArrowLeft, Shield, ChevronDown } from 'lucide-react';
 import { BreadcrumbJsonLd } from './BreadcrumbJsonLd';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
+import { SITE_CONFIG } from '@/config/site';
 
 export interface TocItem {
   id: string;
@@ -45,8 +46,8 @@ export function LegalPageLayout({
         {path && (
           <BreadcrumbJsonLd
             items={[
-              { name: 'Home', url: 'https://nashik.sooubh.me' },
-              { name: title, url: `https://nashik.sooubh.me${path}` },
+              { name: 'Home', url: SITE_CONFIG.canonicalUrl },
+              { name: title, url: `${SITE_CONFIG.canonicalUrl}${path}` },
             ]}
           />
         )}

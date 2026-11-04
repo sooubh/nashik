@@ -1,24 +1,25 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy: NashikExplore',
+  title: `Privacy Policy · ${SITE_CONFIG.name}`,
   description:
-    'Privacy Policy for the NashikExplore Android application and website. Information regarding data collection, device permissions, and user data rights.',
+    `Privacy Policy for the ${SITE_CONFIG.name} Android application and website. Information regarding data collection, device permissions, and user data rights.`,
   alternates: {
     canonical: '/privacy-policy',
   },
   openGraph: {
-    title: 'Privacy Policy: NashikExplore',
+    title: `Privacy Policy · ${SITE_CONFIG.name}`,
     description:
-      'Privacy Policy for the NashikExplore Android app and website.',
-    url: 'https://nashik.sooubh.me/privacy-policy',
+      `Privacy Policy for the ${SITE_CONFIG.name} Android app and website.`,
+    url: `${SITE_CONFIG.canonicalUrl}/privacy-policy`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy: NashikExplore',
+    title: `Privacy Policy · ${SITE_CONFIG.name}`,
     description:
-      'Privacy Policy for the NashikExplore Android app and website.',
+      `Privacy Policy for the ${SITE_CONFIG.name} Android app and website.`,
   },
 };
 
@@ -31,7 +32,7 @@ export default function PrivacyPolicyPage() {
     { id: 'third-parties', title: 'Third-Party Networks (AdMob, RevenueCat)' },
     { id: 'deletion-process', title: 'Account Deletion & Data Rights' },
     { id: 'children-privacy', title: "Children's Privacy" },
-    { id: 'contact-dpo', title: 'Contact & Policy Updates' },
+    { id: 'contact-dpo', title: 'Grievance Redressal & Contact' },
   ];
 
   return (
@@ -39,7 +40,7 @@ export default function PrivacyPolicyPage() {
       title="Privacy Policy"
       path="/privacy-policy"
       lastUpdated="July 14, 2026"
-      summary="This Privacy Policy explains how NashikExplore processes, stores, and protects your information across the mobile application and website. We prioritize on-device storage with minimal network transmission."
+      summary={`This Privacy Policy explains how ${SITE_CONFIG.name} processes, stores, and protects your information across the mobile application and website. We prioritize on-device storage with minimal network transmission.`}
       toc={toc}
     >
       <section id="data-collection" className="space-y-3">
@@ -152,14 +153,18 @@ export default function PrivacyPolicyPage() {
 
       <section id="contact-dpo" className="space-y-3">
         <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4">
-          8. Contact &amp; Policy Updates
+          8. Grievance Redressal &amp; Contact
         </h2>
         <p>
-          We may update this policy periodically to reflect new features or regulatory requirements. For questions regarding our privacy practices, contact us at:
+          In accordance with the Information Technology Act, 2000, India&apos;s Digital Personal Data Protection Act (DPDP Act, 2023), and global privacy standards, any concerns, questions, or grievances regarding your personal data may be addressed to our Grievance Officer:
         </p>
-        <p className="font-bold text-slate-900 dark:text-white">
-          support@nashikexplore.com
-        </p>
+        <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-sm space-y-1">
+          <p><strong>Designation:</strong> Data Protection &amp; Grievance Redressal Officer</p>
+          <p><strong>Application:</strong> {SITE_CONFIG.name}</p>
+          <p><strong>Support Email:</strong> <a href={`mailto:${SITE_CONFIG.supportEmail}`} className="text-blue-600 dark:text-blue-400 font-bold hover:underline">{SITE_CONFIG.supportEmail}</a></p>
+          <p><strong>Response Timeline:</strong> Grievance inquiries are acknowledged within 48 hours and resolved within 30 days.</p>
+          <p><strong>Location:</strong> Nashik, Maharashtra, India</p>
+        </div>
       </section>
     </LegalPageLayout>
   );

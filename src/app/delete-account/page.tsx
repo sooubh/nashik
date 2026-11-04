@@ -1,25 +1,26 @@
 import { Metadata } from 'next';
 import { DeleteAccountClient } from '@/components/DeleteAccount/DeleteAccountClient';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
+import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Request Account & Data Deletion: NashikExplore',
+  title: `Request Account & Data Deletion · ${SITE_CONFIG.name}`,
   description:
-    'Account and Personal Data Deletion Request page for NashikExplore. Instructions for in-app deletion and email-based deletion requests.',
+    `Account and personal data deletion request page for ${SITE_CONFIG.name}. Instructions for in-app deletion and email requests to ${SITE_CONFIG.supportEmail}.`,
   alternates: {
     canonical: '/delete-account',
   },
   openGraph: {
-    title: 'Request Account & Data Deletion: NashikExplore',
+    title: `Request Account & Data Deletion · ${SITE_CONFIG.name}`,
     description:
-      'Account and Data Deletion instructions for NashikExplore.',
-    url: 'https://nashik.sooubh.me/delete-account',
+      `Account and data deletion instructions for ${SITE_CONFIG.name}.`,
+    url: `${SITE_CONFIG.canonicalUrl}/delete-account`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Request Account & Data Deletion: NashikExplore',
+    title: `Request Account & Data Deletion · ${SITE_CONFIG.name}`,
     description:
-      'Account and Data Deletion instructions for NashikExplore.',
+      `Account and data deletion instructions for ${SITE_CONFIG.name}.`,
   },
 };
 
@@ -28,8 +29,8 @@ export default function DeleteAccountPage() {
     <>
       <BreadcrumbJsonLd
         items={[
-          { name: 'Home', url: 'https://nashik.sooubh.me' },
-          { name: 'Delete Account & Data', url: 'https://nashik.sooubh.me/delete-account' },
+          { name: 'Home', url: SITE_CONFIG.canonicalUrl },
+          { name: 'Delete Account & Data', url: `${SITE_CONFIG.canonicalUrl}/delete-account` },
         ]}
       />
       <DeleteAccountClient />

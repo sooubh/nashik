@@ -28,19 +28,24 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   keywords: [
     'Nashik travel guide',
-    'Nashik android app',
-    'Trimbakeshwar Shiva Temple',
-    'Sula Vineyards',
-    'Harihar Fort rock steps',
-    'Panchavati Ramkund',
-    'Pandavleni Caves',
-    'Godavari River',
-    'Maharashtra tourism',
-    'Nashik itinerary planner',
+    'Trivio Nashik',
+    'Nashik tourism app',
+    'Trimbakeshwar Shiva Temple darshan timings',
+    'Sula Vineyards wine tour Nashik',
+    'Harihar Fort rock steps trek',
+    'Panchavati Ramkund Nashik',
+    'Pandavleni Caves Nashik',
+    'Anjaneri Fort birthplace of Lord Hanuman',
+    'Someshwar Waterfall Nashik',
+    'Gangapur Dam boat club',
+    'Nashik itinerary planner 1 day 2 days',
+    'best places to visit in Nashik',
+    'Maharashtra tourism offline travel guide',
+    'Jyotirlinga Maharashtra travel companion',
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'sooubh',
-  publisher: 'NashikExplore',
+  publisher: SITE_CONFIG.name,
   robots: {
     index: true,
     follow: true,
@@ -100,34 +105,74 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'Organization',
+        '@id': `${SITE_CONFIG.canonicalUrl}/#organization`,
+        name: SITE_CONFIG.name,
+        url: SITE_CONFIG.canonicalUrl,
+        logo: `${SITE_CONFIG.canonicalUrl}/images/branding/logo.png`,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: SITE_CONFIG.supportEmail,
+          contactType: 'Customer Support',
+          areaServed: 'IN',
+          availableLanguage: ['English', 'Hindi', 'Marathi'],
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Nashik',
+          addressRegion: 'Maharashtra',
+          addressCountry: 'IN',
+        },
+        sameAs: [
+          SITE_CONFIG.playStoreUrl,
+          'https://twitter.com',
+          'https://instagram.com',
+          'https://youtube.com',
+        ],
+      },
+      {
         '@type': 'WebSite',
         '@id': `${SITE_CONFIG.canonicalUrl}/#website`,
         url: SITE_CONFIG.canonicalUrl,
         name: SITE_CONFIG.name,
         description: SITE_CONFIG.description,
         inLanguage: 'en-IN',
+        publisher: {
+          '@id': `${SITE_CONFIG.canonicalUrl}/#organization`,
+        },
       },
       {
         '@type': 'MobileApplication',
         '@id': `${SITE_CONFIG.canonicalUrl}/#app`,
-        name: SITE_CONFIG.name,
+        name: `${SITE_CONFIG.name} - Nashik Travel Guide`,
         operatingSystem: 'ANDROID',
         applicationCategory: 'TravelApplication',
         installUrl: SITE_CONFIG.playStoreUrl,
+        downloadUrl: SITE_CONFIG.playStoreUrl,
         offers: {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'INR',
         },
+        featureList: [
+          'Offline Sahyadri trail maps and elevation markers',
+          'Sacred Jyotirlinga and temple puja timings',
+          'Sula and Gangapur wine tasting estate dossiers',
+          'Deterministic multi-day itinerary generator',
+          'One-tap GPS turn-by-turn navigation handoff',
+        ],
+        screenshot: [
+          `${SITE_CONFIG.canonicalUrl}/images/screenshots/home.png`,
+          `${SITE_CONFIG.canonicalUrl}/images/screenshots/explore.png`,
+          `${SITE_CONFIG.canonicalUrl}/images/screenshots/ai-planner.png`,
+          `${SITE_CONFIG.canonicalUrl}/images/screenshots/saved.png`,
+          `${SITE_CONFIG.canonicalUrl}/images/screenshots/profile.png`,
+        ],
         author: {
-          '@type': 'Organization',
-          name: 'NashikExplore',
-          url: SITE_CONFIG.canonicalUrl,
+          '@id': `${SITE_CONFIG.canonicalUrl}/#organization`,
         },
         publisher: {
-          '@type': 'Organization',
-          name: 'NashikExplore',
-          url: SITE_CONFIG.canonicalUrl,
+          '@id': `${SITE_CONFIG.canonicalUrl}/#organization`,
         },
       },
     ],
@@ -138,7 +183,9 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+          }}
         />
       </head>
       <body className="bg-white font-sans text-on-surface antialiased min-h-screen w-full overflow-x-hidden p-0 m-0">
