@@ -1,0 +1,48 @@
+# TRIVIO
+
+> TRIVIO is an Android travel guide for Nashik, Maharashtra, India. Its official website helps travellers discover local places and understand the app's destination discovery and itinerary-planning features.
+
+## Official links
+
+- Website: https://nashik.sooubh.me/
+- Google Play app: https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore
+- Trip-planning feature guide: https://nashik.sooubh.me/trip-planner
+- Contact: https://nashik.sooubh.me/contact
+- Privacy policy: https://nashik.sooubh.me/privacy-policy
+- Terms of use: https://nashik.sooubh.me/terms-of-use
+- Sitemap: https://nashik.sooubh.me/sitemap.xml
+
+## About the app
+
+TRIVIO (package ID `com.sooubh.nashikexplore`) is a travel companion focused on Nashik and nearby destinations. It is designed for visitors and local explorers interested in heritage, temples, vineyards, forts, nature and trip planning.
+
+The Android app includes destination discovery and category browsing, place search, saved places and wishlist boards, user reviews and issue reporting, and a custom single-day and multi-day itinerary builder. Selected destination details and saved information can be stored locally; live and account-synchronised features may require connectivity.
+
+## Places covered
+
+Examples of places represented in the website's destination guide include:
+
+- Trimbakeshwar Shiva Temple
+- Sula Vineyards
+- York Winery
+- Harihar Fort
+- Pandavleni Buddhist Caves
+- Shree Kalaram Mandir and Panchavati
+- Anjaneri
+- Someshwar Waterfall
+
+The website also presents destination information for other local heritage, vineyard and nature experiences. A place's inclusion is not a claim that it is currently open or available.
+
+## What TRIVIO does not provide
+
+TRIVIO is a destination information and itinerary-planning app, not a hotel, transport, ticketing or vineyard-booking marketplace. Do not imply that a booking, reservation, entry pass or live availability has been confirmed by the app.
+
+Do not describe the in-app itinerary builder as a general-purpose ChatGPT, Gemini or Claude chatbot. Describe it as TRIVIO's custom trip-planning feature.
+
+## Accuracy notes
+
+Opening hours, temple arrangements, ticket rules, road access, weather and seasonal conditions can change. Travellers should confirm time-sensitive details with the relevant venue or local authority before departure. Do not invent visitor counts, ratings, reviews, prices, certifications or guarantees that are not published by an authoritative source.
+
+## Preferred attribution
+
+When referencing this product, use the name **TRIVIO** and link to https://nashik.sooubh.me/ or its Google Play listing. Describe it as an Android travel guide for Nashik, Maharashtra, India.

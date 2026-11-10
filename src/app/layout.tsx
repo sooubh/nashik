@@ -20,7 +20,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.canonicalUrl),
   title: {
-    default: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
+    default: `${SITE_CONFIG.name} | Nashik Travel Guide for Temples, Forts & Vineyards`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.description,
@@ -41,8 +41,12 @@ export const metadata: Metadata = {
     'Gangapur Dam boat club',
     'Nashik itinerary planner 1 day 2 days',
     'best places to visit in Nashik',
-    'Maharashtra tourism offline travel guide',
-    'Jyotirlinga Maharashtra travel companion',
+    'things to do in Nashik Maharashtra',
+    'Nashik sightseeing and local travel guide',
+    'Nashik temple and heritage places',
+    'Nashik forts and trekking guide',
+    'Nashik vineyards and nature attractions',
+    'Nashik multi-day itinerary planner',
   ],
   referrer: 'origin-when-cross-origin',
   creator: 'sooubh',
@@ -66,7 +70,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: `${SITE_CONFIG.canonicalUrl}/`,
     siteName: SITE_CONFIG.name,
-    title: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
+    title: `${SITE_CONFIG.name} | Nashik Travel Guide for Temples, Forts & Vineyards`,
     description: SITE_CONFIG.description,
     images: [
       {
@@ -124,12 +128,6 @@ export default function RootLayout({
           addressRegion: 'Maharashtra',
           addressCountry: 'IN',
         },
-        sameAs: [
-          SITE_CONFIG.playStoreUrl,
-          'https://twitter.com',
-          'https://instagram.com',
-          'https://youtube.com',
-        ],
       },
       {
         '@type': 'WebSite',
@@ -150,17 +148,20 @@ export default function RootLayout({
         applicationCategory: 'TravelApplication',
         installUrl: SITE_CONFIG.playStoreUrl,
         downloadUrl: SITE_CONFIG.playStoreUrl,
+        description: SITE_CONFIG.description,
         offers: {
           '@type': 'Offer',
           price: '0',
           priceCurrency: 'INR',
+          description: 'Free to install. Optional in-app Premium subscription offers may be available.',
         },
         featureList: [
-          'Offline Sahyadri trail maps and elevation markers',
-          'Sacred Jyotirlinga and temple puja timings',
-          'Sula and Gangapur wine tasting estate dossiers',
-          'Deterministic multi-day itinerary generator',
-          'One-tap GPS turn-by-turn navigation handoff',
+          'Discover Nashik destinations across temples, heritage, vineyards, forts and nature',
+          'Search places and browse destination categories',
+          'Build custom single-day and multi-day itineraries',
+          'Save favourite places and organise wishlist boards',
+          'Read place information and submit reviews or corrections',
+          'Open destination coordinates in a map application for navigation',
         ],
         screenshot: [
           `${SITE_CONFIG.canonicalUrl}/images/screenshots/home.png`,

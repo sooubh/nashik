@@ -78,15 +78,15 @@ export function AppShowcase() {
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.9, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto mt-7 w-full max-w-[1360px] sm:mt-9 lg:mt-10"
+          className="relative mx-auto mt-7 w-full max-w-[560px] sm:mt-9 lg:mt-10"
         >
           <Image
-            src="/images/app-preview/trivio-app-preview.webp"
-            alt="Trivio travel guide app preview showing Nashik destinations, temple and waterfall discoveries, and a trip route planner across three phone screens"
-            width={1536}
-            height={1024}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 96vw, 1360px"
-            className="block h-auto w-full select-none object-contain"
+            src="/images/screenshots/home.png"
+            alt="TRIVIO Android app home screen showing Nashik destination discovery and travel-guide content"
+            width={540}
+            height={1080}
+            sizes="(max-width: 640px) 88vw, 540px"
+            className="mx-auto block h-auto w-full max-w-[360px] select-none rounded-[28px] border border-[#e8e5ed] object-contain shadow-[0_24px_70px_rgba(31,22,47,0.12)]"
             draggable={false}
           />
         </motion.div>

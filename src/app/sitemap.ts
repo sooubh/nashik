@@ -4,11 +4,12 @@ import { SITE_CONFIG } from '@/config/site';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.canonicalUrl;
   const lastModified = '2026-11-04';
+  const homepageLastModified = '2026-11-11';
 
   return [
     {
       url: baseUrl,
-      lastModified,
+      lastModified: homepageLastModified,
       changeFrequency: 'weekly',
       priority: 1.0,
     },

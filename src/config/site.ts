@@ -14,9 +14,9 @@ export interface SiteConfig {
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'Trivio',
-  tagline: 'Places, Events and People in One App',
+  tagline: 'Discover Nashik. Plan your journey.',
   description:
-    'Discover ancient Jyotirlinga shrines, world-renowned vineyards, sheer Sahyadri fort steps, and seasonal waterfalls with local-first offline intelligence.',
+    'TRIVIO is an Android travel guide for Nashik, Maharashtra. Discover temples, forts, vineyards and waterfalls, explore local place details, save favourites and build custom multi-day itineraries.',
   canonicalUrl: 'https://nashik.sooubh.me',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore',
   supportEmail: 'trivio-support@sooubh.in',
