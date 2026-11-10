@@ -9,7 +9,6 @@ import { AppShowcase } from '@/components/landing/AppShowcase';
 import { LocalAdvantage } from '@/components/landing/LocalAdvantage';
 import { AppFaq } from '@/components/landing/AppFaq';
 import { DownloadCta } from '@/components/landing/DownloadCta';
-import { SITE_CONFIG } from '@/config/site';
 import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
 import { FAQ_ITEMS } from '@/data/faqData';
 import { safeJsonLd } from '@/lib/utils';
