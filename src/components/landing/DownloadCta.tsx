@@ -12,16 +12,16 @@ export function DownloadCta() {
         {/* Left Column: Heading & Value */}
         <div className="max-w-xl">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-signal-lime">
-            Offline Android Guide
+            TRIVIO FOR ANDROID
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
             Start exploring Nashik with confidence.
           </h2>
           <p className="text-base sm:text-lg text-white/80 leading-relaxed">
-            Download Trivio on your Android device. Complete offline guides, sanctum hours, and zero tracking.
+            Explore Nashik temples, forts, vineyards, waterfalls and local attractions. Browse place details and shape a multi-day trip around your interests.
           </p>
           <div className="mt-4 text-xs text-white/60">
-            <span>Free on Google Play</span>
+            <span>Available on Google Play for Android</span>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ export function DownloadCta() {
             href="/trip-planner"
             className="inline-flex min-h-[44px] items-center justify-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 transition-colors"
           >
-            <span>Read Trip Architecture Guide</span>
+            <span>See how trip planning works</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
