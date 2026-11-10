@@ -7,33 +7,43 @@ export interface FaqItem {
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    question: `Is ${SITE_CONFIG.name} free to download and use on Android?`,
+    question: 'What is TRIVIO?',
     answer:
-      `Yes. ${SITE_CONFIG.name} is completely free on Android via Google Play. You get access to all destination dossiers, category filters, offline caching, and itinerary planning with zero ads or surprise subscriptions.`,
+      'TRIVIO is an Android travel guide focused on Nashik, Maharashtra. It helps travellers discover local destinations, explore place information, search by category, save favourites and create custom itineraries.',
   },
   {
-    question: 'How does Trivio differ from generic chatbots or standard map apps?',
+    question: `Is ${SITE_CONFIG.name} free to download?`,
     answer:
-      'Standard map apps frequently fail to account for afternoon Garbhagriha closures or pair distant spots that cause hours of cross-city traffic. Trivio uses verified local entries that verify opening hours, check aarti timings, factor in mountain road transit, and sequence stops without backtracking.',
+      'TRIVIO is free to install from Google Play. Optional in-app Premium subscription offers may be available, and some free app experiences may include advertising. Check the app and Google Play listing for current plans, prices and inclusions.',
   },
   {
-    question: 'Does the app work if cellular reception drops in Sahyadri valleys?',
+    question: 'Which places can I explore with TRIVIO in Nashik?',
     answer:
-      'Yes. The application is built local-first for the realities of the Western Ghats. Saved wishlist boards and destination guides are stored on-device in local storage. When cellular signal drops at fort summits or in rural valleys, core data and coordinates remain accessible.',
+      'Explore destination information for places such as Trimbakeshwar Shiva Temple, Kalaram Mandir and Panchavati, Sula and York vineyards, Harihar Fort, Anjaneri and Pandavleni Caves. The guide also features nature destinations around Nashik; check each place entry for the latest available details.',
   },
   {
-    question: 'Which transit arrival hubs can I select for multi-day itineraries?',
+    question: 'Can TRIVIO create a Nashik trip itinerary?',
     answer:
-      'You can choose your exact point of arrival: Nashik Road Railway Station (main rail terminus), Ozar Airport (regional flight hub), or Central Bus Stand (CBS / Thakkar Bazaar). The itinerary sequences your stops geographically from that starting hub.',
+      'Yes. The Android app includes a custom itinerary builder for single-day and multi-day Nashik trips. You can shape a plan around your interests, trip duration and starting point, then review the suggested stops before travelling.',
   },
   {
-    question: 'How does turn-by-turn road navigation work?',
+    question: 'Can I use saved TRIVIO information without an internet connection?',
     answer:
-      'The app displays point-to-point geographic distances for planning and provides a direct one-tap button to push exact GPS coordinates into your favorite map app (such as Google Maps) for live driving directions.',
+      'The app stores selected destination information and saved lists locally, so previously loaded or saved details may remain available when connectivity is weak. Live information, account features and cloud syncing can still require an internet connection.',
   },
   {
-    question: 'Are temple dress codes and visiting guidelines included?',
+    question: 'Does TRIVIO book hotels, tickets or vineyard experiences?',
     answer:
-      'Yes. Heritage and pilgrimage sites like Trimbakeshwar Jyotirlinga and Kalaram Mandir provide specific guidance on expected attire (such as dhoti/kurta rules for Gabhara puja) and optimal morning hours to avoid long queues.',
+      'No. TRIVIO is a destination discovery and trip-planning guide, not a booking platform. Confirm current entry rules, opening hours, ticket availability and vineyard tasting reservations directly with the venue before visiting.',
+  },
+  {
+    question: 'How do I navigate to a destination?',
+    answer:
+      'Open a place in the app and use its map or navigation hand-off to continue in a maps application such as Google Maps. Check the route and local travel conditions before starting your journey.',
+  },
+  {
+    question: 'Are destination timings and travel conditions always current?',
+    answer:
+      'Venue schedules, temple arrangements, road access and seasonal conditions can change. Treat the app as a planning guide and confirm time-sensitive information with the destination or relevant local authority before you travel.',
   },
 ];
