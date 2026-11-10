@@ -1,5 +1,3 @@
-import { SITE_CONFIG } from '@/config/site';
-
 export interface FaqItem {
   question: string;
   answer: string;
@@ -7,33 +5,33 @@ export interface FaqItem {
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    question: `Is ${SITE_CONFIG.name} free to download and use on Android?`,
+    question: 'What is Trivio?',
     answer:
-      `Yes. ${SITE_CONFIG.name} is completely free on Android via Google Play. You get access to all destination dossiers, category filters, offline caching, and itinerary planning with zero ads or surprise subscriptions.`,
+      'Trivio is an Android travel guide focused on Nashik and nearby destinations. It helps visitors discover places, browse practical destination information and plan a visit around their interests.',
   },
   {
-    question: 'How does Trivio differ from generic chatbots or standard map apps?',
+    question: 'Which places can I explore with Trivio?',
     answer:
-      'Standard map apps frequently fail to account for afternoon Garbhagriha closures or pair distant spots that cause hours of cross-city traffic. Trivio uses verified local entries that verify opening hours, check aarti timings, factor in mountain road transit, and sequence stops without backtracking.',
+      'The guide highlights a range of Nashik-area places, including Trimbakeshwar Shiva Temple, Kalaram Mandir and Panchavati, Pandavleni Caves, Sula and York vineyards, Harihar Fort, Anjaneri Hills and Someshwar Waterfall. Place information and availability can change, so confirm important details before travelling.',
   },
   {
-    question: 'Does the app work if cellular reception drops in Sahyadri valleys?',
+    question: 'Can Trivio help me plan a multi-day Nashik trip?',
     answer:
-      'Yes. The application is built local-first for the realities of the Western Ghats. Saved wishlist boards and destination guides are stored on-device in local storage. When cellular signal drops at fort summits or in rural valleys, core data and coordinates remain accessible.',
+      'Yes. The app collects preferences such as trip duration, budget, travel style, interests, transport and pace. It can request AI-assisted itinerary generation and also has a local rule-based fallback. Treat generated plans as suggestions and check current opening hours, travel conditions and access rules before your trip.',
   },
   {
-    question: 'Which transit arrival hubs can I select for multi-day itineraries?',
+    question: 'Can I search and filter destinations?',
     answer:
-      'You can choose your exact point of arrival: Nashik Road Railway Station (main rail terminus), Ozar Airport (regional flight hub), or Central Bus Stand (CBS / Thakkar Bazaar). The itinerary sequences your stops geographically from that starting hub.',
+      'Yes. Trivio supports destination discovery with search and filters across available place listings, helping you browse categories and find places that match your interests.',
   },
   {
-    question: 'How does turn-by-turn road navigation work?',
+    question: 'Can I save places for a future visit?',
     answer:
-      'The app displays point-to-point geographic distances for planning and provides a direct one-tap button to push exact GPS coordinates into your favorite map app (such as Google Maps) for live driving directions.',
+      'Signed-in users can save places to wishlist boards in the app and organise destinations they want to revisit.',
   },
   {
-    question: 'Are temple dress codes and visiting guidelines included?',
+    question: 'Does Trivio provide turn-by-turn navigation or live opening hours?',
     answer:
-      'Yes. Heritage and pilgrimage sites like Trimbakeshwar Jyotirlinga and Kalaram Mandir provide specific guidance on expected attire (such as dhoti/kurta rules for Gabhara puja) and optimal morning hours to avoid long queues.',
+      'When a place has a valid map link or coordinates, the app can hand off to an external maps application such as Google Maps. Place listings may include timing, fee or facility details where available, but these details can change and should be confirmed with the venue. Trivio does not replace live navigation or venue confirmation.',
   },
 ];
