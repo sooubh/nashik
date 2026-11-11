@@ -15,7 +15,7 @@ const REASONS = [
     icon: Route,
     title: 'Plan better days',
     description:
-      'Bring nearby places together and shape a trip around your arrival point, available time and interests.',
+      'Shape a multi-day suggestion around your trip duration, budget, interests, transport and preferred pace.',
   },
   {
     icon: Bookmark,
