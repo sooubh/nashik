@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Compass, Route, CloudOff } from 'lucide-react';
+import { Compass, Route, Bookmark } from 'lucide-react';
 
 const REASONS = [
   {
@@ -15,13 +15,13 @@ const REASONS = [
     icon: Route,
     title: 'Plan better days',
     description:
-      'Bring nearby places together and shape a trip around your arrival point, available time and interests.',
+      'Shape a multi-day suggestion around your trip duration, budget, interests, transport and preferred pace.',
   },
   {
-    icon: CloudOff,
-    title: 'Useful beyond the signal',
+    icon: Bookmark,
+    title: 'Keep your shortlist close',
     description:
-      'Keep saved destination information close, even when your journey takes you into areas with weak connectivity.',
+      'Save places to wishlist boards in the app and revisit the destinations you want to explore.',
   },
 ];
 

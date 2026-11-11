@@ -9,7 +9,6 @@ import { AppShowcase } from '@/components/landing/AppShowcase';
 import { LocalAdvantage } from '@/components/landing/LocalAdvantage';
 import { AppFaq } from '@/components/landing/AppFaq';
 import { DownloadCta } from '@/components/landing/DownloadCta';
-import { SITE_CONFIG } from '@/config/site';
 import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
 import { FAQ_ITEMS } from '@/data/faqData';
 import { safeJsonLd } from '@/lib/utils';
@@ -20,14 +19,15 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'ItemList',
-        name: 'Featured Nashik Destinations in ' + SITE_CONFIG.name,
-        description: 'Temples, vineyards, Sahyadri trails and nature spots around Nashik.',
+        name: 'Places to visit in Nashik, Maharashtra',
+        description: 'A curated set of Nashik-area temples, heritage sites, forts, vineyards and nature attractions featured in the Trivio travel guide.',
         itemListElement: NASHIK_REAL_PLACES.map((place, index) => ({
           '@type': 'ListItem',
           position: index + 1,
           item: {
             '@type': 'TouristAttraction',
             name: place.name,
+            alternateName: place.marathiName,
             description: place.highlight,
             address: {
               '@type': 'PostalAddress',

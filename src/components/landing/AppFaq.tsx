@@ -8,7 +8,6 @@ export function AppFaq() {
   return (
     <section className="w-full bg-[#FBFAFD] px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-28" id="faq">
       <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
         <div className="max-w-2xl mb-10 sm:mb-14">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
             Common Inquiries
@@ -17,11 +16,10 @@ export function AppFaq() {
             Frequently Asked Questions
           </h2>
           <p className="text-base sm:text-lg text-on-surface-variant mt-3 leading-relaxed">
-            Practical details regarding offline operation, arrival transit hubs, and local temple customs.
+            Learn what Trivio covers, how its trip planner works, and what to check before visiting a destination.
           </p>
         </div>
 
-        {/* FAQ Accordion List */}
         <div className="space-y-3.5">
           {FAQ_ITEMS.map((item, index) => (
             <details

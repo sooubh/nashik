@@ -17,13 +17,13 @@ export function PlaceIntelligence() {
         {/* Section Header */}
         <div className="max-w-2xl mb-10 sm:mb-14">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-violet">
-            Field Intelligence
+            DESTINATION GUIDE
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface">
-            Nashik Field Intelligence
+            Explore places around Nashik
           </h2>
           <p className="text-base sm:text-lg text-on-surface-variant mt-3 leading-relaxed">
-            Essential ground realities for travelers: sanctum entry windows, Sahyadri terrain alerts, and road transit markers.
+            Browse selected Nashik destinations with descriptions, suggested visiting windows, map links and practical travel notes.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export function PlaceIntelligence() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
                 <div className="p-4 rounded-xl bg-brand-50">
                   <span className="block text-xs font-semibold text-deep-violet mb-1">
-                    Optimal visiting hours
+                    Suggested visiting window
                   </span>
                   <span className="text-sm font-medium text-on-surface block leading-snug">
                     {activePlace.bestTime}
@@ -139,7 +139,7 @@ export function PlaceIntelligence() {
               {/* Local Practical Advice */}
               <div className="p-4 rounded-xl bg-[#F4F1F8] mb-6">
                 <span className="block text-xs font-semibold text-deep-violet mb-1">
-                  Local ground reality
+                  Practical travel note
                 </span>
                 <p className="text-sm text-on-surface leading-relaxed">
                   {activePlace.practicalTip}
@@ -150,7 +150,7 @@ export function PlaceIntelligence() {
             {/* Action Bar */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
               <span className="text-xs text-on-surface-variant text-center sm:text-left">
-                Full offline directions and cached maps available in Trivio on Android.
+                Place notes are informational. Confirm current timings, fees and access rules before travelling.
               </span>
               <a
                 href={activePlace.googleMapsUrl}
