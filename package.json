@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "seo:smoke": "node scripts/seo-smoke.mjs"
   },
   "repository": {
     "type": "git",
