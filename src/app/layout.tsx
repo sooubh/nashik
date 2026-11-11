@@ -101,12 +101,6 @@ export default function RootLayout({
           areaServed: 'IN',
           availableLanguage: ['English', 'Hindi', 'Marathi'],
         },
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Nashik',
-          addressRegion: 'Maharashtra',
-          addressCountry: 'IN',
-        },
       },
       {
         '@type': 'WebSite',
