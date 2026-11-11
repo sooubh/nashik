@@ -1,6 +1,5 @@
 export interface SiteConfig {
   name: string;
-  tagline: string;
   description: string;
   canonicalUrl: string;
   playStoreUrl: string;
@@ -14,7 +13,6 @@ export interface SiteConfig {
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'Trivio',
-  tagline: 'A travel guide for Nashik, Maharashtra',
   description:
     'Trivio is a Nashik travel guide for discovering temples, forts, vineyards, waterfalls and local attractions, with place details and a preference-based multi-day trip planner.',
   canonicalUrl: 'https://nashik.sooubh.me',
