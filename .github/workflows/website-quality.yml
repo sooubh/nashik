@@ -2,7 +2,7 @@ name: Website quality gates
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, seo/ci-quality-gates]
   push:
     branches: [main]
 
