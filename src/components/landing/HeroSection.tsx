@@ -58,12 +58,6 @@ export function HeroSection() {
         </motion.h1>
       </motion.div>
 
-      <div className="pointer-events-none absolute inset-x-0 top-[58%] z-20 flex justify-center px-5 sm:top-[29%]">
-        <p className="max-w-xl rounded-full border border-white/20 bg-slate-950/40 px-4 py-2 text-center text-xs font-medium leading-relaxed tracking-wide text-white shadow-lg backdrop-blur-sm sm:px-6 sm:text-sm">
-          {SITE_CONFIG.tagline}
-        </p>
-      </div>
-
       {/* Reuse the exact desktop foreground cutout; responsive object-fit frames it for phones. */}
       <motion.div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none" style={shouldReduceMotion ? undefined : { y: foregroundY }}>
         <div className="absolute inset-0 h-full w-full">
