@@ -9,9 +9,9 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SITE_CONFIG } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
+  title: `Nashik Trip Planner Guide · ${SITE_CONFIG.name}`,
   description:
-    `Discover how the ${SITE_CONFIG.name} Android app plans multi-day itineraries around Nashik with geographic clustering, zero backtracking, and offline caching.`,
+    `See how the ${SITE_CONFIG.name} Android app helps plan a multi-day Nashik visit around your preferences. Itinerary suggestions are not live route or venue guarantees.`,
   alternates: {
     canonical: '/trip-planner',
   },
@@ -66,10 +66,10 @@ export default function TripPlannerPage() {
             Itinerary Architecture Guide
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface leading-tight">
-            Trip planning built for real travel in Nashik.
+            Plan a Nashik trip around your interests.
           </h1>
           <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed">
-            The {SITE_CONFIG.name} app includes a dedicated itinerary builder designed to eliminate backtracking between wine estates, sacred ghats, and Sahyadri mountains.
+            The {SITE_CONFIG.name} app includes a multi-day trip planner. Add your preferences to receive an itinerary suggestion for exploring Nashik and nearby destinations.
           </p>
         </div>
 
@@ -82,46 +82,47 @@ export default function TripPlannerPage() {
                 How the Itinerary Builder Works
               </h2>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Instead of manually coordinating scattered attractions on different maps, {SITE_CONFIG.name} guides you through clear geographic preferences:
+                Set trip preferences such as duration, budget, interests, transport and travel pace to shape your suggested itinerary:
               </p>
 
               <ul className="space-y-4 text-sm text-on-surface">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-deep-violet shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-deep-violet">Transit Hub Departure:</strong> Choose your exact arrival hub, such as Nashik Road Railway Station, Ozar Airport, or Central Bus Stand (CBS), to sequence stops geographically.
+                    <strong className="text-deep-violet">Trip preferences:</strong> Choose the details that matter for your visit, including trip duration, budget, interests and transport.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-deep-violet shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-deep-violet">Duration and Travel Pace:</strong> Plan 1, 2, or 3 days with relaxed pacing (2 to 3 major sights) or active pacing (4 or more stops with sunrise treks).
+                    <strong className="text-deep-violet">Travel pace:</strong> Shape the suggestion around how long you have and whether you prefer a relaxed or active visit.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-deep-violet shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-deep-violet">Offline Fallback:</strong> The app connects to an assisted scheduling service, with a deterministic offline heuristic generator if cell reception drops in Sahyadri valleys.
+                    <strong className="text-deep-violet">AI-assisted suggestions:</strong> Trivio can request AI-assisted itinerary suggestions. If the remote generator is unavailable, a local rule-based fallback can be used; this does not provide live venue, road or map data offline.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-deep-violet shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-deep-violet">Direct Road Navigation:</strong> Point-to-point geographic distances are computed, and individual stops open directly in your favorite maps app for live turn-by-turn road directions.
+                    <strong className="text-deep-violet">Map hand-off:</strong> Available destination map links can open in an external maps app. That app provides its own route and navigation information.
                   </div>
                 </li>
               </ul>
             </div>
 
-            {/* Real Sample Itinerary Display */}
+            {/* Illustrative itinerary example */}
             <div className="p-6 sm:p-8 rounded-card bg-[#F4F1F8] border border-[#ded9e8] space-y-4">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#E0A24A]" />
                 <h3 className="text-base sm:text-lg font-bold text-on-surface">
-                  Example 2-Day Itinerary: Heritage &amp; Wine Country
+                  Illustrative 2-Day Nashik Trip Idea
                 </h3>
               </div>
               
+              <p className="text-sm leading-relaxed text-on-surface-variant">This is an example for inspiration, not a live itinerary or a promise of current opening hours, access, travel times or availability. Confirm details with each venue before setting out.</p>
               <div className="space-y-3 pt-2">
                 <div className="p-4 rounded-xl bg-white border border-[#ded9e8]">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
