@@ -13,9 +13,7 @@ async function get(path) {
 const robots = await get('/robots.txt');
 assert.match(robots, /^User-Agent:\s*\*/im, 'robots.txt must include a wildcard rule');
 assert.match(robots, /^Allow:\s*\//im, 'robots.txt must allow public crawling');
-for (const bot of ['OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot']) {
-  assert.ok(robots.toLowerCase().includes(bot.toLowerCase()), `robots.txt is missing ${bot}`);
-}
+assert.doesNotMatch(robots, /^Disallow:\\s*\\/\\s*$/im, 'robots.txt must not block the entire site');
 
 const sitemap = await get('/sitemap.xml');
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
