@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: '/trip-planner',
   },
   openGraph: {
-    title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
+    title: `Nashik Trip Planner Guide · ${SITE_CONFIG.name}`,
     description:
       `Plan multi-day travel itineraries in Nashik with ${SITE_CONFIG.name}.`,
     url: `${SITE_CONFIG.canonicalUrl}/trip-planner`,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
+    title: `Nashik Trip Planner Guide · ${SITE_CONFIG.name}`,
     description:
       `Plan multi-day travel itineraries in Nashik with ${SITE_CONFIG.name}.`,
     images: ['/images/screenshots/ai-planner.png'],
@@ -63,7 +63,7 @@ export default function TripPlannerPage() {
         {/* Page Header */}
         <div className="max-w-2xl text-left space-y-3">
           <span className="font-editorial italic text-base text-deep-violet block">
-            Itinerary Architecture Guide
+            Nashik Trip Planner Guide
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-on-surface leading-tight">
             Plan a Nashik trip around your interests.
