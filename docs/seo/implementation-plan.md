@@ -20,15 +20,15 @@
 |---|---|---|---|
 | 0 | Correct the existing technical SEO pass and remove unsupported claims | [PR #3](https://github.com/sooubh/nashik/pull/3) | Fresh preview deployment and review; do not merge until reviewed |
 | 1 | Add TypeScript and production-build CI gates | [PR #9](https://github.com/sooubh/nashik/pull/9), [Issue #4](https://github.com/sooubh/nashik/issues/4) | CI typecheck and production build must pass |
-| 2 | Add robots, sitemap, metadata, canonical and JSON-LD smoke tests | [PR #11](https://github.com/sooubh/nashik/pull/11), [Issue #10](https://github.com/sooubh/nashik/issues/10) | Stacked on PR #9; retarget to main after PR #9 merges; smoke tests must pass |
-| 3 | Build factual destination detail pages | [Issue #5](https://github.com/sooubh/nashik/issues/5) | Source-of-truth data audit and content verification first |
-| 4 | Publish distinct, people-first Nashik travel guides | [Issue #6](https://github.com/sooubh/nashik/issues/6) | Destination pages and editorial sourcing process established |
-| 5 | Improve mobile experience, accessibility and Core Web Vitals | [Issue #7](https://github.com/sooubh/nashik/issues/7) | Baseline measurements before changes; preserve design |
-| 6 | Verify canonical host, indexing and AI crawler eligibility | [Issue #8](https://github.com/sooubh/nashik/issues/8) | Requires production-domain and Search Console access |
+| 2 | Upgrade unsupported Next.js and remediate dependency vulnerabilities | [Issue #13](https://github.com/sooubh/nashik/issues/13) | Audit advisories and choose a supported Next.js/React target before implementation |\n| 3 | Add robots, sitemap, metadata, canonical and JSON-LD smoke tests | [PR #11](https://github.com/sooubh/nashik/pull/11), [Issue #10](https://github.com/sooubh/nashik/issues/10) | Stacked on PR #9; retarget to main after PR #9 merges; smoke tests must pass |
+| 4 | Build factual destination detail pages | [Issue #5](https://github.com/sooubh/nashik/issues/5) | Source-of-truth data audit and content verification first |
+| 5 | Publish distinct, people-first Nashik travel guides | [Issue #6](https://github.com/sooubh/nashik/issues/6) | Destination pages and editorial sourcing process established |
+| 6 | Improve mobile experience, accessibility and Core Web Vitals | [Issue #7](https://github.com/sooubh/nashik/issues/7) | Baseline measurements before changes; preserve design |
+| 7 | Verify canonical host, indexing and AI crawler eligibility | [Issue #8](https://github.com/sooubh/nashik/issues/8) | Requires production-domain and Search Console access |
 
 Each workstream should remain a focused PR. Destination pages and editorial guides should not be combined into one broad content dump. If a workstream requires unverified facts or owner access, keep it blocked rather than publishing assumptions.
 
-## Technical SEO checklist
+## Dependency security gate\n\nThe current dependency set uses Next.js 14.2.15. CI reported an npm audit total of four findings (one moderate, two high and one critical) and the Next.js support policy lists 14.x as unsupported. Track this separately in [SEC-01](https://github.com/sooubh/nashik/issues/13). Do not treat a successful build as proof that dependencies are secure. Upgrade to a supported patched Next.js/React combination, review every advisory path, regenerate the lockfile, and rerun all quality gates before production readiness.\n\n## Technical SEO checklist
 
 - Confirm the real production hostname and redirect all alternate hosts to it.
 - Use one self-referencing canonical per indexable page.
