@@ -19,12 +19,14 @@ const sitemap = await get('/sitemap.xml');
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
 assert.ok(sitemapUrls.length >= 2, 'sitemap.xml must contain the homepage and trip planner');
 const sitemapPaths = new Set(sitemapUrls.map((value) => new URL(value).pathname));
+assert.equal(sitemapPaths.size, sitemapUrls.length, 'sitemap.xml must not contain duplicate URLs');
+const pathsToCheck = [...new Set([...requiredPaths, ...sitemapPaths])];
 for (const path of ['/', '/trip-planner']) {
   assert.ok(sitemapPaths.has(path), `sitemap.xml is missing ${path}`);
 }
 
 const pages = [];
-for (const path of requiredPaths) {
+for (const path of pathsToCheck) {
   const html = await get(path);
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)?.[1]?.trim()
