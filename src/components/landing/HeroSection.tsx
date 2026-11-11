@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Download } from 'lucide-react';
-import { SITE_CONFIG } from '@/config/site';
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
