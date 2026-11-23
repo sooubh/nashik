@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, MapPin, X, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+import { getPlayStoreUrl } from '@/lib/utm';
 
 const NAV_ITEMS = [
-  { label: 'Destinations', href: '/#destinations' },
-  { label: 'Field Guide', href: '/#gazetteer' },
-  { label: 'Experiences', href: '/#experiences' },
+  { label: 'Destinations', href: '/destinations' },
+  { label: 'Places', href: '/places' },
+  { label: 'Guides', href: '/guides' },
+  { label: 'Itineraries', href: '/blog' },
   { label: 'Trip Guide', href: '/trip-planner' },
-  { label: 'Why Trivio', href: '/#why-trivio' },
   { label: 'FAQ', href: '/#faq' },
 ];
 
@@ -76,7 +77,7 @@ export function SiteNav() {
               ))}
             </nav>
             <a
-              href={SITE_CONFIG.playStoreUrl}
+              href={getPlayStoreUrl('nav_button', 'header')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[40px] items-center justify-center rounded-full bg-signal-lime px-4 py-2 text-xs font-bold text-[#221045] transition-colors hover:bg-[#d5ff4f]"
@@ -135,7 +136,7 @@ export function SiteNav() {
               ))}
             </div>
             <a
-              href={SITE_CONFIG.playStoreUrl}
+              href={getPlayStoreUrl('mobile_nav_button', 'mobile_menu')}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}

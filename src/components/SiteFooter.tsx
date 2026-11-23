@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+import { getPlayStoreUrl } from '@/lib/utm';
 
 export function SiteFooter() {
   return (
@@ -74,7 +75,7 @@ export function SiteFooter() {
                     <li key={link.label}>
                       {link.external ? (
                         <a
-                          href={link.href}
+                          href={link.href.includes('play.google.com') ? getPlayStoreUrl('footer_link', 'footer') : link.href}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex min-h-[36px] sm:min-h-[40px] items-center text-xs leading-snug text-[#696474] transition-colors hover:text-deep-violet sm:text-sm py-1"

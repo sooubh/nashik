@@ -2,9 +2,12 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
 import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
+
+const MotionLink = motion.create ? motion.create(Link) : motion(Link);
 
 export function DestinationGallery() {
   const railRef = useRef<HTMLDivElement>(null);
@@ -76,47 +79,48 @@ export function DestinationGallery() {
           className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-1 sm:gap-5"
           aria-label="Featured Nashik destinations"
         >
-          {NASHIK_REAL_PLACES.map((place, index) => (
-            <motion.a
-              key={place.id}
-              href={place.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={'Explore ' + place.name + ' on Google Maps'}
-              initial={reduceMotion ? false : { opacity: 0, y: 40, rotateX: 8, scale: 0.94 }}
-              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.12 }}
-              transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
-              whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
-              whileTap={reduceMotion ? undefined : { scale: 0.985 }}
-              style={{ transformPerspective: 1100, transformStyle: 'preserve-3d' }}
-              className="group relative aspect-[4/5] w-[calc(100vw-4.5rem)] max-w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
-            >
-              <Image
-                src={place.image}
-                alt={place.name}
-                fill
-                sizes="(max-width: 640px) 85vw, (max-width: 1024px) 310px, 340px"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/12 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="absolute left-4 top-4 max-w-[calc(100%-4.5rem)] truncate rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
-                {place.categoryLabel}
-              </span>
-              <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <ArrowUpRight className="h-4 w-4" />
-              </span>
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                <h3 className="text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl">
-                  {place.name}
-                </h3>
-                <p className="mt-1 line-clamp-1 text-xs text-white/75">
-                  {place.locationArea}
-                </p>
-              </div>
-            </motion.a>
-          ))}
+          {NASHIK_REAL_PLACES.map((place, index) => {
+            const placeSlug = place.id === 'kalaram-temple' ? 'panchavati-kalaram' : place.id;
+            return (
+              <MotionLink
+                key={place.id}
+                href={`/places/${placeSlug}`}
+                aria-label={'View complete guide for ' + place.name}
+                initial={reduceMotion ? false : { opacity: 0, y: 40, rotateX: 8, scale: 0.94 }}
+                whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{ duration: 0.72, delay: Math.min(index * 0.075, 0.3), ease: [0.22, 1, 0.36, 1] }}
+                whileHover={reduceMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2, scale: 1.018 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.985 }}
+                style={{ transformPerspective: 1100, transformStyle: 'preserve-3d' }}
+                className="group relative aspect-[4/5] w-[calc(100vw-4.5rem)] max-w-[280px] shrink-0 snap-start overflow-hidden rounded-[24px] bg-slate-900 shadow-[0_18px_38px_rgba(21,17,35,0.18)] ring-1 ring-inset ring-white/15 sm:w-[310px] sm:rounded-[26px] lg:w-[320px] xl:w-[340px]"
+              >
+                <Image
+                  src={place.image}
+                  alt={place.name}
+                  fill
+                  sizes="(max-width: 640px) 85vw, (max-width: 1024px) 310px, 340px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/12 to-black/5 transition-colors duration-500 group-hover:from-black/95" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <span className="absolute left-4 top-4 max-w-[calc(100%-4.5rem)] truncate rounded-full border border-white/20 bg-black/25 px-3 py-1 text-[10px] font-medium tracking-wide text-white/90 backdrop-blur-sm">
+                  {place.categoryLabel}
+                </span>
+                <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/85 text-slate-900 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                  <h3 className="text-xl font-bold leading-tight tracking-tight text-white sm:text-2xl">
+                    {place.name}
+                  </h3>
+                  <p className="mt-1 line-clamp-1 text-xs text-white/75">
+                    {place.locationArea}
+                  </p>
+                </div>
+              </MotionLink>
+            );
+          })}
         </div>
       </div>
     </section>

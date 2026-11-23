@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Download, ArrowUpRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+import { getPlayStoreUrl } from '@/lib/utm';
 
 export function DownloadCta() {
   return (
@@ -28,7 +29,7 @@ export function DownloadCta() {
         {/* Right Column: High-contrast Actions */}
         <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0">
           <a
-            href={SITE_CONFIG.playStoreUrl}
+            href={getPlayStoreUrl('download_section', 'bottom_cta')}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex min-h-[48px] items-center justify-center gap-3 bg-signal-lime hover:bg-[#d5ff4f] text-[#221045] text-sm sm:text-base font-bold px-8 py-3.5 rounded-xl transition-colors cursor-pointer"

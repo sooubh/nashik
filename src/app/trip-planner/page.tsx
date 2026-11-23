@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SITE_CONFIG } from '@/config/site';
+import { getPlayStoreUrl } from '@/lib/utm';
 
 export const metadata: Metadata = {
   title: `Trip Planning Architecture Guide · ${SITE_CONFIG.name}`,
@@ -151,7 +152,7 @@ export default function TripPlannerPage() {
 
             <div className="pt-2">
               <a
-                href={SITE_CONFIG.playStoreUrl}
+                href={getPlayStoreUrl('trip_planner_guide', 'feature_dossier')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[48px] items-center gap-2.5 bg-signal-lime hover:bg-[#d5ff4f] text-[#221045] text-sm sm:text-base font-bold px-7 py-3.5 rounded-full transition-transform hover:scale-[1.02] active:scale-95 cursor-pointer"

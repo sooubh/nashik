@@ -83,6 +83,7 @@ const nextConfig = {
       { source: '/delete-account.html', destination: '/delete-account', permanent: true },
       { source: '/trip-planner.html', destination: '/trip-planner', permanent: true },
       { source: '/404.html', destination: '/', permanent: true },
+      { source: '/places/kalaram-temple', destination: '/places/panchavati-kalaram', permanent: true },
     ];
   },
 };

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { NASHIK_REAL_PLACES, NashikPlace } from '@/data/nashikPlaces';
 
@@ -152,15 +153,13 @@ export function PlaceIntelligence() {
               <span className="text-xs text-on-surface-variant text-center sm:text-left">
                 Full offline directions and cached maps available in Trivio on Android.
               </span>
-              <a
-                href={activePlace.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/places/${activePlace.id === 'kalaram-temple' ? 'panchavati-kalaram' : activePlace.id}`}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-deep-violet hover:bg-[#392066] text-white text-xs sm:text-sm font-semibold transition-colors"
               >
-                <span>Open in Google Maps</span>
+                <span>View Full Destination Guide</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

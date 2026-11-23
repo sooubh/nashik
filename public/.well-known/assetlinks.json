@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sooubh.nashikexplore",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7F:02:4F:73:9A:C3:A8:1D:3B:56:4C:E6:9A:8B:27:0C:8B:91:28:44:8D:1F:B1:A6:49:55:08:42:07"
+      ]
+    }
+  }
+]

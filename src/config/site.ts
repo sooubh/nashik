@@ -30,6 +30,15 @@ export const SITE_CONFIG: SiteConfig = {
   ],
   footerColumns: [
     {
+      title: 'Directory & Guides',
+      links: [
+        { label: 'All Destinations & Regions', href: '/destinations' },
+        { label: 'Top 23 Places to Visit', href: '/places' },
+        { label: 'Expert Travel Guides', href: '/guides' },
+        { label: 'Itineraries & Road Trips', href: '/blog' },
+      ],
+    },
+    {
       title: 'App & Features',
       links: [
         { label: 'Trip Architecture Guide', href: '/trip-planner' },

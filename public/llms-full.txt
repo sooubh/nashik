@@ -1,0 +1,272 @@
+# Trivio — Nashik Travel Guide Complete Knowledge Base (llms-full.txt)
+> Authoritative, machine-readable directory of Nashik tourism entities with verified 2026 operational facts, geographical coordinates, timings, fees, transit options, and safety rules.
+
+## Metadata
+- Domain: https://nashik.sooubh.me
+- Android Application: com.sooubh.nashikexplore (https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore)
+- Primary Language: English (en)
+- Localized Languages: Marathi (mr), Hindi (hi)
+- Last Verification Date: November 2026
+
+---
+
+## 1. Trimbakeshwar Shiva Temple
+- Slug: trimbakeshwar
+- Local Names: श्री त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर (mr), श्री त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर (hi)
+- Category: Spiritual & Heritage
+- Latitude: 19.9324, Longitude: 73.5309, Elevation: 620m
+- Operating Hours: 05:30 to 21:00 Daily
+- Major Pujas: Brahma Dev Puja (07:00-08:30), Mahadev Puja (10:45-12:30), Vishnu Dev Puja (19:00-20:30), Shej Aarti (21:00)
+- Entry Fee: Free for general darshan line; ₹200 Donation Darshan Fast-Track Pass (available at Uttar Mahadwar counter or trimbakeshwartrust.com)
+- Dress Code: Strict traditional dress required. Men: Dhoti/Kurta or formal trousers; Women: Saree or Salwar Kameez. Shorts, miniskirts, sleeveless disallowed.
+- Inner Sanctum Access: General public entry into Garbhagriha is legally prohibited; darshan conducted from outer Sabha Mandap.
+- How to Reach: 28 km west of Nashik city via NH 848 (45 mins drive). Citilinc Bus #143 & #144 run every 15 mins from CBS (~₹45).
+- Sacred Reservoirs: Kushavarta Kund (400m south), where River Godavari re-emerges.
+- Nearby Landmarks: Brahmagiri Hill, Dugarwadi Waterfall, Anjaneri Hills.
+
+---
+
+## 2. Sula Vineyards & Estate
+- Slug: sula-vineyards
+- Local Names: सुला वाईनयार्ड्स व इस्टेट (mr), सुला वाइनयार्ड्स एवं एस्टेट (hi)
+- Category: Wine Country
+- Latitude: 19.9805, Longitude: 73.6811, Elevation: 590m
+- Operating Hours: 10:30 to 22:30 Daily
+- Gate Entry Fee: ₹600 per person (Mon-Fri) / ₹1,000 per person (Sat-Sun & Holidays) — 100% redeemable on food, beverage, and retail on the same day.
+- Tasting & Tour Packages: Standard Tour ₹200-₹300; Best of Sula (Tour + 6 Wine Tastings) ₹600-₹700 per person; Exclusive Private Tasting ₹1,500/person.
+- Legal Age: 21+ for wine tasting. Valid government ID required.
+- Grape Stomping & Harvest Season: Mid-January through late March.
+- How to Reach: 15 km northwest of Nashik center via Gangapur Road towards Govardhan village (30 mins drive).
+- Nearby Landmarks: York Winery (2 km), Soma Vine Village (3 km), Someshwar Waterfall (7 km).
+
+---
+
+## 3. Harihar Fort (Harishgad)
+- Slug: harihar-fort
+- Local Names: हरीहर किल्ला (mr), हरिहर किला (hi)
+- Category: Forts & Treks
+- Latitude: 19.9042, Longitude: 73.4728, Elevation: 1120m
+- Operating Hours: 05:30 to 18:00 (Day trek only; descending after dark strictly unsafe).
+- Entry Fee: Free (Village parking ₹30-₹50).
+- Ascent Duration: 2.5 to 3 hours.
+- Key Feature: 117 rock-cut steps inclined at 70° to 80° with hand and foot grip notches.
+- Difficulty Grade: Moderate to Difficult (High exposure).
+- Base Villages: Harshewadi (closer approach, ~40 km from Nashik) or Nirgudpada (traditional path, ~48 km).
+- Safety Alert: Avoid climbing during torrential monsoon squalls when steps become slick waterfalls. Carry 2.5L+ water.
+- Nearby Landmarks: Brahmagiri Hill, Trimbakeshwar, Dugarwadi Waterfall.
+
+---
+
+## 4. Shree Kalaram Mandir & Panchavati
+- Slug: panchavati-kalaram
+- Local Names: श्री काळाराम मंदिर व पंचवटी (mr), श्री कालाराम मंदिर एवं पंचवटी (hi)
+- Category: Spiritual & Heritage
+- Latitude: 20.0076, Longitude: 73.7944, Elevation: 585m
+- Operating Hours: 05:30 to 22:00 Daily
+- Entry Fee: Free for all visitors.
+- Architecture: 1788-1790 CE black basalt stone temple with 84 pillars built by Sardar Rangarao Odhekar.
+- Surrounding Sites: Ramkund (holy dip ghat 350m), Sita Gufa (ancient cave 150m), Kapaleshwar Temple (300m), Tapovan (2 km).
+- Daily Godavari Aarti: 19:00 daily at Ramkund stone steps.
+- How to Reach: Located in Old Nashik city center, 2 km from CBS. Citilinc buses #101, #103, #110 run frequently (Fare ₹15).
+
+---
+
+## 5. Dugarwadi Waterfall
+- Slug: dugarwadi-waterfall
+- Local Names: दुगरवाडी धबधबा (mr), डुगरवाडी झरना (hi)
+- Category: Waterfalls & Nature
+- Latitude: 19.9278, Longitude: 73.4925, Elevation: 560m
+- Operating Hours: 07:00 to 17:00 (Daylight hours only during monsoon July-October).
+- Entry Fee: Free (Village parking ₹30-₹50).
+- Trail: 1.5 km scenic forest walk from vehicle parking to canyon viewing rim.
+- STRICT WARNING: Do not enter the water basin at the foot of the gorge. Whirlpools and flash floods have caused fatal accidents.
+- How to Reach: 30 km west of Nashik, 4 km past Trimbakeshwar on Jawhar Highway.
+
+---
+
+## 6. Pandavleni Buddhist Caves
+- Slug: pandavleni-caves
+- Category: Spiritual & Archaeology
+- Latitude: 19.9616, Longitude: 73.7483, Elevation: 690m
+- Operating Hours: 08:30 to 17:30 Daily
+- Entry Fee: ₹25 for Indian nationals; ₹300 for foreigners; free for children under 15.
+- Key Feature: 24 Hinayana Buddhist rock-cut caves (2nd century BCE to 2nd century CE) on Trirashmi Hill.
+- Steps: ~300 stone steps to reach cave level.
+- How to Reach: Situated directly on Mumbai-Agra highway (NH 3), 8 km from city center.
+
+---
+
+## 7. York Winery & Tasting Room
+- Slug: york-winery
+- Category: Wine Country
+- Latitude: 19.9912, Longitude: 73.6708, Elevation: 595m
+- Operating Hours: 12:00 to 22:00 Daily (Tasting sessions 12:30 to 18:30).
+- Entry Fee: Free gate entry; wine tasting ₹350 (5 wines) to ₹500 (7 reserve wines).
+- Key Feature: Lakeside sunset balcony overlooking Gangapur Dam backwaters, artisanal Reserve Shiraz.
+- How to Reach: 2 km past Sula Vineyards on Gangapur-Savargaon Road.
+
+---
+
+## 8. Anjaneri Mountain & Hanuman Birthplace
+- Slug: anjaneri-hills
+- Category: Forts & Treks
+- Latitude: 19.9192, Longitude: 73.5786, Elevation: 1280m
+- Operating Hours: 06:00 to 17:30 Daily
+- Entry Fee: Free (Base parking ₹20-₹40).
+- Hike Time: 2 to 2.5 hours via stone staircase to wide upper plateau.
+- Key Feature: Traditional birthplace of Lord Hanuman, Jain caves, reverse waterfall during monsoons.
+- How to Reach: 22 km west of Nashik on Nashik-Trimbak Highway (NH 848).
+
+---
+
+## 9. Someshwar Waterfall (Dudhsagar)
+- Slug: someshwar-waterfall
+- Category: Waterfalls & Nature
+- Latitude: 20.0248, Longitude: 73.7402, Elevation: 580m
+- Operating Hours: 06:00 to 19:00 Daily
+- Entry Fee: Free.
+- Key Feature: 10m cascade on upper Godavari river, adjacent to Someshwar Mahadev Temple and boating club.
+- How to Reach: 8 km northwest of CBS via Gangapur Road. Citilinc bus drops at temple gate (Fare ₹20).
+
+---
+
+## 10. Soma Vine Village & Resort
+- Slug: soma-vine-village
+- Category: Wine Country
+- Latitude: 19.9882, Longitude: 73.6654, Elevation: 592m
+- Operating Hours: 10:00 to 22:30 Daily
+- Entry Fee: Day tour & 4-wine tasting package ₹500 per person.
+- Key Feature: Poolside vineyard villas, grape stomping, wine spa.
+- How to Reach: 18 km northwest along Gangapur backwaters.
+
+---
+
+## 11. Saptashrungi Devi Temple (Vani)
+- Slug: saptashrungi-devi
+- Category: Spiritual & Heritage
+- Latitude: 20.3955, Longitude: 73.9056, Elevation: 1230m
+- Operating Hours: 05:00 to 21:00 Daily
+- Entry Fee: Free temple entry.
+- Funicular Ropeway Trolley: ₹110 return (Adults), ₹55 (Children), ascends cliff in 3 minutes.
+- Significance: Half of Maharashtra's 3.5 Shaktipeeths, self-manifested 18-armed Goddess idol.
+- How to Reach: 60 km north of Nashik via Dindori-Vani Ghat. Direct MSRTC buses from CBS every 30 mins (Fare ~₹100).
+
+---
+
+## 12. Brahmagiri Hill & Godavari Origin
+- Slug: brahmagiri-hill
+- Category: Forts & Treks
+- Latitude: 19.9288, Longitude: 73.5218, Elevation: 1298m
+- Operating Hours: 06:00 to 17:30 Daily
+- Entry Fee: Free.
+- Key Feature: ~1,000 stone steps to holy origin temple of River Godavari.
+- How to Reach: Trail starts directly behind Trimbakeshwar town (29 km from Nashik).
+
+---
+
+## 13. Muktidham Temple Nashik Road
+- Slug: muktidham-temple
+- Category: Spiritual & Heritage
+- Latitude: 19.9576, Longitude: 73.8312, Elevation: 580m
+- Operating Hours: 06:00 to 20:30 Daily
+- Entry Fee: Free.
+- Key Feature: Pure Makrana white marble architecture, replicas of 12 Jyotirlingas, 700 Gita verses on walls.
+- How to Reach: 1.5 km from Nashik Road Railway Station (5 mins by auto, ₹40).
+
+---
+
+## 14. Ramshej Fort
+- Slug: ramshej-fort
+- Category: Forts & Treks
+- Latitude: 20.0789, Longitude: 73.7456, Elevation: 960m
+- Operating Hours: 06:00 to 18:00 Daily
+- Entry Fee: Free. Easy 1-hour hike.
+- History: Defied 5.5-year imperial Mughal siege under Maratha garrison.
+- How to Reach: 14 km north along Dindori Road to Aashewadi base village.
+
+---
+
+## 15. Salher Fort
+- Slug: salher-fort
+- Category: Forts & Treks
+- Latitude: 20.7233, Longitude: 73.9436, Elevation: 1567m
+- Operating Hours: 05:30 to 18:00
+- Entry Fee: Free. Strenuous 3.5-4 hour mountain trek.
+- Status: Highest fort in Maharashtra, site of 1672 Maratha-Mughal battle.
+- How to Reach: 110 km north of Nashik via Satana and Taharabad.
+
+---
+
+## 16. Vihigaon Waterfall (Ashoka Falls)
+- Slug: vihigaon-waterfall
+- Category: Waterfalls & Nature
+- Latitude: 19.6738, Longitude: 73.4975, Elevation: 480m
+- Operating Hours: 08:00 to 17:00 (Monsoon July-October).
+- Entry Fee: Free (Rappelling activities ₹800-₹1,200 with certified instructors).
+- How to Reach: 55 km south of Nashik near Igatpuri.
+
+---
+
+## 17. Bhandardara (Randha & Umbrella Falls)
+- Slug: bhandardara-falls
+- Category: Waterfalls & Nature
+- Latitude: 19.5348, Longitude: 73.7619, Elevation: 740m
+- Operating Hours: 07:00 to 18:00 Daily
+- Entry Fee: ₹30 at Randha Falls; Wilson Dam view is free.
+- Key Feature: 170ft roaring Pravara River cascade, Arthur Lake camping.
+- How to Reach: 72 km south via Ghoti-Bhandardara road (2 hrs drive).
+
+---
+
+## 18. Sadhana Chulivarchi Misal
+- Slug: sadhana-misal
+- Category: Culinary & Food
+- Latitude: 20.0278, Longitude: 73.7389, Elevation: 582m
+- Operating Hours: 08:00 to 15:30 Daily
+- Cost: ~₹120-₹150 per Misal Pav plate.
+- Key Feature: Wood-fired chulha cooked smoky gravy, village charpai seating, clay-pot buttermilk.
+- How to Reach: Gangapur Road near Someshwar (9 km from CBS).
+
+---
+
+## 19. Shamsundar Misal Satpur
+- Slug: shamsundar-misal
+- Category: Culinary & Food
+- Latitude: 19.9965, Longitude: 73.7254, Elevation: 585m
+- Operating Hours: 08:00 to 15:00 Monday to Saturday. CLOSED on Sundays.
+- Cost: ~₹90-₹110 per plate.
+- Key Feature: Local purist favorite, fiercely spicy authentic balanced tarri.
+- How to Reach: Satpur MIDC Industrial Area (6 km west of CBS).
+
+---
+
+## 20. Shree Ambika Misal Panchavati
+- Slug: ambika-misal
+- Category: Culinary & Food
+- Latitude: 20.0088, Longitude: 73.7932, Elevation: 584m
+- Operating Hours: 08:00 to 21:00 Daily
+- Cost: ~₹80-₹100 per plate.
+- Key Feature: Dark Kala Rassa (black roasted spice gravy) in Old Nashik heritage lane.
+- How to Reach: Panchavati Karanja (2 km from CBS, near Kalaram temple).
+
+---
+
+## 21. Chandon India Winery (Dindori)
+- Slug: chandon-india
+- Category: Wine Country
+- Latitude: 20.1982, Longitude: 73.8431, Elevation: 610m
+- Operating Hours: 10:30 to 17:30 Tuesday to Sunday. CLOSED on Mondays.
+- Entry: Guided tasting tour ₹1,000-₹1,500 per person (Prior reservation required).
+- Speciality: Méthode Traditionnelle sparkling wine by Moët Hennessy.
+- How to Reach: 25 km north of Nashik via Dindori Road.
+
+---
+
+## 22. Vallonné Vineyards (Igatpuri)
+- Slug: vallonne-vineyards
+- Category: Wine Country
+- Latitude: 19.7821, Longitude: 73.6124, Elevation: 620m
+- Operating Hours: 11:00 to 22:00 Daily
+- Entry: Free entry; tasting of 5 boutique wines ₹500 per person.
+- Speciality: French château style estate, oak barrel-aged Malbec on Mukhne Dam backwaters.
+- How to Reach: 45 km south on NH 160 near Sanjegaon / Igatpuri.

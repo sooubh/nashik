@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Download } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+import { getPlayStoreUrl } from '@/lib/utm';
 
 export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
@@ -81,7 +82,7 @@ export function HeroSection() {
       {/* The primary hero action now takes visitors directly to Google Play. */}
       <div className="pointer-events-auto absolute left-1/2 top-[51%] z-20 -translate-x-1/2 sm:top-[52%] md:top-[53%] max-sm:top-[73%]">
         <a
-          href={SITE_CONFIG.playStoreUrl}
+          href={getPlayStoreUrl('hero_cta', 'hero_banner')}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download Trivio on Google Play"
