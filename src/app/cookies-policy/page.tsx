@@ -1,27 +1,14 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
-  description:
-    `Cookies & Local Storage Policy for ${SITE_CONFIG.name}. Details regarding localStorage and on-device storage.`,
-  alternates: {
-    canonical: '/cookies-policy',
-  },
-  openGraph: {
-    title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
-    description:
-      `Cookies & Local Storage Policy for ${SITE_CONFIG.name}.`,
-    url: `${SITE_CONFIG.canonicalUrl}/cookies-policy`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Cookies & Storage Policy · ${SITE_CONFIG.name}`,
-    description:
-      `Cookies & Local Storage Policy for ${SITE_CONFIG.name}.`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Cookie Policy & Local Storage Disclosures',
+  description: 'Learn how Trivio uses necessary cookies and local device storage to remember your language preferences and provide fast offline travel experiences.',
+  path: '/cookies-policy',
+  ogType: 'website',
+});
 
 export default function CookiesPolicyPage() {
   const toc = [

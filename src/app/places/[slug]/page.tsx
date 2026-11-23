@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { PlaceDetailView } from '@/components/views/PlaceDetailView';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -21,36 +21,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const place = DESTINATIONS_DATA.find((p) => p.slug === params.slug);
   if (!place) return {};
 
-  const title = `${place.title} · Timings, Entry Fee & Nashik Travel Guide`;
-  const description = place.directAnswer || place.excerpt;
-  const canonical = `/places/${place.slug}`;
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/places/${place.slug}`,
-        'mr': `/mr/places/${place.slug}`,
-        'hi': `/hi/places/${place.slug}`,
-        'x-default': `/places/${place.slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [place.heroImage],
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [place.heroImage],
-    },
-  };
+  return constructMetadata({
+    title: `${place.title} Nashik`,
+    description: place.excerpt || place.directAnswer,
+    path: `/places/${place.slug}`,
+    ogType: 'article',
+    ogImage: place.heroImage,
+    locale: 'en',
+  });
 }
 
 export default function PlacePage({ params }: PageProps) {

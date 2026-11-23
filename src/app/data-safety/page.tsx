@@ -2,27 +2,14 @@ import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { ShieldCheck, Lock, CheckCircle } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
-  description:
-    `Google Play Data Safety Disclosures for ${SITE_CONFIG.name}. Complete inventory of collected data, transit encryption, and account deletion mechanisms.`,
-  alternates: {
-    canonical: '/data-safety',
-  },
-  openGraph: {
-    title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
-    description:
-      `Data safety disclosures for ${SITE_CONFIG.name} matching Google Play console specifications.`,
-    url: `${SITE_CONFIG.canonicalUrl}/data-safety`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Data Safety Sheet · ${SITE_CONFIG.name}`,
-    description:
-      `Data safety disclosures for ${SITE_CONFIG.name} matching Google Play console specifications.`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Google Play Data Safety Disclosures & FAQ',
+  description: 'Verified Google Play Data Safety sheet for Trivio. Detailed explanations of minimal permissions, zero third-party advertising, and encrypted telemetry.',
+  path: '/data-safety',
+  ogType: 'website',
+});
 
 export default function DataSafetyPage() {
   const toc = [

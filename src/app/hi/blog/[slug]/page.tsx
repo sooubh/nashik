@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { BLOG_POSTS_DATA } from '@/data/blogData';
 import { BlogDetailView } from '@/components/views/BlogDetailView';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -22,37 +22,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
 
   const postTitle = post.localTitle?.hi || post.title;
-  const title = `${postTitle} · नासिक यात्रा ब्लॉग एवं कार्ययोजना`;
-  const description = post.directAnswer || post.summary;
-  const canonical = `/hi/blog/${post.slug}`;
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/blog/${post.slug}`,
-        'mr': `/mr/blog/${post.slug}`,
-        'hi': `/hi/blog/${post.slug}`,
-        'x-default': `/blog/${post.slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [post.heroImage],
-      type: 'article',
-      locale: 'hi_IN',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [post.heroImage],
-    },
-  };
+  return constructMetadata({
+    title: `${postTitle} नासिक`,
+    description: post.summary || post.directAnswer,
+    path: `/hi/blog/${post.slug}`,
+    ogType: 'article',
+    ogImage: post.heroImage,
+    publishedTime: `${post.publishedDate}T08:00:00+05:30`,
+    modifiedTime: '2026-01-15T12:00:00+05:30',
+    author: post.author,
+    locale: 'hi',
+  });
 }
 
 export default function BlogPostHindiPage({ params }: PageProps) {

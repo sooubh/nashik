@@ -1,27 +1,14 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: `Terms of Use · ${SITE_CONFIG.name}`,
-  description:
-    `Terms of Use and Conditions for ${SITE_CONFIG.name}. Guidelines on permitted use, trekking risk acknowledgments, and intellectual property.`,
-  alternates: {
-    canonical: '/terms-of-use',
-  },
-  openGraph: {
-    title: `Terms of Use · ${SITE_CONFIG.name}`,
-    description:
-      `Terms of Use for the ${SITE_CONFIG.name} Android application and website.`,
-    url: `${SITE_CONFIG.canonicalUrl}/terms-of-use`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Terms of Use · ${SITE_CONFIG.name}`,
-    description:
-      `Terms of Use for the ${SITE_CONFIG.name} Android application and website.`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Terms of Use & App Conditions of Service',
+  description: 'Official Terms of Use and Service for the Trivio Nashik travel guide application and website. Understand user rights, content rules, and disclaimers.',
+  path: '/terms-of-use',
+  ogType: 'website',
+});
 
 export default function TermsOfUsePage() {
   const toc = [

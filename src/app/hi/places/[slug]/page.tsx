@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { PlaceDetailView } from '@/components/views/PlaceDetailView';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -22,37 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!place) return {};
 
   const placeTitle = place.localized?.hi?.title || place.localName.hi || place.title;
-  const title = `${placeTitle} · दर्शन समय, प्रवेश शुल्क एवं नासिक यात्रा गाइड`;
-  const description = place.localized?.hi?.directAnswer || place.directAnswer || place.excerpt;
-  const canonical = `/hi/places/${place.slug}`;
+  const desc = place.localized?.hi?.excerpt || place.excerpt;
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/places/${place.slug}`,
-        'mr': `/mr/places/${place.slug}`,
-        'hi': `/hi/places/${place.slug}`,
-        'x-default': `/places/${place.slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [place.heroImage],
-      type: 'article',
-      locale: 'hi_IN',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [place.heroImage],
-    },
-  };
+  return constructMetadata({
+    title: `${placeTitle} नासिक`,
+    description: desc,
+    path: `/hi/places/${place.slug}`,
+    ogType: 'article',
+    ogImage: place.heroImage,
+    locale: 'hi',
+  });
 }
 
 export default function PlaceHindiPage({ params }: PageProps) {

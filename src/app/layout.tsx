@@ -27,26 +27,10 @@ export const metadata: Metadata = {
   applicationName: SITE_CONFIG.name,
   authors: [{ name: 'sooubh', url: SITE_CONFIG.canonicalUrl }],
   generator: 'Next.js',
-  keywords: [
-    'Nashik travel guide',
-    'Trivio Nashik',
-    'Nashik tourism app',
-    'Trimbakeshwar Shiva Temple darshan timings',
-    'Sula Vineyards wine tour Nashik',
-    'Harihar Fort rock steps trek',
-    'Panchavati Ramkund Nashik',
-    'Pandavleni Caves Nashik',
-    'Anjaneri Fort birthplace of Lord Hanuman',
-    'Someshwar Waterfall Nashik',
-    'Gangapur Dam boat club',
-    'Nashik itinerary planner 1 day 2 days',
-    'best places to visit in Nashik',
-    'Maharashtra tourism offline travel guide',
-    'Jyotirlinga Maharashtra travel companion',
-  ],
   referrer: 'origin-when-cross-origin',
   creator: 'sooubh',
   publisher: SITE_CONFIG.name,
+  manifest: '/manifest.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -59,7 +43,13 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: '/',
+    canonical: `${SITE_CONFIG.canonicalUrl}/`,
+    languages: {
+      'en': `${SITE_CONFIG.canonicalUrl}/`,
+      'mr': `${SITE_CONFIG.canonicalUrl}/mr`,
+      'hi': `${SITE_CONFIG.canonicalUrl}/hi`,
+      'x-default': `${SITE_CONFIG.canonicalUrl}/`,
+    },
   },
   openGraph: {
     type: 'website',
@@ -182,6 +172,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${newsreader.variable}`} suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="manifest" href="/manifest.webmanifest" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

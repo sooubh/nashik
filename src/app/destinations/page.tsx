@@ -9,21 +9,16 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
 import { ContextualAppCta } from '@/components/places/ContextualAppCta';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
+import { generateBreadcrumbSchema } from '@/lib/schema';
+import { safeJsonLd } from '@/lib/utils';
 
-export const metadata: Metadata = {
-  title: `Nashik Destinations & Regional Hubs · Categories & Cities | ${SITE_CONFIG.name}`,
-  description:
-    'Explore Nashik tourism by region or category: Nashik Central, Trimbakeshwar, Igatpuri highlands, Dindori wine country, temples, vineyards, forts, and waterfalls.',
-  alternates: {
-    canonical: '/destinations',
-  },
-  openGraph: {
-    title: `Nashik Destinations & Regional Hubs · Categories & Cities`,
-    description:
-      'Curated overview of 4 regional hubs and 8 travel categories across Nashik district.',
-    url: `${SITE_CONFIG.canonicalUrl}/destinations`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Nashik Destinations & Regional Hubs Guide',
+  description: 'Explore Nashik tourism by region or category: Trimbakeshwar, Igatpuri highlands, Dindori wine valley, sacred temples, and Sahyadri waterfalls.',
+  path: '/destinations',
+  ogType: 'website',
+});
 
 export default function DestinationsHubPage() {
   const breadcrumbs = [
@@ -31,8 +26,20 @@ export default function DestinationsHubPage() {
     { label: 'Destinations & Hubs', href: '/destinations' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `${SITE_CONFIG.canonicalUrl}/` },
+    { name: 'Nashik Destinations & Regional Hubs', url: `${SITE_CONFIG.canonicalUrl}/destinations` },
+  ]);
+
   return (
     <div className="min-h-screen bg-paper flex flex-col justify-between">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: safeJsonLd(breadcrumbSchema),
+        }}
+      />
+
       <SiteNav />
 
       <main id="main-content" className="flex-1 pt-24 sm:pt-28 pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
@@ -71,7 +78,7 @@ export default function DestinationsHubPage() {
                 >
                   <Image
                     src={city.heroImage}
-                    alt={city.title.en}
+                    alt={`${city.title.en} - Regional Travel Guide`}
                     fill
                     sizes="(max-width: 768px) 100vw, 550px"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"

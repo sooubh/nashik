@@ -1,9 +1,11 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { SiteNav } from '@/components/SiteNav';
 import { SiteFooter } from '@/components/SiteFooter';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { DestinationGallery } from '@/components/landing/DestinationGallery';
 import { PlaceIntelligence } from '@/components/landing/PlaceIntelligence';
+import { BlogShowcaseSection } from '@/components/landing/BlogShowcaseSection';
 import { DiscoverExperiences } from '@/components/landing/DiscoverExperiences';
 import { AppShowcase } from '@/components/landing/AppShowcase';
 import { LocalAdvantage } from '@/components/landing/LocalAdvantage';
@@ -13,6 +15,14 @@ import { SITE_CONFIG } from '@/config/site';
 import { NASHIK_REAL_PLACES } from '@/data/nashikPlaces';
 import { FAQ_ITEMS } from '@/data/faqData';
 import { safeJsonLd } from '@/lib/utils';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: 'Trivio · Nashik Travel Guide, Temples & Vineyards',
+  description: 'Explore sacred Trimbakeshwar Jyotirlinga, Sula wine estates, Harihar fort treks, and waterfalls with verified 2026 timings, costs, maps & offline guides.',
+  path: '/',
+  ogType: 'website',
+});
 
 export default function HomePage() {
   const pageSchema = {
@@ -65,6 +75,7 @@ export default function HomePage() {
         <HeroSection />
         <DestinationGallery />
         <PlaceIntelligence />
+        <BlogShowcaseSection />
         <DiscoverExperiences />
         <AppShowcase />
         <LocalAdvantage />

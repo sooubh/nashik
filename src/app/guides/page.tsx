@@ -8,21 +8,16 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
 import { ContextualAppCta } from '@/components/places/ContextualAppCta';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
+import { generateBreadcrumbSchema } from '@/lib/schema';
+import { safeJsonLd } from '@/lib/utils';
 
-export const metadata: Metadata = {
-  title: `Nashik Travel Guides · 15 In-Depth Dossiers & Trek Blueprints | ${SITE_CONFIG.name}`,
-  description:
-    'Detailed travel, trekking, wine tasting, and temple darshan guides for Nashik: Trimbakeshwar VIP passes, Harihar rock steps, Sula wine etiquette, and transit routes.',
-  alternates: {
-    canonical: '/guides',
-  },
-  openGraph: {
-    title: `Nashik Travel Guides · 15 In-Depth Dossiers`,
-    description:
-      'Curated expert travel guides for exploring Nashik temples, forts, waterfalls, and wine country.',
-    url: `${SITE_CONFIG.canonicalUrl}/guides`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Nashik Travel Guides & Trek Blueprints',
+  description: 'Detailed Nashik travel guides: Trimbakeshwar VIP darshan passes, Harihar rock steps trek, Sula wine tasting etiquette, and transit directions.',
+  path: '/guides',
+  ogType: 'website',
+});
 
 export default function GuidesPage() {
   const breadcrumbs = [
@@ -30,8 +25,20 @@ export default function GuidesPage() {
     { label: 'Travel Guides', href: '/guides' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `${SITE_CONFIG.canonicalUrl}/` },
+    { name: 'Nashik Travel Guides', url: `${SITE_CONFIG.canonicalUrl}/guides` },
+  ]);
+
   return (
     <div className="min-h-screen bg-paper flex flex-col justify-between">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: safeJsonLd(breadcrumbSchema),
+        }}
+      />
+
       <SiteNav />
 
       <main id="main-content" className="flex-1 pt-24 sm:pt-28 pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-8 sm:space-y-12">
@@ -62,7 +69,7 @@ export default function GuidesPage() {
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
                   <Image
                     src={guide.heroImage}
-                    alt={guide.title}
+                    alt={`${guide.title} - Nashik Travel Guide`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

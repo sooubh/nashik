@@ -144,6 +144,66 @@ export function generateFAQSchema(faqs: FAQItem[]) {
 }
 
 /**
+ * Generates Schema.org JSON-LD for a BlogPosting entity.
+ * Meets Google Search Structured Data requirements for Blog posts.
+ */
+export function generateBlogPostingSchema(
+  post: BlogPost,
+  url: string,
+  locale: Locale = 'en'
+) {
+  const isMr = locale === 'mr';
+  const isHi = locale === 'hi';
+
+  const title = isMr && post.localTitle?.mr
+    ? post.localTitle.mr
+    : isHi && post.localTitle?.hi
+    ? post.localTitle.hi
+    : post.title;
+
+  const description =
+    post.directAnswer ||
+    post.summary ||
+    'Nashik travel itinerary and verified local guide.';
+
+  const imageUrl = post.heroImage.startsWith('http')
+    ? post.heroImage
+    : `${SITE_CONFIG.canonicalUrl}${post.heroImage.startsWith('/') ? post.heroImage : `/${post.heroImage}`}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${url}#blogposting`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    headline: title.slice(0, 110),
+    description: description.slice(0, 160),
+    url,
+    image: [imageUrl],
+    datePublished: `${post.publishedDate}T08:00:00+05:30`,
+    dateModified: '2026-01-15T12:00:00+05:30',
+    author: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.canonicalUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.canonicalUrl}/images/branding/logo.png`,
+      },
+    },
+    inLanguage: locale === 'mr' ? 'mr-IN' : locale === 'hi' ? 'hi-IN' : 'en-IN',
+    articleSection: post.category,
+    keywords: post.tags?.join(', '),
+  };
+}
+
+/**
  * Generates Schema.org JSON-LD for an Article / Travel Guide.
  */
 export function generateArticleSchema(

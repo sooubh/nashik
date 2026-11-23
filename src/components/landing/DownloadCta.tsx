@@ -39,10 +39,10 @@ export function DownloadCta() {
           </a>
 
           <Link
-            href="/trip-planner"
+            href="/blog"
             className="inline-flex min-h-[44px] items-center justify-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm font-semibold px-4 py-2.5 transition-colors"
           >
-            <span>Read Trip Architecture Guide</span>
+            <span>Explore Itineraries & Road Trips</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>

@@ -6,21 +6,16 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { Breadcrumbs } from '@/components/common/Breadcrumbs';
 import { ContextualAppCta } from '@/components/places/ContextualAppCta';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
+import { generateBreadcrumbSchema } from '@/lib/schema';
+import { safeJsonLd } from '@/lib/utils';
 
-export const metadata: Metadata = {
-  title: `Places to Visit in Nashik · Directory of 23 Verified Attractions | ${SITE_CONFIG.name}`,
-  description:
-    'Comprehensive directory of top places to visit in Nashik: Jyotirlinga temples, Sula wine estates, Sahyadri rock steps treks, waterfalls, and authentic misal eateries.',
-  alternates: {
-    canonical: '/places',
-  },
-  openGraph: {
-    title: `Places to Visit in Nashik · Directory of 23 Verified Attractions`,
-    description:
-      'Explore verified timings, entry tickets, and transit routes for 23 top Nashik destinations.',
-    url: `${SITE_CONFIG.canonicalUrl}/places`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Top 23 Places to Visit in Nashik Guide (2026)',
+  description: 'Explore 23 top places to visit in Nashik: Jyotirlinga temples, Sula vineyards, Sahyadri fort treks, and waterfalls with verified timings and fees.',
+  path: '/places',
+  ogType: 'website',
+});
 
 export default function PlacesPage() {
   const breadcrumbs = [
@@ -28,8 +23,20 @@ export default function PlacesPage() {
     { label: 'Places to Visit', href: '/places' },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: `${SITE_CONFIG.canonicalUrl}/` },
+    { name: 'Places to Visit in Nashik', url: `${SITE_CONFIG.canonicalUrl}/places` },
+  ]);
+
   return (
     <div className="min-h-screen bg-paper flex flex-col justify-between">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: safeJsonLd(breadcrumbSchema),
+        }}
+      />
+
       <SiteNav />
 
       <main id="main-content" className="flex-1 pt-24 sm:pt-28 pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-8 sm:space-y-12">

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { GUIDES_DATA } from '@/data/guidesData';
 import { GuideDetailView } from '@/components/views/GuideDetailView';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -22,37 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!guide) return {};
 
   const guideTitle = guide.localTitle?.hi || guide.title;
-  const title = `${guideTitle} · नासिक यात्रा गाइड`;
-  const description = guide.directAnswer || guide.excerpt;
-  const canonical = `/hi/guides/${guide.slug}`;
+  const desc = guide.excerpt || guide.directAnswer;
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/guides/${guide.slug}`,
-        'mr': `/mr/guides/${guide.slug}`,
-        'hi': `/hi/guides/${guide.slug}`,
-        'x-default': `/guides/${guide.slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [guide.heroImage],
-      type: 'article',
-      locale: 'hi_IN',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [guide.heroImage],
-    },
-  };
+  return constructMetadata({
+    title: `${guideTitle} नासिक`,
+    description: desc,
+    path: `/hi/guides/${guide.slug}`,
+    ogType: 'article',
+    ogImage: guide.heroImage,
+    locale: 'hi',
+  });
 }
 
 export default function GuideHindiPage({ params }: PageProps) {

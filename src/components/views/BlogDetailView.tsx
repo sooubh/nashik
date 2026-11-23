@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Calendar, User, Tag, Clock } from 'lucide-react';
+import { Calendar, User, Tag, ListOrdered, ArrowRight, MapPin, Compass } from 'lucide-react';
 import { BLOG_POSTS_DATA } from '@/data/blogData';
+import { DESTINATIONS_DATA } from '@/data/destinationsData';
+import { GUIDES_DATA } from '@/data/guidesData';
 import { BlogPost, Locale } from '@/types/content';
-import { generateArticleSchema } from '@/lib/schema';
+import { generateBlogPostingSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import { safeJsonLd } from '@/lib/utils';
 import { SITE_CONFIG } from '@/config/site';
 import { SiteNav } from '@/components/SiteNav';
@@ -41,16 +43,36 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
 
   const breadcrumbs = [
     { label: isMr ? 'मुख्यपृष्ठ' : isHi ? 'होम' : 'Home', href: `${localePrefix || '/'}` },
-    { label: isMr ? 'ब्लॉग व प्रवास' : isHi ? 'ब्लॉग एवं यात्रा' : 'Blog & Travelogue', href: `${localePrefix || '/'}` },
+    { label: isMr ? 'ब्लॉग व प्रवास' : isHi ? 'ब्लॉग एवं यात्रा' : 'Blog & Travelogue', href: `${localePrefix || ''}/blog` },
     { label: title, href: canonicalUrl },
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: isMr ? 'मुख्यपृष्ठ' : isHi ? 'होम' : 'Home', url: `${SITE_CONFIG.canonicalUrl}${localePrefix || '/'}` },
+    { name: isMr ? 'ब्लॉग व प्रवास' : isHi ? 'ब्लॉग एवं यात्रा' : 'Blog & Travelogue', url: `${SITE_CONFIG.canonicalUrl}${localePrefix || ''}/blog` },
+    { name: title, url: canonicalUrl },
+  ]);
+
+  const blogPostingSchema = generateBlogPostingSchema(post, canonicalUrl, locale);
+
+  // Curate 3 contextual internal places and 2 guides
+  const relatedPlaces = DESTINATIONS_DATA.slice(0, 3);
+  const relatedGuides = GUIDES_DATA.slice(0, 2);
+
   return (
     <div className="min-h-screen bg-paper flex flex-col justify-between">
+      {/* BlogPosting JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: safeJsonLd(generateArticleSchema(post, canonicalUrl, locale)),
+          __html: safeJsonLd(blogPostingSchema),
+        }}
+      />
+      {/* BreadcrumbList JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: safeJsonLd(breadcrumbSchema),
         }}
       />
 
@@ -71,7 +93,7 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
             </span>
             <div className="flex items-center gap-1 text-on-surface-variant">
               <Calendar className="h-3.5 w-3.5" />
-              <span>{post.publishedDate}</span>
+              <time dateTime={post.publishedDate}>{post.publishedDate}</time>
             </div>
             <div className="flex items-center gap-1 text-on-surface-variant">
               <User className="h-3.5 w-3.5" />
@@ -92,7 +114,7 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
         <div className="relative aspect-[16/9] w-full rounded-[28px] overflow-hidden bg-slate-900 shadow-md">
           <Image
             src={post.heroImage}
-            alt={title}
+            alt={`${title} - Nashik Travel Guide`}
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 1000px"
@@ -100,14 +122,58 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
           />
         </div>
 
+        {/* Table of Contents (TOC) */}
+        <nav aria-label="Table of Contents" className="rounded-2xl border border-brand-100 bg-white p-6 sm:p-8 space-y-4 shadow-xs">
+          <div className="flex items-center gap-2 text-deep-violet font-bold text-base sm:text-lg">
+            <ListOrdered className="h-5 w-5 text-signal-lime bg-deep-violet rounded-md p-0.5" />
+            <span>{isMr ? 'अनुक्रमणिका (Table of Contents)' : isHi ? 'विषय सूची (Table of Contents)' : 'Table of Contents'}</span>
+          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-on-surface-variant">
+            <li>
+              <a href="#direct-answer" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                <span className="text-deep-violet font-bold">1.</span> Quick Answer & Key Highlights
+              </a>
+            </li>
+            {post.itineraryDays && post.itineraryDays.length > 0 && (
+              <li>
+                <a href="#itinerary-breakdown" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                  <span className="text-deep-violet font-bold">2.</span> Day-by-Day Route Itinerary
+                </a>
+              </li>
+            )}
+            <li>
+              <a href="#detailed-article" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                <span className="text-deep-violet font-bold">{post.itineraryDays && post.itineraryDays.length > 0 ? '3.' : '2.'}</span> Complete Travelogue & Tips
+              </a>
+            </li>
+            <li>
+              <a href="#frequently-asked-questions" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                <span className="text-deep-violet font-bold">{post.itineraryDays && post.itineraryDays.length > 0 ? '4.' : '3.'}</span> FAQs & Practical Logistics
+              </a>
+            </li>
+            <li>
+              <a href="#related-attractions" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                <span className="text-deep-violet font-bold">{post.itineraryDays && post.itineraryDays.length > 0 ? '5.' : '4.'}</span> Nearby Places & Guides
+              </a>
+            </li>
+            <li>
+              <a href="#offline-app-cta" className="inline-flex items-center gap-1.5 hover:text-deep-violet transition-colors py-1">
+                <span className="text-deep-violet font-bold">{post.itineraryDays && post.itineraryDays.length > 0 ? '6.' : '5.'}</span> Offline Maps & Trivio App
+              </a>
+            </li>
+          </ul>
+        </nav>
+
         {/* Direct Answer Box */}
-        <DirectAnswerBox answer={post.directAnswer} locale={locale} subjectTitle={title} />
+        <div id="direct-answer">
+          <DirectAnswerBox answer={post.directAnswer} locale={locale} subjectTitle={title} />
+        </div>
 
         {/* Itinerary Days if present */}
         {post.itineraryDays && post.itineraryDays.length > 0 && (
-          <section className="space-y-6">
+          <section id="itinerary-breakdown" className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-on-surface">
-              Day-by-Day Route Itinerary
+              {isMr ? 'दिवसनिहाय प्रवास योजना (Day-by-Day Itinerary)' : isHi ? 'दिन-प्रतिदिन यात्रा योजना' : 'Day-by-Day Route Itinerary'}
             </h2>
 
             <div className="space-y-4">
@@ -159,9 +225,14 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
         )}
 
         {/* Main Content Article */}
-        <article className="rounded-2xl border border-brand-100 bg-white p-6 sm:p-8 space-y-4 shadow-xs text-on-surface text-base sm:text-lg leading-relaxed whitespace-pre-line">
-          {post.content}
-        </article>
+        <section id="detailed-article" className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-on-surface">
+            {isMr ? 'तपशीलवार प्रवास माहिती' : isHi ? 'विस्तृत यात्रा विवरण' : 'Detailed Travelogue & Field Notes'}
+          </h2>
+          <article className="rounded-2xl border border-brand-100 bg-white p-6 sm:p-8 space-y-4 shadow-xs text-on-surface text-base sm:text-lg leading-relaxed whitespace-pre-line">
+            {post.content}
+          </article>
+        </section>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
@@ -177,14 +248,67 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
         </div>
 
         {/* FAQs */}
-        <FAQAccordion faqs={post.faqs} locale={locale} />
+        <div id="frequently-asked-questions">
+          <FAQAccordion faqs={post.faqs} locale={locale} />
+        </div>
+
+        {/* Contextual Internal Links Section */}
+        <section id="related-attractions" className="space-y-6 rounded-2xl border border-brand-100 bg-white p-6 sm:p-8 shadow-xs">
+          <h2 className="text-xl sm:text-2xl font-bold text-on-surface flex items-center gap-2">
+            <Compass className="h-5 w-5 text-deep-violet" />
+            <span>{isMr ? 'संबंधित पर्यटन स्थळे व मार्गदर्शक' : isHi ? 'संबंधित पर्यटन स्थल एवं गाइड' : 'Featured Nashik Attractions & Guides'}</span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {relatedPlaces.map((place) => (
+              <Link
+                key={place.slug}
+                href={`${localePrefix}/places/${place.slug}`}
+                className="group p-4 rounded-xl border border-brand-100 hover:border-deep-violet bg-brand-50/50 hover:bg-brand-50 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-1 text-xs text-deep-violet font-bold mb-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{place.categoryLabel[locale] || place.category}</span>
+                  </div>
+                  <h3 className="font-bold text-sm text-on-surface group-hover:text-deep-violet transition-colors line-clamp-1">
+                    {place.title}
+                  </h3>
+                  <p className="text-xs text-on-surface-variant line-clamp-2 mt-1">
+                    {place.excerpt}
+                  </p>
+                </div>
+                <span className="text-xs font-bold text-deep-violet mt-3 inline-flex items-center gap-1">
+                  View Timings & Pass <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="pt-2 border-t border-brand-100 flex flex-wrap items-center justify-between gap-4 text-xs font-semibold text-deep-violet">
+            <span>Explore More Guides:</span>
+            <div className="flex flex-wrap gap-2">
+              {relatedGuides.map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`${localePrefix}/guides/${guide.slug}`}
+                  className="rounded-full bg-white border border-brand-200 px-3 py-1 hover:bg-deep-violet hover:text-white transition-colors"
+                >
+                  {guide.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* App CTA */}
-        <ContextualAppCta
-          appCtaHook={post.appCtaHooks}
-          placeSlug={post.slug}
-          locale={locale}
-        />
+        <div id="offline-app-cta">
+          <ContextualAppCta
+            appCtaHook={post.appCtaHooks}
+            placeSlug={post.slug}
+            locale={locale}
+          />
+        </div>
       </main>
 
       <SiteFooter />

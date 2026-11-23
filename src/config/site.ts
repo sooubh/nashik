@@ -21,12 +21,11 @@ export const SITE_CONFIG: SiteConfig = {
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore',
   supportEmail: 'trivio-support@sooubh.in',
   navLinks: [
-    { label: 'Destinations', href: '#destinations' },
-    { label: 'Field Guide', href: '#gazetteer' },
-    { label: 'Experiences', href: '#experiences' },
-    { label: 'Why Local', href: '#why-trivio' },
-    { label: 'Trip Guide', href: '/trip-planner' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Places to Visit', href: '/places' },
+    { label: 'Expert Guides', href: '/guides' },
+    { label: 'Blog & Itineraries', href: '/blog' },
+    { label: 'FAQ', href: '/#faq' },
   ],
   footerColumns: [
     {
@@ -41,8 +40,8 @@ export const SITE_CONFIG: SiteConfig = {
     {
       title: 'App & Features',
       links: [
-        { label: 'Trip Architecture Guide', href: '/trip-planner' },
-        { label: 'Google Play Store', href: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore', external: true },
+        { label: 'Trivio Android App', href: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore', external: true },
+        { label: 'Offline GPS Navigation', href: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore', external: true },
         { label: 'Direct Support', href: '/contact' },
       ],
     },

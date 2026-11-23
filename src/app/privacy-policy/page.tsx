@@ -1,27 +1,14 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: `Privacy Policy · ${SITE_CONFIG.name}`,
-  description:
-    `Privacy Policy for the ${SITE_CONFIG.name} Android application and website. Information regarding data collection, device permissions, and user data rights.`,
-  alternates: {
-    canonical: '/privacy-policy',
-  },
-  openGraph: {
-    title: `Privacy Policy · ${SITE_CONFIG.name}`,
-    description:
-      `Privacy Policy for the ${SITE_CONFIG.name} Android app and website.`,
-    url: `${SITE_CONFIG.canonicalUrl}/privacy-policy`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Privacy Policy · ${SITE_CONFIG.name}`,
-    description:
-      `Privacy Policy for the ${SITE_CONFIG.name} Android app and website.`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Trivio Privacy Policy & User Data Protection',
+  description: 'Read Trivio privacy disclosures, data collection policies, Hive storage details, and location data safety in compliance with Google Play standards.',
+  path: '/privacy-policy',
+  ogType: 'website',
+});
 
 export default function PrivacyPolicyPage() {
   const toc = [

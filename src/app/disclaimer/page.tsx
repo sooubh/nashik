@@ -1,27 +1,14 @@
 import { Metadata } from 'next';
 import { LegalPageLayout } from '@/components/LegalPageLayout';
 import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
-  description:
-    `Disclaimer Statement for ${SITE_CONFIG.name}. Travel disclosures on trekking cautions, temple guidelines, and local travel advisories.`,
-  alternates: {
-    canonical: '/disclaimer',
-  },
-  openGraph: {
-    title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
-    description:
-      `Travel and safety disclosures for exploring Nashik with ${SITE_CONFIG.name}.`,
-    url: `${SITE_CONFIG.canonicalUrl}/disclaimer`,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Disclaimer & Safety Statement · ${SITE_CONFIG.name}`,
-    description:
-      `Travel and safety disclosures for exploring Nashik with ${SITE_CONFIG.name}.`,
-  },
-};
+export const metadata: Metadata = constructMetadata({
+  title: 'Travel, Trekking & Monsoon Safety Guide',
+  description: 'Important travel and monsoon trekking safety disclaimers for Nashik, Harihar fort rock steps, and Sahyadri waterfalls. Review safety protocols.',
+  path: '/disclaimer',
+  ogType: 'website',
+});
 
 export default function DisclaimerPage() {
   const toc = [

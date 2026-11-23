@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { PlaceDetailView } from '@/components/views/PlaceDetailView';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -22,37 +22,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!place) return {};
 
   const placeTitle = place.localized?.mr?.title || place.localName.mr || place.title;
-  const title = `${placeTitle} · दर्शन वेळ, प्रवेश शुल्क व नाशिक प्रवास माहिती`;
-  const description = place.localized?.mr?.directAnswer || place.directAnswer || place.excerpt;
-  const canonical = `/mr/places/${place.slug}`;
+  const desc = place.localized?.mr?.excerpt || place.excerpt;
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/places/${place.slug}`,
-        'mr': `/mr/places/${place.slug}`,
-        'hi': `/hi/places/${place.slug}`,
-        'x-default': `/places/${place.slug}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [place.heroImage],
-      type: 'article',
-      locale: 'mr_IN',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [place.heroImage],
-    },
-  };
+  return constructMetadata({
+    title: `${placeTitle} नाशिक`,
+    description: desc,
+    path: `/mr/places/${place.slug}`,
+    ogType: 'article',
+    ogImage: place.heroImage,
+    locale: 'mr',
+  });
 }
 
 export default function PlaceMarathiPage({ params }: PageProps) {

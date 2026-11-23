@@ -3,7 +3,7 @@ import { ALL_CATEGORIES, CATEGORIES_DATA } from '@/data/categoriesData';
 import { ALL_REGIONAL_CITIES, REGIONAL_CITIES } from '@/data/regionalCities';
 import { CategoryHubView } from '@/components/views/CategoryHubView';
 import { Category } from '@/types/content';
-import { SITE_CONFIG } from '@/config/site';
+import { constructMetadata } from '@/lib/seo';
 
 interface PageProps {
   params: {
@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isCity && !isCat) return {};
 
   const title = isCity
-    ? `${REGIONAL_CITIES[params.category].title.mr} · नाशिक पर्यटन मार्गदर्शिका`
-    : `${CATEGORIES_DATA[params.category as Category].title.mr} नाशिक · प्रेक्षणीय स्थळे`;
+    ? `${REGIONAL_CITIES[params.category].title.mr} पर्यटन`
+    : `${CATEGORIES_DATA[params.category as Category].title.mr} नाशिक`;
 
   const description = isCity
     ? REGIONAL_CITIES[params.category].description.mr
@@ -37,34 +37,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? REGIONAL_CITIES[params.category].heroImage
     : CATEGORIES_DATA[params.category as Category].heroImage;
 
-  const canonical = `/mr/destinations/${params.category}`;
-
-  return {
+  return constructMetadata({
     title,
     description,
-    alternates: {
-      canonical,
-      languages: {
-        'en': `/destinations/${params.category}`,
-        'mr': `/mr/destinations/${params.category}`,
-        'hi': `/hi/destinations/${params.category}`,
-        'x-default': `/destinations/${params.category}`,
-      },
-    },
-    openGraph: {
-      title,
-      description,
-      url: `${SITE_CONFIG.canonicalUrl}${canonical}`,
-      images: [heroImage],
-      locale: 'mr_IN',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [heroImage],
-    },
-  };
+    path: `/mr/destinations/${params.category}`,
+    ogType: 'website',
+    ogImage: heroImage,
+    locale: 'mr',
+  });
 }
 
 export default function DestinationMarathiPage({ params }: PageProps) {
