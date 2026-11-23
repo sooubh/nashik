@@ -17,7 +17,7 @@ export const SITE_CONFIG: SiteConfig = {
   tagline: 'Places, Events and People in One App',
   description:
     'Discover ancient Jyotirlinga shrines, world-renowned vineyards, sheer Sahyadri fort steps, and seasonal waterfalls with local-first offline intelligence.',
-  canonicalUrl: 'https://nashik.sooubh.me',
+  canonicalUrl: 'https://nashik.sooubh.in',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore',
   supportEmail: 'trivio-support@sooubh.in',
   navLinks: [

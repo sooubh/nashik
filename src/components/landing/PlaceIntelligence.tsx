@@ -95,6 +95,8 @@ export function PlaceIntelligence() {
                   src={activePlace.image}
                   alt={activePlace.name}
                   fill
+                  loading="lazy"
+                  decoding="async"
                   sizes="(max-width: 1024px) 100vw, 640px"
                   className="object-cover object-center"
                 />

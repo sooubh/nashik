@@ -89,7 +89,7 @@ export function constructMetadata({
   description,
   path,
   ogType = 'website',
-  ogImage = '/images/destinations/sula-vineyards.jpg',
+  ogImage = '/images/destinations/sula-vineyards.webp',
   ogImageAlt,
   publishedTime,
   modifiedTime,

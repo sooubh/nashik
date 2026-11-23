@@ -85,6 +85,8 @@ export function AppShowcase() {
             alt="Trivio travel guide app preview showing Nashik destinations, temple and waterfall discoveries, and a trip route planner across three phone screens"
             width={1536}
             height={1024}
+            loading="lazy"
+            decoding="async"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 96vw, 1360px"
             className="block h-auto w-full select-none object-contain"
             draggable={false}

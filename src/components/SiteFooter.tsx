@@ -33,6 +33,8 @@ export function SiteFooter() {
             alt="Illustrated panorama of Nashik with Sahyadri hills, vineyards, waterfalls, temples, the Godavari waterfront and local food"
             width={640}
             height={213}
+            loading="lazy"
+            decoding="async"
             sizes="100vw"
             className="relative z-10 block h-auto w-full select-none object-contain"
             draggable={false}

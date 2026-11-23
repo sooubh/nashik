@@ -30,13 +30,14 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0 h-full w-full select-none">
         <div className="absolute inset-0 h-full w-full">
           <Image
-            src="/images/trivio/hero-sky.jpg"
+            src="/images/trivio/hero-sky.webp"
             alt=""
             aria-hidden="true"
             fill
             priority
             fetchPriority="high"
-            quality={95}
+            loading="eager"
+            quality={80}
             sizes="100vw"
             className="scale-[1.002] object-cover object-center max-sm:scale-100"
           />
@@ -44,32 +45,29 @@ export function HeroSection() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-slate-950/60 via-slate-950/20 to-transparent" />
       </div>
 
-      {/* The oversized wordmark sits behind the transparent mountain foreground. */}
+      {/* The oversized wordmark sits behind the transparent mountain foreground. Rendered immediately visible without opacity:0 */}
       <motion.div
         className="pointer-events-none absolute inset-x-0 top-[34%] z-[5] flex w-full justify-center px-2 sm:top-[11%] md:top-[9%] lg:top-[7%]"
         style={shouldReduceMotion ? undefined : { y: wordmarkY, opacity: wordmarkOpacity }}
       >
-        <motion.h1
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-          animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
+        <h1
           className="w-full select-none text-center font-sans text-[clamp(4.25rem,21vw,8rem)] sm:text-[clamp(6rem,19.2vw,16rem)] font-black uppercase leading-none tracking-tight text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
         >
           NASHIK
-        </motion.h1>
+        </h1>
       </motion.div>
 
       {/* Reuse the exact desktop foreground cutout; responsive object-fit frames it for phones. */}
       <motion.div className="pointer-events-none absolute inset-0 z-10 h-full w-full select-none" style={shouldReduceMotion ? undefined : { y: foregroundY }}>
         <div className="absolute inset-0 h-full w-full">
           <Image
-            src="/images/trivio/hero-temple-cutout.png"
-            alt="Trimbakeshwar Temple and Brahmagiri Mountain"
-            aria-hidden="true"
+            src="/images/trivio/hero-temple-cutout.webp"
+            alt="Trimbakeshwar Temple and Brahmagiri Mountain Nashik"
             fill
             priority
             fetchPriority="high"
-            quality={95}
+            loading="eager"
+            quality={85}
             sizes="100vw"
             className="scale-[1.002] object-cover object-center max-sm:scale-100 max-sm:object-[center_50%]"
           />

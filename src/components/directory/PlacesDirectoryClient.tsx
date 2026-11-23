@@ -125,6 +125,8 @@ export function PlacesDirectoryClient({ places }: PlacesDirectoryClientProps) {
                     src={place.heroImage}
                     alt={place.title}
                     fill
+                    loading="lazy"
+                    decoding="async"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />

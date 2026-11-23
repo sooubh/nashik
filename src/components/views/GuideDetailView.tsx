@@ -100,6 +100,7 @@ export function GuideDetailView({ slug, locale }: GuideDetailViewProps) {
             alt={title}
             fill
             priority
+            fetchPriority="high"
             sizes="(max-width: 1024px) 100vw, 1000px"
             className="object-cover object-center"
           />
@@ -170,6 +171,8 @@ export function GuideDetailView({ slug, locale }: GuideDetailViewProps) {
                       src={rp.heroImage}
                       alt={rp.title}
                       fill
+                      loading="lazy"
+                      decoding="async"
                       sizes="(max-width: 640px) 100vw, 300px"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />

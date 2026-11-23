@@ -18,7 +18,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'त्र्यंबकेश्वर ज्योतिर्लिंग, गोदावरी रामकुंड, काळाराम मंदिर आणि डोंगराळ मंदिरांचे दर्शन वेळा, नियम आणि थेट माहिती जाणून घ्या.',
       hi: 'त्र्यंबकेश्वर ज्योतिर्लिंग, पवित्र गोदावरी रामकुंड, कालाराम मंदिर और सप्तश्रृंगी देवी के दर्शन समय, नियम और यात्रा गाइड।',
     },
-    heroImage: '/images/destinations/trimbakeshwar-temple.jpg',
+    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
     iconName: 'temple',
   },
   vineyards: {
@@ -38,7 +38,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'भारताची वाईन राजधानी नाशिक! सुला, यॉर्क, सोमा आणि वल्लोने वाईनयार्ड्सच्या अधिकृत प्रवेश शुल्क, चव चाखणी पॅकेजेस आणि बुकिंग टिप्स.',
       hi: 'भारत की वाइन राजधानी नासिक! सुला, यॉर्क और सोमा वाइनयार्ड के टिकट शुल्क, वाइन टेस्टिंग समय और संपूर्ण यात्रा गाइड।',
     },
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     iconName: 'wine',
   },
   treks: {
@@ -58,7 +58,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'हरीहरचा ८० अंश कातळकडा, हनुमानाचे जन्मस्थान अंजनेरी आणि महाराष्ट्रातील सर्वोच्च साल्हेर किल्ला - बेस व्हिलेज आणि ट्रेक मार्गदर्शक.',
       hi: 'हरिहर का मशहूर ८० डिग्री रॉक-कट ट्रेक, अंजनेरी और साल्हेर किला ट्रेक के रास्ते, सुरक्षा सुझाव और बेस विलेज जानकारी।',
     },
-    heroImage: '/images/destinations/harihar-fort.jpg',
+    heroImage: '/images/destinations/harihar-fort.webp',
     iconName: 'mountain',
   },
   waterfalls: {
@@ -78,7 +78,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'डुगरवाडी, सोमेश्वर दूधसागर आणि भंडारदरा रंधा धबधब्यांचे पाणी वाहण्याचा हंगाम, रस्ते आणि कौटुंबिक सुरक्षितता मार्गदर्शक.',
       hi: 'डुगरवाडी, सोमेश्वर दूधसागर और विहीगांव झरने की सटीक जानकारी, मानसून सुरक्षा निर्देश और रास्ते।',
     },
-    heroImage: '/images/destinations/someshwar-waterfall.jpg',
+    heroImage: '/images/destinations/someshwar-waterfall.webp',
     iconName: 'droplet',
   },
   food: {
@@ -98,7 +98,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'साधना चुलीवरची, MIDC मधील शामसुंदर आणि पंचवटीची अंबिका मिसळ - अस्सल नाशिककरांची चव आणि ठिकाणे.',
       hi: 'साधना, श्यामसुंदर और अंबिका की मशहूर मिसल पाव, कोंडाजी चिवड़ा और नासिक की प्रसिद्ध स्ट्रीट फूड गाइड।',
     },
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     iconName: 'utensils',
   },
   itineraries: {
@@ -118,7 +118,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'समृद्धी महामार्गावरून २ दिवसांची नाशिक ट्रिप, वाईन आणि मंदिर दर्शन एकाच फेरीत करण्याचे संपूर्ण नियोजन.',
       hi: 'समृद्धि एक्सप्रेसवे से नासिक २ दिन का वीकेंड प्लान, वाइनरी और ज्योतिर्लिंग दर्शन का संतुलित शेड्यूल।',
     },
-    heroImage: '/images/destinations/sahyadri-sunrise.jpg',
+    heroImage: '/images/destinations/sahyadri-sunrise.webp',
     iconName: 'map',
   },
   logistics: {
@@ -138,7 +138,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'नाशिक रोड रेल्वे स्थानक, सिटीलिंक बस मार्ग, रिक्षाचे दर आणि समृद्धी महामार्गाचे टोल तपशील.',
       hi: 'नासिक कैसे पहुंचे: वंदे भारत ट्रेन, लोकल बस रूट्स, टैक्सी और बजट होटल की सटीक जानकारी।',
     },
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     iconName: 'bus',
   },
   festivals: {
@@ -158,7 +158,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'रामकुंडावर होणारी नयनरम्य गोदावरी महाआरती, सिंहस्थ कुंभमेळ्याचा इतिहास आणि नाशिकचा सांस्कृतिक वारसा.',
       hi: 'रामकुंड की गोदावरी महाआरती, सिंहस्थ कुंभमेले का इतिहास और नासिक की आध्यात्मिक परंपराएं।',
     },
-    heroImage: '/images/destinations/trimbakeshwar-temple.jpg',
+    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
     iconName: 'sparkles',
   },
 };

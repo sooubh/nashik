@@ -117,6 +117,7 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
             alt={`${title} - Nashik Travel Guide`}
             fill
             priority
+            fetchPriority="high"
             sizes="(max-width: 1024px) 100vw, 1000px"
             className="object-cover object-center"
           />

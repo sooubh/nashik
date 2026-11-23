@@ -27,7 +27,7 @@ export const REGIONAL_CITIES: Record<string, RegionalCity> = {
       mr: 'पंचवटी, पवित्र रामकुंड, १७८८ चे काळाराम मंदिर, पांडवलेणी आणि नाशिकची प्रसिद्ध मिसळ ठिकाणे.',
       hi: 'प्राचीन पंचवटी, पवित्र रामकुंड, १७८८ का काळाराम मंदिर, दूसरी सदी ईसा पूर्व की पांडवलेणी गुफाएं और प्रसिद्ध नासिक मिसल केंद्र.',
     },
-    heroImage: '/images/destinations/sahyadri-sunrise.jpg',
+    heroImage: '/images/destinations/sahyadri-sunrise.webp',
     placeSlugs: [
       'panchavati-kalaram',
       'pandavleni-caves',
@@ -56,7 +56,7 @@ export const REGIONAL_CITIES: Record<string, RegionalCity> = {
       mr: '१२ वे पवित्र ज्योतिर्लिंग मंदिर, गोदावरी उगमस्थान ब्रह्मगिरी, हनुमान जन्मस्थान अंजनेरी टेकडी आणि निसर्गरम्य दुगारवाडी धबधबा.',
       hi: '१२वां पवित्र ज्योतिर्लिंग मंदिर, गोदावरी उद्गम स्थल ब्रह्मगिरी, हनुमान जन्मस्थल अंजनेरी पहाड़ी और मनोरम दुगारवाडी जलप्रपात.',
     },
-    heroImage: '/images/destinations/trimbakeshwar-temple.jpg',
+    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
     placeSlugs: [
       'trimbakeshwar',
       'brahmagiri-hill',
@@ -81,7 +81,7 @@ export const REGIONAL_CITIES: Record<string, RegionalCity> = {
       mr: 'साहसी पर्यटकांचे नंदनवन: हरीहर किल्ल्याच्या ८० अंशांच्या खडक पायऱ्या, विहिगाव अशोक धबधबा आणि भंडारदरा जलाशय.',
       hi: 'साहसिक पर्यटकों का स्वर्ग: हरीहर किले की ८० अंश खड़ी चट्टान सीढ़ियां, विहिगांव जलप्रपात और भंडारदरा झील.',
     },
-    heroImage: '/images/destinations/harihar-fort.jpg',
+    heroImage: '/images/destinations/harihar-fort.webp',
     placeSlugs: [
       'harihar-fort',
       'vihigaon-waterfall',
@@ -105,7 +105,7 @@ export const REGIONAL_CITIES: Record<string, RegionalCity> = {
       mr: 'सुला वाईनयार्ड्स, यॉर्क, सोमा, शँडॉन वाईनरी आणि वणी येथील पवित्र सप्तशृंगी देवी गड परिसर.',
       hi: 'सुला वाइनयार्ड्स, यॉर्क, सोमा, शैंडॉन वाइनरी और वणी का पवित्र सप्तशृंगी देवी शक्तिपीठ.',
     },
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     placeSlugs: [
       'sula-vineyards',
       'york-winery',

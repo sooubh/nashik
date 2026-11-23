@@ -80,6 +80,8 @@ export default function DestinationsHubPage() {
                     src={city.heroImage}
                     alt={`${city.title.en} - Regional Travel Guide`}
                     fill
+                    loading="lazy"
+                    decoding="async"
                     sizes="(max-width: 768px) 100vw, 550px"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />

@@ -11,7 +11,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     category: 'itineraries',
     publishedDate: '2026-11-20',
     author: 'Trivio Itinerary Desk',
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     summary: 'The ultimate 48-hour road-trip itinerary from Mumbai to Nashik via the new Samruddhi Mahamarg: Day 1 wine country & sunsets; Day 2 sacred Trimbakeshwar & historic Panchavati.',
     directAnswer: 'Driving from Mumbai to Nashik via the Samruddhi Mahamarg takes under 3 hours. Day 1 covers Pandavleni Caves, lunch, and sunset wine tasting at Sula or York. Day 2 covers Trimbakeshwar Jyotirlinga, Panchavati Ramkund, and return via the expressway.',
     content: `
@@ -82,7 +82,7 @@ With the seamless connection of the Samruddhi Mahamarg at Amane (Bhiwandi), the 
     category: 'itineraries',
     publishedDate: '2026-11-20',
     author: 'Trivio Itinerary Desk',
-    heroImage: '/images/destinations/sahyadri-sunrise.jpg',
+    heroImage: '/images/destinations/sahyadri-sunrise.webp',
     summary: 'A deep-dive 3-day holiday from Pune via NH 60 covering the wine country, Trimbakeshwar, Anjaneri or Harihar hill trek, and authentic culinary stops.',
     directAnswer: 'Drive 4 hours from Pune to Nashik via NH 60. Day 1: City heritage and Panchavati. Day 2: Morning trek at Anjaneri or Harihar, followed by afternoon wine tasting at Sula and York. Day 3: Trimbakeshwar Jyotirlinga and Brahmagiri before return drive.',
     content: `
@@ -154,7 +154,7 @@ Pune travelers have direct highway access to Nashik via NH 60 (Pune-Nashik Highw
     category: 'logistics',
     publishedDate: '2026-11-20',
     author: 'Trivio Budget Travel Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     summary: 'A backpacker’s and student’s blueprint for exploring Nashik for 2 full days under ₹3,000 all-inclusive, utilizing local Citilinc buses, free attractions, and clean pilgrim trusts.',
     directAnswer: 'Nashik is one of Maharashtra’s most budget-friendly cities. Stay at temple trusts or youth hostels (₹400-₹600/night), travel via Citilinc city buses (₹15-₹45/ride), and enjoy legendary Misal Pav (₹80-₹120) to comfortably spend under ₹3,000 for 2 days.',
     content: `
@@ -202,7 +202,7 @@ Pune travelers have direct highway access to Nashik via NH 60 (Pune-Nashik Highw
     category: 'festivals',
     publishedDate: '2026-11-20',
     author: 'Trivio Culture & Heritage Desk',
-    heroImage: '/images/destinations/trimbakeshwar-temple.jpg',
+    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
     summary: 'The grand chronicle of the Simhastha Kumbh Mela: planetary alignments in Leo (Simha), the sacred Godavari Shahi Snan at Ramkund and Kushavarta, and preparations for the next mega gathering.',
     directAnswer: 'The Simhastha Kumbh Mela in Nashik-Trimbakeshwar occurs every 12 years when Jupiter enters the zodiac sign of Leo (Simha). Shahi Snan takes place at Ramkund for Vaishnava Akhadas and at Kushavarta Kund for Shaiva Akhadas. The next Simhastha Kumbh Mela cycle is scheduled for 2027-2028.',
     content: `
@@ -250,7 +250,7 @@ The Simhastha is unique in that it unfolds simultaneously across two sacred node
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Fast-Track Desk',
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     summary: 'The ultimate power-packed same-day return itinerary for visitors from Mumbai, Thane, or Pune wanting to cover Trimbakeshwar Jyotirlinga, Panchavati heritage, legendary misal, and Sula Vineyards in exactly 12 hours.',
     directAnswer: 'A 1-day whirlwind Nashik trip begins with 7:00 AM Trimbakeshwar VIP darshan (₹200 pass), followed by 10:30 AM Panchavati Ramkund and Kalaram Mandir, 12:30 PM Sadhana wood-fired misal lunch, and 3:30 PM sunset tasting at Sula Vineyards before heading home by 7:00 PM.',
     content: `
@@ -304,7 +304,7 @@ Traveling to Nashik on a day trip is now seamless thanks to the Samruddhi Mahama
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Highway Desk',
-    heroImage: '/images/destinations/sahyadri-sunrise.jpg',
+    heroImage: '/images/destinations/sahyadri-sunrise.webp',
     summary: 'The ultimate motorist’s guide for driving between Pune and Nashik via NH 60: road conditions, Chandoli ghat sections, famous culinary highway pitstops, and avoiding Chakan industrial jams.',
     directAnswer: 'Driving from Pune to Nashik via NH 60 spans 210 km and takes 4 to 4.5 hours. To avoid heavy Chakan industrial bottlenecks, depart Pune before 6:30 AM or use the Spine Road bypass via Bhosari. Major food and fuel pitstops are located around Narayangaon and Sangamner.',
     content: `
@@ -358,7 +358,7 @@ The Pune-Nashik corridor (National Highway 60) connects Maharashtra’s two vibr
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Highway Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     summary: 'Detailed driving manual for taking the high-speed Samruddhi Mahamarg from Mumbai/Thane to Nashik: interchange navigation at Amane, toll charges, 120 km/h speed enforcement, and wayside amenities.',
     directAnswer: 'The Samruddhi Mahamarg cuts Mumbai-Nashik travel to under 3 hours via the Amane (Bhiwandi) interchange. Maximum speed is 120 km/h with automated AI camera surveillance. FASTag toll for cars is approximately ₹300-₹350.',
     content: `
@@ -412,7 +412,7 @@ The Hindu Hrudaysamrat Balasaheb Thackeray Maharashtra Samruddhi Mahamarg has fu
     category: 'food',
     publishedDate: '2026-11-23',
     author: 'Trivio Culinary Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     summary: 'A mouthwatering self-guided walking food tour through the historic bazaars of Old Nashik: crisp Kondaji Chivda, golden crunchy Sayantara sabudana vadas, and warm Budha Halwai jalebi-rabdi.',
     directAnswer: 'Old Nashik’s historic food trail spans 1.5 km between Bhadrakali and Tiwndha Chowk. Legendary must-eats include Sayantara (famous for crispy Sabudana Vada with spicy peanut chutney), Kondaji Chivda (original 1920s shop), and Budha Halwai (pure ghee jalebi and rabdi since 1956).',
     content: `
@@ -466,7 +466,7 @@ While Nashik’s modern avenues boast trendy cafes and winery bistros, the true 
     category: 'vineyards',
     publishedDate: '2026-11-23',
     author: 'Trivio Romance & Luxury Desk',
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     summary: 'Curated list of the most intimate, picturesque vineyard resorts in Nashik: private pool villas, lakeside sunset balconies, couples wine tasting packages, and candlelit vineyard dining.',
     directAnswer: 'The top 4 romantic vineyard resorts in Nashik are: The Source at Sula (Tuscan architecture & luxury pool, ₹9,000+), Beyond by Sula (private lakefront infinity villas, ₹12,000+), Soma Vine Village (waterfront villas & wine spa, ₹7,000+), and Vallonné Vineyards (French château on Mukhne lake, ₹8,000+).',
     content: `
@@ -520,7 +520,7 @@ Rolling Sahyadri hills, morning lake mists, golden hour grape stomping, and chil
     category: 'festivals',
     publishedDate: '2026-11-23',
     author: 'Trivio Heritage Desk',
-    heroImage: '/images/destinations/trimbakeshwar-temple.jpg',
+    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
     summary: 'Experience the mesmerizing evening Godavari Maha Aarti along the ancient stone steps of Ramkund: brass lamp rituals, sacred conch fanfares, aarti timings, and spectator vantage points.',
     directAnswer: 'The daily Godavari Maha Aarti at Ramkund takes place every evening at 7:00 PM (winter: 6:45 PM; summer: 7:15 PM). Admission is completely free. Best viewing vantage points are the steps directly opposite the central aarti platform or the elevated stone porch of Kapaleshwar Temple.',
     content: `
@@ -574,7 +574,7 @@ Just as Varanasi is world-famous for its Ganga Aarti at Dashashwamedh Ghat, Nash
     category: 'festivals',
     publishedDate: '2026-11-23',
     author: 'Trivio Agriculture & Tourism Desk',
-    heroImage: '/images/destinations/sula-vineyards.jpg',
+    heroImage: '/images/destinations/sula-vineyards.webp',
     summary: 'Celebrate the world-famous Nashik grape harvest season from January through March: participating in traditional grape stomping, touring export-quality grape farms, and attending vineyard harvest festivals.',
     directAnswer: 'The grape harvest season in Nashik peaks from mid-January through late March. Visitors can participate in wooden tub grape stomping at Sula, Soma, and Grover Zampa, pluck fresh export grapes directly from agro-tourism farms in Dindori and Niphad, and experience live music harvest festivals.',
     content: `
@@ -628,7 +628,7 @@ Nashik produces over 1.5 million metric tons of table and wine grapes annually, 
     category: 'logistics',
     publishedDate: '2026-11-23',
     author: 'Trivio Hospitality Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.jpg',
+    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
     summary: 'Comprehensive neighborhood lodging guide to Nashik: choosing between luxury vineyard lake villas along Gangapur Road, central business hotels near CBS/College Road, or peaceful pilgrim dharamshalas in Trimbakeshwar.',
     directAnswer: 'For romantic weekends and wine tasting, stay in the Gangapur Dam wine belt (Sula, York, Soma, ₹6,000-₹15,000). For family temple visits and food walks, stay around City Center / CBS (The Gateway, Radisson, Express Inn, ₹3,500-₹7,000). For early morning Jyotirlinga darshan, stay in Trimbakeshwar (Shivprasad Bhaktaniwas, ₹500-₹2,000).',
     content: `

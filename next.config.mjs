@@ -69,6 +69,24 @@ const nextConfig = {
         source: '/(.*)',
         headers: securityHeaders,
       },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
   async redirects() {
@@ -81,7 +99,8 @@ const nextConfig = {
       { source: '/disclaimer.html', destination: '/disclaimer', permanent: true },
       { source: '/contact.html', destination: '/contact', permanent: true },
       { source: '/delete-account.html', destination: '/delete-account', permanent: true },
-      { source: '/trip-planner.html', destination: '/trip-planner', permanent: true },
+      { source: '/trip-planner.html', destination: '/', permanent: true },
+      { source: '/trip-planner', destination: '/', permanent: true },
       { source: '/404.html', destination: '/', permanent: true },
       { source: '/places/kalaram-temple', destination: '/places/panchavati-kalaram', permanent: true },
     ];

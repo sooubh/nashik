@@ -106,6 +106,8 @@ export function DiscoverExperiences() {
                   src={place.image}
                   alt={place.name}
                   fill
+                  loading="lazy"
+                  decoding="async"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />

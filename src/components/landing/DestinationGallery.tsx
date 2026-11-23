@@ -99,6 +99,8 @@ export function DestinationGallery() {
                   src={place.image}
                   alt={place.name}
                   fill
+                  loading="lazy"
+                  decoding="async"
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 310px, 340px"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />

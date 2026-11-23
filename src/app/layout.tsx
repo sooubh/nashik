@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: [
       {
-        url: '/images/destinations/sula-vineyards.jpg',
+        url: '/images/destinations/sula-vineyards.webp',
         width: 1200,
         height: 630,
         alt: `${SITE_CONFIG.name} · Authentic Travel Guide for Nashik`,
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
     description: SITE_CONFIG.description,
-    images: ['/images/destinations/sula-vineyards.jpg'],
+    images: ['/images/destinations/sula-vineyards.webp'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -174,6 +174,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/images/trivio/hero-temple-cutout.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/trivio/hero-sky.webp" type="image/webp" fetchPriority="high" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <script
           type="application/ld+json"

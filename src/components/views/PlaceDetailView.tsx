@@ -182,6 +182,8 @@ export function PlaceDetailView({ slug, locale }: PlaceDetailViewProps) {
                       src={np.heroImage}
                       alt={np.title}
                       fill
+                      loading="lazy"
+                      decoding="async"
                       sizes="(max-width: 640px) 100vw, 300px"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />

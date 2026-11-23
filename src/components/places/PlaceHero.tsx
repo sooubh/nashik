@@ -52,6 +52,7 @@ export function PlaceHero({ place, locale }: PlaceHeroProps) {
           alt={title}
           fill
           priority
+          fetchPriority="high"
           sizes="(max-width: 1024px) 100vw, 1400px"
           className="object-cover object-center"
         />
