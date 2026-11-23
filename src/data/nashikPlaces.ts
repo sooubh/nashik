@@ -87,7 +87,7 @@ export const NASHIK_REAL_PLACES: NashikPlace[] = [
     bestTime: 'Morning or late afternoon',
     highlight: 'A cluster of 24 rock-cut Hinayana Buddhist caves dating from the 2nd century BCE to 2nd century CE, housing ancient stupas, water cisterns, and intricate Brahmi inscriptions.',
     practicalTip: 'Requires climbing approximately 300 well-maintained stone steps; morning visits provide cool breezes and sweeping panoramic views over Nashik city.',
-    image: '/images/destinations/sahyadri-sunrise.webp',
+    image: '/images/destinations/pandavleni-caves.webp',
     coordinates: {
       latitude: 19.9616,
       longitude: 73.7483,
@@ -106,7 +106,7 @@ export const NASHIK_REAL_PLACES: NashikPlace[] = [
     bestTime: 'Late afternoon (4:00 PM – 7:00 PM)',
     highlight: 'Boutique vineyard known for artisanal Reserve Shiraz and Chenin Blanc, set right on the serene water edge of Gangapur lake with stunning sunset balcony views.',
     practicalTip: 'A quieter, more intimate alternative to larger commercial estates, located just 2 km past Sula along the same lakefront route.',
-    image: '/images/destinations/gangapur-lake-sunset.webp',
+    image: '/images/destinations/york-winery.webp',
     coordinates: {
       latitude: 19.9912,
       longitude: 73.6708,
@@ -125,7 +125,7 @@ export const NASHIK_REAL_PLACES: NashikPlace[] = [
     bestTime: 'Morning aarti or evening twilight',
     highlight: 'Majestic 1788 CE black-stone temple dedicated to Lord Rama, surrounded by an 84-pillar cloister and rich with historical significance from the Ramayana epic.',
     practicalTip: 'Pair with a short walk to Ramkund ghats and Sita Gufa (ancient cave dwelling) located within 400 meters.',
-    image: '/images/destinations/trimbakeshwar-temple.webp',
+    image: '/images/destinations/kalaram-temple.webp',
     coordinates: {
       latitude: 20.0076,
       longitude: 73.7944,
@@ -144,7 +144,7 @@ export const NASHIK_REAL_PLACES: NashikPlace[] = [
     bestTime: 'Morning (7:00 AM – 11:00 AM)',
     highlight: 'Revered mountain plateau traditionally identified as the birthplace of Lord Hanuman, surrounded by lush seasonal grasslands, rock pinnacles, and a serene mountaintop lake.',
     practicalTip: 'Moderately challenging 2 to 3 hour trail with stone steps and plateau sections; carry personal water as hilltop amenities are minimal.',
-    image: '/images/destinations/sahyadri-sunrise.webp',
+    image: '/images/destinations/anjaneri-hills.webp',
     coordinates: {
       latitude: 19.9192,
       longitude: 73.5786,

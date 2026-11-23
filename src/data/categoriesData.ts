@@ -98,7 +98,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'साधना चुलीवरची, MIDC मधील शामसुंदर आणि पंचवटीची अंबिका मिसळ - अस्सल नाशिककरांची चव आणि ठिकाणे.',
       hi: 'साधना, श्यामसुंदर और अंबिका की मशहूर मिसल पाव, कोंडाजी चिवड़ा और नासिक की प्रसिद्ध स्ट्रीट फूड गाइड।',
     },
-    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
+    heroImage: '/images/destinations/nashik-misal-food.webp',
     iconName: 'utensils',
   },
   itineraries: {
@@ -158,7 +158,7 @@ export const CATEGORIES_DATA: Record<Category, CategoryMetadata> = {
       mr: 'रामकुंडावर होणारी नयनरम्य गोदावरी महाआरती, सिंहस्थ कुंभमेळ्याचा इतिहास आणि नाशिकचा सांस्कृतिक वारसा.',
       hi: 'रामकुंड की गोदावरी महाआरती, सिंहस्थ कुंभमेले का इतिहास और नासिक की आध्यात्मिक परंपराएं।',
     },
-    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
+    heroImage: '/images/destinations/ramkund-godavari-aarti.webp',
     iconName: 'sparkles',
   },
 };

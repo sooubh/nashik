@@ -412,7 +412,7 @@ The Hindu Hrudaysamrat Balasaheb Thackeray Maharashtra Samruddhi Mahamarg has fu
     category: 'food',
     publishedDate: '2026-11-23',
     author: 'Trivio Culinary Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
+    heroImage: '/images/destinations/nashik-misal-food.webp',
     summary: 'A mouthwatering self-guided walking food tour through the historic bazaars of Old Nashik: crisp Kondaji Chivda, golden crunchy Sayantara sabudana vadas, and warm Budha Halwai jalebi-rabdi.',
     directAnswer: 'Old Nashik’s historic food trail spans 1.5 km between Bhadrakali and Tiwndha Chowk. Legendary must-eats include Sayantara (famous for crispy Sabudana Vada with spicy peanut chutney), Kondaji Chivda (original 1920s shop), and Budha Halwai (pure ghee jalebi and rabdi since 1956).',
     content: `
@@ -520,7 +520,7 @@ Rolling Sahyadri hills, morning lake mists, golden hour grape stomping, and chil
     category: 'festivals',
     publishedDate: '2026-11-23',
     author: 'Trivio Heritage Desk',
-    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
+    heroImage: '/images/destinations/ramkund-godavari-aarti.webp',
     summary: 'Experience the mesmerizing evening Godavari Maha Aarti along the ancient stone steps of Ramkund: brass lamp rituals, sacred conch fanfares, aarti timings, and spectator vantage points.',
     directAnswer: 'The daily Godavari Maha Aarti at Ramkund takes place every evening at 7:00 PM (winter: 6:45 PM; summer: 7:15 PM). Admission is completely free. Best viewing vantage points are the steps directly opposite the central aarti platform or the elevated stone porch of Kapaleshwar Temple.',
     content: `
