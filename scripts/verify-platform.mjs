@@ -274,6 +274,55 @@ assert(catPageCode.includes('ALL_REGIONAL_CITIES'), 'Destinations route includes
 assert(catPageCode.includes('REGIONAL_CITIES'), 'Destinations route handles regional city metadata');
 
 // ---------------------------------------------------------
+// 10. Performance, Core Web Vitals (LCP) & Assets Audit
+// ---------------------------------------------------------
+console.log('\n--- 10. Performance & Core Web Vitals (LCP) ---');
+
+// HeroSection LCP check
+const heroSectionPath = path.join(ROOT_DIR, 'src/components/landing/HeroSection.tsx');
+if (fs.existsSync(heroSectionPath)) {
+  const heroCode = fs.readFileSync(heroSectionPath, 'utf8');
+  assert(!heroCode.includes('initial={{ opacity: 0'), 'Hero title does NOT hide on initial mount (no opacity:0 LCP penalty)');
+  assert(heroCode.includes('hero-temple-cutout.webp'), 'Hero cutout uses WebP format');
+  assert(heroCode.includes('priority'), 'Hero cutout image has priority attribute');
+  assert(!heroCode.includes('aria-hidden="true"') || !heroCode.includes('hero-temple-cutout.webp" aria-hidden'), 'Hero cutout is not hidden from accessibility/rendering tree');
+} else {
+  assert(false, 'src/components/landing/HeroSection.tsx exists');
+}
+
+// 404 App Preview Image check
+const appPreviewPath = path.join(ROOT_DIR, 'public/images/app-preview/trivio-app-preview.webp');
+assert(fs.existsSync(appPreviewPath) && fs.statSync(appPreviewPath).size > 10000, 'App preview WebP asset exists (>10KB, no 404)');
+
+// Preload link tags in Root Layout
+const layoutPath = path.join(ROOT_DIR, 'src/app/layout.tsx');
+if (fs.existsSync(layoutPath)) {
+  const layoutCode = fs.readFileSync(layoutPath, 'utf8');
+  assert(layoutCode.includes('rel="preload" as="image" href="/images/trivio/hero-sky.webp"'), 'Root layout preloads hero sky WebP');
+  assert(layoutCode.includes('rel="preload" as="image" href="/images/trivio/hero-temple-cutout.webp"'), 'Root layout preloads hero temple cutout WebP');
+} else {
+  assert(false, 'src/app/layout.tsx exists');
+}
+
+// Next.js caching headers
+const nextConfigPath = path.join(ROOT_DIR, 'next.config.mjs');
+if (fs.existsSync(nextConfigPath)) {
+  const nextConfigCode = fs.readFileSync(nextConfigPath, 'utf8');
+  assert(nextConfigCode.includes('Cache-Control') && nextConfigCode.includes('max-age=31536000, immutable'), 'next.config.mjs sets immutable 1-year cache headers for static images');
+} else {
+  assert(false, 'next.config.mjs exists');
+}
+
+// Site config canonical URL
+const siteConfigPath = path.join(ROOT_DIR, 'src/config/site.ts');
+if (fs.existsSync(siteConfigPath)) {
+  const siteConfigCode = fs.readFileSync(siteConfigPath, 'utf8');
+  assert(siteConfigCode.includes('https://nashik.sooubh.in'), 'Canonical URL unified to https://nashik.sooubh.in');
+} else {
+  assert(false, 'src/config/site.ts exists');
+}
+
+// ---------------------------------------------------------
 // Final Audit Scorecard
 // ---------------------------------------------------------
 console.log('\n====================================================');
