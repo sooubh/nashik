@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        userAgent: ['Googlebot', 'Bingbot'],
+        userAgent: ['Googlebot', 'Bingbot', 'GoogleOther', 'Google-Sitemaps'],
         allow: '/',
       },
       {
