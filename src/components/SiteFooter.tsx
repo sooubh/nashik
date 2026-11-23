@@ -29,7 +29,7 @@ export function SiteFooter() {
           </div>
 
           <Image
-            src="/images/footer/nashik-illustration.png"
+            src="/images/footer/nashik-illustration.webp"
             alt="Illustrated panorama of Nashik with Sahyadri hills, vineyards, waterfalls, temples, the Godavari waterfront and local food"
             width={640}
             height={213}

@@ -323,6 +323,37 @@ if (fs.existsSync(siteConfigPath)) {
 }
 
 // ---------------------------------------------------------
+// 11. Authentic Destination WebP Assets Audit
+// ---------------------------------------------------------
+console.log('\n--- 11. Authentic Destination WebP Assets ---');
+const destinationWebpImages = [
+  'trimbakeshwar-temple.webp',
+  'sula-vineyards.webp',
+  'harihar-fort.webp',
+  'kalaram-temple.webp',
+  'dugarwadi-waterfall.webp',
+  'pandavleni-caves.webp',
+  'york-winery.webp',
+  'anjaneri-hills.webp',
+  'someshwar-waterfall.webp',
+  'nashik-misal-food.webp',
+  'ramkund-godavari-aarti.webp',
+  'gangapur-lake-sunset.webp',
+  'sahyadri-sunrise.webp',
+  'saptashrungi-temple.webp',
+  'muktidham-temple.webp',
+  'brahmagiri-hill.webp',
+  'samruddhi-expressway.webp',
+  'soma-vine-village.webp',
+];
+
+for (const imgName of destinationWebpImages) {
+  const imgPath = path.join(ROOT_DIR, 'public/images/destinations', imgName);
+  const exists = fs.existsSync(imgPath) && fs.statSync(imgPath).size > 10000;
+  assert(exists, `Destination WebP asset exists & valid (>10KB): ${imgName}`);
+}
+
+// ---------------------------------------------------------
 // Final Audit Scorecard
 // ---------------------------------------------------------
 console.log('\n====================================================');

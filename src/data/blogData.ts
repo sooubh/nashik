@@ -202,7 +202,7 @@ Pune travelers have direct highway access to Nashik via NH 60 (Pune-Nashik Highw
     category: 'festivals',
     publishedDate: '2026-11-20',
     author: 'Trivio Culture & Heritage Desk',
-    heroImage: '/images/destinations/trimbakeshwar-temple.webp',
+    heroImage: '/images/destinations/ramkund-godavari-aarti.webp',
     summary: 'The grand chronicle of the Simhastha Kumbh Mela: planetary alignments in Leo (Simha), the sacred Godavari Shahi Snan at Ramkund and Kushavarta, and preparations for the next mega gathering.',
     directAnswer: 'The Simhastha Kumbh Mela in Nashik-Trimbakeshwar occurs every 12 years when Jupiter enters the zodiac sign of Leo (Simha). Shahi Snan takes place at Ramkund for Vaishnava Akhadas and at Kushavarta Kund for Shaiva Akhadas. The next Simhastha Kumbh Mela cycle is scheduled for 2027-2028.',
     content: `
@@ -250,7 +250,7 @@ The Simhastha is unique in that it unfolds simultaneously across two sacred node
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Fast-Track Desk',
-    heroImage: '/images/destinations/sula-vineyards.webp',
+    heroImage: '/images/destinations/nashik-misal-food.webp',
     summary: 'The ultimate power-packed same-day return itinerary for visitors from Mumbai, Thane, or Pune wanting to cover Trimbakeshwar Jyotirlinga, Panchavati heritage, legendary misal, and Sula Vineyards in exactly 12 hours.',
     directAnswer: 'A 1-day whirlwind Nashik trip begins with 7:00 AM Trimbakeshwar VIP darshan (₹200 pass), followed by 10:30 AM Panchavati Ramkund and Kalaram Mandir, 12:30 PM Sadhana wood-fired misal lunch, and 3:30 PM sunset tasting at Sula Vineyards before heading home by 7:00 PM.',
     content: `
@@ -304,7 +304,7 @@ Traveling to Nashik on a day trip is now seamless thanks to the Samruddhi Mahama
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Highway Desk',
-    heroImage: '/images/destinations/sahyadri-sunrise.webp',
+    heroImage: '/images/destinations/samruddhi-expressway.webp',
     summary: 'The ultimate motorist’s guide for driving between Pune and Nashik via NH 60: road conditions, Chandoli ghat sections, famous culinary highway pitstops, and avoiding Chakan industrial jams.',
     directAnswer: 'Driving from Pune to Nashik via NH 60 spans 210 km and takes 4 to 4.5 hours. To avoid heavy Chakan industrial bottlenecks, depart Pune before 6:30 AM or use the Spine Road bypass via Bhosari. Major food and fuel pitstops are located around Narayangaon and Sangamner.',
     content: `
@@ -358,7 +358,7 @@ The Pune-Nashik corridor (National Highway 60) connects Maharashtra’s two vibr
     category: 'itineraries',
     publishedDate: '2026-11-23',
     author: 'Trivio Highway Desk',
-    heroImage: '/images/destinations/gangapur-lake-sunset.webp',
+    heroImage: '/images/destinations/samruddhi-expressway.webp',
     summary: 'Detailed driving manual for taking the high-speed Samruddhi Mahamarg from Mumbai/Thane to Nashik: interchange navigation at Amane, toll charges, 120 km/h speed enforcement, and wayside amenities.',
     directAnswer: 'The Samruddhi Mahamarg cuts Mumbai-Nashik travel to under 3 hours via the Amane (Bhiwandi) interchange. Maximum speed is 120 km/h with automated AI camera surveillance. FASTag toll for cars is approximately ₹300-₹350.',
     content: `
@@ -466,7 +466,7 @@ While Nashik’s modern avenues boast trendy cafes and winery bistros, the true 
     category: 'vineyards',
     publishedDate: '2026-11-23',
     author: 'Trivio Romance & Luxury Desk',
-    heroImage: '/images/destinations/sula-vineyards.webp',
+    heroImage: '/images/destinations/soma-vine-village.webp',
     summary: 'Curated list of the most intimate, picturesque vineyard resorts in Nashik: private pool villas, lakeside sunset balconies, couples wine tasting packages, and candlelit vineyard dining.',
     directAnswer: 'The top 4 romantic vineyard resorts in Nashik are: The Source at Sula (Tuscan architecture & luxury pool, ₹9,000+), Beyond by Sula (private lakefront infinity villas, ₹12,000+), Soma Vine Village (waterfront villas & wine spa, ₹7,000+), and Vallonné Vineyards (French château on Mukhne lake, ₹8,000+).',
     content: `
