@@ -112,7 +112,7 @@ This is a candidate list, **not a deletion order**. For every file: search impor
 
 ## 7. Domain consistency and legacy routes
 
-The old `index.html` references `https://nashikexplore.com/` in Open Graph metadata, while the Next.js layout/sitemap use `https://nashik.sooubh.me`. This is a real source conflict. The correct production domain must be confirmed from the active deployment and domain settings; do not pick a domain based only on whichever string appears newest.
+The old `index.html` references `https://nashikexplore.com/` in Open Graph metadata, while the Next.js layout/sitemap use `https://nashik.sooubh.in`. This is a real source conflict. The correct production domain must be confirmed from the active deployment and domain settings; do not pick a domain based only on whichever string appears newest.
 
 Once the canonical host is confirmed:
 

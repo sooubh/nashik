@@ -4,14 +4,14 @@
 * **Status:** Approved
 * **Date:** 2026-11-02
 * **Target Package:** `com.sooubh.nashikexplore`
-* **Canonical Site URL:** `https://nashik.sooubh.me`
+* **Canonical Site URL:** `https://nashik.sooubh.in`
 * **Google Play Listing:** `https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`
 
 --------------------------------------------------------------------------------
 
 ## Overview
 
-The web presence for **Nashik Travel Guide** (`nashik.sooubh.me`) is the primary public entry point and conversion funnel for the production Android application (`com.sooubh.nashikexplore`). 
+The web presence for **Nashik Travel Guide** (`nashik.sooubh.in`) is the primary public entry point and conversion funnel for the production Android application (`com.sooubh.nashikexplore`). 
 
 This project executes a visual-first redesign of the landing page, converting it from an unverified prototype into an authoritative marketing asset. The redesigned page highlights authentic destination photography (covering Trimbakeshwar, Sula Vineyards, and Sahyadri forts), showcases actual Android app screens inside realistic device frames, introduces fluid entrance motion, and provides structured navigation links to all mandatory Play Store compliance and legal documents.
 
@@ -52,7 +52,7 @@ The existing web implementation suffers from four structural flaws that diminish
 ## Critical User Journeys (CUJs)
 
 ### CUJ 1: Discovery to App Installation
-* **Given:** A traveler searches for "Nashik trip guide" or "Trimbakeshwar timings" and lands on `nashik.sooubh.me`.
+* **Given:** A traveler searches for "Nashik trip guide" or "Trimbakeshwar timings" and lands on `nashik.sooubh.in`.
 * **When:** The visitor scrolls past the hero, views the authentic destination gallery, and inspects the mobile app screenshot showcase.
 * **Then:** The visitor taps "Get it on Google Play" and is redirected to `com.sooubh.nashikexplore` on the Google Play Store with zero broken redirects.
 
@@ -218,7 +218,7 @@ export default function HomePage() {
 
 #### 1. `src/config/site.ts` (Create)
 * **Type / Scope:** TypeScript Configuration Module
-* **Proposed Changes:** Export `SiteConfig` interface and `SITE_CONFIG` object containing canonical title, tagline, description, canonical web domain (`https://nashik.sooubh.me`), support email, official Play Store URL (`com.sooubh.nashikexplore`), navigation link definitions, and 3-column footer link mappings.
+* **Proposed Changes:** Export `SiteConfig` interface and `SITE_CONFIG` object containing canonical title, tagline, description, canonical web domain (`https://nashik.sooubh.in`), support email, official Play Store URL (`com.sooubh.nashikexplore`), navigation link definitions, and 3-column footer link mappings.
 
 #### 2. Shared Navigation (`src/components/SiteNav.tsx` & `src/components/SiteFooter.tsx`) (Create)
 * **Type / Scope:** React Client & Server Components

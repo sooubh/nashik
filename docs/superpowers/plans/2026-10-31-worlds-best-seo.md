@@ -1,8 +1,8 @@
 # Implementation Plan: World's Best SEO for NashikExplore
 
-**Goal:** Elevate `NashikExplore` (https://nashik.sooubh.me) to world-class SEO standards through comprehensive, truthful Schema.org structured data (JSON-LD), full Web App Manifest discoverability, enhanced robots and sitemap configs, complete OpenGraph/Twitter cards, and hierarchical BreadcrumbList metadata across all routes.
+**Goal:** Elevate `NashikExplore` (https://nashik.sooubh.in) to world-class SEO standards through comprehensive, truthful Schema.org structured data (JSON-LD), full Web App Manifest discoverability, enhanced robots and sitemap configs, complete OpenGraph/Twitter cards, and hierarchical BreadcrumbList metadata across all routes.
 
-**Canonical Domain:** `https://nashik.sooubh.me`  
+**Canonical Domain:** `https://nashik.sooubh.in`  
 **Execution Context:** Next.js 14 App Router, TypeScript, Tailwind CSS.  
 **Adherence:** Truthful content only (no fabricated ratings or review counts, real landmarks from `src/data/nashikPlaces.ts`, real FAQs from `src/components/TravelFaq.tsx`).
 
@@ -78,7 +78,7 @@
 - **Actions:**
   - Update `sitemap.ts` `lastModified` to current ISO date (`2026-10-31`).
   - Confirm priorities: Homepage (1.0), Trip Planner (0.9), Contact (0.8), Legal (0.5 - 0.7).
-  - Update `robots.ts` with `host: 'https://nashik.sooubh.me'`.
+  - Update `robots.ts` with `host: 'https://nashik.sooubh.in'`.
 - **Verification:** Verify `/sitemap.xml` and `/robots.txt` output during build.
 
 ### Task 5: Taste Skill Lint & Production Build Verification

@@ -11,10 +11,10 @@
 
 The inspected website files conflict:
 
-- `src/app/layout.tsx`, route metadata, Next sitemap and Next robots use `https://nashik.sooubh.me`.
+- `src/app/layout.tsx`, route metadata, Next sitemap and Next robots use `https://nashik.sooubh.in`.
 - Root `index.html` uses `https://nashikexplore.com/` in Open Graph/Twitter metadata and older images.
 
-Do not hard-code a choice until the coordinator confirms the production domain from the current deployment/custom-domain configuration and owner-provided settings. Once confirmed, set the same canonical host in every retained source. If `nashik.sooubh.me` is confirmed as production, use it consistently; if another domain is actually live, update the whole site to that host instead.
+Do not hard-code a choice until the coordinator confirms the production domain from the current deployment/custom-domain configuration and owner-provided settings. Once confirmed, set the same canonical host in every retained source. If `nashik.sooubh.in` is confirmed as production, use it consistently; if another domain is actually live, update the whole site to that host instead.
 
 Check:
 
@@ -170,7 +170,7 @@ Review every remaining hit manually. Some hits may be policy text or a legitimat
 ### SEO
 
 - Exactly one canonical host across retained pages and metadata.
-- No stale `nashikexplore.com`/`nashik.sooubh.me` mix unless there is an explicitly documented redirect/canonical setup.
+- No stale `nashikexplore.com`/`nashik.sooubh.in` mix unless there is an explicitly documented redirect/canonical setup.
 - No fabricated aggregate rating/schema.
 - No `localhost`, broken OG images, missing favicons or broken sitemap URLs.
 - No duplicate homepage section IDs or empty anchor links.

@@ -78,10 +78,10 @@
 * **Affected Scope:** Line 7
 * **Discrepancy Description:** Line 7 in the frontmatter declares:  
   `* **Canonical URL:** https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`  
-  In web engineering and search indexing standards, `canonical` refers strictly to the authoritative URL of the web page or domain (`https://nashik.sooubh.me`). A Google Play Store link is an external distribution endpoint. Labeling the app listing as the canonical URL confuses web indexing directives and contradicts line 97 (`canonicalUrl: https://nashik.sooubh.me`) and line 221 (`ensure canonical URL points to https://nashik.sooubh.me`).
+  In web engineering and search indexing standards, `canonical` refers strictly to the authoritative URL of the web page or domain (`https://nashik.sooubh.in`). A Google Play Store link is an external distribution endpoint. Labeling the app listing as the canonical URL confuses web indexing directives and contradicts line 97 (`canonicalUrl: https://nashik.sooubh.in`) and line 221 (`ensure canonical URL points to https://nashik.sooubh.in`).
 * **Rationale & Recommendation:** Update line 7 to maintain strict technical accuracy:
   ```markdown
-  * **Canonical Site URL:** `https://nashik.sooubh.me`
+  * **Canonical Site URL:** `https://nashik.sooubh.in`
   * **Google Play Listing:** `https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`
   ```
 

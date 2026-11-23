@@ -10,7 +10,7 @@
 
 ## Overview
 
-The web presence for **Nashik Travel Guide** (`nashik.sooubh.me`) is the primary public entry point and conversion funnel for the production Android application (`com.sooubh.nashikexplore`). 
+The web presence for **Nashik Travel Guide** (`nashik.sooubh.in`) is the primary public entry point and conversion funnel for the production Android application (`com.sooubh.nashikexplore`). 
 
 This project executes a visual-first redesign of the landing page, converting it from an unverified prototype into an authoritative marketing asset. The redesigned page highlights authentic destination photography (covering Trimbakeshwar, Sula Vineyards, and Sahyadri forts), showcases actual Android app screens inside realistic device frames, introduces fluid entrance motion, and provides structured navigation links to all mandatory Play Store compliance and legal documents.
 
@@ -45,7 +45,7 @@ The existing web implementation suffers from four structural flaws that diminish
 ## Critical User Journeys (CUJs)
 
 ### CUJ 1: Discovery to App Installation
-* **Given:** A traveler searches for "Nashik trip guide" or "Trimbakeshwar timings" and lands on `nashik.sooubh.me`.
+* **Given:** A traveler searches for "Nashik trip guide" or "Trimbakeshwar timings" and lands on `nashik.sooubh.in`.
 * **When:** The visitor scrolls past the hero, views the authentic destination gallery, and inspects the mobile app screenshot showcase.
 * **Then:** The visitor taps "Get it on Google Play" and is redirected to `com.sooubh.nashikexplore` on the Google Play Store with zero broken redirects.
 
@@ -94,7 +94,7 @@ flowchart TD
 1. **`src/config/site.ts` (New Single Source of Truth):**
    - Centralizes site constants:
      - `name`: "Nashik Travel Guide"
-     - `canonicalUrl`: `https://nashik.sooubh.me`
+     - `canonicalUrl`: `https://nashik.sooubh.in`
      - `playStoreUrl`: `https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`
      - `packageId`: `com.sooubh.nashikexplore`
      - `supportEmail`: `support@nashikexplore.com`
@@ -210,7 +210,7 @@ flowchart TD
 
 #### 11. `src/app/layout.tsx` (Modify)
 * **Type / Scope:** Next.js Root Layout
-* **Proposed Changes:** Update `metadata` to reflect "Nashik Travel Guide", update OpenGraph card image to authentic landscape photography, and ensure canonical URL points to `https://nashik.sooubh.me`.
+* **Proposed Changes:** Update `metadata` to reflect "Nashik Travel Guide", update OpenGraph card image to authentic landscape photography, and ensure canonical URL points to `https://nashik.sooubh.in`.
 
 #### 12. Deletion of Deprecated / Synthetic Files (Delete)
 * `src/components/trivio/TrivioTestimonials.tsx` (Delete: contains fake quotes and synthetic star ratings).

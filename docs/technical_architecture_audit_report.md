@@ -1,7 +1,7 @@
 # Trivio (Nashik Travel Guide) — Phase A: Technical Architecture & Repository Audit Report
 
 **Platform:** Trivio / Nashik Travel Companion (`com.sooubh.nashikexplore`)  
-**Canonical Web Domain:** `https://nashik.sooubh.me`  
+**Canonical Web Domain:** `https://nashik.sooubh.in`  
 **Repository Path:** `/data/data/com.termux/files/home/nashik`  
 **Framework:** Next.js 14.2.15 (App Router, React 18, TypeScript 5, Tailwind CSS 3)  
 **Author:** Repository and Architecture Technical Auditor (`@auditor`)  
@@ -147,7 +147,7 @@ To capture the 450,000+ monthly searches identified in the SEO/GEO strategy repo
 
 ### 5.1 Android App Links (`/.well-known/assetlinks.json`) — CRITICAL GAP
 - **Finding:** The file `public/.well-known/assetlinks.json` does **not exist** in the repository.
-- **Impact:** Android devices opening links to `https://nashik.sooubh.me/*` will not trigger Android App Links verification, preventing seamless handoff into the installed Trivio Flutter app (`com.sooubh.nashikexplore`).
+- **Impact:** Android devices opening links to `https://nashik.sooubh.in/*` will not trigger Android App Links verification, preventing seamless handoff into the installed Trivio Flutter app (`com.sooubh.nashikexplore`).
 - **Solution:** Create `public/.well-known/assetlinks.json`:
 
 ```json

@@ -8,7 +8,7 @@
 
 ### 1. Paraphrase of What This Design Accomplishes
 
-This document proposes a visual and structural redesign of the public web landing page (`nashik.sooubh.me`) for the production Android application (`com.sooubh.nashikexplore`). It replaces an unverified prototype branded as "Trivio"—which contained placeholder alpine imagery, simulated itinerary features, and fake reviews—with an authoritative, Google Play policy-compliant marketing landing page branded as "Nashik Travel Guide". The redesign focuses on presenting authentic regional photography (Trimbakeshwar, Sula Vineyards, Sahyadri forts), showcasing real mobile screenshots inside realistic device frames, driving app installations via verified Play Store links, and providing transparent navigation to all mandatory legal, privacy, and account-deletion compliance pages.
+This document proposes a visual and structural redesign of the public web landing page (`nashik.sooubh.in`) for the production Android application (`com.sooubh.nashikexplore`). It replaces an unverified prototype branded as "Trivio"—which contained placeholder alpine imagery, simulated itinerary features, and fake reviews—with an authoritative, Google Play policy-compliant marketing landing page branded as "Nashik Travel Guide". The redesign focuses on presenting authentic regional photography (Trimbakeshwar, Sula Vineyards, Sahyadri forts), showcasing real mobile screenshots inside realistic device frames, driving app installations via verified Play Store links, and providing transparent navigation to all mandatory legal, privacy, and account-deletion compliance pages.
 
 ### 2. Paraphrase of How It Works Mechanically
 
@@ -58,4 +58,4 @@ The web presence is implemented in Next.js using the App Router, Tailwind CSS, a
 * **Severity**: Nit
 * **Affected Scope**: Section "Component Hierarchy & Responsibilities" (Line 100) — `supportEmail`.
 * **Discrepancy Description & Rationale**: 
-  Domain divergence without explanation. The canonical web domain is `nashik.sooubh.me` and the Play Store ID is `com.sooubh.nashikexplore`, but `supportEmail` is specified as `support@nashikexplore.com`. The document does not indicate whether `nashikexplore.com` is a live domain configured for inbound mail routing or an unverified placeholder, creating a risk of user inquiry delivery failures.
+  Domain divergence without explanation. The canonical web domain is `nashik.sooubh.in` and the Play Store ID is `com.sooubh.nashikexplore`, but `supportEmail` is specified as `support@nashikexplore.com`. The document does not indicate whether `nashikexplore.com` is a live domain configured for inbound mail routing or an unverified placeholder, creating a risk of user inquiry delivery failures.

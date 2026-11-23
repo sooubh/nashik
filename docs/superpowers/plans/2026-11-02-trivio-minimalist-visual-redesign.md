@@ -15,7 +15,7 @@
 * Next.js 14 App Router, React 18, TypeScript.
 * Target App Package: `com.sooubh.nashikexplore`.
 * Official Brand Name: `Trivio`.
-* Canonical Site URL: `https://nashik.sooubh.me`.
+* Canonical Site URL: `https://nashik.sooubh.in`.
 * Preloaded imagery must use Next.js `<Image priority>` and preserve 0.00 CLS.
 * Animations must respect `prefers-reduced-motion: reduce`.
 * Zero broken routes or compilation failures on `npm run build`.

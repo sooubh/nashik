@@ -1,7 +1,7 @@
 # Trivio (Nashik Travel Guide) — Phase A: Comprehensive SEO, GEO & Content Strategy Report
 
 **Platform:** Trivio / Nashik Travel Guide (`com.sooubh.nashikexplore`)  
-**Canonical Web Domain:** `https://nashik.sooubh.me`  
+**Canonical Web Domain:** `https://nashik.sooubh.in`  
 **Target Search Verticals:** Traditional Search (Google, Bing), AI Generative Search Engines (Perplexity, ChatGPT Search, Gemini, Claude), and App Store Discovery (Google Play Store).  
 **Author:** Trivio SEO & GEO Strategy Team  
 **Status:** Complete & Approved for Implementation  
@@ -404,17 +404,17 @@ Nashik's visitor demographic is uniquely tri-lingual. Trivio's multilingual arch
 
 ### 5.2 Technical URL Routing & hreflang Implementation
 Trivio adopts prefix-based subpath internationalization using Next.js App Router:
-- English (Default): `https://nashik.sooubh.me/places/trimbakeshwar` (or `/en/places/trimbakeshwar`)
-- Marathi: `https://nashik.sooubh.me/mr/places/trimbakeshwar`
-- Hindi: `https://nashik.sooubh.me/hi/places/trimbakeshwar`
+- English (Default): `https://nashik.sooubh.in/places/trimbakeshwar` (or `/en/places/trimbakeshwar`)
+- Marathi: `https://nashik.sooubh.in/mr/places/trimbakeshwar`
+- Hindi: `https://nashik.sooubh.in/hi/places/trimbakeshwar`
 
 #### Canonical and `hreflang` Link Headers:
 ```html
-<link rel="canonical" href="https://nashik.sooubh.me/places/trimbakeshwar" />
-<link rel="alternate" hreflang="en" href="https://nashik.sooubh.me/places/trimbakeshwar" />
-<link rel="alternate" hreflang="mr" href="https://nashik.sooubh.me/mr/places/trimbakeshwar" />
-<link rel="alternate" hreflang="hi" href="https://nashik.sooubh.me/hi/places/trimbakeshwar" />
-<link rel="alternate" hreflang="x-default" href="https://nashik.sooubh.me/places/trimbakeshwar" />
+<link rel="canonical" href="https://nashik.sooubh.in/places/trimbakeshwar" />
+<link rel="alternate" hreflang="en" href="https://nashik.sooubh.in/places/trimbakeshwar" />
+<link rel="alternate" hreflang="mr" href="https://nashik.sooubh.in/mr/places/trimbakeshwar" />
+<link rel="alternate" hreflang="hi" href="https://nashik.sooubh.in/hi/places/trimbakeshwar" />
+<link rel="alternate" hreflang="x-default" href="https://nashik.sooubh.in/places/trimbakeshwar" />
 ```
 
 ### 5.3 Font Performance & Devanagari Typography

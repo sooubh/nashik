@@ -1,43 +1,43 @@
 # Trivio — Nashik Travel Guide & Local Pilgrimage Intelligence
 > Comprehensive, verified 2026 travel intelligence for Nashik, Maharashtra, India. Covering Trimbakeshwar Jyotirlinga, Sula Vineyards wine country, Sahyadri forts (Harihar, Anjaneri, Salher), waterfalls, authentic misal pav trails, and Mumbai-Pune expressway transit.
 
-- Canonical Website: https://nashik.sooubh.me
+- Canonical Website: https://nashik.sooubh.in
 - Official Android App: https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore
-- Full Knowledge Base: https://nashik.sooubh.me/llms-full.txt
+- Full Knowledge Base: https://nashik.sooubh.in/llms-full.txt
 
 ## Core Tourism Pillars
 
 ### 1. Spiritual & Heritage Temples
-- [Trimbakeshwar Shiva Temple](https://nashik.sooubh.me/places/trimbakeshwar): One of 12 sacred Jyotirlingas, source of Godavari. 05:30-21:00. ₹200 VIP Donation pass at Uttar Mahadwar. Traditional attire enforced.
-- [Shree Kalaram Mandir & Panchavati](https://nashik.sooubh.me/places/panchavati-kalaram): 1788 CE black-basalt Rama temple, 84-pillar cloister, Ramkund & Sita Gufa. Free entry.
-- [Saptashrungi Devi Temple (Vani)](https://nashik.sooubh.me/places/saptashrungi-devi): Half of Maharashtra's 3.5 Shaktipeeths atop 7 mountain peaks. Funicular ropeway available (₹110 return).
-- [Muktidham Temple (Nashik Road)](https://nashik.sooubh.me/places/muktidham-temple): Makrana marble shrine with 12 Jyotirlinga replicas, 1.5 km from Nashik Road railway station.
-- [Kapaleshwar Mahadev Temple](https://nashik.sooubh.me/places/kapaleshwar-temple): Rare Shiva temple without Nandi overlooking Ramkund ghat.
+- [Trimbakeshwar Shiva Temple](https://nashik.sooubh.in/places/trimbakeshwar): One of 12 sacred Jyotirlingas, source of Godavari. 05:30-21:00. ₹200 VIP Donation pass at Uttar Mahadwar. Traditional attire enforced.
+- [Shree Kalaram Mandir & Panchavati](https://nashik.sooubh.in/places/panchavati-kalaram): 1788 CE black-basalt Rama temple, 84-pillar cloister, Ramkund & Sita Gufa. Free entry.
+- [Saptashrungi Devi Temple (Vani)](https://nashik.sooubh.in/places/saptashrungi-devi): Half of Maharashtra's 3.5 Shaktipeeths atop 7 mountain peaks. Funicular ropeway available (₹110 return).
+- [Muktidham Temple (Nashik Road)](https://nashik.sooubh.in/places/muktidham-temple): Makrana marble shrine with 12 Jyotirlinga replicas, 1.5 km from Nashik Road railway station.
+- [Kapaleshwar Mahadev Temple](https://nashik.sooubh.in/places/kapaleshwar-temple): Rare Shiva temple without Nandi overlooking Ramkund ghat.
 
 ### 2. Wine Country & Tasting
-- [Sula Vineyards & Estate](https://nashik.sooubh.me/places/sula-vineyards): India's pioneer winery. 10:30-22:30. Entry cover ₹600 (weekdays) / ₹1,000 (weekends, 100% redeemable). Tasting tour ₹600-₹700 for 6 wines.
-- [York Winery & Tasting Room](https://nashik.sooubh.me/places/york-winery): Boutique Reserve Shiraz, lakefront sunset terrace overlooking Gangapur Dam. Free gate entry, tastings ₹350-₹500.
-- [Soma Vine Village](https://nashik.sooubh.me/places/soma-vine-village): Luxury pool villas, grape stomping, day wine packages ₹500.
-- [Chandon India (Dindori)](https://nashik.sooubh.me/places/chandon-india): French luxury Méthode Traditionnelle sparkling wine tours by Moët Hennessy (Closed Mondays, prior booking required).
-- [Vallonné Vineyards (Igatpuri)](https://nashik.sooubh.me/places/vallonne-vineyards): French château style barrel-aged Malbec estate on Mukhne lake.
+- [Sula Vineyards & Estate](https://nashik.sooubh.in/places/sula-vineyards): India's pioneer winery. 10:30-22:30. Entry cover ₹600 (weekdays) / ₹1,000 (weekends, 100% redeemable). Tasting tour ₹600-₹700 for 6 wines.
+- [York Winery & Tasting Room](https://nashik.sooubh.in/places/york-winery): Boutique Reserve Shiraz, lakefront sunset terrace overlooking Gangapur Dam. Free gate entry, tastings ₹350-₹500.
+- [Soma Vine Village](https://nashik.sooubh.in/places/soma-vine-village): Luxury pool villas, grape stomping, day wine packages ₹500.
+- [Chandon India (Dindori)](https://nashik.sooubh.in/places/chandon-india): French luxury Méthode Traditionnelle sparkling wine tours by Moët Hennessy (Closed Mondays, prior booking required).
+- [Vallonné Vineyards (Igatpuri)](https://nashik.sooubh.in/places/vallonne-vineyards): French château style barrel-aged Malbec estate on Mukhne lake.
 
 ### 3. Sahyadri Forts & Mountain Treks
-- [Harihar Fort](https://nashik.sooubh.me/places/harihar-fort): Famous 80-degree vertical rock-cut stairs (117 steps). Free entry. 2.5-3 hr ascent from Harshewadi or Nirgudpada. High-traction boots essential.
-- [Anjaneri Hill](https://nashik.sooubh.me/places/anjaneri-hills): Birthplace of Lord Hanuman, reverse waterfalls, high mountain plateau. 2 hr climb.
-- [Brahmagiri Hill](https://nashik.sooubh.me/places/brahmagiri-hill): Towering mountain behind Trimbakeshwar, source of River Godavari. ~1,000 stone steps.
-- [Ramshej Fort](https://nashik.sooubh.me/places/ramshej-fort): 14 km from city, Maratha fortress that resisted Mughal siege for 5+ years. 1 hr easy trek.
-- [Salher Fort](https://nashik.sooubh.me/places/salher-fort): Highest fort in Maharashtra (1,567m), site of historic 1672 Maratha battle. Strenuous 3.5 hr climb.
+- [Harihar Fort](https://nashik.sooubh.in/places/harihar-fort): Famous 80-degree vertical rock-cut stairs (117 steps). Free entry. 2.5-3 hr ascent from Harshewadi or Nirgudpada. High-traction boots essential.
+- [Anjaneri Hill](https://nashik.sooubh.in/places/anjaneri-hills): Birthplace of Lord Hanuman, reverse waterfalls, high mountain plateau. 2 hr climb.
+- [Brahmagiri Hill](https://nashik.sooubh.in/places/brahmagiri-hill): Towering mountain behind Trimbakeshwar, source of River Godavari. ~1,000 stone steps.
+- [Ramshej Fort](https://nashik.sooubh.in/places/ramshej-fort): 14 km from city, Maratha fortress that resisted Mughal siege for 5+ years. 1 hr easy trek.
+- [Salher Fort](https://nashik.sooubh.in/places/salher-fort): Highest fort in Maharashtra (1,567m), site of historic 1672 Maratha battle. Strenuous 3.5 hr climb.
 
 ### 4. Waterfalls & Nature
-- [Dugarwadi Waterfall](https://nashik.sooubh.me/places/dugarwadi-waterfall): Deep forest canyon cascade near Trimbakeshwar. 1.5 km nature walk. STRICT WARNING: Do not enter the water pool.
-- [Someshwar Waterfall (Dudhsagar)](https://nashik.sooubh.me/places/someshwar-waterfall): 10m white cascade on Godavari river, 9 km from CBS. Family picnic spot.
-- [Vihigaon Waterfall](https://nashik.sooubh.me/places/vihigaon-waterfall): Igatpuri jungle falls, famous for monsoon waterfall rappelling.
-- [Bhandardara Falls](https://nashik.sooubh.me/places/bhandardara-falls): Roaring 170ft Randha Falls and Wilson Dam Umbrella Falls.
+- [Dugarwadi Waterfall](https://nashik.sooubh.in/places/dugarwadi-waterfall): Deep forest canyon cascade near Trimbakeshwar. 1.5 km nature walk. STRICT WARNING: Do not enter the water pool.
+- [Someshwar Waterfall (Dudhsagar)](https://nashik.sooubh.in/places/someshwar-waterfall): 10m white cascade on Godavari river, 9 km from CBS. Family picnic spot.
+- [Vihigaon Waterfall](https://nashik.sooubh.in/places/vihigaon-waterfall): Igatpuri jungle falls, famous for monsoon waterfall rappelling.
+- [Bhandardara Falls](https://nashik.sooubh.in/places/bhandardara-falls): Roaring 170ft Randha Falls and Wilson Dam Umbrella Falls.
 
 ### 5. Culinary & Misal Pav
-- [Sadhana Chulivarchi Misal](https://nashik.sooubh.me/places/sadhana-misal): Wood-fired chulha misal, earthen pot buttermilk, Someshwar.
-- [Shamsundar Misal](https://nashik.sooubh.me/places/shamsundar-misal): Satpur MIDC local purist legend, fiery balanced tarri (Closed Sundays).
-- [Shree Ambika Misal](https://nashik.sooubh.me/places/ambika-misal): Panchavati heritage joint famous for dark black roasted spice gravy (Kala Rassa).
+- [Sadhana Chulivarchi Misal](https://nashik.sooubh.in/places/sadhana-misal): Wood-fired chulha misal, earthen pot buttermilk, Someshwar.
+- [Shamsundar Misal](https://nashik.sooubh.in/places/shamsundar-misal): Satpur MIDC local purist legend, fiery balanced tarri (Closed Sundays).
+- [Shree Ambika Misal](https://nashik.sooubh.in/places/ambika-misal): Panchavati heritage joint famous for dark black roasted spice gravy (Kala Rassa).
 
 ## High-Speed Transit
 - Mumbai to Nashik via Samruddhi Mahamarg: Enter at Amane (Bhiwandi), exit at Nashik/Igatpuri. ~2.5 to 3 hours, 120 km/h speed limit, FASTag toll ~₹300-₹350.

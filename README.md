@@ -4,10 +4,10 @@ Official marketing website and policy center for the **NashikExplore** Android a
 
 ## Overview
 
-- **Canonical Domain:** `https://nashik.sooubh.me`
+- **Canonical Domain:** `https://nashik.sooubh.in`
 - **Architecture:** Next.js 14 (App Router) with TypeScript & Tailwind CSS
 - **Target App:** Trivio for Android ([Google Play Store](https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore))
-- **Support Contact:** `support@nashikexplore.com`
+- **Support Contact:** `trivio-support@sooubh.in`
 
 ---
 
@@ -15,11 +15,14 @@ Official marketing website and policy center for the **NashikExplore** Android a
 
 | Route | Purpose | Status |
 |---|---|---|
-| `/` | Landing page (Hero, 3 Benefits, Screenshots, Download CTA) | Active |
-| `/trip-planner` | Truthful app feature explainer for the multi-day trip planner | Active |
-| `/contact` | Monitored email contact workflow (`mailto:support@nashikexplore.com`) | Active |
+| `/` | Landing page (Hero, Places, Intelligence, Itineraries, App Showcase) | Active |
+| `/places` | Complete directory of 23+ Nashik heritage, fort, and wine destinations | Active |
+| `/destinations` | Category hubs & regional corridors (Mumbai, Pune, Shirdi, etc.) | Active |
+| `/guides` | In-depth operational travel manuals and transit guides | Active |
+| `/blog` | Field stories, 1-3 day road trip itineraries, and food walks | Active |
+| `/contact` | Monitored email contact workflow (`trivio-support@sooubh.in`) | Active |
 | `/delete-account` | Play Store compliant account & data deletion request instructions | Active |
-| `/privacy-policy` | Privacy policy reflecting authentic app architecture (Firebase, Hive, etc.) | Active |
+| `/privacy-policy` | Privacy policy reflecting authentic app architecture | Active |
 | `/terms-of-use` | Terms of service for the mobile application and website | Active |
 | `/data-safety` | Data safety disclosures matching Play Store declarations | Active |
 | `/cookies-policy` | Website cookies and client storage disclosure | Active |

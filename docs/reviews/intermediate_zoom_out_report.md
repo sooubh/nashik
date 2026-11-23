@@ -42,9 +42,9 @@ However, synthesizing the findings from Stages 5, 6, and 7 reveals three critica
 ### 3. [Blocker] Semantic Error: External Play Store Link Labeled as Web "Canonical URL"
 * **Affected Scope:** Frontmatter (Line 7) and Section 4.1 (`src/config/site.ts`, lines 97–98).
 * **Simplicity Rationale:** 
-  Line 7 assigns `Canonical URL: https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`. In web and search engine standards, canonical URLs strictly represent authoritative web domain endpoints (`https://nashik.sooubh.me`), not third-party application store listings. Conflating them confuses search crawlers and contradicts Next.js metadata in `src/app/layout.tsx`.
+  Line 7 assigns `Canonical URL: https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`. In web and search engine standards, canonical URLs strictly represent authoritative web domain endpoints (`https://nashik.sooubh.in`), not third-party application store listings. Conflating them confuses search crawlers and contradicts Next.js metadata in `src/app/layout.tsx`.
   **Minimal Fix:** Split into two distinct configuration keys:
-  - `canonicalUrl`: `https://nashik.sooubh.me`
+  - `canonicalUrl`: `https://nashik.sooubh.in`
   - `playStoreUrl`: `https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore`
 
 ### 4. [Major] Architectural Inversion: Hoisting Global Shared Navigation Under `landing/`
@@ -108,7 +108,7 @@ However, synthesizing the findings from Stages 5, 6, and 7 reveals three critica
 ## Action Plan for Design Document Revision
 
 Before moving to implementation, `docs/designs/landing_page_redesign.md` should be amended to:
-1. Update Frontmatter to separate `Canonical Site URL` (`https://nashik.sooubh.me`) from `Google Play Store Link`.
+1. Update Frontmatter to separate `Canonical Site URL` (`https://nashik.sooubh.in`) from `Google Play Store Link`.
 2. Move `SiteNav.tsx` and `SiteFooter.tsx` out of `src/components/landing/` to `src/components/navigation/` (or `src/components/`).
 3. Add `LegalPageLayout.tsx`, `trip-planner/page.tsx`, `DeleteAccountClient.tsx`, and `ContactClient.tsx` to the file modification list.
 4. Add `TrivioJourney.tsx`, `TrivioCategories.tsx`, and `TrivioFounderNote.tsx` to the deletion list and retarget the skip-link in `src/app/layout.tsx` to `#main`.

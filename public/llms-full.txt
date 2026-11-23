@@ -2,7 +2,7 @@
 > Authoritative, machine-readable directory of Nashik tourism entities with verified 2026 operational facts, geographical coordinates, timings, fees, transit options, and safety rules.
 
 ## Metadata
-- Domain: https://nashik.sooubh.me
+- Domain: https://nashik.sooubh.in
 - Android Application: com.sooubh.nashikexplore (https://play.google.com/store/apps/details?id=com.sooubh.nashikexplore)
 - Primary Language: English (en)
 - Localized Languages: Marathi (mr), Hindi (hi)

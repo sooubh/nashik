@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Propel Trivio (https://nashik.sooubh.me) to rank top on search engines (Google, Bing) for Nashik tourism, pilgrimage, trekking, and wine travel queries through comprehensive Schema.org JSON-LD (WebSite, Organization, MobileApplication, ItemList, TouristAttraction, FAQPage, BreadcrumbList), expanded on-page semantic content (mounting Field Guide & FAQ sections), aligned metadata/keywords, Web App Manifest discoverability, updated sitemaps, and full migration of the support email to `trivio-support@sooubh.in`.
+**Goal:** Propel Trivio (https://nashik.sooubh.in) to rank top on search engines (Google, Bing) for Nashik tourism, pilgrimage, trekking, and wine travel queries through comprehensive Schema.org JSON-LD (WebSite, Organization, MobileApplication, ItemList, TouristAttraction, FAQPage, BreadcrumbList), expanded on-page semantic content (mounting Field Guide & FAQ sections), aligned metadata/keywords, Web App Manifest discoverability, updated sitemaps, and full migration of the support email to `trivio-support@sooubh.in`.
 
 **Architecture:** Next.js 14 App Router with Server Components rendering JSON-LD schemas via `<script type="application/ld+json">`, centralized configuration in `src/config/site.ts`, dynamic metadata with `metadataBase`, programmatic `sitemap.ts` and `robots.ts`, and accessible client interactive components.
 
@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- Canonical Domain: `https://nashik.sooubh.me`
+- Canonical Domain: `https://nashik.sooubh.in`
 - Official Support Email: `trivio-support@sooubh.in`
 - Brand Name: `Trivio`
 - Factual Accuracy: All destination data from `src/data/nashikPlaces.ts`, all FAQ data from `src/components/landing/AppFaq.tsx`
