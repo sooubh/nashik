@@ -63,7 +63,7 @@ export function ContactClient() {
     <div className="min-h-[100dvh] bg-paper flex flex-col justify-between">
       <SiteNav />
 
-      <main className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
+      <main id="main-content" className="flex-1 pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-8 lg:px-12 max-w-6xl mx-auto w-full space-y-12">
         {/* Top Back Link & Badge */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link

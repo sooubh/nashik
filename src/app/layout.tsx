@@ -190,9 +190,9 @@ export default function RootLayout({
       <body className="bg-white font-sans text-on-surface antialiased min-h-screen w-full overflow-x-hidden p-0 m-0">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-deep-violet focus:text-white focus:rounded-full text-xs font-bold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2.5 focus:bg-deep-violet focus:text-white focus:rounded-full text-xs font-bold focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-signal-lime transition-transform"
         >
-          Skip to content
+          Skip to main content
         </a>
         <div className="w-full min-h-screen">
           {children}

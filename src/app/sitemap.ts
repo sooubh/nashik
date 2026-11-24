@@ -71,49 +71,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]);
 
-  // Guide routes (en, mr, hi)
-  const guideRoutes: MetadataRoute.Sitemap = GUIDES_DATA.flatMap((guide) => [
-    {
-      url: `${baseUrl}/guides/${guide.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/mr/guides/${guide.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/hi/guides/${guide.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-  ]);
+  // Guide routes (en, mr, hi) with accurate lastModified from content
+  const guideRoutes: MetadataRoute.Sitemap = GUIDES_DATA.flatMap((guide) => {
+    const guideLastMod = guide.lastUpdated || lastModified;
+    return [
+      {
+        url: `${baseUrl}/guides/${guide.slug}`,
+        lastModified: guideLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/mr/guides/${guide.slug}`,
+        lastModified: guideLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/hi/guides/${guide.slug}`,
+        lastModified: guideLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+    ];
+  });
 
-  // Blog / Itinerary routes (en, mr, hi)
-  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS_DATA.flatMap((post) => [
-    {
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/mr/blog/${post.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/hi/blog/${post.slug}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-  ]);
+  // Blog / Itinerary routes (en, mr, hi) with accurate lastModified from content
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS_DATA.flatMap((post) => {
+    const postLastMod = post.publishedDate || lastModified;
+    return [
+      {
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: postLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/mr/blog/${post.slug}`,
+        lastModified: postLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}/hi/blog/${post.slug}`,
+        lastModified: postLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+    ];
+  });
 
   return [...staticRoutes, ...destinationRoutes, ...placeRoutes, ...guideRoutes, ...blogRoutes];
 }

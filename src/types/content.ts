@@ -21,6 +21,13 @@ export interface Coordinates {
   longitude: number;
 }
 
+export interface VerifiedSource {
+  title: string;
+  url: string;
+  type: 'official' | 'government' | 'academic' | 'news';
+  verifiedDate: string;
+}
+
 export interface PlaceTimings {
   open: string;
   close: string;
@@ -90,6 +97,8 @@ export interface Place {
   tags: string[];
   googleMapsUrl: string;
   featured?: boolean;
+  sources?: VerifiedSource[];
+  lastVerified?: string;
   // Localized override content for mr and hi
   localized?: {
     mr?: Partial<Omit<Place, 'slug' | 'coordinates' | 'category' | 'localized'>>;
@@ -123,6 +132,8 @@ export interface Guide {
   appCtaHooks: AppCtaHook;
   author: string;
   featured?: boolean;
+  sources?: VerifiedSource[];
+  lastVerified?: string;
   localized?: {
     mr?: Partial<Omit<Guide, 'slug' | 'category' | 'localized'>>;
     hi?: Partial<Omit<Guide, 'slug' | 'category' | 'localized'>>;
@@ -157,6 +168,8 @@ export interface BlogPost {
   faqs: FAQItem[];
   appCtaHooks: AppCtaHook;
   tags: string[];
+  sources?: VerifiedSource[];
+  lastVerified?: string;
   localized?: {
     mr?: Partial<Omit<BlogPost, 'slug' | 'category' | 'localized'>>;
     hi?: Partial<Omit<BlogPost, 'slug' | 'category' | 'localized'>>;

@@ -4,7 +4,7 @@ import { Compass, Home } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col items-center justify-center text-center max-w-3xl mx-auto min-h-[60vh]">
+    <main id="main-content" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col items-center justify-center text-center max-w-3xl mx-auto min-h-[60vh]">
       <div className="p-6 px-10 bg-slate-100 dark:bg-slate-900 rounded-3xl text-blue-600 dark:text-blue-400 font-extrabold text-6xl sm:text-7xl mb-8 inline-block">
         404
       </div>
@@ -31,6 +31,6 @@ export default function NotFound() {
           <span>Explore Itineraries & Blog</span>
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

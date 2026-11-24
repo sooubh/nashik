@@ -87,6 +87,32 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain; charset=utf-8',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml; charset=utf-8',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
     ];
   },
   async redirects() {
@@ -103,6 +129,8 @@ const nextConfig = {
       { source: '/trip-planner', destination: '/', permanent: true },
       { source: '/404.html', destination: '/', permanent: true },
       { source: '/places/kalaram-temple', destination: '/places/panchavati-kalaram', permanent: true },
+      { source: '/places/saptashrungi-gad', destination: '/places/saptashrungi-devi', permanent: true },
+      { source: '/places/anjaveri-hills', destination: '/places/anjaneri-hills', permanent: true },
     ];
   },
 };

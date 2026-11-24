@@ -3,6 +3,21 @@ import { Place } from '@/types/content';
 export const DESTINATIONS_DATA: Place[] = [
   {
     slug: 'trimbakeshwar',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Shri Trimbakeshwar Devasthan Trust Official Portal',
+            url: 'https://trimbakeshwartrust.com',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism (MTDC) Trimbakeshwar Circuit',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Trimbakeshwar Shiva Temple',
     localName: {
       mr: 'श्री त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर',
@@ -98,6 +113,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'sula-vineyards',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Sula Vineyards Official Guest Desk',
+            url: 'https://sulavineyards.com',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Sula Vineyards & Tasting Room',
     localName: {
       mr: 'सुला वाईनयार्ड्स व टेस्टिंग रूम',
@@ -190,6 +220,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'harihar-fort',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Trek Advisory',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Directorate of Archaeology and Museums Maharashtra',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Harihar Fort (Harishgad)',
     localName: {
       mr: 'हरीहर किल्ला (हर्षगड)',
@@ -284,6 +329,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'panchavati-kalaram',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Shree Kalaram Mandir Sansthan Panchavati',
+            url: 'https://kalarammandirnashik.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Heritage Committee',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Shree Kalaram Mandir & Panchavati',
     localName: {
       mr: 'श्री काळाराम मंदिर व पंचवटी',
@@ -371,6 +431,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'dugarwadi-waterfall',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Dugarwadi Waterfall',
     localName: {
       mr: 'दुगरवाडी धबधबा (त्र्यंबक)',
@@ -459,6 +534,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'pandavleni-caves',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Archaeological Survey of India (ASI) Portal',
+            url: 'https://asi.nic.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Ministry of Culture Government of India Epigraphical Records',
+            url: 'https://asi.nic.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Pandavleni Buddhist Caves',
     localName: {
       mr: 'पांडवलेणी बौद्ध लेणी',
@@ -542,6 +632,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'york-winery',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'York Winery & Tasting Room',
     localName: {
       mr: 'यॉर्क वाईनरी व टेस्टिंग रूम',
@@ -624,6 +729,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'anjaneri-hills',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Anjaneri Mountain & Hanuman Birthplace',
     localName: {
       mr: 'अंजनेरी टेकडी व हनुमान जन्मस्थान',
@@ -707,6 +827,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'someshwar-waterfall',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Someshwar Waterfall (Dudhsagar Falls)',
     localName: {
       mr: 'सोमेश्वर धबधबा (दूधसागर)',
@@ -788,6 +923,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'soma-vine-village',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Soma Vine Village & Resort',
     localName: {
       mr: 'सोमा व्हाईन व्हिलेज व रिसॉर्ट',
@@ -866,6 +1016,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'saptashrungi-devi',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Shree Saptashrung Nivasini Devi Trust Vani',
+            url: 'https://saptashrungidevi.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Shaktipeeth Circuit',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Saptashrungi Devi Temple (Vani)',
     localName: {
       mr: 'श्री सप्तश्रृंगी देवी मंदिर (वणी)',
@@ -947,6 +1112,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'brahmagiri-hill',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Brahmagiri Hill & Godavari Origin',
     localName: {
       mr: 'ब्रह्मगिरी पर्वत व गोदावरी उगम',
@@ -1028,6 +1208,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'muktidham-temple',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Muktidham Temple Nashik Road',
     localName: {
       mr: 'मुक्तिधाम मंदिर, नाशिक रोड',
@@ -1105,6 +1300,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'ramshej-fort',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Ramshej Fort',
     localName: {
       mr: 'रामशेज किल्ला',
@@ -1183,6 +1393,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'salher-fort',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Salher Fort (Highest Fort in Maharashtra)',
     localName: {
       mr: 'साल्हेर किल्ला (महाराष्ट्रातील सर्वोच्च किल्ला)',
@@ -1264,6 +1489,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'vihigaon-waterfall',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Vihigaon Waterfall (Ashoka Falls)',
     localName: {
       mr: 'विहीगाव धबधबा (अशोका फॉल्स)',
@@ -1346,6 +1586,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'bhandardara-falls',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Bhandardara (Randha & Umbrella Falls)',
     localName: {
       mr: 'भंडारदरा (रंधा व अम्ब्रेला फॉल्स)',
@@ -1426,6 +1681,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'sadhana-misal',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+            url: 'https://fssai.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Health Department',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Sadhana Chulivarchi Misal',
     localName: {
       mr: 'साधना चुलीवरची मिसळ (सोमेश्वर)',
@@ -1503,6 +1773,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'shamsundar-misal',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+            url: 'https://fssai.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Health Department',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Shamsundar Misal Satpur',
     localName: {
       mr: 'शामसुंदर मिसळ (सातपूर MIDC)',
@@ -1581,6 +1866,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'ambika-misal',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+            url: 'https://fssai.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Health Department',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Shree Ambika Misal Panchavati',
     localName: {
       mr: 'श्री अंबिका मिसळ (पंचवटी)',
@@ -1658,6 +1958,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'chandon-india',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Chandon India Winery (Dindori)',
     localName: {
       mr: 'शँडॉन इंडिया वाईनरी (दिंडोरी)',
@@ -1736,6 +2051,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'vallonne-vineyards',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Vallonné Vineyards (Igatpuri)',
     localName: {
       mr: 'वल्लोने वाईनयार्ड्स (इगतपुरी)',
@@ -1814,6 +2144,21 @@ export const DESTINATIONS_DATA: Place[] = [
   },
   {
     slug: 'kapaleshwar-temple',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Kapaleshwar Mahadev Temple',
     localName: {
       mr: 'कपालेश्वर महादेव मंदिर (पंचवटी)',

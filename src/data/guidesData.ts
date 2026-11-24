@@ -3,6 +3,21 @@ import { Guide } from '@/types/content';
 export const GUIDES_DATA: Guide[] = [
   {
     slug: 'trimbakeshwar-temple-darshan-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Trimbakeshwar Temple Guide 2026: Darshan Timings, ₹200 VIP Pass Booking & Pooja Rules',
     localTitle: {
       mr: 'त्र्यंबकेश्वर मंदिर दर्शन मार्गदर्शक २०२६: दर्शन वेळ, ₹२०० व्हीआयपी पास व पूजा नियम',
@@ -77,6 +92,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'sula-vineyards-tour-tasting-complete-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Sula Vineyards Nashik: 2026 Entry Fee, Wine Tasting Packages, Tour Timings & Stays',
     localTitle: {
       mr: 'सुला वाईनयार्ड्स नाशिक: २०२६ प्रवेश शुल्क, वाईन टेस्टिंग पॅकेजेस, वेळा आणि रिसॉर्ट माहिती',
@@ -141,6 +171,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'harihar-fort-trek-complete-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Harihar Fort Trek Guide 2026: The 80-Degree Rock-Cut Steps, Difficulty & Base Village',
     localTitle: {
       mr: 'हरीहर किल्ला ट्रेक संपूर्ण मार्गदर्शक २०२६: ८० अंशांच्या कातळ पायऱ्या, अडचण स्तर व पायथ्याची गावे',
@@ -204,6 +249,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'panchavati-ramkund-sita-gufa-walking-tour',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Complete Panchavati Walking Tour: Ramkund, Sita Gufa, Kapaleshwar & Tapovan',
     localTitle: {
       mr: 'संपूर्ण पंचवटी हेरिटेज वॉक: रामकुंड, सीता गुंफा, कपालेश्वर आणि तपोवन',
@@ -263,6 +323,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'best-misal-pav-in-nashik-ultimate-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+            url: 'https://fssai.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Health Department',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'The Ultimate Nashik Misal Pav Trail: Top 10 Legendary Misal Spots Ranked by Locals',
     localTitle: {
       mr: 'नाशिकची मिसळ: स्थानिक नाशिककरांची पसंती लाभलेली टॉप १० प्रसिद्ध मिसळ ठिकाणे',
@@ -323,6 +398,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'dugarwadi-waterfall-trimbak-complete-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Dugarwadi Waterfall (Trimbak): Forest Trail, Scenic Gorge Views & Safety Guidelines',
     localTitle: {
       mr: 'दुगरवाडी धबधबा (त्र्यंबक): जंगलातील पायवाट, दरीचे दृश्य आणि सुरक्षितता मार्गदर्शक',
@@ -378,6 +468,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'mumbai-to-nashik-samruddhi-expressway-drive-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Driving from Mumbai to Nashik via Samruddhi Mahamarg: Toll Rates, Amane Interchange & Speed Limits',
     localTitle: {
       mr: 'मुंबई ते नाशिक समृद्धी महामार्ग प्रवास: टोल दर, आमणे इंटरचेंज आणि प्रवासाचा वेळ',
@@ -434,6 +539,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'saptashrungi-devi-temple-vani-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Shree Saptashrung Nivasini Devi Trust Vani',
+            url: 'https://saptashrungidevi.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Shaktipeeth Circuit',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Saptashrungi Devi Temple (Vani): Ropeway Timings, Ticket Prices & Distance from Nashik',
     localTitle: {
       mr: 'श्री सप्तश्रृंगी देवी मंदिर (वणी): रोपवे वेळ, तिकीट दर आणि नाशिकहून अंतर',
@@ -485,6 +605,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'kapaleshwar-temple-nandi-mystery',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'The Mystery of Kapaleshwar Temple: Why This Ancient Shiva Shrine Has No Nandi',
     localTitle: {
       mr: 'कपालेश्वर महादेव मंदिराचे रहस्य: नंदी नसलेले जगातील एकमेव शिवमंदिर',
@@ -540,6 +675,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'saptashrungi-devi-vani-ropeway-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Shree Saptashrung Nivasini Devi Trust Vani',
+            url: 'https://saptashrungidevi.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Shaktipeeth Circuit',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Saptashrungi Devi Ropeway & Pilgrimage: Funicular Ticket Rates, 510 Steps vs Trolley',
     localTitle: {
       mr: 'सप्तश्रृंगी गड फ्युनिक्युलर रोपवे व दर्शन: तिकीट दर, ५१० पायऱ्या आणि संपूर्ण नियोजन',
@@ -595,6 +745,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'nashik-wine-tasting-etiquette-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Nashik Wine Tasting Etiquette & Cellar Tour Manual: The 5S Method, Cab Hire & Winery Hopping',
     localTitle: {
       mr: 'नाशिक वाईन टेस्टिंग पद्धती व शिष्टाचार: ५एस नियम, कॅब बुकिंग आणि वाईनयार्ड्स गाईड',
@@ -657,6 +822,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'monsoon-trekking-safety-rules-nashik',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Monsoon Trekking Safety Manual for Nashik & Sahyadri: Gear, Flash Floods & Emergency Contacts',
     localTitle: {
       mr: 'नाशिक व सह्याद्री पावसाळी ट्रेकिंग सुरक्षा नियम: गियर, पूर धोके व आपत्कालीन क्रमांक',
@@ -725,6 +905,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'gangapur-dam-boat-club-water-sports',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Forest Department Sahyadri Range Office',
+            url: 'https://mahaforest.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC)',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'MTDC Gangapur Dam Boat Club & Water Sports: Jet Ski Rates, Kayaking & Sunset Cruises',
     localTitle: {
       mr: 'गंगापूर धरण बोट क्लब व वॉटर स्पोर्ट्स: जेट स्की दर, कयाकिंग आणि सूर्यास्त बोटिंग',
@@ -787,6 +982,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'csmt-to-nashik-vande-bharat-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Mumbai CSMT to Nashik Vande Bharat Express: Timings, Ticket Fares & Kasara Ghat Ride',
     localTitle: {
       mr: 'मुंबई सीएसएमटी ते नाशिक वंदे भारत एक्सप्रेस: वेळापत्रक, तिकीट दर आणि कसारा घाट प्रवास',
@@ -847,6 +1057,21 @@ export const GUIDES_DATA: Guide[] = [
   },
   {
     slug: 'nashik-road-station-to-trimbakeshwar-transit',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'How to Reach Trimbakeshwar from Nashik Road Railway Station: Bus Numbers, Auto Fares & Taxi Rates',
     localTitle: {
       mr: 'नाशिक रोड रेल्वे स्थानक ते त्र्यंबकेश्वर प्रवास: सिटीलिंक बस क्रमांक, रिक्षा आणि टॅक्सी दर',

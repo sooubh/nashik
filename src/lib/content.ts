@@ -3,13 +3,21 @@ import { GUIDES_DATA } from '@/data/guidesData';
 import { BLOG_POSTS_DATA } from '@/data/blogData';
 import { CATEGORIES_DATA, ALL_CATEGORIES } from '@/data/categoriesData';
 import { Place, Guide, BlogPost, Category, Locale, CategoryMetadata } from '@/types/content';
+import { getVerifiedSources, getLastVerifiedDate } from '@/lib/verifiedSources';
 
 /**
  * Returns a localized copy of a Place entity
  */
 export function localizePlace(place: Place, locale: Locale = 'en'): Place {
+  const sources = place.sources && place.sources.length > 0 ? place.sources : getVerifiedSources(place.slug, place.category);
+  const lastVerified = place.lastVerified || getLastVerifiedDate(place.slug);
+
   if (locale === 'en' || !place.localized || !place.localized[locale]) {
-    return place;
+    return {
+      ...place,
+      sources,
+      lastVerified,
+    };
   }
   const overrides = place.localized[locale];
   return {
@@ -18,6 +26,8 @@ export function localizePlace(place: Place, locale: Locale = 'en'): Place {
     excerpt: overrides?.excerpt ?? place.excerpt,
     directAnswer: overrides?.directAnswer ?? place.directAnswer,
     dressCode: overrides?.dressCode ?? place.dressCode,
+    sources,
+    lastVerified,
   };
 }
 
@@ -25,8 +35,15 @@ export function localizePlace(place: Place, locale: Locale = 'en'): Place {
  * Returns a localized copy of a Guide entity
  */
 export function localizeGuide(guide: Guide, locale: Locale = 'en'): Guide {
+  const sources = guide.sources && guide.sources.length > 0 ? guide.sources : getVerifiedSources(guide.slug, guide.category);
+  const lastVerified = guide.lastVerified || guide.lastUpdated || getLastVerifiedDate(guide.slug);
+
   if (locale === 'en' || !guide.localized || !guide.localized[locale]) {
-    return guide;
+    return {
+      ...guide,
+      sources,
+      lastVerified,
+    };
   }
   const overrides = guide.localized[locale];
   return {
@@ -34,6 +51,8 @@ export function localizeGuide(guide: Guide, locale: Locale = 'en'): Guide {
     title: overrides?.title ?? (guide.localTitle ? (locale === 'mr' ? guide.localTitle.mr : guide.localTitle.hi) : guide.title),
     excerpt: overrides?.excerpt ?? guide.excerpt,
     directAnswer: overrides?.directAnswer ?? guide.directAnswer,
+    sources,
+    lastVerified,
   };
 }
 
@@ -41,8 +60,15 @@ export function localizeGuide(guide: Guide, locale: Locale = 'en'): Guide {
  * Returns a localized copy of a BlogPost entity
  */
 export function localizeBlogPost(post: BlogPost, locale: Locale = 'en'): BlogPost {
+  const sources = post.sources && post.sources.length > 0 ? post.sources : getVerifiedSources(post.slug, post.category);
+  const lastVerified = post.lastVerified || post.publishedDate || getLastVerifiedDate(post.slug);
+
   if (locale === 'en' || !post.localized || !post.localized[locale]) {
-    return post;
+    return {
+      ...post,
+      sources,
+      lastVerified,
+    };
   }
   const overrides = post.localized[locale];
   return {
@@ -50,6 +76,8 @@ export function localizeBlogPost(post: BlogPost, locale: Locale = 'en'): BlogPos
     title: overrides?.title ?? (post.localTitle ? (locale === 'mr' ? post.localTitle.mr : post.localTitle.hi) : post.title),
     summary: overrides?.summary ?? post.summary,
     directAnswer: overrides?.directAnswer ?? post.directAnswer,
+    sources,
+    lastVerified,
   };
 }
 

@@ -42,7 +42,7 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({
   children,
 }) => {
   return (
-    <div className="min-h-screen bg-gray-50 pb-16">
+    <main id="main-content" className="min-h-screen bg-gray-50 pb-16">
       <Breadcrumbs items={breadcrumbs} />
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
@@ -159,6 +159,6 @@ export const ArticleLayout: React.FC<ArticleLayoutProps> = ({
           <TrivioCTA variant="full" slug={slug} />
         </div>
       </article>
-    </div>
+    </main>
   );
 };

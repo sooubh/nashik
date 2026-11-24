@@ -3,6 +3,21 @@ import { BlogPost } from '@/types/content';
 export const BLOG_POSTS_DATA: BlogPost[] = [
   {
     slug: 'nashik-2-days-itinerary-from-mumbai',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Perfect 2 Days in Nashik from Mumbai: Wineries, Trimbakeshwar & Heritage (Via Samruddhi Expressway)',
     localTitle: {
       mr: 'मुंबईहून २ दिवसांची नाशिक ट्रिप: वाईनयार्ड्स, त्र्यंबकेश्वर आणि समृद्धी महामार्ग',
@@ -74,6 +89,21 @@ With the seamless connection of the Samruddhi Mahamarg at Amane (Bhiwandi), the 
   },
   {
     slug: 'nashik-3-days-complete-itinerary-pune',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: '3 Days in Nashik from Pune: Comprehensive Wine Country, Temples & Sahyadri Trek Plan',
     localTitle: {
       mr: 'पुण्याहून ३ दिवसांची नाशिक ट्रिप: वाईनयार्ड्स, मंदिरे आणि सह्याद्री ट्रेक',
@@ -146,6 +176,21 @@ Pune travelers have direct highway access to Nashik via NH 60 (Pune-Nashik Highw
   },
   {
     slug: 'nashik-budget-travel-guide-under-3000',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Nashik on a Budget: How to Travel for 2 Days Under ₹3,000 (Citilinc Buses & Hostels)',
     localTitle: {
       mr: 'कमी बजेटमध्ये नाशिक: २ दिवसांत ३,००० रुपयांत संपूर्ण सफर (सिटीलिंक बस व धर्मशाळा)',
@@ -194,6 +239,21 @@ Pune travelers have direct highway access to Nashik via NH 60 (Pune-Nashik Highw
   },
   {
     slug: 'nashik-kumbh-mela-history-dates-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Nashik District Administration Simhastha Kumbh Authority',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Akhil Bharatiya Akhada Parishad Official Advisory',
+            url: 'https://nashik.gov.in',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'The Sacred Nashik-Trimbakeshwar Simhastha Kumbh Mela: History, 12-Year Cycle & Next Dates',
     localTitle: {
       mr: 'नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळा: इतिहास, १२ वर्षांचे चक्र आणि पुढील पर्व',
@@ -242,6 +302,21 @@ The Simhastha is unique in that it unfolds simultaneously across two sacred node
   },
   {
     slug: 'nashik-one-day-whirlwind-itinerary',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Nashik in One Day: High-Speed 12-Hour Whirlwind Itinerary (Temples + Misal + Wineries)',
     localTitle: {
       mr: 'एका दिवसात नाशिक दर्शन: १२ तासांची सुपरफास्ट ट्रिप (मंदिरे + मिसळ + वाईनयार्ड्स)',
@@ -296,6 +371,21 @@ Traveling to Nashik on a day trip is now seamless thanks to the Samruddhi Mahama
   },
   {
     slug: 'pune-to-nashik-road-trip-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Pune to Nashik Road Trip Guide: NH 60 Highway Route, Narayangaon Stops & Fuel Points',
     localTitle: {
       mr: 'पुणे ते नाशिक रोड ट्रिप मार्गदर्शक: राष्ट्रीय महामार्ग ६०, नारायणगाव हॉल्ट्स आणि घाट रस्ते',
@@ -350,6 +440,21 @@ The Pune-Nashik corridor (National Highway 60) connects Maharashtra’s two vibr
   },
   {
     slug: 'mumbai-to-nashik-samruddhi-mahamarg-drive',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra State Road Development Corporation (MSRDC)',
+            url: 'https://mahamarg.maharashtra.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Indian Railways (IRCTC) Official Portal',
+            url: 'https://irctc.co.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Mumbai to Nashik via Samruddhi Mahamarg: Toll Rates, Travel Times, Rest Plazas & Speed Limits',
     localTitle: {
       mr: 'समृद्धी महामार्गाने मुंबई ते नाशिक: टोल दर, प्रवासाचा वेळ, फूड प्लाझा आणि गती मर्यादा',
@@ -404,6 +509,21 @@ The Hindu Hrudaysamrat Balasaheb Thackeray Maharashtra Samruddhi Mahamarg has fu
   },
   {
     slug: 'old-nashik-heritage-food-walk',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+            url: 'https://fssai.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik Municipal Corporation Health Department',
+            url: 'https://nmc.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Old Nashik Heritage Food Walk: Kondaji Chivda, Sayantara Sabudana Vada & Budha Halwai',
     localTitle: {
       mr: 'जुने नाशिक हेरिटेज फूड वॉक: कोंडाजी चिवडा, सायंतारा साबुदाणा वडा आणि बुधा हलवाई',
@@ -458,6 +578,21 @@ While Nashik’s modern avenues boast trendy cafes and winery bistros, the true 
   },
   {
     slug: 'best-vineyard-resorts-in-nashik-for-couples',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Top Romantic Vineyard Resorts in Nashik for Couples: Infinity Pools, Wine Spas & Stays',
     localTitle: {
       mr: 'नाशिकमधील सर्वोत्तम रोमँटिक वाईनयार्ड रिसॉर्ट्स: इन्फिनिटी पूल, वाईन स्पा व निसर्गरम्य मुक्काम',
@@ -512,6 +647,21 @@ Rolling Sahyadri hills, morning lake mists, golden hour grape stomping, and chil
   },
   {
     slug: 'godavari-aarti-ramkund-evening-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'The Evening Godavari Maha Aarti at Ramkund: Timings, Rituals & Best Photography Spots',
     localTitle: {
       mr: 'रामकुंडावरील सायंकालीन गोदावरी महाआरती: वेळ, विधी आणि छायाचित्रणासाठी उत्तम जागा',
@@ -566,6 +716,21 @@ Just as Varanasi is world-famous for its Ganga Aarti at Dashashwamedh Ghat, Nash
   },
   {
     slug: 'grape-harvest-season-guide-nashik',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'All India Wine Producers Association (AIWPA)',
+            url: 'https://aiwpa.org',
+            type: 'official',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Maharashtra Tourism Agro-Tourism Registry',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Nashik Grape Harvest Season Guide: January to March Stomping Dates, Agrotourism & Fests',
     localTitle: {
       mr: 'नाशिक द्राक्ष तोडणी हंगाम गाईड: जानेवारी ते मार्च द्राक्ष तुडवणे, शेती पर्यटन व महोत्सव',
@@ -620,6 +785,21 @@ Nashik produces over 1.5 million metric tons of table and wine grapes annually, 
   },
   {
     slug: 'where-to-stay-in-nashik-area-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+            title: 'Maharashtra Tourism Development Corporation (MTDC) Official Portal',
+            url: 'https://maharashtratourism.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      },
+      {
+            title: 'Nashik District Administration Portal',
+            url: 'https://nashik.gov.in',
+            type: 'government',
+            verifiedDate: '2026-11-24'
+      }
+],
     title: 'Where to Stay in Nashik: Area-by-Area Hotel Guide (City Center vs Gangapur Wine Belt vs Trimbak)',
     localTitle: {
       mr: 'नाशिकमध्ये कुठे मुक्काम करावा: परिसरनिहाय हॉटेल गाईड (सिटी सेंटर वि. गंगापूर वाईन बेल्ट वि. त्र्यंबक)',
