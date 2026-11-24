@@ -22,6 +22,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Explore sacred Trimbakeshwar Jyotirlinga, Sula wine estates, Harihar fort treks, and waterfalls with verified 2026 timings, costs, maps & offline guides.',
   path: '/',
   ogType: 'website',
+  ogImage: '/images/destinations/trimbakeshwar-temple.webp',
+  ogImageAlt: 'Trimbakeshwar Shiva Jyotirlinga Temple Nashik',
 });
 
 export default function HomePage() {

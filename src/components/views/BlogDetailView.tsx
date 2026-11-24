@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Calendar, User, Tag, ListOrdered, ArrowRight, MapPin, Compass, ShieldCheck, ExternalLink } from 'lucide-react';
+import { normalizeTagSlug } from '@/lib/tags';
 import { BLOG_POSTS_DATA } from '@/data/blogData';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { GUIDES_DATA } from '@/data/guidesData';
@@ -238,13 +239,15 @@ export function BlogDetailView({ slug, locale }: BlogDetailViewProps) {
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {post.tags.map((tag) => (
-            <span
+            <Link
               key={tag}
-              className="inline-flex items-center gap-1 rounded-full bg-brand-50 border border-brand-100 px-3 py-1 text-xs font-semibold text-deep-violet"
+              href={`/tags/${normalizeTagSlug(tag)}`}
+              className="inline-flex items-center gap-1 rounded-full bg-brand-50 border border-brand-100 px-3 py-1 text-xs font-semibold text-deep-violet hover:bg-brand-100 hover:border-brand-200 transition-colors"
+              title={`Explore more ${tag} travel resources in Nashik`}
             >
               <Tag className="h-3 w-3" />
               <span>{tag}</span>
-            </span>
+            </Link>
           ))}
         </div>
 

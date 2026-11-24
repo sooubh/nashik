@@ -17,6 +17,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Detailed Nashik travel guides: Trimbakeshwar VIP darshan passes, Harihar rock steps trek, Sula wine tasting etiquette, and transit directions.',
   path: '/guides',
   ogType: 'website',
+  ogImage: '/images/destinations/pandavleni-caves.webp',
+  ogImageAlt: 'Nashik Travel Guides & Sahyadri Trek Blueprints',
 });
 
 export default function GuidesPage() {

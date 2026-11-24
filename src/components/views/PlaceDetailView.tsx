@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, MapPin, Tag, ShieldCheck, ExternalLink } from 'lucide-react';
+import { normalizeTagSlug } from '@/lib/tags';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { CATEGORIES_DATA } from '@/data/categoriesData';
 import { Place, Locale } from '@/types/content';
@@ -146,13 +147,15 @@ export function PlaceDetailView({ slug, locale }: PlaceDetailViewProps) {
           {/* Tags */}
           <div className="pt-4 border-t border-brand-50 flex flex-wrap gap-2">
             {place.tags.map((tag) => (
-              <span
+              <Link
                 key={tag}
-                className="inline-flex items-center gap-1 rounded-full bg-brand-50 border border-brand-100 px-3 py-1 text-xs font-semibold text-deep-violet"
+                href={`/tags/${normalizeTagSlug(tag)}`}
+                className="inline-flex items-center gap-1 rounded-full bg-brand-50 border border-brand-100 px-3 py-1 text-xs font-semibold text-deep-violet hover:bg-brand-100 hover:border-brand-200 transition-colors"
+                title={`Explore more ${tag} attractions & guides in Nashik`}
               >
                 <Tag className="h-3 w-3" />
                 <span>{tag}</span>
-              </span>
+              </Link>
             ))}
           </div>
         </section>

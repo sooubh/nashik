@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { Clock, Calendar, CheckCircle2, ArrowLeft, ArrowUpRight, ShieldCheck, ExternalLink } from 'lucide-react';
+import { Clock, Calendar, CheckCircle2, ArrowLeft, ArrowUpRight, ShieldCheck, ExternalLink, Tag as TagIcon } from 'lucide-react';
+import { normalizeTagSlug, getTagsForGuide } from '@/lib/tags';
 import { GUIDES_DATA } from '@/data/guidesData';
 import { DESTINATIONS_DATA } from '@/data/destinationsData';
 import { Guide, Locale } from '@/types/content';
@@ -49,6 +50,8 @@ export function GuideDetailView({ slug, locale }: GuideDetailViewProps) {
   const relatedPlaces = DESTINATIONS_DATA.filter((p) =>
     guide.relatedPlaces.includes(p.slug)
   );
+
+  const guideTags = getTagsForGuide(guide.slug);
 
   return (
     <div className="min-h-screen bg-paper flex flex-col justify-between">
@@ -189,6 +192,26 @@ export function GuideDetailView({ slug, locale }: GuideDetailViewProps) {
               ))}
             </div>
           </section>
+        )}
+
+        {/* Travel Themes & Tags */}
+        {guideTags.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 pt-2">
+            <span className="text-xs font-bold text-on-surface flex items-center gap-1 mr-1">
+              <TagIcon className="h-3.5 w-3.5 text-deep-violet" />
+              <span>{isMr ? 'थीम्स:' : isHi ? 'थीम्स:' : 'Travel Themes:'}</span>
+            </span>
+            {guideTags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/tags/${normalizeTagSlug(tag)}`}
+                className="inline-flex items-center gap-1 rounded-full bg-brand-50 border border-brand-100 px-3 py-1 text-xs font-semibold text-deep-violet hover:bg-brand-100 hover:border-brand-200 transition-colors"
+                title={`Explore ${tag} guides and places in Nashik`}
+              >
+                <span>{tag}</span>
+              </Link>
+            ))}
+          </div>
         )}
 
         {/* FAQs */}

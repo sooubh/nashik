@@ -8,6 +8,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Read Trivio privacy disclosures, data collection policies, Hive storage details, and location data safety in compliance with Google Play standards.',
   path: '/privacy-policy',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Trivio Privacy Policy & User Data Protection',
 });
 
 export default function PrivacyPolicyPage() {

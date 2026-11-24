@@ -18,6 +18,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Explore Nashik tourism by region or category: Trimbakeshwar, Igatpuri highlands, Dindori wine valley, sacred temples, and Sahyadri waterfalls.',
   path: '/destinations',
   ogType: 'website',
+  ogImage: '/images/destinations/harihar-fort.webp',
+  ogImageAlt: 'Nashik Destinations & Regional Hubs Guide',
 });
 
 export default function DestinationsHubPage() {

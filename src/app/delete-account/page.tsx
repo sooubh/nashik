@@ -9,6 +9,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Step-by-step instructions to delete your Trivio account, saved bookmarks, and custom itinerary data in full compliance with Google Play requirements.',
   path: '/delete-account',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Account & Travel Data Deletion Request',
 });
 
 export default function DeleteAccountPage() {

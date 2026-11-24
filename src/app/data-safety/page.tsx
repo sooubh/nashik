@@ -9,6 +9,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Verified Google Play Data Safety sheet for Trivio. Detailed explanations of minimal permissions, zero third-party advertising, and encrypted telemetry.',
   path: '/data-safety',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Google Play Data Safety Disclosures & FAQ',
 });
 
 export default function DataSafetyPage() {

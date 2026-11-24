@@ -132,6 +132,7 @@ export interface Guide {
   appCtaHooks: AppCtaHook;
   author: string;
   featured?: boolean;
+  tags?: string[];
   sources?: VerifiedSource[];
   lastVerified?: string;
   localized?: {

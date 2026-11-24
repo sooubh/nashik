@@ -1,0 +1,5 @@
+# Google AdSense ads.txt for Trivio / nashik.sooubh.in
+# Official Travel Platform for Nashik & North Maharashtra
+# Replace pub-0000000000000000 with your verified AdSense publisher ID upon account approval
+# Contact: trivio-support@sooubh.in
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

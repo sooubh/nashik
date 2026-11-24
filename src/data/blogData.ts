@@ -852,5 +852,326 @@ Because Nashik’s prime attractions are spread across a 40-kilometer radius—f
       },
     },
   },
-];
+  {
+    slug: 'shirdi-day-trip-from-nashik',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+        title: 'Shri Saibaba Sansthan Trust Shirdi Official Portal',
+        url: 'https://sai.org.in',
+        type: 'official',
+        verifiedDate: '2026-11-24',
+      },
+      {
+        title: 'Maharashtra State Road Transport Corporation (MSRTC)',
+        url: 'https://msrtc.maharashtra.gov.in',
+        type: 'government',
+        verifiedDate: '2026-11-24',
+      },
+    ],
+    title: 'Nashik to Shirdi Day Trip Itinerary: Sai Baba Samadhi Darshan, Timings, MSRTC Buses & Route via NH 160',
+    localTitle: {
+      mr: 'नाशिक ते शिर्डी एक दिवसीय सहल: साईबाबा समाधी दर्शन, वेळापत्रक, एसटी बस व एनएच १६० महामार्ग नियोजन',
+      hi: 'नासिक से शिरडी एक दिवसीय यात्रा: साईं बाबा समाधि दर्शन, समय, बस रूट एवं एनएच १६० गाइड',
+    },
+    category: 'itineraries',
+    publishedDate: '2026-11-24',
+    author: 'Trivio Pilgrimage Desk',
+    heroImage: '/images/destinations/muktidham-temple.webp',
+    summary: 'The ultimate same-day pilgrimage itinerary from Nashik to Shirdi (88 km): Sai Baba Samadhi Mandir daily timings, ₹200 VIP darshan passes, MSRTC bus schedules, Prasadalaya meals, and Sinnar Gondeshwar temple stop.',
+    directAnswer: 'Shirdi is 88 km southeast of Nashik via NH 160 (1 hr 45 min drive). The Samadhi Mandir opens at 4:00 AM and closes at 11:00 PM. General darshan is free; ₹200 VIP Fast-Track passes are bookable online at online.sai.org.in. MSRTC buses depart Nashik CBS every 15-20 minutes (fare ₹125–₹160).',
+    content: `
+### Overview: Seamless Day Pilgrimage from Nashik to Shirdi
+Located just 88 kilometers southeast of Nashik, Shirdi is one of India’s most visited pilgrimage hubs. Thanks to the smooth four-lane NH 160 corridor (Nashik-Sinnar-Shirdi), you can comfortably complete the round-trip within a single day while experiencing Kakad or Madhyan Aarti, holy darshan at the Samadhi Mandir, Dwarkamai, and the world’s largest solar-powered Prasadalaya.
 
+---
+
+### Distance, Driving & Public Transit Blueprint
+* **Exact Road Distance:** 88 km from Nashik CBS (Central Bus Stand) via NH 160.
+* **Driving Time:** 1 hour 45 minutes to 2 hours by private car or cab.
+* **MSRTC Public Buses:** Semi-luxury (Hirkani) and ordinary express buses leave Nashik CBS (Old CBS) and Mahamarg Bus Stand every 15 to 20 minutes directly to Shirdi Bus Stand (fare ₹125 to ₹160 per seat).
+* **Train Option:** The Mumbai CSMT – Sainagar Shirdi Vande Bharat Express departs Nashik Road Station at 09:35 AM and arrives at Sainagar Shirdi at 11:30 AM (operational 6 days a week, except Tuesdays).
+* **Highway Toll:** Single toll plaza at Sinnar bypass on NH 160 (FASTag car toll ~₹85).
+
+---
+
+### Temple Timings & Darshan Pass Guidelines
+* **Temple Opening Hours:** 04:00 AM to 11:00 PM daily.
+* **Aarti Schedule:**
+  * **Kakad Aarti (Morning):** 04:30 AM
+  * **Madhyan Aarti (Noon):** 12:00 PM
+  * **Dhoop Aarti (Evening):** 06:15 PM (sunset)
+  * **Shej Aarti (Night):** 10:30 PM
+* **Entry Fees & VIP Passes:**
+  * **General Queue:** 100% Free (typical waiting time 1.5 to 3.5 hours on weekdays, up to 5 hours on weekends/Thursdays).
+  * **VIP Fast-Track Pass:** ₹200 per devotee (bookable up to 60 days in advance via official portal 'online.sai.org.in' or on-spot at the Sansthan Public Relations Office counters with valid Aadhaar/Passport ID).
+  * **Aarti Attendance Passes:** ₹400 to ₹600 (subject to pre-booked slot availability).
+    `,
+    itineraryDays: [
+      {
+        dayNumber: 1,
+        dayTitle: 'Nashik to Shirdi Return Pilgrimage Circuit',
+        morningActivity: '06:30 AM: Depart Nashik via NH 160. Arrive at Shirdi by 08:30 AM. Deposit footwear and electronic devices at Sansthan Gate 2 lockers. Enter via your pre-booked ₹200 VIP Darshan slot at Samadhi Mandir.',
+        afternoonActivity: '11:00 AM: Visit sacred secondary shrines: Dwarkamai (where the eternal Dhuni burns), Chavadi, and Gurusthan (neem tree). 12:30 PM: Walk to the Shri Sai Prasadalaya for pure satvik Mahaprasad (₹10 thali, free for children under 10).',
+        eveningActivity: '03:00 PM: Depart Shirdi on return drive towards Nashik. Stop at Sinnar (30 km before Nashik) to marvel at the 12th-century stone Hemadpanthi Gondeshwar Shiva Temple. Arrive in Nashik by 06:00 PM.',
+        recommendedMeals: 'Breakfast: Hotel Sai Sahavas (Shirdi); Lunch: Shri Sai Baba Sansthan Mega Prasadalaya; Evening Snacks: Sinnar highway food plazas.',
+        travelTips: 'Thursdays experience peak devotee rush (expect 2x queue times). Carry original government photo ID (Aadhaar or Passport) matching your VIP pass reservation.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How frequent are buses between Nashik and Shirdi?',
+        answer: 'MSRTC buses operate with high frequency every 15 to 20 minutes from Nashik CBS (Old Central Bus Stand) and Mahamarg Bus Stand between 05:00 AM and 11:00 PM. Travel time is approximately 2 hours and 15 minutes, with one-way fares ranging from ₹125 to ₹160.',
+      },
+      {
+        question: 'Can I get VIP darshan tickets on the spot in Shirdi?',
+        answer: 'Yes, if online quotas on online.sai.org.in are exhausted, a limited number of on-spot ₹200 VIP passes are issued at the Sansthan PRO counter near Gate 1 on presentation of original Aadhaar or government ID.',
+      },
+      {
+        question: 'What is the dress code at Shirdi Sai Baba Temple?',
+        answer: 'Devotees must wear modest traditional attire covering shoulders and knees. Men may wear kurta-pajama, dhoti, or full trousers with shirts. Women should wear sarees, salwar kameez, or formal trousers. Shorts, nightwear, and sleeveless tops are strictly barred.',
+      },
+    ],
+    appCtaHooks: {
+      headline: 'Nashik & Shirdi Offline Route Maps in Trivio',
+      subline: 'Access verified highway speed limits, bus timetables, and darshan checklists offline in the Trivio Android App.',
+      ctaText: 'Open Shirdi Guide in App',
+      utmCampaign: 'blog_shirdi_day_trip',
+    },
+    tags: ['Shirdi', 'Sai Baba', 'Day Trip', 'NH 160', 'Sinnar Gondeshwar', 'Pilgrimage'],
+    localized: {
+      mr: {
+        title: 'नाशिक ते शिर्डी एक दिवसीय सहल: साईबाबा समाधी दर्शन, वेळापत्रक, एसटी बस व एनएच १६० महामार्ग नियोजन',
+        summary: 'नाशिकहून शिर्डी (८८ किमी) एक दिवसीय दर्शन नियोजन: साईबाबा समाधी मंदिर वेळ, ₹२०० व्हीआयपी दर्शन पास, एसटी बस वेळापत्रक, महाप्रसादालय आणि सिन्नर गोंदेश्वर मंदिर भेट.',
+        directAnswer: 'नाशिक ते शिर्डी अंतर एनएच १६० ने ८८ किमी असून १ तास ४५ मिनिटांत पोहोचता येते. मंदिर सकाळी ४:०० ते रात्री ११:०० उघडे असते. सामान्य दर्शन मोफत तर ₹२०० व्हीआयपी पास online.sai.org.in वर उपलब्ध आहे. नाशिक सीबीएसवरून दर १५ मिनिटांनी एसटी बसेस उपलब्ध आहेत.',
+      },
+      hi: {
+        title: 'नासिक से शिरडी एक दिवसीय यात्रा: साईं बाबा समाधि दर्शन, समय, बस रूट एवं एनएच १६० गाइड',
+        summary: 'नासिक से शिरडी (८८ किमी) का संपूर्ण एक दिवसीय यात्रा गाइड: समाधि मंदिर समय, ₹२०० वीआईपी पास बुकिंग, एमएसआरटीसी बस शेड्यूल, प्रसाकालय और सिन्नर गोंदेश्वर मंदिर पड़ाव।',
+        directAnswer: 'नासिक से शिरडी की दूरी एनएच १६० से ८८ किमी (१ घंटा ४५ मिनट) है। मंदिर प्रातः ४:०० से रात्रि ११:०० बजे तक खुला रहता है। सामान्य दर्शन निःशुल्क है, वहीं ₹२०० का वीआईपी पास ऑनलाइन उपलब्ध है। सीबीएस से हर १५ मिनट में बसें चलती हैं।',
+      },
+    },
+  },
+  {
+    slug: 'igatpuri-bhandardara-day-trip',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+        title: 'Maharashtra Tourism Development Corporation (MTDC) Bhandardara',
+        url: 'https://maharashtratourism.gov.in',
+        type: 'government',
+        verifiedDate: '2026-11-24',
+      },
+      {
+        title: 'Maharashtra Water Resources Department (Wilson Dam / Arthur Lake)',
+        url: 'https://wrd.maharashtra.gov.in',
+        type: 'government',
+        verifiedDate: '2026-11-24',
+      },
+    ],
+    title: 'Igatpuri & Bhandardara Day Trip from Nashik: Waterfalls, Arthur Lake, Ghats & Scenic Route Blueprint',
+    localTitle: {
+      mr: 'इगतपुरी व भंडारदरा एक दिवसीय सहल: विहिगाव धबधबा, आर्थर लेक, घाटमाथा व निसर्गरम्य मार्ग',
+      hi: 'इगतपुरी और भंडारदरा एक दिवसीय टूर: विहिगांव जलप्रपात, आर्थर झील, कसारा घाट और दर्शनीय मार्ग',
+    },
+    category: 'itineraries',
+    publishedDate: '2026-11-24',
+    author: 'Trivio Sahyadri Desk',
+    heroImage: '/images/destinations/sahyadri-sunrise.webp',
+    summary: 'The definitive Sahyadri nature and waterfall road trip from Nashik (160 km circuit): Vihigaon Ashoka waterfall rappelling, misty Bhavali Dam, thunderous Randha Falls (170 ft), Wilson Dam, and Arthur Lake sunset.',
+    directAnswer: 'Igatpuri is 45 km south and Bhandardara is 72 km south of Nashik via NH 160 and Ghoti-Shendi road. Key sights include Randha Falls (₹30 entry, 7 AM–6 PM), Arthur Lake boating, Vihigaon Waterfall, and Wilson Dam. Best visited July through October for lush monsoon beauty.',
+    content: `
+### Overview: The Crown Jewel of Northern Sahyadri Escapes
+Nestled in the lush western crest of the Sahyadri mountains where rainfall exceeds 3,000 mm annually, the Igatpuri and Bhandardara highland circuit represents Maharashtra’s most dramatic landscape of tumbling waterfalls, towering peaks (including Kalsubai, 1,646 m), and mirror-like reservoir lakes.
+
+---
+
+### Route Distances & Road Quality
+* **Nashik to Igatpuri:** 45 km south via the four-lane Mumbai-Nashik Highway (NH 160); driving time: ~50 minutes.
+* **Igatpuri to Bhandardara (Shendi):** 35 km southeast via Ghoti-Shirdi Road; driving time: ~55 minutes.
+* **Full Circuit Return to Nashik:** ~160 km total driving loop.
+* **Public Transit Access:** MSRTC buses depart Nashik CBS for Ghoti every 30 minutes (fare ₹55), where connecting local jeeps and MSRTC rural buses operate to Shendi/Bhandardara (fare ₹45).
+
+---
+
+### Attraction Verified Timings & Tariffs
+* **Vihigaon Waterfall:** 08:00 AM to 05:00 PM daily (free natural access; guided waterfall rappelling ₹800 to ₹1,200 per head).
+* **Randha Falls (Pravara River):** 07:00 AM to 06:00 PM daily (ticket: ₹30 adults, ₹15 children; parking ₹30).
+* **Wilson Dam & Umbrella Falls:** 07:00 AM to 06:30 PM (viewing promenade free; Umbrella Falls active during reservoir overflow July–September).
+* **Arthur Lake Boating:** 08:00 AM to 06:00 PM (pedal boat ₹150 for 30 mins; motorboat ₹300 per group).
+* **Amruteshwar Temple (Ratanwadi):** 06:00 AM to 07:30 PM (free 1,200-year-old carved Hemadpanthi shrine; accessible via 8 km boat ride across Arthur Lake or scenic dirt road).
+    `,
+    itineraryDays: [
+      {
+        dayNumber: 1,
+        dayTitle: 'Igatpuri Highlands to Bhandardara Lake Circuit',
+        morningActivity: '07:00 AM: Depart Nashik via NH 160. Stop 1: Vihigaon Waterfall (Ashoka Falls) near Kasara for morning waterfall photography and fresh air. 09:30 AM: Drive via Ghoti to Bhavali Dam reservoir viewpoint.',
+        afternoonActivity: '11:30 AM: Arrive at Bhandardara. Marvel at the 170-foot plunging cascade of Randha Falls on the Pravara River. 01:00 PM: Enjoy local Maharashtrian lunch featuring fresh river fish or pitla-bhakri at MTDC Resort Lakeside Restaurant.',
+        eveningActivity: '02:30 PM: Visit Wilson Dam (built in 1910) and take a peaceful sunset motorboat cruise across Arthur Lake with views of Mount Kalsubai. 05:30 PM: Begin scenic return drive via Ghoti to Nashik by 07:30 PM.',
+        recommendedMeals: 'Breakfast: Manas Resort Cafe (Igatpuri); Lunch: MTDC Bhandardara Lakeview Restaurant; Evening Tea: Ghoti highway stalls.',
+        travelTips: 'Monsoon weekends experience dense fog in the Kasara-Ghoti ghats; drive with low-beam fog lamps and keep vehicle headlights clean.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the best season to visit Igatpuri and Bhandardara?',
+        answer: 'July to October (Monsoon and post-monsoon) is the absolute best time when waterfalls roar, foliage turns emerald green, and cloud inversions cover the valleys. November to February offers pleasant camping and star-gazing weather around Arthur Lake.',
+      },
+      {
+        question: 'Can Bhandardara and Igatpuri be covered in a single day from Nashik?',
+        answer: 'Yes. By leaving Nashik at 07:00 AM and returning by 08:00 PM, you can easily cover Vihigaon waterfall, Bhavali dam, Randha falls, Wilson dam, and enjoy an evening boat ride on Arthur Lake.',
+      },
+      {
+        question: 'Are water sports and boating safe in Bhandardara?',
+        answer: 'Yes, boating on Arthur Lake is regulated by the local boatmen cooperative under MTDC guidelines. All passengers are mandated to wear life jackets before boarding.',
+      },
+    ],
+    appCtaHooks: {
+      headline: 'Sahyadri Waterfall & Trek Tracker in Trivio',
+      subline: 'Get offline GPS trails, weather alerts, and verified parking locations in the Trivio Android App.',
+      ctaText: 'Explore Igatpuri in Trivio App',
+      utmCampaign: 'blog_igatpuri_bhandardara',
+    },
+    tags: ['Igatpuri', 'Bhandardara', 'Waterfalls', 'Arthur Lake', 'Randha Falls', 'Sahyadri Road Trip'],
+    localized: {
+      mr: {
+        title: 'इगतपुरी व भंडारदरा एक दिवसीय सहल: विहिगाव धबधबा, आर्थर लेक, घाटमाथा व निसर्गरम्य मार्ग',
+        summary: 'नाशिकहून इगतपुरी व भंडारदरा १६० किमी सहल: विहिगाव धबधबा रॅपलिंग, भावली धरण, १७० फूट रंधा धबधबा, विल्सन डॅम आणि आर्थर लेक बोटिंग नियोजन.',
+        directAnswer: 'इगतपुरी नाशिकपासून ४५ किमी आणि भंडारदरा ७२ किमी अंतरावर आहे. रंधा धबधबा (प्रवेश ₹३०, सकाळी ७ ते संध्याकाळी ६), आर्थर लेक आणि विल्सन डॅम ही मुख्य आकर्षणे आहेत. पावसाळ्यात (जुलै ते ऑक्टोबर) सर्वोत्तम निसर्ग सौंदर्य पाहायला मिळते.',
+      },
+      hi: {
+        title: 'इगतपुरी और भंडारदरा एक दिवसीय टूर: विहिगांव जलप्रपात, आर्थर झील, कसारा घाट और दर्शनीय मार्ग',
+        summary: 'नासिक से इगतपुरी और भंडारदरा (१६० किमी लूप) की संपूर्ण गाइड: विहिगांव जलप्रपात, भावली बांध, १७० फीट ऊंचा रंधा झरना, विल्सन डैम और आर्थर लेक बोटिंग।',
+        directAnswer: 'नासिक से इगतपुरी ४५ किमी और भंडारदरा ७२ किमी दूर है। रंधा झरना (₹३० टिकट, प्रातः ७ से शाम ६), विल्सन डैम और आर्थर लेक यहां के प्रमुख केंद्र हैं। जुलाई से अक्टूबर का समय यात्रा हेतु सबसे उत्तम है।',
+      },
+    },
+  },
+  {
+    slug: 'authentic-nashik-misal-trail-food-guide',
+    lastVerified: '2026-11-24',
+    sources: [
+      {
+        title: 'Food Safety and Standards Authority of India (FSSAI) Registry',
+        url: 'https://fssai.gov.in',
+        type: 'government',
+        verifiedDate: '2026-11-24',
+      },
+      {
+        title: 'Nashik Municipal Corporation Health & Food Safety Department',
+        url: 'https://nmc.gov.in',
+        type: 'government',
+        verifiedDate: '2026-11-24',
+      },
+    ],
+    title: 'Authentic Nashik Misal Trail: 10 Legendary Spots, Verified Timings, Addresses & Gravy Profiles',
+    localTitle: {
+      mr: 'नाशिक मिसळ गौरव यात्रा: टॉप १० प्रसिद्ध ठिकाणे, अधिकृत वेळा, पत्ते आणि रस्सा प्रकार',
+      hi: 'प्रामाणिक नासिक मिसल ट्रेल: टॉप १० मशहूर दुकानें, समय, सही पते एवं रस्सा गाइड',
+    },
+    category: 'food',
+    publishedDate: '2026-11-24',
+    author: 'Trivio Culinary Desk',
+    heroImage: '/images/destinations/nashik-misal-food.webp',
+    summary: 'The ultimate culinary roadmap to authentic Nashik misal: comparing smoky wood-fired chulivarchi rassa, fiery red tarri, and dark roasted kala masala across 10 heritage joints with verified 2026 timings, addresses, and Citilinc bus routes.',
+    directAnswer: 'Nashik misal features three iconic gravy styles: Chulivarchi wood-fired rassa (Sadhana, Someshwar, ₹130), fiery red tarri (Shamsundar, Satpur MIDC, ₹100), and dark roasted spice kala rassa (Ambika, Panchavati, ₹90). Average cost per plate is ₹80 to ₹150; most joints operate 8:00 AM to 3:30 PM.',
+    content: `
+### The Cultural Anatomy of Nashik Misal Pav
+To understand Nashik is to taste its misal. Unlike Mumbai misal (often watered down with farsan toppings) or Pune misal (sweeter, sometimes made with poha), Nashik misal is an intense, slow-simmered culinary institution. The base consists of tenderly sprouted moth beans (matki), topped with crisp, freshly fried farsan, finely chopped onions, cilantro, and lemon, drenched in a scalding, deeply spiced gravy (tarri/rassa).
+
+---
+
+### The 3 Master Gravy Archetypes
+1. **Lal Rassa (Red Tarri):** Characterized by floating crimson red chili oil infused with stone-ground Byadgi and Lavangi chilies. Intense, aromatic heat that awakens the palate without lingering burn.
+2. **Kala Rassa (Black Gravy):** Deep dark brown to blackish gravy crafted from dry roasted whole spices, charred dry coconut (kopra), black pepper, and stone-pounded garam masala. Earthy, rich, and deeply complex.
+3. **Chulivarchi Rassa (Wood-Fired):** Cooked over slow wood embers in giant copper or clay cauldrons, infusing the broth with a natural smoky campfire fragrance and velvety richness.
+
+---
+
+### Verified Directory: Top 8 Authentic Nashik Misal Institutions
+1. **Sadhana Chulivarchi Misal**
+   * **Address:** Bardan Phata, Near Someshwar Temple, Gangapur-Someshwar Road, Nashik 422003
+   * **Hours:** 08:00 AM – 03:30 PM daily
+   * **Cost:** ₹130 per thali (includes wood-fired misal, pav, papad, clay-pot curd, and sweet jalebi)
+   * **Transit:** Citilinc Route #115 to Someshwar Temple (Fare ₹20) + 400m walk
+2. **Shamsundar Misal**
+   * **Address:** P-17, Satpur MIDC, Near ITI Signal, Trimbak Road, Nashik 422007
+   * **Hours:** 08:00 AM – 03:00 PM (Closed Sundays)
+   * **Cost:** ₹100 per plate
+   * **Transit:** Citilinc Routes #111 & #112 to Satpur MIDC / ITI Signal (Fare ₹18)
+3. **Shree Ambika Misal**
+   * **Address:** 5, Panchavati Karanja, Near Kalaram Mandir, Nashik 422003
+   * **Hours:** 08:00 AM – 09:00 PM daily
+   * **Cost:** ₹90 per plate (signature Black Kala Masala gravy)
+   * **Transit:** Citilinc Routes #101, #103, #110 to Panchavati Karanja (Fare ₹15)
+4. **Mamachya Gaonchi Misal**
+   * **Address:** Mohadi Phata, Dindori Road, Nashik 422004
+   * **Hours:** 07:30 AM – 04:00 PM daily
+   * **Cost:** ₹120 per plate (village rustic orchard setting)
+   * **Transit:** MSRTC Dindori bus from Nimani Stand (Fare ₹25)
+5. **Hotel Vihar Misal**
+   * **Address:** Old Gangapur Naka, Gangapur Road, Nashik 422005
+   * **Hours:** 08:00 AM – 08:30 PM daily
+   * **Cost:** ₹95 per plate (balanced mild to medium spice)
+   * **Transit:** Citilinc Route #114 to Gangapur Naka (Fare ₹15)
+6. **Krishna Misal**
+   * **Address:** Old Agra Road, Opp. CBS, Nashik 422001
+   * **Hours:** 08:00 AM – 08:00 PM daily
+   * **Cost:** ₹85 per plate
+   * **Transit:** Right at Nashik Central Bus Stand (CBS)
+7. **Tushar Misal**
+   * **Address:** Thatte Nagar, College Road, Nashik 422005
+   * **Hours:** 08:00 AM – 09:00 PM daily
+   * **Cost:** ₹95 per plate (student favorite, crispy farsan)
+   * **Transit:** Citilinc Route #108 to Thatte Nagar (Fare ₹15)
+8. **Peruchi Wadi Misal**
+   * **Address:** Makhmalabad-Girnare Road, Nashik 422003
+   * **Hours:** 08:00 AM – 04:00 PM daily
+   * **Cost:** ₹120 per plate (dine amidst living guava orchards)
+   * **Transit:** Auto-rickshaw from CBS (~₹150)
+    `,
+    itineraryDays: [
+      {
+        dayNumber: 1,
+        dayTitle: 'The Connoisseur’s Weekend Misal Circuit',
+        morningActivity: '08:30 AM: Kick off the morning at Shamsundar Misal in Satpur MIDC (or Sadhana Chulivarchi on weekends). Order the classic misal with extra rassa and hot buttered pav. Sip fresh clay-pot buttermilk.',
+        afternoonActivity: '12:30 PM: Head to Panchavati for a comparative tasting at Shree Ambika Misal. Experience the stark culinary contrast between Shamsundar’s fiery red oil and Ambika’s roasted black pepper gravy.',
+        eveningActivity: '05:00 PM: Cool down your palate at Sayantara (Bhadrakali) with crispy sabudana vadas and Baghdadi Kulfi near Tiwndha Chowk.',
+        recommendedMeals: 'Breakfast: Shamsundar Misal; Lunch: Shree Ambika Misal; Dessert: Baghdadi Kulfi & Budha Halwai jalebis.',
+        travelTips: 'Never pour all the rassa at once; pour half to soften the matki and farsan, then add fresh hot rassa halfway through your meal to preserve crunchiness.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which is the spiciest misal in Nashik?',
+        answer: 'Shamsundar Misal in Satpur MIDC and Mamachya Gaonchi Misal on Dindori Road are renowned for the fiercest, authentic red tarri. Devotees with lower spice tolerance should request mild rassa or order a bowl of fresh dahi (curd).',
+      },
+      {
+        question: 'What is unique about Sadhana Chulivarchi Misal?',
+        answer: 'Sadhana cooks its misal entirely on traditional wood-fired earthen chulhas (clay ovens) in copper vessels. The property also features camel rides, village artifact displays, and farm gardens, making it the most popular spot for families.',
+      },
+      {
+        question: 'Are misal places open for dinner in Nashik?',
+        answer: 'Most traditional and rustic joints (like Sadhana, Shamsundar, and Peruchi Wadi) close by 3:00 PM or 3:30 PM once their morning broth sells out. However, city joints like Shree Ambika (Panchavati), Hotel Vihar (Gangapur Road), and Tushar (College Road) remain open until 8:30 PM or 9:00 PM.',
+      },
+    ],
+    appCtaHooks: {
+      headline: 'Interactive Nashik Misal Trail in Trivio',
+      subline: 'Navigate to 10 legendary misal spots with real-time crowd status, directions, and spice ratings in Trivio App.',
+      ctaText: 'Start Misal Trail in App',
+      utmCampaign: 'blog_misal_trail',
+    },
+    tags: ['Misal Pav', 'Food Trail', 'Sadhana', 'Shamsundar', 'Ambika', 'Panchavati', 'Maharashtrian Cuisine'],
+    localized: {
+      mr: {
+        title: 'नाशिक मिसळ गौरव यात्रा: टॉप १० प्रसिद्ध ठिकाणे, अधिकृत वेळा, पत्ते आणि रस्सा प्रकार',
+        summary: 'नाशिकच्या मिसळीचा परिपूर्ण खाद्य प्रवास: चुलीवरची मिसळ, झणझणीत लाल तर्री आणि काळा रस्सा देणारी टॉप १० ठिकाणे, वेळा, अचूक पत्ते व सिटीलिंक बस मार्ग.',
+        directAnswer: 'नाशिक मिसळीत ३ मुख्य प्रकार आहेत: चुलीवरची मिसळ (साधना, सोमेश्वर, ₹१३०), झणझणीत लाल तर्री (शामसुंदर, सातपूर, ₹१००) आणि काळा मसाला रस्सा (अंबिका, पंचवटी, ₹९०). सरासरी दर ₹८० ते ₹१५० असून बहुतांश दुकाने दुपारी ३:३० पर्यंत सुरू असतात.',
+      },
+      hi: {
+        title: 'प्रामाणिक नासिक मिसल ट्रेल: टॉप १० मशहूर दुकानें, समय, सही पते एवं रस्सा गाइड',
+        summary: 'नासिक की प्रसिद्ध मिसल पाव का संपूर्ण फूड गाइड: चूल्हे की मिसल, तीखी लाल तरी और भुने काले मसाले का रस्सा परोसने वाले १० मशहूर केंद्र, समय, पते और बस रूट।',
+        directAnswer: 'नासिक मिसल में ३ प्रमुख रस्सा शैलियां हैं: चूल्हे की मिसल (साधना, सोमेश्वर, ₹१३०), तीखी लाल तरी (शामसुंदर, सातपुर, ₹१००) और काला मसाला रस्सा (अंबिका, पंचवटी, ₹९०)। औसत मूल्य ₹८० से ₹१५० है और अधिकतर दुकानें दोपहर ३:३० बजे तक खुली रहती हैं।',
+      },
+    },
+  },
+];

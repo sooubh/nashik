@@ -66,7 +66,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-8 lg:gap-10">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-8 lg:gap-8">
             {SITE_CONFIG.footerColumns.map((col) => (
               <div key={col.title}>
                 <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-deep-violet">

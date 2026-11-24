@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: [
       {
-        url: '/images/destinations/sula-vineyards.webp',
+        url: `${SITE_CONFIG.canonicalUrl}/images/destinations/sula-vineyards.webp`,
         width: 1200,
         height: 630,
         alt: `${SITE_CONFIG.name} · Authentic Travel Guide for Nashik`,
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_CONFIG.name} · Temples, Forts & Vineyards in Nashik`,
     description: SITE_CONFIG.description,
-    images: ['/images/destinations/sula-vineyards.webp'],
+    images: [`${SITE_CONFIG.canonicalUrl}/images/destinations/sula-vineyards.webp`],
   },
   icons: {
     icon: '/favicon.ico',

@@ -8,6 +8,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Learn how Trivio uses necessary cookies and local device storage to remember your language preferences and provide fast offline travel experiences.',
   path: '/cookies-policy',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Cookie Policy & Local Storage Disclosures',
 });
 
 export default function CookiesPolicyPage() {

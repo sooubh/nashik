@@ -89,6 +89,7 @@ export const SITE_CONFIG: SiteConfig = {
         { label: 'Simhastha Kumbh 2027 Guide', href: '/kumbh' },
         { label: 'Expert Travel Guides', href: '/guides' },
         { label: 'Itineraries & Road Trips', href: '/blog' },
+        { label: 'Browse by Tag & Theme', href: '/tags' },
       ],
     },
     {

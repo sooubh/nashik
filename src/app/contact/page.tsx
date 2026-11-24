@@ -9,6 +9,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Get in touch with the Trivio team for corrections, local partnerships, app assistance, or verified guide inquiries. Email trivio-support@sooubh.in.',
   path: '/contact',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Contact Trivio Support & Editorial Team',
 });
 
 export default function ContactPage() {

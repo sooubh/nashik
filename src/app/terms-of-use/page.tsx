@@ -8,6 +8,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Official Terms of Use and Service for the Trivio Nashik travel guide application and website. Understand user rights, content rules, and disclaimers.',
   path: '/terms-of-use',
   ogType: 'website',
+  ogImage: '/images/destinations/sula-vineyards.webp',
+  ogImageAlt: 'Terms of Use & App Conditions of Service',
 });
 
 export default function TermsOfUsePage() {

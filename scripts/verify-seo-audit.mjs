@@ -96,6 +96,7 @@ const checkPages = [
   'src/app/guides/page.tsx',
   'src/app/blog/page.tsx',
   'src/app/destinations/page.tsx',
+  'src/app/trivio/page.tsx',
 ];
 
 checkPages.forEach(p => {

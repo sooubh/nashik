@@ -8,6 +8,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Important travel and monsoon trekking safety disclaimers for Nashik, Harihar fort rock steps, and Sahyadri waterfalls. Review safety protocols.',
   path: '/disclaimer',
   ogType: 'website',
+  ogImage: '/images/destinations/harihar-fort.webp',
+  ogImageAlt: 'Travel, Trekking & Monsoon Safety Guide',
 });
 
 export default function DisclaimerPage() {

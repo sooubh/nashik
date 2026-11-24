@@ -41,6 +41,8 @@ const STATIC_PAGES = [
   { path: 'src/app/delete-account/page.tsx', route: '/delete-account', slug: 'delete-account' },
   { path: 'src/app/cookies-policy/page.tsx', route: '/cookies-policy', slug: 'cookies-policy' },
   { path: 'src/app/disclaimer/page.tsx', route: '/disclaimer', slug: 'disclaimer' },
+  { path: 'src/app/trivio/page.tsx', route: '/trivio', slug: 'trivio' },
+  { path: 'src/app/kumbh/page.tsx', route: '/kumbh', slug: 'kumbh' },
 ];
 
 for (const page of STATIC_PAGES) {
@@ -266,6 +268,7 @@ const MAIN_CONTENT_FILES = [
   'src/components/views/GuideDetailView.tsx',
   'src/components/views/BlogDetailView.tsx',
   'src/components/shared/ArticleLayout.tsx',
+  'src/app/trivio/page.tsx',
 ];
 
 for (const file of MAIN_CONTENT_FILES) {

@@ -14,6 +14,7 @@ export interface SeoMetadataOptions {
   author?: string;
   locale?: Locale;
   noindex?: boolean;
+  follow?: boolean;
 }
 
 /**
@@ -96,6 +97,7 @@ export function constructMetadata({
   author = SITE_CONFIG.name,
   locale = 'en',
   noindex = false,
+  follow,
 }: SeoMetadataOptions): Metadata {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   const canonicalUrl = `${SITE_CONFIG.canonicalUrl}${cleanPath}`;
@@ -133,13 +135,13 @@ export function constructMetadata({
     },
     robots: {
       index: !noindex,
-      follow: !noindex,
+      follow: follow !== undefined ? follow : !noindex,
       'max-image-preview': 'large',
       'max-snippet': -1,
       'max-video-preview': -1,
       googleBot: {
         index: !noindex,
-        follow: !noindex,
+        follow: follow !== undefined ? follow : !noindex,
         'max-video-preview': -1,
         'max-image-preview': 'large',
         'max-snippet': -1,

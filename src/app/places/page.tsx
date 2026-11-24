@@ -15,6 +15,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Explore 23 top places to visit in Nashik: Jyotirlinga temples, Sula vineyards, Sahyadri fort treks, and waterfalls with verified timings and fees.',
   path: '/places',
   ogType: 'website',
+  ogImage: '/images/destinations/trimbakeshwar-temple.webp',
+  ogImageAlt: 'Top 23 Places to Visit in Nashik Guide',
 });
 
 export default function PlacesPage() {

@@ -17,6 +17,8 @@ export const metadata: Metadata = constructMetadata({
   description: 'Curated Nashik itineraries & road trips: 1-day whirlwind plan, Mumbai Samruddhi expressway drive, Pune route, and Old Nashik heritage food walks.',
   path: '/blog',
   ogType: 'website',
+  ogImage: '/images/destinations/gangapur-lake-sunset.webp',
+  ogImageAlt: 'Nashik Travel Itineraries & Road Trips Guide',
 });
 
 export default function BlogPage() {
