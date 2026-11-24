@@ -77,10 +77,10 @@ check('SiteNav does not link to trip-planner', !navTs.includes('/trip-planner'))
 const sitemapTs = fs.readFileSync(path.join(ROOT_DIR, 'src/app/sitemap.ts'), 'utf8');
 check('sitemap.ts does not include trip-planner', !sitemapTs.includes('/trip-planner'));
 
-// 7. Robots.txt and AI Crawler Directives (src/app/robots.ts)
+// 7. Robots.txt Directives (src/app/robots.ts)
 const robotsTs = fs.readFileSync(path.join(ROOT_DIR, 'src/app/robots.ts'), 'utf8');
-check('robots.ts allows Googlebot & Bingbot', robotsTs.includes('Googlebot') && robotsTs.includes('Bingbot'));
-check('robots.ts explicitly accommodates AI Search crawlers (GPTBot, PerplexityBot, ClaudeBot)', robotsTs.includes('GPTBot') && robotsTs.includes('PerplexityBot') && robotsTs.includes('ClaudeBot'));
+check('robots.ts has universal wildcard userAgent rule', robotsTs.includes("userAgent: '*'"));
+check('robots.ts allows all paths', robotsTs.includes("allow: '/'"));
 check('robots.ts references sitemap.xml', robotsTs.includes('sitemap.xml'));
 
 // 8. Static Page Metadata Verification

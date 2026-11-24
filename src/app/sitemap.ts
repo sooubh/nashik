@@ -8,7 +8,7 @@ import { BLOG_POSTS_DATA } from '@/data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.canonicalUrl;
-  const lastModified = '2026-11-23';
+  const lastModified = new Date().toISOString().split('T')[0];
 
   // Static platform & directory hub pages
   const staticRoutes: MetadataRoute.Sitemap = [
